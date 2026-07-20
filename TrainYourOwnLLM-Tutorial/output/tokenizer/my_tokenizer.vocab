@@ -1,0 +1,1024 @@
+[\u0000] 0
+[\u0001] 1
+[\u0002] 2
+[\u0003] 3
+[\u0004] 4
+[\u0005] 5
+[\u0006] 6
+[\u0007] 7
+[\u0008] 8
+[\u0009] 9
+[\u000a] 10
+[\u000b] 11
+[\u000c] 12
+[\u000d] 13
+[\u000e] 14
+[\u000f] 15
+[\u0010] 16
+[\u0011] 17
+[\u0012] 18
+[\u0013] 19
+[\u0014] 20
+[\u0015] 21
+[\u0016] 22
+[\u0017] 23
+[\u0018] 24
+[\u0019] 25
+[\u001a] 26
+[\u001b] 27
+[\u001c] 28
+[\u001d] 29
+[\u001e] 30
+[\u001f] 31
+[ ] 32
+[!] 33
+["] 34
+[#] 35
+[$] 36
+[%] 37
+[&] 38
+['] 39
+[(] 40
+[)] 41
+[*] 42
+[+] 43
+[,] 44
+[-] 45
+[.] 46
+[/] 47
+[0] 48
+[1] 49
+[2] 50
+[3] 51
+[4] 52
+[5] 53
+[6] 54
+[7] 55
+[8] 56
+[9] 57
+[:] 58
+[;] 59
+[<] 60
+[=] 61
+[>] 62
+[?] 63
+[@] 64
+[A] 65
+[B] 66
+[C] 67
+[D] 68
+[E] 69
+[F] 70
+[G] 71
+[H] 72
+[I] 73
+[J] 74
+[K] 75
+[L] 76
+[M] 77
+[N] 78
+[O] 79
+[P] 80
+[Q] 81
+[R] 82
+[S] 83
+[T] 84
+[U] 85
+[V] 86
+[W] 87
+[X] 88
+[Y] 89
+[Z] 90
+[[] 91
+[\] 92
+[]] 93
+[^] 94
+[_] 95
+[`] 96
+[a] 97
+[b] 98
+[c] 99
+[d] 100
+[e] 101
+[f] 102
+[g] 103
+[h] 104
+[i] 105
+[j] 106
+[k] 107
+[l] 108
+[m] 109
+[n] 110
+[o] 111
+[p] 112
+[q] 113
+[r] 114
+[s] 115
+[t] 116
+[u] 117
+[v] 118
+[w] 119
+[x] 120
+[y] 121
+[z] 122
+[{] 123
+[|] 124
+[}] 125
+[~] 126
+[\u007f] 127
+[�] 128
+[�] 129
+[�] 130
+[�] 131
+[�] 132
+[�] 133
+[�] 134
+[�] 135
+[�] 136
+[�] 137
+[�] 138
+[�] 139
+[�] 140
+[�] 141
+[�] 142
+[�] 143
+[�] 144
+[�] 145
+[�] 146
+[�] 147
+[�] 148
+[�] 149
+[�] 150
+[�] 151
+[�] 152
+[�] 153
+[�] 154
+[�] 155
+[�] 156
+[�] 157
+[�] 158
+[�] 159
+[�] 160
+[�] 161
+[�] 162
+[�] 163
+[�] 164
+[�] 165
+[�] 166
+[�] 167
+[�] 168
+[�] 169
+[�] 170
+[�] 171
+[�] 172
+[�] 173
+[�] 174
+[�] 175
+[�] 176
+[�] 177
+[�] 178
+[�] 179
+[�] 180
+[�] 181
+[�] 182
+[�] 183
+[�] 184
+[�] 185
+[�] 186
+[�] 187
+[�] 188
+[�] 189
+[�] 190
+[�] 191
+[�] 192
+[�] 193
+[�] 194
+[�] 195
+[�] 196
+[�] 197
+[�] 198
+[�] 199
+[�] 200
+[�] 201
+[�] 202
+[�] 203
+[�] 204
+[�] 205
+[�] 206
+[�] 207
+[�] 208
+[�] 209
+[�] 210
+[�] 211
+[�] 212
+[�] 213
+[�] 214
+[�] 215
+[�] 216
+[�] 217
+[�] 218
+[�] 219
+[�] 220
+[�] 221
+[�] 222
+[�] 223
+[�] 224
+[�] 225
+[�] 226
+[�] 227
+[�] 228
+[�] 229
+[�] 230
+[�] 231
+[�] 232
+[�] 233
+[�] 234
+[�] 235
+[�] 236
+[�] 237
+[�] 238
+[�] 239
+[�] 240
+[�] 241
+[�] 242
+[�] 243
+[�] 244
+[�] 245
+[�] 246
+[�] 247
+[�] 248
+[�] 249
+[�] 250
+[�] 251
+[�] 252
+[�] 253
+[�] 254
+[�] 255
+[e][ ] -> [e ] 256
+[t][ ] -> [t ] 257
+[i][n] -> [in] 258
+[.][ ] -> [. ] 259
+[s][ ] -> [s ] 260
+[ ][t] -> [ t] 261
+[o][u] -> [ou] 262
+[y][ ] -> [y ] 263
+[a][n] -> [an] 264
+[in][g] -> [ing] 265
+[o][n] -> [on] 266
+[d][ ] -> [d ] 267
+[o][ ] -> [o ] 268
+[o][r] -> [or] 269
+[ing][ ] -> [ing ] 270
+[l][l] -> [ll] 271
+[e][r] -> [er] 272
+[ t][h] -> [ th] 273
+[y][ou] -> [you] 274
+[i][t] -> [it] 275
+[i][s ] -> [is ] 276
+[e][a] -> [ea] 277
+[?][ ] -> [? ] 278
+[o][m] -> [om] 279
+[h][a] -> [ha] 280
+[e][n] -> [en] 281
+[o][w] -> [ow] 282
+[!][ ] -> [! ] 283
+[ ][s] -> [ s] 284
+[i][t ] -> [it ] 285
+[I]['] -> [I'] 286
+[t][h] -> [th] 287
+[e][s] -> [es] 288
+[ th][e ] -> [ the ] 289
+[ ][w] -> [ w] 290
+[d][a] -> [da] 291
+[m][e ] -> [me ] 292
+[u][s] -> [us] 293
+[e][. ] -> [e. ] 294
+[b][r] -> [br] 295
+[I][ ] -> [I ] 296
+[ll][ ] -> [ll ] 297
+[I'][m] -> [I'm] 298
+[you][ ] -> [you ] 299
+[,][ ] -> [, ] 300
+[a][r] -> [ar] 301
+['][t ] -> ['t ] 302
+[e][e] -> [ee] 303
+[g][h] -> [gh] 304
+['][s ] -> ['s ] 305
+[e][d ] -> [ed ] 306
+[f][or] -> [for] 307
+[an][ ] -> [an ] 308
+[k][ ] -> [k ] 309
+[�][�] -> [�] 310
+[ ][m] -> [ m] 311
+[br][o ] -> [bro ] 312
+[e][t] -> [et] 313
+[v][e ] -> [ve ] 314
+[i][c] -> [ic] 315
+[o][o] -> [oo] 316
+[r][ ] -> [r ] 317
+[l][a] -> [la] 318
+[in][ ] -> [in ] 319
+[v][er] -> [ver] 320
+[s][t] -> [st] 321
+[c][h] -> [ch] 322
+[p][p] -> [pp] 323
+[ow][ ] -> [ow ] 324
+[or][r] -> [orr] 325
+[on][ ] -> [on ] 326
+[a][t ] -> [at ] 327
+[r][i] -> [ri] 328
+[e ][d] -> [e d] 329
+[w][a] -> [wa] 330
+[I'm][ ] -> [I'm ] 331
+[us][t ] -> [ust ] 332
+[l][i] -> [li] 333
+[o][f] -> [of] 334
+[da][y ] -> [day ] 335
+[j][ust ] -> [just ] 336
+[t][i] -> [ti] 337
+[en][ ] -> [en ] 338
+[s][. ] -> [s. ] 339
+[on]['t ] -> [on't ] 340
+[da][y] -> [day] 341
+[e][s ] -> [es ] 342
+[a][ ] -> [a ] 343
+[l][ea] -> [lea] 344
+[o][p] -> [op] 345
+[i][d ] -> [id ] 346
+[d][ t] -> [d t] 347
+[ha][t ] -> [hat ] 348
+[y ][b] -> [y b] 349
+[e][ver] -> [ever] 350
+[d][o] -> [do] 351
+[i][r] -> [ir] 352
+[th][e ] -> [the ] 353
+[e][ll] -> [ell] 354
+[o][t ] -> [ot ] 355
+[for][ ] -> [for ] 356
+[d][. ] -> [d. ] 357
+[o][h] -> [oh] 358
+[ou][t ] -> [out ] 359
+[c][om] -> [com] 360
+[s][t ] -> [st ] 361
+[u][y] -> [uy] 362
+[on][e ] -> [one ] 363
+[t][er] -> [ter] 364
+[ th][is ] -> [ this ] 365
+[you][r ] -> [your ] 366
+[a][g] -> [ag] 367
+[an][d ] -> [and ] 368
+[om][orr] -> [omorr] 369
+[o][l] -> [ol] 370
+[e][t ] -> [et ] 371
+[it][h] -> [ith] 372
+[a][c] -> [ac] 373
+[c][an] -> [can] 374
+[w][ith] -> [with] 375
+[a][pp] -> [app] 376
+[e][c] -> [ec] 377
+[t][u] -> [tu] 378
+[ever][y] -> [every] 379
+[i][ll ] -> [ill ] 380
+[ar][e ] -> [are ] 381
+[uy][s ] -> [uys ] 382
+[W][h] -> [Wh] 383
+[ m][in] -> [ min] 384
+[k][ing ] -> [king ] 385
+[l][it] -> [lit] 386
+[I'][ll ] -> [I'll ] 387
+[n][ow ] -> [now ] 388
+[a][ll] -> [all] 389
+[�][ ] -> [� ] 390
+[ow][. ] -> [ow. ] 391
+[a][l] -> [al] 392
+[k][e ] -> [ke ] 393
+[!][! ] -> [!! ] 394
+[gh][t ] -> [ght ] 395
+[l][o] -> [lo] 396
+[e][x] -> [ex] 397
+[H][app] -> [Happ] 398
+[ ][is ] -> [ is ] 399
+[y][. ] -> [y. ] 400
+[i][d] -> [id] 401
+[er][ ] -> [er ] 402
+[om][ ] -> [om ] 403
+[s][h] -> [sh] 404
+[of][f] -> [off] 405
+[e][, ] -> [e, ] 406
+[a][m] -> [am] 407
+[ee][p] -> [eep] 408
+[e][l] -> [el] 409
+[m][y ] -> [my ] 410
+[?][? ] -> [?? ] 411
+[I'm][ s] -> [I'm s] 412
+[ha][ve ] -> [have ] 413
+[t][ing ] -> [ting ] 414
+[k][. ] -> [k. ] 415
+[t][o ] -> [to ] 416
+[ ][P] -> [ P] 417
+[t][. ] -> [t. ] 418
+[es][? ] -> [es? ] 419
+[u][n] -> [un] 420
+[r][e ] -> [re ] 421
+[f][r] -> [fr] 422
+[R][oh] -> [Roh] 423
+[l][eep] -> [leep] 424
+[u][t ] -> [ut ] 425
+[G][uys ] -> [Guys ] 426
+[R][a] -> [Ra] 427
+[g][o] -> [go] 428
+[t][ed ] -> [ted ] 429
+[d][on't ] -> [don't ] 430
+[it][. ] -> [it. ] 431
+[o ][it ] -> [o it ] 432
+[i][k] -> [ik] 433
+[t]['s ] -> [t's ] 434
+[r][it] -> [rit] 435
+[�][�] -> [�] 436
+[n]['t ] -> [n't ] 437
+[n][ot ] -> [not ] 438
+[? ][I ] -> [? I ] 439
+[r][es] -> [res] 440
+[Happ][y b] -> [Happy b] 441
+[�][�] -> [�] 442
+[.][.] -> [..] 443
+[..][. ] -> [... ] 444
+[do][ the ] -> [do the ] 445
+[d][id ] -> [did ] 446
+[r][e] -> [re] 447
+[0][0] -> [00] 448
+[O][O] -> [OO] 449
+[r][n] -> [rn] 450
+[b][e] -> [be] 451
+[ri][ght ] -> [right ] 452
+[ t][o ] -> [ to ] 453
+[et]['s ] -> [et's ] 454
+[ w][a] -> [ wa] 455
+[y ][s] -> [y s] 456
+[l][oo] -> [loo] 457
+[k][s ] -> [ks ] 458
+[right ][now ] -> [right now ] 459
+[u][l] -> [ul] 460
+[you][r] -> [your] 461
+[wa][s ] -> [was ] 462
+[i][ll] -> [ill] 463
+[T][h] -> [Th] 464
+[in][e ] -> [ine ] 465
+[e][e ] -> [ee ] 466
+[f][ir] -> [fir] 467
+[ing ][for ] -> [ing for ] 468
+[er][all] -> [erall] 469
+[e][d] -> [ed] 470
+[m][a] -> [ma] 471
+[m][an ] -> [man ] 472
+[d][ing ] -> [ding ] 473
+[ir][th] -> [irth] 474
+[your][ s] -> [your s] 475
+[u][p] -> [up] 476
+[O][m] -> [Om] 477
+[Om][g] -> [Omg] 478
+[G][o] -> [Go] 479
+[a][? ] -> [a? ] 480
+[com][ing ] -> [coming ] 481
+[om][e] -> [ome] 482
+[an][y ] -> [any ] 483
+[in][s] -> [ins] 484
+[B][r] -> [Br] 485
+[or][d] -> [ord] 486
+[ P][M] -> [ PM] 487
+[ ][M] -> [ M] 488
+[ t][omorr] -> [ tomorr] 489
+[ tomorr][ow. ] -> [ tomorrow. ] 490
+[on][e. ] -> [one. ] 491
+[ea][r ] -> [ear ] 492
+[or][n] -> [orn] 493
+[fr][om ] -> [from ] 494
+[e][! ] -> [e! ] 495
+[s][e ] -> [se ] 496
+[t][op] -> [top] 497
+[oo][d ] -> [ood ] 498
+[a][b] -> [ab] 499
+[d t][o ] -> [d to ] 500
+[t][omorr] -> [tomorr] 501
+[ t][o] -> [ to] 502
+[e ][n] -> [e n] 503
+[0][ min] -> [0 min] 504
+[t][r] -> [tr] 505
+[W][hat ] -> [What ] 506
+[p][r] -> [pr] 507
+[v][e. ] -> [ve. ] 508
+[in][ the ] -> [in the ] 509
+[ag][a] -> [aga] 510
+[s][a] -> [sa] 511
+[e][d. ] -> [ed. ] 512
+[K][rit] -> [Krit] 513
+[Krit][ik] -> [Kritik] 514
+[r][ea] -> [rea] 515
+[S][ ] -> [S ] 516
+[d][es] -> [des] 517
+[f][in] -> [fin] 518
+[�][� ] -> [🎂 ] 519
+[a][ll ] -> [all ] 520
+[lea][ve ] -> [leave ] 521
+[l][y ] -> [ly ] 522
+[ha][pp] -> [happ] 523
+[you ][g] -> [you g] 524
+[h][is ] -> [his ] 525
+[id][n't ] -> [idn't ] 526
+[on][th] -> [onth] 527
+[ic][k] -> [ick] 528
+[y][ t] -> [y t] 529
+[ab][out ] -> [about ] 530
+[l][on] -> [lon] 531
+[can][c] -> [canc] 532
+[en][d ] -> [end ] 533
+[ou][l] -> [oul] 534
+[ m][y ] -> [ my ] 535
+[h][e ] -> [he ] 536
+[I][t's ] -> [It's ] 537
+[ha][t] -> [hat] 538
+[i][gh] -> [igh] 539
+[�][� ] -> [😂 ] 540
+[00][ ] -> [00 ] 541
+[p][ac] -> [pac] 542
+[m][onth] -> [month] 543
+[be][en ] -> [been ] 544
+[r][a] -> [ra] 545
+[f][ ] -> [f ] 546
+[ w][e ] -> [ we ] 547
+[b][l] -> [bl] 548
+[P][a] -> [Pa] 549
+[it ][was ] -> [it was ] 550
+[5][ min] -> [5 min] 551
+[y ][is ] -> [y is ] 552
+[s][i] -> [si] 553
+[loo][k ] -> [look ] 554
+[an][ks ] -> [anks ] 555
+[er][e ] -> [ere ] 556
+[oul][d ] -> [ould ] 557
+[ t][y] -> [ ty] 558
+[w][or] -> [wor] 559
+[s][orr] -> [sorr] 560
+[�][ ] -> [� ] 561
+[ ][ha] -> [ ha] 562
+[ha][i] -> [hai] 563
+[Wh][y is ] -> [Why is ] 564
+[b][la] -> [bla] 565
+[bla][me ] -> [blame ] 566
+[ea][king ] -> [eaking ] 567
+[look ][at ] -> [look at ] 568
+[ ty][p] -> [ typ] 569
+[ex][t ] -> [ext ] 570
+[e][w] -> [ew] 571
+[N][ ] -> [N ] 572
+[en][ding ] -> [ending ] 573
+[been ][an ] -> [been an ] 574
+[e]['s ] -> [e's ] 575
+[es][t ] -> [est ] 576
+[e][y] -> [ey] 577
+[n][ext ] -> [next ] 578
+[irth][day ] -> [irthday ] 579
+[A][man ] -> [Aman ] 580
+[L][et's ] -> [Let's ] 581
+[i][sh] -> [ish] 582
+[ee][k] -> [eek] 583
+[ing][ the ] -> [ing the ] 584
+[gh][t] -> [ght] 585
+[a][! ] -> [a! ] 586
+[in][. ] -> [in. ] 587
+[ s][p] -> [ sp] 588
+[g][i] -> [gi] 589
+[ell][ed ] -> [elled ] 590
+[up][ ] -> [up ] 591
+[your ][la] -> [your la] 592
+[ ][in] -> [ in] 593
+[e. ][O] -> [e. O] 594
+[i][me ] -> [ime ] 595
+[an][ag] -> [anag] 596
+[gi][ve ] -> [give ] 597
+[fir][st ] -> [first ] 598
+[oo][l] -> [ool] 599
+[e d][id ] -> [e did ] 600
+[you][. ] -> [you. ] 601
+[D][on't ] -> [Don't ] 602
+[ow][n] -> [own] 603
+[leep][ing ] -> [leeping ] 604
+[ell][. ] -> [ell. ] 605
+[lit][erall] -> [literall] 606
+[I][ s] -> [I s] 607
+[ins][an] -> [insan] 608
+[ s][h] -> [ sh] 609
+[ w][h] -> [ wh] 610
+[with][ ] -> [with ] 611
+[do][ing ] -> [doing ] 612
+[literall][y ] -> [literally ] 613
+[c][an ] -> [can ] 614
+[H][R] -> [HR] 615
+[u][gh] -> [ugh] 616
+[an][k ] -> [ank ] 617
+[c][l] -> [cl] 618
+[give ][me ] -> [give me ] 619
+[ord][er ] -> [order ] 620
+[p][ar] -> [par] 621
+[s][li] -> [sli] 622
+[Roh][an] -> [Rohan] 623
+[Th][ank ] -> [Thank ] 624
+[c][ool] -> [cool] 625
+[Ra][h] -> [Rah] 626
+[Rah][ul] -> [Rahul] 627
+[s ][are ] -> [s are ] 628
+[b][y ] -> [by ] 629
+[Roh][an ] -> [Rohan ] 630
+[,][ s] -> [, s] 631
+[l][et ] -> [let ] 632
+[let ][me ] -> [let me ] 633
+[?][?? ] -> [??? ] 634
+[ome][one ] -> [omeone ] 635
+[o][st ] -> [ost ] 636
+[e d][o] -> [e do] 637
+[tomorr][ow ] -> [tomorrow ] 638
+[p][top] -> [ptop] 639
+[your s][tu] -> [your stu] 640
+[day][. ] -> [day. ] 641
+[op][en] -> [open] 642
+[b][ol] -> [bol] 643
+[bol][ted ] -> [bolted ] 644
+[bolted ][it ] -> [bolted it ] 645
+[ s][o ] -> [ so ] 646
+[st][ar] -> [star] 647
+[u][t] -> [ut] 648
+[ol][d ] -> [old ] 649
+[can]['t ] -> [can't ] 650
+[I'll ][d] -> [I'll d] 651
+[lea][s] -> [leas] 652
+[. ][Y] -> [. Y] 653
+[h][ ] -> [h ] 654
+[st][res] -> [stres] 655
+[stres][s] -> [stress] 656
+[I'll d][o it ] -> [I'll do it ] 657
+[ing][. ] -> [ing. ] 658
+[o][or] -> [oor] 659
+[, s][omeone ] -> [, someone ] 660
+[D][one. ] -> [Done. ] 661
+[d][e] -> [de] 662
+[ic][e ] -> [ice ] 663
+[h][ea] -> [hea] 664
+[par][t] -> [part] 665
+[ ][W] -> [ W] 666
+[r][ow] -> [row] 667
+[d t][o] -> [d to] 668
+[w][hat] -> [what] 669
+[with][out ] -> [without ] 670
+[ter][n] -> [tern] 671
+[3][0 min] -> [30 min] 672
+[it][! ] -> [it! ] 673
+[ri][ve ] -> [rive ] 674
+[rive ][in ] -> [rive in ] 675
+[n][ow. ] -> [now. ] 676
+[can ][do the ] -> [can do the ] 677
+[day][, ] -> [day, ] 678
+[om][e ] -> [ome ] 679
+[on][ the ] -> [on the ] 680
+[is ][every] -> [is every] 681
+[is every][on] -> [is everyon] 682
+[c][off] -> [coff] 683
+[m][y b] -> [my b] 684
+[a][ke ] -> [ake ] 685
+[com][ing] -> [coming] 686
+[e n][ee] -> [e nee] 687
+[o ][is ] -> [o is ] 688
+[Kritik][a] -> [Kritika] 689
+[at ][the ] -> [at the ] 690
+[ch][ec] -> [chec] 691
+[in][k ] -> [ink ] 692
+[ ][on the ] -> [ on the ] 693
+[star][t ] -> [start ] 694
+[ha][re ] -> [hare ] 695
+[for][m] -> [form] 696
+[r][ink ] -> [rink ] 697
+[des][k. ] -> [desk. ] 698
+[l][e ] -> [le ] 699
+[form][at ] -> [format ] 700
+[O][ ] -> [O ] 701
+[it]['s ] -> [it's ] 702
+[�][�] -> [�] 703
+[lo][g] -> [log] 704
+[m][e] -> [me] 705
+[ter][ ] -> [ter ] 706
+[d][one ] -> [done ] 707
+[a][t] -> [at] 708
+[the ][b] -> [the b] 709
+[th][ing ] -> [thing ] 710
+[t][hat ] -> [that ] 711
+[O][T] -> [OT] 712
+[done ][with] -> [done with] 713
+[s][ome ] -> [some ] 714
+[o][k ] -> [ok ] 715
+[m][any ] -> [many ] 716
+[of][ the ] -> [of the ] 717
+[r][et] -> [ret] 718
+[d][rink ] -> [drink ] 719
+[li][ke ] -> [like ] 720
+[N][ot ] -> [Not ] 721
+[any ][many ] -> [any many ] 722
+[any many ][happ] -> [any many happ] 723
+[any many happ][y ] -> [any many happy ] 724
+[any many happy ][ret] -> [any many happy ret] 725
+[any many happy ret][u] -> [any many happy retu] 726
+[any many happy retu][rn] -> [any many happy return] 727
+[any many happy return][s ] -> [any many happy returns ] 728
+[any many happy returns ][of the ] -> [any many happy returns of the ] 729
+[any many happy returns of the ][day ] -> [any many happy returns of the day ] 730
+[any many happy returns of the day ][🎂 ] -> [any many happy returns of the day 🎂 ] 731
+[t][o] -> [to] 732
+[i][l] -> [il] 733
+[st][an] -> [stan] 734
+[�][� ] -> [🙏 ] 735
+[day][! ] -> [day! ] 736
+[S][en] -> [Sen] 737
+[m][orn] -> [morn] 738
+[e][v] -> [ev] 739
+[s][s ] -> [ss ] 740
+[chec][k] -> [check] 741
+[a][f] -> [af] 742
+[Happy b][day! ] -> [Happy bday! ] 743
+[d][! ] -> [d! ] 744
+[wa][it ] -> [wait ] 745
+[ood ][morn] -> [ood morn] 746
+[E][S] -> [ES] 747
+[d][idn't ] -> [didn't ] 748
+[ou][r ] -> [our ] 749
+[us][es ] -> [uses ] 750
+[f][ac] -> [fac] 751
+[aga][in] -> [again] 752
+[ss ][is ] -> [ss is ] 753
+[ev][en] -> [even] 754
+[you][ s] -> [you s] 755
+[G][ood morn] -> [Good morn] 756
+[sa][y] -> [say] 757
+[k][ed ] -> [ked ] 758
+[ th][en ] -> [ then ] 759
+[! ][W] -> [! W] 760
+[n][a] -> [na] 761
+[B][o] -> [Bo] 762
+[Bo][ss is ] -> [Boss is ] 763
+[literally ][just ] -> [literally just ] 764
+[W][E] -> [WE] 765
+[ti][on] -> [tion] 766
+[an][d] -> [and] 767
+[ti][f] -> [tif] 768
+[aga][in ] -> [again ] 769
+[p][er] -> [per] 770
+[5][ PM] -> [5 PM] 771
+[d][own] -> [down] 772
+[w][h] -> [wh] 773
+[p][l] -> [pl] 774
+[ w][hat ] -> [ what ] 775
+[li][st] -> [list] 776
+[g][ood ] -> [good ] 777
+[al][ ] -> [al ] 778
+[ing ][f] -> [ing f] 779
+[G][OO] -> [GOO] 780
+[n][ew] -> [new] 781
+[ea][u] -> [eau] 782
+[eau][tif] -> [eautif] 783
+[eautif][ul] -> [eautiful] 784
+[com][e ] -> [come ] 785
+[l][et's ] -> [let's ] 786
+[i][f] -> [if] 787
+[es][s] -> [ess] 788
+[ma][ke ] -> [make ] 789
+[ w][on't ] -> [ won't ] 790
+[D][a] -> [Da] 791
+[A][pp] -> [App] 792
+[a][v] -> [av] 793
+[every][thing ] -> [everything ] 794
+[r][am] -> [ram] 795
+[k][now ] -> [know ] 796
+[to][o ] -> [too ] 797
+[ra][in] -> [rain] 798
+[ti][m] -> [tim] 799
+[ ][just ] -> [ just ] 800
+[ex][p] -> [exp] 801
+[M][any many happy returns of the day 🎂 ] -> [Many many happy returns of the day 🎂 ] 802
+[K][E] -> [KE] 803
+[Y][ou] -> [You] 804
+[s][ic] -> [sic] 805
+[g][et ] -> [get ] 806
+[ t][ime ] -> [ time ] 807
+[and][ then ] -> [and then ] 808
+[la][ugh] -> [laugh] 809
+[let's ][just ] -> [let's just ] 810
+[E][T] -> [ET] 811
+[r][o] -> [ro] 812
+[everything ][is ] -> [everything is ] 813
+[next ][month] -> [next month] 814
+[t][ake ] -> [take ] 815
+[li][ght] -> [light] 816
+[a][la] -> [ala] 817
+[ in][st] -> [ inst] 818
+[ inst][ea] -> [ instea] 819
+[w][hat ] -> [what ] 820
+[ick][et ] -> [icket ] 821
+[b][ut ] -> [but ] 822
+[did ][you ] -> [did you ] 823
+[m][in] -> [min] 824
+[d][o ] -> [do ] 825
+[e ][th] -> [e th] 826
+[b][et] -> [bet] 827
+[2][00 ] -> [200 ] 828
+[Happy b][irthday ] -> [Happy birthday ] 829
+[!! ][�] -> [!! �] 830
+[!! �][�] -> [!! 🎉] 831
+[Br][o ] -> [Bro ] 832
+[Bro ][lon] -> [Bro lon] 833
+[Bro lon][g] -> [Bro long] 834
+[Bro long][ w] -> [Bro long w] 835
+[Bro long w][eek] -> [Bro long week] 836
+[Bro long week][end ] -> [Bro long weekend ] 837
+[Bro long weekend ][coming ] -> [Bro long weekend coming ] 838
+[Bro long weekend coming ][up ] -> [Bro long weekend coming up ] 839
+[Bro long weekend coming up ][next month] -> [Bro long weekend coming up next month] 840
+[Bro long weekend coming up next month][. ] -> [Bro long weekend coming up next month. ] 841
+[Bro long weekend coming up next month. ][Go] -> [Bro long weekend coming up next month. Go] 842
+[Bro long weekend coming up next month. Go][a? ] -> [Bro long weekend coming up next month. Goa? ] 843
+[Bro long weekend coming up next month. Goa? ][I'm ] -> [Bro long weekend coming up next month. Goa? I'm ] 844
+[Bro long weekend coming up next month. Goa? I'm ][in. ] -> [Bro long weekend coming up next month. Goa? I'm in. ] 845
+[Bro long weekend coming up next month. Goa? I'm in. ][1] -> [Bro long weekend coming up next month. Goa? I'm in. 1] 846
+[Bro long weekend coming up next month. Goa? I'm in. 1][00] -> [Bro long weekend coming up next month. Goa? I'm in. 100] 847
+[Bro long weekend coming up next month. Goa? I'm in. 100][%] -> [Bro long weekend coming up next month. Goa? I'm in. 100%] 848
+[Bro long weekend coming up next month. Goa? I'm in. 100%][ this ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this ] 849
+[Bro long weekend coming up next month. Goa? I'm in. 100% this ][tim] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this tim] 850
+[Bro long weekend coming up next month. Goa? I'm in. 100% this tim][e. ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. ] 851
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. ][you g] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you g] 852
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you g][uys ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys ] 853
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys ][say] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say] 854
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say][ this ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this ] 855
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this ][every] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every] 856
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every][ time ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time ] 857
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time ][and then ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then ] 858
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then ][canc] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then canc] 859
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then canc][el] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel] 860
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel][ my ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my ] 861
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my ][m] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my m] 862
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my m][anag] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manag] 863
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manag][er] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager] 864
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager][ won't ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't ] 865
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't ][give me ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me ] 866
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me ][leave ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave ] 867
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave ][bro ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro ] 868
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro ][b] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro b] 869
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro b][hai] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai] 870
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai][ just ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just ] 871
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just ][take ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take ] 872
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take ][sic] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sic] 873
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sic][k ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick ] 874
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick ][lea] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick lea] 875
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick lea][ve. ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. ] 876
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. ][it's ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's ] 877
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's ][go] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's go] 878
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's go][a! ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! ] 879
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! ][let me ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me ] 880
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me ][check] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check] 881
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check][ t] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check t] 882
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check t][rain] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train] 883
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train][ t] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train t] 884
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train t][ick] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tick] 885
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tick][et] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train ticket] 886
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train ticket][s] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets] 887
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets][... ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... ] 888
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... ][wait ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait ] 889
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait ][everything is ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is ] 890
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is ][wa] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is wa] 891
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is wa][it] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is wait] 892
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is wait][list] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlist] 893
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlist][ed ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted ] 894
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted ][f] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted f] 895
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted f][light] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flight] 896
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flight][s are ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are ] 897
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are ][too ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too ] 898
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too ][exp] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too exp] 899
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too exp][en] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expen] 900
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expen][si] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensi] 901
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensi][ve. ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. ] 902
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. ][let's just ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just ] 903
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just ][go] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go] 904
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go][ to ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to ] 905
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to ][lon] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lon] 906
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lon][av] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonav] 907
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonav][ala] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala] 908
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala][ instea] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instea] 909
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instea][d t] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead t] 910
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead t][old ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told ] 911
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told ][you g] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told you g] 912
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told you g][uy] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told you guy] 913
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told you guy][s. ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told you guys. ] 914
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told you guys. ][pl] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told you guys. pl] 915
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told you guys. pl][an ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told you guys. plan ] 916
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told you guys. plan ][canc] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told you guys. plan canc] 917
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told you guys. plan canc][elled ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told you guys. plan cancelled ] 918
+[Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told you guys. plan cancelled ][again ] -> [Bro long weekend coming up next month. Goa? I'm in. 100% this time. you guys say this every time and then cancel my manager won't give me leave bro bhai just take sick leave. it's goa! let me check train tickets... wait everything is waitlisted flights are too expensive. let's just go to lonavala instead told you guys. plan cancelled again ] 919
+[o][t] -> [ot] 920
+[ wa][it] -> [ wait] 921
+[ wait][ing for ] -> [ waiting for ] 922
+[o][ver] -> [over] 923
+[ting ][c] -> [ting c] 924
+[ould ][have ] -> [ould have ] 925
+[5 min][ut] -> [5 minut] 926
+[h][ere ] -> [here ] 927
+[I'm ][not ] -> [I'm not ] 928
+[el][ec] -> [elec] 929
+[f ][you ] -> [f you ] 930
+[y ][me ] -> [y me ] 931
+[l][ou] -> [lou] 932
+[laugh][ ] -> [laugh ] 933
+[ed ][it ] -> [ed it ] 934
+[ou][gh] -> [ough] 935
+[sorr][y s] -> [sorry s] 936
+[c][re] -> [cre] 937
+[h][igh] -> [high] 938
+[F][or] -> [For] 939
+[For][w] -> [Forw] 940
+[Forw][ar] -> [Forwar] 941
+[Forwar][d] -> [Forward] 942
+[Forward][ed] -> [Forwarded] 943
+[Forwarded][:] -> [Forwarded:] 944
+[A][n] -> [An] 945
+[An][d ] -> [And ] 946
+[ th][a] -> [ tha] 947
+[ tha][t's ] -> [ that's ] 948
+[ wa][s ] -> [ was ] 949
+[l][un] -> [lun] 950
+[lun][ch] -> [lunch] 951
+[en ][h] -> [en h] 952
+[s][m] -> [sm] 953
+[ow][ what ] -> [ow what ] 954
+[ha][r] -> [har] 955
+[ou][r] -> [our] 956
+[t][w] -> [tw] 957
+[ t][ell] -> [ tell] 958
+[j][o] -> [jo] 959
+[A][C] -> [AC] 960
+[el][y s] -> [ely s] 961
+[it ][sorry s] -> [it sorry s] 962
+[O][N ] -> [ON ] 963
+[m][ee] -> [mee] 964
+[fin][ish] -> [finish] 965
+[Guys ][elec] -> [Guys elec] 966
+[Guys elec][tr] -> [Guys electr] 967
+[Guys electr][ic] -> [Guys electric] 968
+[Guys electric][it] -> [Guys electricit] 969
+[Guys electricit][y b] -> [Guys electricity b] 970
+[Guys electricity b][ill ] -> [Guys electricity bill ] 971
+[Guys electricity bill ][is ] -> [Guys electricity bill is ] 972
+[Guys electricity bill is ][ou] -> [Guys electricity bill is ou] 973
+[Guys electricity bill is ou][t. ] -> [Guys electricity bill is out. ] 974
+[Guys electricity bill is out. ][3] -> [Guys electricity bill is out. 3] 975
+[Guys electricity bill is out. 3][6] -> [Guys electricity bill is out. 36] 976
+[Guys electricity bill is out. 36][00 ] -> [Guys electricity bill is out. 3600 ] 977
+[Guys electricity bill is out. 3600 ][r] -> [Guys electricity bill is out. 3600 r] 978
+[Guys electricity bill is out. 3600 r][s. ] -> [Guys electricity bill is out. 3600 rs. ] 979
+[Guys electricity bill is out. 3600 rs. ][1] -> [Guys electricity bill is out. 3600 rs. 1] 980
+[Guys electricity bill is out. 3600 rs. 1][200 ] -> [Guys electricity bill is out. 3600 rs. 1200 ] 981
+[Guys electricity bill is out. 3600 rs. 1200 ][ea] -> [Guys electricity bill is out. 3600 rs. 1200 ea] 982
+[Guys electricity bill is out. 3600 rs. 1200 ea][ch] -> [Guys electricity bill is out. 3600 rs. 1200 each] 983
+[Guys electricity bill is out. 3600 rs. 1200 each][. ] -> [Guys electricity bill is out. 3600 rs. 1200 each. ] 984
+[Guys electricity bill is out. 3600 rs. 1200 each. ][Pa] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pa] 985
+[Guys electricity bill is out. 3600 rs. 1200 each. Pa][y me ] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me ] 986
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me ][b] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me b] 987
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me b][y t] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by t] 988
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by t][on] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by ton] 989
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by ton][igh] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonigh] 990
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonigh][t. ] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. ] 991
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. ][Done. ] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. ] 992
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. ][Sen] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sen] 993
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sen][t ] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent ] 994
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent ][on ] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on ] 995
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on ][G] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on G] 996
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on G][Pa] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPa] 997
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPa][y. ] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay. ] 998
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay. ][ waiting for ] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for ] 999
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for ][your s] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your s] 1000
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your s][hare ] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share ] 1001
+[lea][v] -> [leav] 1002
+[You][ ] -> [You ] 1003
+[T][V] -> [TV] 1004
+[s][n't ] -> [sn't ] 1005
+[g][ot ] -> [got ] 1006
+[h][our] -> [hour] 1007
+[H][A] -> [HA] 1008
+[or][ w] -> [or w] 1009
+[in ][5 min] -> [in 5 min] 1010
+[in 5 min][s ] -> [in 5 mins ] 1011
+[s. ][What ] -> [s. What ] 1012
+[U][n] -> [Un] 1013
+[Un][cl] -> [Uncl] 1014
+[a][s ] -> [as ] 1015
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share ][bro ] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share bro ] 1016
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share bro ][oh] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share bro oh] 1017
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share bro oh][ sh] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share bro oh sh] 1018
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share bro oh sh][it sorry s] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share bro oh shit sorry s] 1019
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share bro oh shit sorry s][ending ] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share bro oh shit sorry sending ] 1020
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share bro oh shit sorry sending ][right now ] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share bro oh shit sorry sending right now ] 1021
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share bro oh shit sorry sending right now ][Why is ] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share bro oh shit sorry sending right now Why is ] 1022
+[Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share bro oh shit sorry sending right now Why is ][the b] -> [Guys electricity bill is out. 3600 rs. 1200 each. Pay me by tonight. Done. Sent on GPay.  waiting for your share bro oh shit sorry sending right now Why is the b] 1023
