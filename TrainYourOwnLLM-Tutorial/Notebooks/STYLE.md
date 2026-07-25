@@ -44,7 +44,9 @@ The markdown is the teaching. Aim it at the trap, not the syntax.
 - **Explain why, not what.** "`str.translate` applies the whole table in one C-level pass"
   beats "this replaces characters."
 - **Name the failure concretely.** Not "this can cause issues" but "the model samples id
-  1031, no vocab entry covers it, and generation dies with `KeyError` inside `decode()`."
+  1031, no vocab entry covers it, and generation dies with `ValueError: invalid token id`
+  inside `decode()`." (`BasicTokenizer` raises `KeyError` here instead — check which one you
+  are using before quoting an exception type.)
 - **Prose must match the output.** Notebook 2 claimed "more than 618K tokens" directly above
   a cell printing `57847`. If you change a number, re-read the markdown around it.
 - **State costs honestly.** `RegexTokenizer` made training *slower* (10.8s → 17.1s) while
