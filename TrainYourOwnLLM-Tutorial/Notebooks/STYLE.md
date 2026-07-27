@@ -105,6 +105,33 @@ if missing.any():
 
 Fast in the common case, still correct on mixed input. ~13x on our data.
 
+### Synchronize before timing anything on a GPU
+
+CUDA and MPS dispatch **asynchronously**. The Python call returns when the work is *queued*,
+not when it is done, so a naive timer measures how fast you can submit kernels — and any
+implementation that submits fewer of them looks spectacular.
+
+```python
+def synchronize(device):
+    if device == "cuda":   torch.cuda.synchronize()
+    elif device == "mps":  torch.mps.synchronize()
+
+for _ in range(3): module(x).sum().backward()   # warm-up: skip lazy init
+synchronize(device)
+start = time.perf_counter()
+for _ in range(repeats): module(x).sum().backward()
+synchronize(device)                              # <- without this the number is fiction
+```
+
+This cost us a claimed **23.5x** speedup for fused attention that was really **1.1x**. Also
+benchmark at the shape you actually train on: the same comparison at batch 8 / context 128 on
+CPU reads 1.5x, at batch 16 / context 256 on MPS it reads 1.1x.
+
+And do not trust `torch.mps.driver_allocated_memory()` as a peak-memory measure — it reports
+Metal heap growth, so whichever module runs second looks worse. If you cannot measure a
+resource claim cleanly, state the part you can verify (36 duplicated 256×256 mask buffers =
+9.4 MB is arithmetic, not a benchmark) and drop the rest.
+
 ### `errors="coerce"` already swallows failures
 
 So a `try/except` around it is dead code. Notebook 1 had one. If you want to know about
