@@ -71,13 +71,15 @@ class CausalSelfAttention(nn.Module):
         k = k.view(B, T, self.n_head, self.head_size).transpose(1, 2)
         v = v.view(B, T, self.n_head, self.head_size).transpose(1, 2)
 
+        # Dropout only means anything when gradients are going to flow through it. Under
+        # `no_grad` it would just add noise to a measurement, so it is switched off there
+        # as well as in eval mode. That is also what keeps this portable: the MPS fused
+        # kernel raises NotImplementedError for any non-zero dropout_p, and `no_grad` is
+        # exactly when PyTorch picks that kernel.
+        dropout_p = self.dropout if (self.training and torch.is_grad_enabled()) else 0.0
+
         # Scaling by 1/sqrt(head_size) and the causal mask are both handled internally.
-        # dropout_p must be 0 outside training, or evaluation becomes non-deterministic.
-        y = F.scaled_dot_product_attention(
-            q, k, v,
-            dropout_p=self.dropout if self.training else 0.0,
-            is_causal=True,
-        )
+        y = F.scaled_dot_product_attention(q, k, v, dropout_p=dropout_p, is_causal=True)
 
         # (B, n_head, T, head_size) -> (B, T, C), i.e. concatenate the heads back together
         y = y.transpose(1, 2).contiguous().view(B, T, C)
