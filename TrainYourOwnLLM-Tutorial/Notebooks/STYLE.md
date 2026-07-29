@@ -132,6 +132,34 @@ Metal heap growth, so whichever module runs second looks worse. If you cannot me
 resource claim cleanly, state the part you can verify (36 duplicated 256×256 mask buffers =
 9.4 MB is arithmetic, not a benchmark) and drop the rest.
 
+### A measurement cell must not mutate what it measures
+
+A "how fast is one training step?" cell that calls `optimizer.step()` on the real model leaves
+it several steps into training. Then the training loop's first evaluation is not the initial
+loss, and the curve silently starts from the wrong place — notebook 4 reported `step 0
+train 5.9553` when it should have been near `ln(1029) = 6.94`.
+
+Use throwaway copies for anything that probes, times, or overfits:
+
+```python
+timing_model = GPTLanguageModel(...).to(device)     # not `model`
+timing_optimizer = torch.optim.AdamW(timing_model.parameters(), lr=learning_rate)
+seconds_per_step = time_steps(timing_model, timing_optimizer, train_loader)
+del timing_model, timing_optimizer
+```
+
+The check that catches it is free: assert the loss at step 0 is near `ln(vocab_size)`.
+
+### Overlapping windows inflate predictions, not information
+
+A sliding-window dataset at `stride=1` makes 20 validation batches look like 163,840 token
+predictions. They cover about **900 distinct tokens**, because all 640 windows start within
+900 positions of each other. Expensive, correlated, and a poor estimate.
+
+Build the validation loader with `stride=block_size` so its windows are disjoint: one pass
+covers the held-out set exactly once. In notebook 4 that turned 20 batches over 15% of the
+validation set into 1 batch over all of it — cheaper *and* more meaningful.
+
 ### `errors="coerce"` already swallows failures
 
 So a `try/except` around it is dead code. Notebook 1 had one. If you want to know about
