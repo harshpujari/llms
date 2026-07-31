@@ -1,0 +1,498 @@
+03/02/2025, 09:58 - Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them. Tap to learn more.
+03/02/2025, 10:00 - Farhan: standup in 5, join the meet
+03/02/2025, 10:00 - Isha: omw
+03/02/2025, 10:01 - Devansh: 2 min, coffee first
+03/02/2025, 10:02 - Priyanka: joined
+03/02/2025, 10:22 - Farhan: good standup, remember to update jira tickets before eod
+03/02/2025, 10:23 - Isha: will do
+04/02/2025, 15:40 - Devansh: deploy to staging failed, build error in the auth module
+04/02/2025, 15:41 - Farhan: what's the error
+04/02/2025, 15:42 - Devansh: missing env var, JWT_SECRET not set on the new pipeline
+04/02/2025, 15:43 - Priyanka: added it just now, retry
+04/02/2025, 15:50 - Devansh: passed, thanks
+06/02/2025, 11:15 - Isha: anyone free to review my PR? its the search filter one
+06/02/2025, 11:30 - Priyanka: reviewing now
+06/02/2025, 12:00 - Priyanka: left some comments, mostly nits
+06/02/2025, 12:05 - Isha: thanks, addressing them
+07/02/2025, 03:20 - Devansh: guys pagerduty just woke me up, prod db cpu at 95%
+07/02/2025, 03:22 - Farhan: ugh. checking
+07/02/2025, 03:35 - Devansh: found a runaway query from the reports job, killing it
+07/02/2025, 03:40 - Devansh: cpu back to normal, going back to sleep
+07/02/2025, 08:00 - Farhan: sorry you had to handle that alone at 3am
+07/02/2025, 08:02 - Devansh: part of the job I guess. we really need to fix that reports job though
+07/02/2025, 08:03 - Priyanka: agreed, adding it to the backlog with high priority
+10/02/2025, 09:45 - Farhan: sprint planning at 11, come prepared with estimates
+10/02/2025, 09:46 - Isha: ok
+10/02/2025, 09:47 - Devansh: do we really need story points, can we just do t-shirt sizes
+10/02/2025, 09:48 - Farhan: lets discuss in the meeting
+10/02/2025, 11:35 - Isha: that planning meeting could have been 15 minutes not 45
+10/02/2025, 11:36 - Priyanka: agreed, too much debating over 3 vs 5 points
+10/02/2025, 11:37 - Devansh: told you t-shirt sizes would be faster lol
+12/02/2025, 14:00 - Priyanka: PR #234 has been open for 3 days, can someone review pls
+12/02/2025, 14:30 - Farhan: on it after lunch
+12/02/2025, 16:00 - Farhan: reviewed, approved
+12/02/2025, 16:01 - Priyanka: finally, merging
+14/02/2025, 10:00 - Isha: <Media omitted>
+14/02/2025, 10:01 - Devansh: is that the new dashboard mockup
+14/02/2025, 10:02 - Isha: yep, feedback welcome
+14/02/2025, 10:15 - Priyanka: looks clean, love the color scheme
+17/02/2025, 09:30 - Farhan: reminder, code freeze starts wednesday for the release
+17/02/2025, 09:31 - Devansh: noted
+17/02/2025, 09:32 - Isha: got it
+19/02/2025, 13:20 - Priyanka: merge conflict on the dashboard branch, anyone touched that recently
+19/02/2025, 13:22 - Isha: yeah I rebased earlier, sorry, let me help resolve
+19/02/2025, 13:45 - Isha: resolved, pushed
+19/02/2025, 13:46 - Priyanka: thanks, pulling now
+21/02/2025, 16:00 - Devansh: release went out clean, no rollbacks needed for once
+21/02/2025, 16:01 - Farhan: nice, small wins
+24/02/2025, 09:00 - Farhan: standup, who wants to go first
+24/02/2025, 09:01 - Devansh: I'll go, finished the cron refactor yesterday
+24/02/2025, 09:03 - Isha: working on the search filter still, almost done
+24/02/2025, 09:05 - Priyanka: fixing flaky tests in the CI pipeline
+26/02/2025, 15:00 - Isha: latency on the search endpoint is way up since yesterday
+26/02/2025, 15:02 - Devansh: checking the metrics dashboard now
+26/02/2025, 15:10 - Devansh: looks like the new index isn't being used, query planner picking a bad plan
+26/02/2025, 15:30 - Devansh: forced the index hint, latency back to normal
+26/02/2025, 15:31 - Farhan: good catch, add a comment in the code explaining why the hint is there
+28/02/2025, 11:00 - Priyanka: someone approve my PR when free, small css fix
+28/02/2025, 11:20 - Isha: approved
+03/03/2025, 09:15 - Farhan: happy monday. sprint 2 goals in the doc, take a look
+03/03/2025, 09:20 - Devansh: reading
+05/03/2025, 14:00 - Isha: does anyone know why staging env is so slow today
+05/03/2025, 14:02 - Priyanka: someone left a load test running probably
+05/03/2025, 14:05 - Devansh: yep that was me, sorry, killing it now
+05/03/2025, 14:06 - Isha: lol no worries
+07/03/2025, 10:30 - Farhan: @Isha are you coming to the design review at 2?
+07/03/2025, 10:35 - Isha: yes will be there
+10/03/2025, 03:05 - Priyanka: on call page, api gateway returning 502s
+10/03/2025, 03:07 - Priyanka: looks like the container OOM killed, restarting
+10/03/2025, 03:15 - Priyanka: back up, will investigate memory leak tomorrow
+10/03/2025, 08:30 - Farhan: thanks for handling that overnight, get some rest if you can
+10/03/2025, 08:31 - Priyanka: haha will try, standup at 10 tho
+10/03/2025, 15:00 - Priyanka: found the leak, a cache that never evicts old entries
+10/03/2025, 15:01 - Devansh: classic
+10/03/2025, 16:30 - Priyanka: fix deployed, added a TTL to the cache
+12/03/2025, 09:00 - Farhan: whos on call this week
+12/03/2025, 09:01 - Devansh: me, swapping with Isha next week
+14/03/2025, 12:00 - Isha: lunch order for the team lunch, what's everyone want
+14/03/2025, 12:02 - Devansh: usual, chicken biryani
+14/03/2025, 12:03 - Priyanka: same for me
+14/03/2025, 12:04 - Farhan: paneer for me thanks
+17/03/2025, 09:40 - Devansh: PR review reminder, I've got 2 sitting for review since friday
+17/03/2025, 09:41 - Priyanka: sorry, reviewing now
+17/03/2025, 10:15 - Priyanka: done, left a comment about the naming
+19/03/2025, 14:00 - Isha: rolling back the last deploy, seeing error spikes
+19/03/2025, 14:01 - Farhan: what kind of errors
+19/03/2025, 14:02 - Isha: 500s on the checkout flow, started right after deploy
+19/03/2025, 14:10 - Isha: rollback done, errors stopped
+19/03/2025, 14:12 - Devansh: what changed in that deploy
+19/03/2025, 14:15 - Isha: the payment gateway sdk upgrade, must be a breaking change
+19/03/2025, 14:16 - Farhan: lets test that thoroughly in staging before trying again
+21/03/2025, 11:00 - Isha: found the issue, sdk changed the response format for a field we rely on
+21/03/2025, 11:01 - Isha: fixed and tested in staging, redeploying tomorrow morning
+21/03/2025, 11:02 - Farhan: good, lets not deploy risky stuff on a friday afternoon again lol
+24/03/2025, 09:00 - Isha: redeployed this morning, all green
+24/03/2025, 09:01 - Priyanka: nice recovery from friday
+26/03/2025, 16:00 - Farhan: reminder, all PRs need at least one approval before merge now, new team rule
+26/03/2025, 16:01 - Devansh: about time honestly
+28/03/2025, 10:00 - Priyanka: This message was deleted
+28/03/2025, 10:02 - Devansh: what happened there
+28/03/2025, 10:03 - Priyanka: accidentally sent something meant for another chat lol
+31/03/2025, 09:30 - Farhan: sprint retro at 4 today, come with your notes
+31/03/2025, 09:31 - Isha: will do
+31/03/2025, 16:20 - Devansh: retro takeaway, we need better test coverage before merging risky stuff
+31/03/2025, 16:22 - Farhan: agreed, adding to next sprint
+02/04/2025, 09:15 - Priyanka: morning, anyone else's laptop being super slow today
+02/04/2025, 09:16 - Isha: mine's fine, maybe restart
+02/04/2025, 09:20 - Priyanka: restarted, better now
+04/04/2025, 13:00 - Devansh: PR up for the notification service refactor, its a big one, sorry in advance
+04/04/2025, 13:01 - Farhan: how big
+04/04/2025, 13:02 - Devansh: like 800 lines, mostly moving things around though
+04/04/2025, 13:05 - Priyanka: I'll take a first pass this afternoon
+07/04/2025, 03:40 - Farhan: page again, redis connection pool exhausted
+07/04/2025, 03:42 - Farhan: restarted the redis instance, investigating root cause tomorrow
+07/04/2025, 08:15 - Devansh: three 3am pages this month already, we need to fix our infra properly
+07/04/2025, 08:17 - Farhan: agreed, lets prioritize the infra hardening epic this sprint
+09/04/2025, 11:00 - Priyanka: reviewed the notification refactor, looks solid, few small comments
+09/04/2025, 11:01 - Devansh: addressing now
+11/04/2025, 15:00 - Isha: does anyone remember why we chose mongo for the events table
+11/04/2025, 15:02 - Farhan: before my time, probably worth revisiting given how it's grown
+14/04/2025, 09:00 - Farhan: standup, sprint's halfway done, how are we tracking
+14/04/2025, 09:02 - Isha: on track for my tickets
+14/04/2025, 09:03 - Devansh: a bit behind, that refactor took longer than expected
+14/04/2025, 09:05 - Priyanka: on track
+16/04/2025, 14:30 - Devansh: notification refactor merged finally
+16/04/2025, 14:31 - Farhan: great, appreciate the patience on that one
+18/04/2025, 10:00 - Isha: found a weird bug, timestamps off by exactly 5:30, must be a timezone thing
+18/04/2025, 10:02 - Devansh: classic IST vs UTC bug, where is it happening
+18/04/2025, 10:05 - Isha: the export csv, dates showing wrong for some rows
+18/04/2025, 10:30 - Isha: fixed, was storing local time without timezone info in one place
+21/04/2025, 09:30 - Priyanka: null
+21/04/2025, 09:31 - Farhan: lol did you mean to send that
+21/04/2025, 09:32 - Priyanka: no idea, keyboard glitch maybe, ignore
+23/04/2025, 16:00 - Devansh: infra hardening epic kickoff, starting with redis config review
+23/04/2025, 16:01 - Farhan: good, keep us posted
+25/04/2025, 09:00 - Farhan: quick heads up, hiring for a 5th engineer, keep an eye out for referrals
+25/04/2025, 09:01 - Isha: oh nice, do we know what we need most
+25/04/2025, 09:02 - Farhan: someone strong on infra/devops honestly
+28/04/2025, 13:00 - Devansh: redis fix deployed, added connection pooling limits and alerts
+28/04/2025, 13:01 - Priyanka: love that we're finally being proactive instead of reactive
+30/04/2025, 09:15 - Isha: sprint review today, demo the export fix and notification refactor
+30/04/2025, 09:16 - Farhan: sounds good, who's presenting what
+30/04/2025, 09:17 - Isha: I'll do export, Devansh can do notifications
+02/05/2025, 11:00 - Priyanka: found a candidate for the infra role, resume looks strong
+02/05/2025, 11:01 - Farhan: send it over, I'll do a quick screen
+05/05/2025, 15:00 - Devansh: PR waiting for review since morning, its just a small logging change
+05/05/2025, 15:20 - Isha: approved sorry, was heads down
+07/05/2025, 03:15 - Isha: on call page, disk space alert on the log server
+07/05/2025, 03:17 - Isha: old logs weren't being rotated properly, clearing now
+07/05/2025, 03:30 - Isha: cleared and fixed the rotation cron, should be sorted going forward
+07/05/2025, 09:00 - Farhan: another overnight page, we really need that infra hire soon
+09/05/2025, 14:00 - Priyanka: interview with the infra candidate went well
+09/05/2025, 14:01 - Farhan: good, moving to final round then
+12/05/2025, 09:30 - Farhan: standup, whats blocking anyone this week
+12/05/2025, 09:31 - Devansh: waiting on design specs for the settings page
+12/05/2025, 09:33 - Isha: I'll get those to you by eod
+14/05/2025, 16:00 - Farhan: final round with the infra candidate tomorrow
+14/05/2025, 16:01 - Devansh: exciting, hope it goes well
+16/05/2025, 10:00 - Farhan: offer going out to the infra candidate, his name's Karthik
+16/05/2025, 10:01 - Priyanka: yesss, welcome soon Karthik
+19/05/2025, 09:00 - Devansh: Karthik accepted, starts in 3 weeks
+19/05/2025, 09:01 - Isha: relief, more hands on infra finally
+21/05/2025, 14:00 - Isha: staging deploy stuck, pipeline hanging on the test stage
+21/05/2025, 14:05 - Devansh: checking, might be a flaky integration test
+21/05/2025, 14:20 - Devansh: yep, one test has a race condition, skipping it for now and filing a ticket
+23/05/2025, 09:00 - Farhan: sprint planning, lets be more realistic with estimates this time
+23/05/2025, 09:01 - Priyanka: lol every sprint we say that
+26/05/2025, 11:00 - Isha: PR up for settings page, ready for review whenever
+26/05/2025, 15:00 - Priyanka: reviewing
+26/05/2025, 15:30 - Priyanka: looks good, approved
+28/05/2025, 03:50 - Devansh: page, api response times spiking badly
+28/05/2025, 03:52 - Devansh: seems like a slow query again, this time on the orders table
+28/05/2025, 04:10 - Devansh: added a missing index, times back to normal
+28/05/2025, 09:00 - Farhan: this is exactly the kind of thing Karthik can help systematize once he's here
+30/05/2025, 12:00 - Devansh: <Media omitted>
+30/05/2025, 12:01 - Isha: is that the new grafana dashboard
+30/05/2025, 12:02 - Devansh: yep, much better visibility now
+02/06/2025, 09:00 - Farhan: Karthik's first day today, everyone say hi
+02/06/2025, 09:01 - Isha: welcome Karthik!!
+02/06/2025, 09:02 - Priyanka: excited to have you here
+04/06/2025, 15:00 - Devansh: giving karthik a tour of the infra setup, lots to explain honestly
+04/06/2025, 15:01 - Farhan: take your time, better he understands it deeply now than later
+06/06/2025, 10:00 - Karthik: hey team, settling in well, this codebase has some interesting history lol
+06/06/2025, 10:01 - Devansh: haha yeah, 2 years of decisions made under pressure
+09/06/2025, 09:30 - Farhan: standup, karthik any first impressions on infra
+09/06/2025, 09:32 - Karthik: few quick wins I can see already, will write up a doc
+11/06/2025, 14:00 - Karthik: doc's up, proposing better alerting thresholds and a proper on call rotation tool
+11/06/2025, 14:01 - Priyanka: finally someone who thinks about this stuff full time
+13/06/2025, 16:00 - Farhan: reminder, PR review SLA is 24 hours now, lets actually stick to it
+13/06/2025, 16:01 - Devansh: fair, I've been slow on this lately, will do better
+16/06/2025, 09:00 - Isha: sprint retro notes from last week, we're getting better at estimates slowly
+16/06/2025, 09:01 - Farhan: progress
+18/06/2025, 11:00 - Karthik: setting up the new on call tool, migrating pagerduty rotations this week
+18/06/2025, 11:01 - Devansh: thank god, pagerduty ui is painful
+20/06/2025, 03:00 - Karthik: first page for me, api gateway timeout
+20/06/2025, 03:15 - Karthik: fixed, was a connection leak in the new service, patched and monitoring
+20/06/2025, 09:00 - Farhan: welcome to the on call club karthik lol
+20/06/2025, 09:01 - Karthik: what an introduction 😅
+23/06/2025, 10:00 - Priyanka: PR nagging time, I have 3 open for review, please look when you can
+23/06/2025, 10:30 - Isha: reviewing one now
+23/06/2025, 11:00 - Karthik: reviewing another
+25/06/2025, 15:00 - Devansh: found a really old TODO comment from before I joined, "fix this properly later - 2022"
+25/06/2025, 15:01 - Farhan: lol some things never change
+27/06/2025, 09:00 - Farhan: sprint goals for next 2 weeks in the doc, mostly infra hardening and the settings page rollout
+27/06/2025, 09:01 - Isha: looks reasonable
+30/06/2025, 14:00 - Karthik: new alerting is live, way fewer false positives already
+30/06/2025, 14:01 - Devansh: noticeably calmer slack channel this week ngl
+02/07/2025, 09:30 - Priyanka: standup, anything blocking anyone
+02/07/2025, 09:31 - Devansh: nope, smooth sailing for once
+04/07/2025, 16:00 - Isha: settings page shipped to prod, no issues so far
+04/07/2025, 16:01 - Farhan: nice clean release
+07/07/2025, 11:00 - Devansh: quick PR up, just a small refactor of the auth middleware
+07/07/2025, 11:20 - Priyanka: approved
+09/07/2025, 03:30 - Karthik: page, disk usage alert again, but this time caught before it got critical
+09/07/2025, 03:40 - Karthik: cleared and the new alerting caught it way earlier than before, exactly as designed
+09/07/2025, 09:00 - Farhan: this is what good infra work looks like, proud of the progress
+11/07/2025, 14:00 - Isha: does anyone have context on the old billing service, need to touch it for a bug fix
+11/07/2025, 14:02 - Farhan: Devansh probably knows best, he built the original version
+11/07/2025, 14:03 - Devansh: yeah give me 10 mins, will walk you through it
+14/07/2025, 09:00 - Farhan: standup, halfway through the sprint, we're on track for once
+14/07/2025, 09:01 - Priyanka: feels good to say that honestly
+16/07/2025, 15:00 - Devansh: heads up, I'm thinking about leaving the company, got an offer elsewhere
+16/07/2025, 15:02 - Farhan: oh. can we talk 1:1 first before anything's decided
+16/07/2025, 15:03 - Devansh: yeah of course, just wanted to give you a heads up first
+16/07/2025, 15:05 - Isha: oh wow, wasn't expecting that
+16/07/2025, 15:06 - Priyanka: hope everything's ok, congrats on the offer though if that's the direction
+18/07/2025, 11:00 - Farhan: had the chat with Devansh, he's decided to move on, last day is in 3 weeks
+18/07/2025, 11:01 - Isha: gonna miss having him around honestly
+18/07/2025, 11:02 - Priyanka: same, he's been here since day one basically
+18/07/2025, 11:03 - Karthik: sorry to hear, though I've only known him a short while, good energy on the team
+21/07/2025, 09:00 - Devansh: hey team, wanted to say it myself, moving on to a new role but this has been a great run
+21/07/2025, 09:01 - Isha: 2 years of memories, gonna be weird without you in standup
+21/07/2025, 09:02 - Devansh: haha same, who's gonna get paged at 3am for db issues now
+21/07/2025, 09:03 - Karthik: that would be me apparently, no pressure
+23/07/2025, 14:00 - Farhan: lets plan a proper handover doc for everything Devansh owns
+23/07/2025, 14:01 - Devansh: already drafting one, will share by friday
+25/07/2025, 16:00 - Devansh: <Media omitted>
+25/07/2025, 16:01 - Farhan: is that the handover doc
+25/07/2025, 16:02 - Devansh: yep, tried to cover everything, ping me if anything's missing
+28/07/2025, 10:00 - Priyanka: going through the handover doc, really thorough, thank you
+28/07/2025, 10:01 - Devansh: wanted to leave things in good shape
+30/07/2025, 09:30 - Farhan: standup, lets talk backfilling devansh's role after he's gone
+30/07/2025, 09:32 - Karthik: I can take some of the backend stuff temporarily while we hire
+01/08/2025, 15:00 - Devansh: 2 weeks left, feels surreal honestly
+01/08/2025, 15:01 - Isha: don't make it weird, we still have your farewell lunch to plan
+04/08/2025, 09:00 - Farhan: opened the backend role today to backfill, will share the posting
+04/08/2025, 09:01 - Priyanka: sharing with my network too
+06/08/2025, 14:00 - Devansh: last PR review as an official team member lol, feels nostalgic
+06/08/2025, 14:01 - Karthik: approved, end of an era
+08/08/2025, 12:00 - Isha: farewell lunch friday, everyone confirm attendance
+08/08/2025, 12:01 - Priyanka: definitely coming
+08/08/2025, 12:02 - Farhan: same, wouldn't miss it
+11/08/2025, 09:00 - Devansh: last standup today, feels like the first one all over again but backwards
+11/08/2025, 09:01 - Farhan: you've been a huge part of building this team, thank you for everything
+13/08/2025, 13:00 - Devansh: farewell lunch was amazing, thank you all, this team means a lot to me
+13/08/2025, 13:01 - Isha: gonna miss you so much, keep in touch
+13/08/2025, 13:02 - Karthik: good luck out there, was great working with you even briefly
+13/08/2025, 13:03 - Priyanka: this chat won't be the same without you
+15/08/2025, 09:00 - Farhan: officially devansh's last day, thank you for two great years
+15/08/2025, 09:01 - Devansh: thank you all, this was the best team I've worked with. see you around
+18/08/2025, 09:30 - Farhan: standup, first one without devansh, feels different
+18/08/2025, 09:32 - Karthik: taking over the billing service stuff this week per the handover doc
+18/08/2025, 09:33 - Isha: doc's been super helpful honestly
+20/08/2025, 15:00 - Priyanka: interviewing backfill candidates this week
+20/08/2025, 15:01 - Farhan: good, keep me posted
+22/08/2025, 09:00 - Karthik: first solo on call week without devansh's backup, feeling the pressure a bit
+22/08/2025, 09:01 - Farhan: you've got this, we're all here if you need help
+25/08/2025, 03:00 - Karthik: page, memory spike on the billing service
+25/08/2025, 03:20 - Karthik: handled it solo, felt good honestly, the handover doc really helped
+25/08/2025, 09:00 - Isha: proud of you karthik
+27/08/2025, 14:00 - Priyanka: strong candidate for the backfill role, final round next week
+27/08/2025, 14:01 - Farhan: exciting, hope it works out
+29/08/2025, 09:00 - Farhan: sprint retro, team's adjusting well to the new setup honestly
+29/08/2025, 09:01 - Karthik: still getting used to being the infra and backend person but its going ok
+01/09/2025, 10:00 - Priyanka: final round done, offer going out to the backfill candidate
+01/09/2025, 10:01 - Farhan: great, whats the timeline
+01/09/2025, 10:02 - Priyanka: could start in 3 weeks if he accepts
+03/09/2025, 15:00 - Isha: he accepted! his name's Rehan, starts september 22
+03/09/2025, 15:01 - Karthik: nice, relief honestly, could use the extra hands
+06/09/2025, 09:00 - Farhan: standup, sprint's going smoothly, good momentum this week
+06/09/2025, 09:01 - Priyanka: PR review turnaround has been great lately too
+09/09/2025, 14:00 - Karthik: proposing we add a staging smoke test before every prod deploy, would've caught a few of our past incidents
+09/09/2025, 14:01 - Farhan: good idea, lets prioritize it
+12/09/2025, 11:00 - Isha: smoke test suite is up, catches basic breakage before it hits prod
+12/09/2025, 11:01 - Priyanka: this would've saved us that friday checkout incident back in march
+15/09/2025, 09:00 - Farhan: standup, karthik hows the transition going overall
+15/09/2025, 09:01 - Karthik: better each week honestly, the team's been really supportive
+18/09/2025, 03:20 - Isha: page, api gateway 502s again
+18/09/2025, 03:25 - Isha: smoke test would've caught this if it were a deploy issue but this looks like an upstream outage
+18/09/2025, 03:40 - Isha: confirmed, our cloud provider had a regional issue, nothing on our end, recovered on its own
+18/09/2025, 09:00 - Farhan: glad it wasn't us for once
+22/09/2025, 09:00 - Farhan: rehan's first day today, everyone say hi
+22/09/2025, 09:01 - Isha: welcome rehan!!
+22/09/2025, 09:02 - Priyanka: excited to have you, team's back to 4 again
+24/09/2025, 15:00 - Karthik: giving rehan a walkthrough of the billing service since I own it now
+24/09/2025, 15:01 - Farhan: perfect, good to spread that knowledge around early
+26/09/2025, 09:30 - Farhan: standup, sprint review friday, lets make sure everything's demo ready
+26/09/2025, 09:31 - Isha: on it
+29/09/2025, 14:00 - Rehan: first PR up, small logging fix, nervous about my first review here
+29/09/2025, 14:20 - Priyanka: approved, welcome to the team officially now lol
+02/10/2025, 09:00 - Farhan: standup, quarter's almost over, lets review what shipped
+02/10/2025, 09:01 - Isha: shipped the settings page, export fix, and the smoke test suite this quarter
+02/10/2025, 09:02 - Karthik: plus survived a very eventful team transition
+02/10/2025, 09:03 - Farhan: honestly proud of how the team handled all of it
+05/10/2025, 09:00 - Priyanka: morning all, quiet monday for once
+05/10/2025, 09:01 - Karthik: enjoy it while it lasts lol
+08/10/2025, 11:00 - Rehan: question about the deploy pipeline, is staging always this flaky
+08/10/2025, 11:02 - Karthik: honestly yes, its on our list to fix properly, welcome to the team haha
+10/10/2025, 15:00 - Isha: PR up for the reports page redesign
+10/10/2025, 15:30 - Rehan: I can take a look, want the practice reviewing bigger PRs
+13/10/2025, 09:00 - Farhan: standup, good pace this sprint, everyone's ticket load looking healthy
+13/10/2025, 09:01 - Priyanka: feels stable finally after all the changes this year
+16/10/2025, 14:00 - Rehan: PR ready for the reports redesign, first big one from me
+16/10/2025, 14:05 - Isha: reviewing now, excited to see it
+16/10/2025, 15:00 - Isha: this is really solid work, minor comments only
+16/10/2025, 15:01 - Rehan: relief, thank you
+18/10/2025, 09:00 - Farhan: standup, whats everyone's focus this week
+18/10/2025, 09:01 - Karthik: fixing the flaky staging pipeline finally
+18/10/2025, 09:02 - Priyanka: continuing the reports redesign QA
+18/10/2025, 09:03 - Rehan: onboarding stuff still, reading through more of the codebase
+21/10/2025, 03:10 - Karthik: page, cpu spike on the worker nodes
+21/10/2025, 03:15 - Karthik: batch job running way more instances than expected, scaling config bug
+21/10/2025, 03:30 - Karthik: capped the max instances, cpu back to normal, will fix the config properly tomorrow
+21/10/2025, 09:00 - Farhan: thanks for handling that, get some rest before standup if you need
+21/10/2025, 09:01 - Karthik: I'm ok, made coffee, lets go
+23/10/2025, 11:00 - Priyanka: found a bug in the reports redesign during QA, numbers not matching the old page
+23/10/2025, 11:02 - Rehan: looking into it now
+23/10/2025, 14:00 - Rehan: found it, timezone issue again lol, we really need to standardize this across the app
+23/10/2025, 14:01 - Isha: seriously, this is like the third time this year
+25/10/2025, 16:00 - Farhan: proposing we add a timezone handling guideline to our eng docs
+25/10/2025, 16:01 - Isha: yes please, long overdue
+27/10/2025, 09:00 - Farhan: standup, sprint review this week, reports redesign should be demo ready
+27/10/2025, 09:01 - Rehan: fix deployed, numbers matching now
+29/10/2025, 13:00 - Karthik: staging pipeline fix merged, should be way less flaky now
+29/10/2025, 13:01 - Priyanka: fingers crossed, that thing has been annoying for months
+31/10/2025, 15:00 - Isha: reports redesign shipped to prod, went smooth
+31/10/2025, 15:01 - Farhan: great demo today too, clients are gonna love this
+03/11/2025, 09:30 - Farhan: standup, new sprint, lets set realistic goals please
+03/11/2025, 09:31 - Priyanka: every sprint we say that lol, this time for real though
+05/11/2025, 14:00 - Rehan: quick PR up, adding tests for the reports page
+05/11/2025, 14:30 - Karthik: approved, good coverage
+07/11/2025, 03:00 - Priyanka: page, database replica lag alert
+07/11/2025, 03:10 - Priyanka: replica catching up, was a large batch write, monitoring
+07/11/2025, 03:25 - Priyanka: lag back to normal
+07/11/2025, 09:00 - Farhan: another quiet-ish night for once, appreciated
+10/11/2025, 11:00 - Karthik: timezone guideline doc is up, please read before writing new date logic
+10/11/2025, 11:01 - Isha: reading now, this is helpful
+12/11/2025, 15:00 - Rehan: does anyone know why we have two different date libraries in the codebase
+12/11/2025, 15:02 - Karthik: legacy reasons probably, worth consolidating at some point
+14/11/2025, 09:00 - Farhan: standup, lets talk about consolidating the date libraries as a small cleanup task
+14/11/2025, 09:01 - Priyanka: I can take that on, shouldn't be too bad
+17/11/2025, 14:00 - Priyanka: PR up for date library consolidation
+17/11/2025, 14:30 - Rehan: reviewing
+17/11/2025, 15:00 - Rehan: looks good, approved
+19/11/2025, 09:00 - Isha: morning, anyone else notice the CI is slower than usual today
+19/11/2025, 09:02 - Karthik: checking, might be a resource contention issue on the runners
+19/11/2025, 09:30 - Karthik: bumped the runner resources, should be faster now
+21/11/2025, 16:00 - Farhan: sprint retro, good progress this sprint, team's really hitting a rhythm
+21/11/2025, 16:01 - Isha: feels good to say that honestly
+24/11/2025, 09:00 - Farhan: standup, quiet week ahead hopefully before the holidays
+24/11/2025, 09:01 - Rehan: fingers crossed
+26/11/2025, 13:00 - Karthik: heads up, doing some proactive db maintenance this weekend, might see brief blips
+26/11/2025, 13:01 - Farhan: thanks for the heads up, will keep an eye
+29/11/2025, 09:00 - Karthik: maintenance went smoothly, no issues
+29/11/2025, 09:01 - Priyanka: nice, good weekend work
+01/12/2025, 09:30 - Farhan: standup, december already, lets wrap the year strong
+01/12/2025, 09:31 - Isha: excited for the holidays not gonna lie
+03/12/2025, 14:00 - Rehan: PR up for the notification preferences feature
+03/12/2025, 14:30 - Isha: reviewing
+03/12/2025, 15:00 - Isha: nice work, few small comments
+05/12/2025, 03:30 - Rehan: uh guys my first ever page, not sure what to do
+05/12/2025, 03:31 - Karthik: what's the alert say
+05/12/2025, 03:32 - Rehan: high error rate on the auth service
+05/12/2025, 03:33 - Karthik: check the logs first, look for a stack trace pattern
+05/12/2025, 03:45 - Rehan: found it, a null check missing after a recent deploy, rolling back
+05/12/2025, 03:50 - Rehan: rollback done, errors stopped
+05/12/2025, 09:00 - Farhan: nice work handling your first page solo rehan
+05/12/2025, 09:01 - Rehan: honestly terrifying but karthik's guidance helped a lot
+05/12/2025, 09:02 - Karthik: you did great, thats basically the whole job
+08/12/2025, 11:00 - Priyanka: notification preferences feature ready for QA
+08/12/2025, 11:01 - Farhan: nice, on track for the release this week
+10/12/2025, 15:00 - Isha: found an edge case, preferences not saving for users with no email set
+10/12/2025, 15:02 - Rehan: on it
+10/12/2025, 16:00 - Rehan: fixed, added a fallback for that case
+12/12/2025, 09:00 - Farhan: standup, last sprint before the holiday break
+12/12/2025, 09:01 - Karthik: lets keep changes small and low risk this close to break
+15/12/2025, 13:00 - Priyanka: notification preferences shipped, all good so far
+15/12/2025, 13:01 - Farhan: great way to close out the feature work for the year
+17/12/2025, 09:00 - Farhan: code freeze starting friday through the new year, only critical fixes after that
+17/12/2025, 09:01 - Isha: noted
+19/12/2025, 16:00 - Farhan: last standup before break, thank you all for a solid year
+19/12/2025, 16:01 - Priyanka: this year had a lot of change but the team came out stronger
+19/12/2025, 16:02 - Karthik: agreed, proud of where we landed
+19/12/2025, 16:03 - Rehan: my first few months here have been a wild ride already, excited for more
+22/12/2025, 10:00 - Farhan: happy holidays team, enjoy the break, see you in january
+22/12/2025, 10:01 - Isha: happy holidays!!
+22/12/2025, 10:02 - Priyanka: see you all next year
+22/12/2025, 10:03 - Karthik: happy holidays everyone
+05/01/2026, 09:30 - Farhan: happy new year team, hope everyone had a good break
+05/01/2026, 09:31 - Isha: happy new year! feeling recharged
+05/01/2026, 09:32 - Rehan: happy new year, ready for round 2
+07/01/2026, 09:00 - Farhan: standup, first sprint of the year, lets set the tone
+07/01/2026, 09:01 - Karthik: infra roadmap for the year is in the doc, take a look when you can
+09/01/2026, 14:00 - Priyanka: reviewing the infra roadmap, looks ambitious but doable
+09/01/2026, 14:01 - Karthik: thanks, tried to be realistic given last year's lessons
+12/01/2026, 03:15 - Isha: page, ssl cert expired on one of the subdomains
+12/01/2026, 03:20 - Isha: renewed manually, need to fix the auto renewal cron
+12/01/2026, 09:00 - Karthik: adding cert expiry to the monitoring dashboard, should never surprise us again
+14/01/2026, 09:00 - Farhan: standup, good energy this week, lets keep it going
+14/01/2026, 09:01 - Rehan: PR up for the search improvements ticket
+16/01/2026, 11:00 - Priyanka: reviewing rehan's PR now
+16/01/2026, 11:30 - Priyanka: solid work, approved with minor comments
+19/01/2026, 09:00 - Farhan: standup, sprint review friday, prep your demos
+19/01/2026, 09:01 - Isha: will do
+21/01/2026, 15:00 - Karthik: cert auto renewal cron fixed and tested
+21/01/2026, 15:01 - Isha: great, one less thing to worry about
+23/01/2026, 13:00 - Rehan: search improvements shipped, feedback from early users looking good so far
+23/01/2026, 13:01 - Farhan: nice, appreciate the quick turnaround
+26/01/2026, 09:30 - Farhan: standup, republic day tomorrow, office closed
+26/01/2026, 09:31 - Priyanka: long weekend, finally
+28/01/2026, 14:00 - Isha: back from the break, feeling good
+28/01/2026, 14:01 - Karthik: same, needed that
+30/01/2026, 03:00 - Rehan: page, disk usage warning on the logging server again
+30/01/2026, 03:10 - Rehan: cleared old logs manually, checking the rotation config
+30/01/2026, 03:30 - Rehan: found it, rotation cron pointed at the wrong directory after a recent migration, fixed
+30/01/2026, 09:00 - Karthik: good debugging at 3am, that migration bug could've bitten us for a while
+02/02/2026, 09:00 - Farhan: standup, one year since we hit that first big incident together
+02/02/2026, 09:01 - Priyanka: feels like a different team now honestly, in a good way
+04/02/2026, 15:00 - Isha: PR up for the profile page revamp
+04/02/2026, 15:30 - Rehan: I'll review this one
+06/02/2026, 09:00 - Rehan: reviewed, looks great, small suggestion on the loading state
+06/02/2026, 09:15 - Isha: good catch, fixing
+09/02/2026, 09:30 - Farhan: standup, sprint's on track, morale seems high across the board
+09/02/2026, 09:31 - Karthik: yeah honestly this is the smoothest stretch we've had in a while
+11/02/2026, 14:00 - Priyanka: profile page revamp ready for QA
+11/02/2026, 14:01 - Farhan: nice pace this sprint
+13/02/2026, 16:00 - Isha: profile page revamp shipped, no issues
+13/02/2026, 16:01 - Farhan: clean release, love to see it
+16/02/2026, 09:00 - Farhan: standup, lets talk Q1 goals and what's left before end of quarter
+16/02/2026, 09:01 - Karthik: infra roadmap is roughly on track, a couple items slipping to Q2
+16/02/2026, 09:02 - Priyanka: feature side is looking good, mostly on schedule
+18/02/2026, 11:00 - Rehan: six months in now, feels like I've been here way longer honestly
+18/02/2026, 11:01 - Isha: you've fit right in, feels like you've always been here
+20/02/2026, 13:00 - Karthik: proposing a small offsite for the eng team sometime next month
+20/02/2026, 13:01 - Farhan: love that idea, lets plan it
+23/02/2026, 09:00 - Farhan: standup, quiet week, good time to knock out some tech debt
+23/02/2026, 09:01 - Priyanka: finally getting to that old TODO from 2022 lol
+25/02/2026, 14:00 - Farhan: offsite booked, a resort a couple hours out, first week of march
+25/02/2026, 14:01 - Isha: excited, been way too long since we did something outside work
+27/02/2026, 09:30 - Farhan: standup, last one before the offsite, keep changes small this week
+27/02/2026, 09:31 - Karthik: agreed, no risky deploys before we're all out of office
+02/03/2026, 08:00 - Isha: heading to the resort, traffic already bad
+02/03/2026, 08:02 - Rehan: same, leaving now
+02/03/2026, 08:03 - Karthik: already here, grabbed good rooms jk
+02/03/2026, 20:00 - Priyanka: today was really fun, needed this
+02/03/2026, 20:01 - Farhan: good to bond outside of jira tickets for once
+04/03/2026, 09:00 - Farhan: back to reality, standup at 10 as usual
+04/03/2026, 09:01 - Isha: back to it
+06/03/2026, 15:00 - Rehan: PR up for the mobile responsiveness fixes
+06/03/2026, 15:30 - Priyanka: reviewing
+06/03/2026, 16:00 - Priyanka: looks good, approved
+09/03/2026, 03:20 - Karthik: page, worker queue backed up badly
+09/03/2026, 03:25 - Karthik: consumer crashed silently a few hours ago, restarting and adding a health check
+09/03/2026, 03:45 - Karthik: queue draining now, will add proper alerting for consumer health tomorrow
+09/03/2026, 09:00 - Farhan: thanks for catching that, add it to the infra backlog
+11/03/2026, 09:30 - Farhan: standup, mobile fixes shipping this week hopefully
+11/03/2026, 09:31 - Rehan: yep, on track
+13/03/2026, 14:00 - Isha: mobile responsiveness fixes shipped, tested on a bunch of devices
+13/03/2026, 14:01 - Farhan: great, been getting complaints about this for a while
+16/03/2026, 09:00 - Farhan: standup, sprint's flying by, good pace this month overall
+16/03/2026, 09:01 - Karthik: consumer health check work is done, queue issues should be way less common now
+18/03/2026, 11:00 - Priyanka: PR up, small fix for a rare race condition in the checkout flow
+18/03/2026, 11:30 - Isha: reviewing
+18/03/2026, 12:00 - Isha: nice catch, approved
+20/03/2026, 15:00 - Rehan: does anyone have bandwidth to pair on a tricky bug, cant reproduce it locally
+20/03/2026, 15:02 - Karthik: I can hop on a call in 20
+20/03/2026, 16:00 - Rehan: found it with karthik's help, thanks, was a caching issue specific to prod config
+23/03/2026, 09:00 - Farhan: standup, whats blocking anyone
+23/03/2026, 09:01 - Isha: waiting on design feedback for the next feature
+23/03/2026, 09:02 - Priyanka: nothing blocking here
+25/03/2026, 14:00 - Karthik: proposing we do a quarterly infra review, similar cadence to sprint retros
+25/03/2026, 14:01 - Farhan: good idea, lets add it to the calendar
+27/03/2026, 03:00 - Rehan: page, api latency alert
+27/03/2026, 03:10 - Rehan: traced it to a third party service we call being slow, not on us
+27/03/2026, 03:20 - Rehan: added a timeout and fallback so it fails gracefully now instead of hanging
+27/03/2026, 09:00 - Karthik: great instinct adding that fallback, exactly the right move
+30/03/2026, 09:00 - Farhan: standup, first quarterly infra review this week, exciting milestone
+30/03/2026, 09:01 - Priyanka: feels like we've built a lot of good process this past year
+02/04/2026, 15:00 - Karthik: infra review went well, team's in a really good place compared to a year ago
+02/04/2026, 15:01 - Farhan: night and day difference honestly, remember the daily pages we used to get
+02/04/2026, 15:02 - Isha: dont remind me lol, we've earned this calm
+04/04/2026, 09:30 - Farhan: standup, quiet friday, good week overall
+04/04/2026, 09:31 - Rehan: smooth sprint, nothing major to report
+06/04/2026, 11:00 - Priyanka: PR up for the last ticket in this sprint
+06/04/2026, 11:30 - Rehan: approved, clean sprint close
+08/04/2026, 09:00 - Farhan: sprint review today, good stuff to demo this time
+08/04/2026, 09:01 - Isha: excited to show off the mobile fixes and checkout improvements
+08/04/2026, 16:00 - Farhan: great review, stakeholders were happy with the pace this quarter
+08/04/2026, 16:01 - Karthik: team's really hitting its stride

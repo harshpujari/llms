@@ -1,1000 +1,999 @@
-14/07/2026, 18:30 - Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them. Tap to learn more.
-02/07/2026, 16:27 - Anjali: Did you hear about the new manager in sales?
-02/07/2026, 16:32 - Sneha: No what happened?? Spill the tea.
-02/07/2026, 16:37 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-02/07/2026, 16:41 - Sneha: Omg that's insane. Poor intern.
-02/07/2026, 16:45 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-02/07/2026, 16:47 - Sneha: Okkk coming to your desk.
-02/07/2026, 17:28 - Sneha: I am so done with today.
-02/07/2026, 17:43 - Anjali: Same. Let's log off.
-02/07/2026, 17:48 - Sneha: Bye see you tomorrow.
-06/07/2026, 12:54 - Sneha: What are we doing for lunch?
-06/07/2026, 13:09 - Anjali: I brought dabba but I'm craving junk food.
-06/07/2026, 13:11 - Sneha: Let's order pizza? We can split.
-06/07/2026, 13:16 - Anjali: Yes please. Order from the place near our office.
-06/07/2026, 13:21 - Sneha: Done, ordering now. Should arrive in 30 mins.
-07/07/2026, 17:13 - Sneha: I am so done with today.
-07/07/2026, 17:22 - Anjali: Same. Let's log off.
-07/07/2026, 17:37 - Sneha: Bye see you tomorrow.
-09/07/2026, 09:42 - Sneha: Are you in office yet?
-09/07/2026, 09:44 - Anjali: Just reached. Metro was so crowded today ugh.
-09/07/2026, 09:47 - Sneha: Come down for coffee? I can't start working without it.
-09/07/2026, 09:49 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-09/07/2026, 09:53 - Sneha: Done.
-13/07/2026, 09:53 - Sneha: Are you in office yet?
-13/07/2026, 10:03 - Anjali: Just reached. Metro was so crowded today ugh.
-13/07/2026, 10:06 - Sneha: Come down for coffee? I can't start working without it.
-13/07/2026, 10:09 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-13/07/2026, 10:11 - Sneha: Done.
-15/07/2026, 17:16 - Sneha: I am so done with today.
-15/07/2026, 17:27 - Anjali: Same. Let's log off.
-15/07/2026, 17:36 - Sneha: Bye see you tomorrow.
-17/07/2026, 14:51 - Anjali: Omg this meeting could have been an email.
-17/07/2026, 14:52 - Sneha: Literally. Why is HR speaking for 45 minutes?
-17/07/2026, 14:53 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-17/07/2026, 14:56 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-17/07/2026, 14:58 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-17/07/2026, 15:00 - Sneha: typing furiously right now
-21/07/2026, 09:14 - Anjali: Did you hear about the new manager in sales?
-21/07/2026, 09:24 - Sneha: No what happened?? Spill the tea.
-21/07/2026, 09:26 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-21/07/2026, 09:28 - Sneha: Omg that's insane. Poor intern.
-21/07/2026, 09:31 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-21/07/2026, 09:32 - Sneha: Okkk coming to your desk.
-22/07/2026, 12:34 - Sneha: What are we doing for lunch?
-22/07/2026, 12:43 - Anjali: I brought dabba but I'm craving junk food.
-22/07/2026, 12:45 - Sneha: Let's order pizza? We can split.
-22/07/2026, 12:47 - Anjali: Yes please. Order from the place near our office.
-22/07/2026, 12:49 - Sneha: Done, ordering now. Should arrive in 30 mins.
-23/07/2026, 09:48 - Sneha: Are you in office yet?
-23/07/2026, 09:55 - Anjali: Just reached. Metro was so crowded today ugh.
-23/07/2026, 10:00 - Sneha: Come down for coffee? I can't start working without it.
-23/07/2026, 10:02 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-23/07/2026, 10:05 - Sneha: Done.
-24/07/2026, 12:54 - Sneha: What are we doing for lunch?
-24/07/2026, 13:06 - Anjali: I brought dabba but I'm craving junk food.
-24/07/2026, 13:09 - Sneha: Let's order pizza? We can split.
-24/07/2026, 13:11 - Anjali: Yes please. Order from the place near our office.
-24/07/2026, 13:14 - Sneha: Done, ordering now. Should arrive in 30 mins.
-27/07/2026, 12:41 - Sneha: What are we doing for lunch?
-27/07/2026, 12:54 - Anjali: I brought dabba but I'm craving junk food.
-27/07/2026, 12:59 - Sneha: Let's order pizza? We can split.
-27/07/2026, 13:04 - Anjali: Yes please. Order from the place near our office.
-27/07/2026, 13:07 - Sneha: Done, ordering now. Should arrive in 30 mins.
-27/07/2026, 12:43 - Sneha: What are we doing for lunch?
-27/07/2026, 12:52 - Anjali: I brought dabba but I'm craving junk food.
-27/07/2026, 12:57 - Sneha: Let's order pizza? We can split.
-27/07/2026, 13:00 - Anjali: Yes please. Order from the place near our office.
-27/07/2026, 13:03 - Sneha: Done, ordering now. Should arrive in 30 mins.
-28/07/2026, 12:59 - Sneha: What are we doing for lunch?
-28/07/2026, 13:11 - Anjali: I brought dabba but I'm craving junk food.
-28/07/2026, 13:16 - Sneha: Let's order pizza? We can split.
-28/07/2026, 13:18 - Anjali: Yes please. Order from the place near our office.
-28/07/2026, 13:21 - Sneha: Done, ordering now. Should arrive in 30 mins.
-28/07/2026, 17:12 - Sneha: I am so done with today.
-28/07/2026, 17:24 - Anjali: Same. Let's log off.
-28/07/2026, 17:39 - Sneha: Bye see you tomorrow.
-29/07/2026, 17:19 - Sneha: I am so done with today.
-29/07/2026, 17:32 - Anjali: Same. Let's log off.
-29/07/2026, 17:44 - Sneha: Bye see you tomorrow.
-31/07/2026, 14:39 - Anjali: Omg this meeting could have been an email.
-31/07/2026, 14:42 - Sneha: Literally. Why is HR speaking for 45 minutes?
-31/07/2026, 14:45 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-31/07/2026, 14:48 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-31/07/2026, 14:49 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-31/07/2026, 14:50 - Sneha: typing furiously right now
-04/08/2026, 10:01 - Anjali: Did you hear about the new manager in sales?
-04/08/2026, 10:10 - Sneha: No what happened?? Spill the tea.
-04/08/2026, 10:14 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-04/08/2026, 10:17 - Sneha: Omg that's insane. Poor intern.
-04/08/2026, 10:20 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-04/08/2026, 10:21 - Sneha: Okkk coming to your desk.
-05/08/2026, 12:15 - Anjali: Omg this meeting could have been an email.
-05/08/2026, 12:16 - Sneha: Literally. Why is HR speaking for 45 minutes?
-05/08/2026, 12:17 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-05/08/2026, 12:20 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-05/08/2026, 12:23 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-05/08/2026, 12:25 - Sneha: typing furiously right now
-06/08/2026, 17:03 - Sneha: I am so done with today.
-06/08/2026, 17:14 - Anjali: Same. Let's log off.
-06/08/2026, 17:21 - Sneha: Bye see you tomorrow.
-07/08/2026, 17:29 - Sneha: It's 5 PM. Can we leave now?
-07/08/2026, 17:35 - Anjali: Boss is still here. Let's wait till 5:30.
-07/08/2026, 17:48 - Sneha: I'm literally just staring at my wallpaper.
-07/08/2026, 17:56 - Anjali: Same. Ok he just packed his bag. Let's go!
-07/08/2026, 17:58 - Sneha: YASSS WEEKEND!!!
-10/08/2026, 09:37 - Sneha: Are you in office yet?
-10/08/2026, 09:40 - Anjali: Just reached. Metro was so crowded today ugh.
-10/08/2026, 09:45 - Sneha: Come down for coffee? I can't start working without it.
-10/08/2026, 09:50 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-10/08/2026, 09:53 - Sneha: Done.
-12/08/2026, 09:45 - Sneha: Are you in office yet?
-12/08/2026, 09:51 - Anjali: Just reached. Metro was so crowded today ugh.
-12/08/2026, 09:56 - Sneha: Come down for coffee? I can't start working without it.
-12/08/2026, 10:01 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-12/08/2026, 10:03 - Sneha: Done.
-12/08/2026, 12:54 - Sneha: What are we doing for lunch?
-12/08/2026, 13:07 - Anjali: I brought dabba but I'm craving junk food.
-12/08/2026, 13:11 - Sneha: Let's order pizza? We can split.
-12/08/2026, 13:16 - Anjali: Yes please. Order from the place near our office.
-12/08/2026, 13:19 - Sneha: Done, ordering now. Should arrive in 30 mins.
-14/08/2026, 06:50 - Anjali: Did you hear about the new manager in sales?
-14/08/2026, 06:58 - Sneha: No what happened?? Spill the tea.
-14/08/2026, 07:03 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-14/08/2026, 07:07 - Sneha: Omg that's insane. Poor intern.
-14/08/2026, 07:09 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-14/08/2026, 07:10 - Sneha: Okkk coming to your desk.
-18/08/2026, 11:07 - Anjali: Omg this meeting could have been an email.
-18/08/2026, 11:09 - Sneha: Literally. Why is HR speaking for 45 minutes?
-18/08/2026, 11:12 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-18/08/2026, 11:14 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-18/08/2026, 11:17 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-18/08/2026, 11:18 - Sneha: typing furiously right now
-18/08/2026, 17:17 - Anjali: Did you hear about the new manager in sales?
-18/08/2026, 17:26 - Sneha: No what happened?? Spill the tea.
-18/08/2026, 17:28 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-18/08/2026, 17:33 - Sneha: Omg that's insane. Poor intern.
-18/08/2026, 17:37 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-18/08/2026, 17:38 - Sneha: Okkk coming to your desk.
-20/08/2026, 12:56 - Sneha: What are we doing for lunch?
-20/08/2026, 13:09 - Anjali: I brought dabba but I'm craving junk food.
-20/08/2026, 13:12 - Sneha: Let's order pizza? We can split.
-20/08/2026, 13:16 - Anjali: Yes please. Order from the place near our office.
-20/08/2026, 13:19 - Sneha: Done, ordering now. Should arrive in 30 mins.
-21/08/2026, 11:22 - Anjali: Omg this meeting could have been an email.
-21/08/2026, 11:25 - Sneha: Literally. Why is HR speaking for 45 minutes?
-21/08/2026, 11:28 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-21/08/2026, 11:30 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-21/08/2026, 11:32 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-21/08/2026, 11:34 - Sneha: typing furiously right now
-24/08/2026, 06:33 - Anjali: Did you hear about the new manager in sales?
-24/08/2026, 06:38 - Sneha: No what happened?? Spill the tea.
-24/08/2026, 06:41 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-24/08/2026, 06:45 - Sneha: Omg that's insane. Poor intern.
-24/08/2026, 06:50 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-24/08/2026, 06:51 - Sneha: Okkk coming to your desk.
-25/08/2026, 09:56 - Sneha: Are you in office yet?
-25/08/2026, 10:06 - Anjali: Just reached. Metro was so crowded today ugh.
-25/08/2026, 10:10 - Sneha: Come down for coffee? I can't start working without it.
-25/08/2026, 10:14 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-25/08/2026, 10:17 - Sneha: Done.
-26/08/2026, 17:24 - Sneha: I am so done with today.
-26/08/2026, 17:32 - Anjali: Same. Let's log off.
-26/08/2026, 17:38 - Sneha: Bye see you tomorrow.
-27/08/2026, 15:00 - Anjali: Omg this meeting could have been an email.
-27/08/2026, 15:02 - Sneha: Literally. Why is HR speaking for 45 minutes?
-27/08/2026, 15:05 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-27/08/2026, 15:06 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-27/08/2026, 15:09 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-27/08/2026, 15:12 - Sneha: typing furiously right now
-28/08/2026, 09:57 - Sneha: Are you in office yet?
-28/08/2026, 09:59 - Anjali: Just reached. Metro was so crowded today ugh.
-28/08/2026, 10:02 - Sneha: Come down for coffee? I can't start working without it.
-28/08/2026, 10:06 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-28/08/2026, 10:09 - Sneha: Done.
-31/08/2026, 09:51 - Sneha: Are you in office yet?
-31/08/2026, 09:59 - Anjali: Just reached. Metro was so crowded today ugh.
-31/08/2026, 10:03 - Sneha: Come down for coffee? I can't start working without it.
-31/08/2026, 10:06 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-31/08/2026, 10:08 - Sneha: Done.
-01/09/2026, 14:54 - Anjali: Omg this meeting could have been an email.
-01/09/2026, 14:56 - Sneha: Literally. Why is HR speaking for 45 minutes?
-01/09/2026, 14:58 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-01/09/2026, 15:00 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-01/09/2026, 15:02 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-01/09/2026, 15:05 - Sneha: typing furiously right now
-02/09/2026, 13:58 - Anjali: Omg this meeting could have been an email.
-02/09/2026, 13:59 - Sneha: Literally. Why is HR speaking for 45 minutes?
-02/09/2026, 14:01 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-02/09/2026, 14:02 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-02/09/2026, 14:04 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-02/09/2026, 14:06 - Sneha: typing furiously right now
-04/09/2026, 17:22 - Sneha: It's 5 PM. Can we leave now?
-04/09/2026, 17:34 - Anjali: Boss is still here. Let's wait till 5:30.
-04/09/2026, 17:49 - Sneha: I'm literally just staring at my wallpaper.
-04/09/2026, 17:55 - Anjali: Same. Ok he just packed his bag. Let's go!
-04/09/2026, 17:58 - Sneha: YASSS WEEKEND!!!
-07/09/2026, 13:20 - Anjali: Omg this meeting could have been an email.
-07/09/2026, 13:23 - Sneha: Literally. Why is HR speaking for 45 minutes?
-07/09/2026, 13:25 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-07/09/2026, 13:27 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-07/09/2026, 13:28 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-07/09/2026, 13:31 - Sneha: typing furiously right now
-09/09/2026, 11:16 - Anjali: Omg this meeting could have been an email.
-09/09/2026, 11:17 - Sneha: Literally. Why is HR speaking for 45 minutes?
-09/09/2026, 11:20 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-09/09/2026, 11:23 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-09/09/2026, 11:26 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-09/09/2026, 11:27 - Sneha: typing furiously right now
-10/09/2026, 14:51 - Anjali: Omg this meeting could have been an email.
-10/09/2026, 14:54 - Sneha: Literally. Why is HR speaking for 45 minutes?
-10/09/2026, 14:55 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-10/09/2026, 14:58 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-10/09/2026, 15:01 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-10/09/2026, 15:03 - Sneha: typing furiously right now
-14/09/2026, 12:59 - Sneha: What are we doing for lunch?
-14/09/2026, 13:10 - Anjali: I brought dabba but I'm craving junk food.
-14/09/2026, 13:14 - Sneha: Let's order pizza? We can split.
-14/09/2026, 13:18 - Anjali: Yes please. Order from the place near our office.
-14/09/2026, 13:20 - Sneha: Done, ordering now. Should arrive in 30 mins.
-16/09/2026, 09:34 - Sneha: Are you in office yet?
-16/09/2026, 09:37 - Anjali: Just reached. Metro was so crowded today ugh.
-16/09/2026, 09:39 - Sneha: Come down for coffee? I can't start working without it.
-16/09/2026, 09:42 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-16/09/2026, 09:45 - Sneha: Done.
-16/09/2026, 22:02 - Anjali: Did you hear about the new manager in sales?
-16/09/2026, 22:05 - Sneha: No what happened?? Spill the tea.
-16/09/2026, 22:08 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-16/09/2026, 22:13 - Sneha: Omg that's insane. Poor intern.
-16/09/2026, 22:16 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-16/09/2026, 22:17 - Sneha: Okkk coming to your desk.
-17/09/2026, 12:35 - Sneha: What are we doing for lunch?
-17/09/2026, 12:42 - Anjali: I brought dabba but I'm craving junk food.
-17/09/2026, 12:46 - Sneha: Let's order pizza? We can split.
-17/09/2026, 12:51 - Anjali: Yes please. Order from the place near our office.
-17/09/2026, 12:55 - Sneha: Done, ordering now. Should arrive in 30 mins.
-21/09/2026, 14:21 - Anjali: Omg this meeting could have been an email.
-21/09/2026, 14:24 - Sneha: Literally. Why is HR speaking for 45 minutes?
-21/09/2026, 14:27 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-21/09/2026, 14:29 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-21/09/2026, 14:32 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-21/09/2026, 14:35 - Sneha: typing furiously right now
-21/09/2026, 17:28 - Sneha: I am so done with today.
-21/09/2026, 17:33 - Anjali: Same. Let's log off.
-21/09/2026, 17:46 - Sneha: Bye see you tomorrow.
-23/09/2026, 15:00 - Anjali: Omg this meeting could have been an email.
-23/09/2026, 15:01 - Sneha: Literally. Why is HR speaking for 45 minutes?
-23/09/2026, 15:02 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-23/09/2026, 15:04 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-23/09/2026, 15:05 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-23/09/2026, 15:07 - Sneha: typing furiously right now
-25/09/2026, 12:51 - Sneha: What are we doing for lunch?
-25/09/2026, 12:57 - Anjali: I brought dabba but I'm craving junk food.
-25/09/2026, 13:02 - Sneha: Let's order pizza? We can split.
-25/09/2026, 13:07 - Anjali: Yes please. Order from the place near our office.
-25/09/2026, 13:11 - Sneha: Done, ordering now. Should arrive in 30 mins.
-28/09/2026, 09:35 - Sneha: Are you in office yet?
-28/09/2026, 09:41 - Anjali: Just reached. Metro was so crowded today ugh.
-28/09/2026, 09:43 - Sneha: Come down for coffee? I can't start working without it.
-28/09/2026, 09:47 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-28/09/2026, 09:50 - Sneha: Done.
-28/09/2026, 09:45 - Sneha: Are you in office yet?
-28/09/2026, 09:50 - Anjali: Just reached. Metro was so crowded today ugh.
-28/09/2026, 09:53 - Sneha: Come down for coffee? I can't start working without it.
-28/09/2026, 09:56 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-28/09/2026, 09:58 - Sneha: Done.
-28/09/2026, 17:28 - Sneha: I am so done with today.
-28/09/2026, 17:36 - Anjali: Same. Let's log off.
-28/09/2026, 17:43 - Sneha: Bye see you tomorrow.
-30/09/2026, 02:23 - Anjali: Did you hear about the new manager in sales?
-30/09/2026, 02:25 - Sneha: No what happened?? Spill the tea.
-30/09/2026, 02:27 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-30/09/2026, 02:30 - Sneha: Omg that's insane. Poor intern.
-30/09/2026, 02:35 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-30/09/2026, 02:36 - Sneha: Okkk coming to your desk.
-01/10/2026, 22:05 - Anjali: Did you hear about the new manager in sales?
-01/10/2026, 22:07 - Sneha: No what happened?? Spill the tea.
-01/10/2026, 22:10 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-01/10/2026, 22:12 - Sneha: Omg that's insane. Poor intern.
-01/10/2026, 22:16 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-01/10/2026, 22:17 - Sneha: Okkk coming to your desk.
-02/10/2026, 17:20 - Sneha: It's 5 PM. Can we leave now?
-02/10/2026, 17:34 - Anjali: Boss is still here. Let's wait till 5:30.
-02/10/2026, 17:45 - Sneha: I'm literally just staring at my wallpaper.
-02/10/2026, 17:53 - Anjali: Same. Ok he just packed his bag. Let's go!
-02/10/2026, 17:55 - Sneha: YASSS WEEKEND!!!
-06/10/2026, 06:25 - Anjali: Did you hear about the new manager in sales?
-06/10/2026, 06:33 - Sneha: No what happened?? Spill the tea.
-06/10/2026, 06:37 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-06/10/2026, 06:40 - Sneha: Omg that's insane. Poor intern.
-06/10/2026, 06:43 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-06/10/2026, 06:44 - Sneha: Okkk coming to your desk.
-07/10/2026, 17:30 - Sneha: I am so done with today.
-07/10/2026, 17:44 - Anjali: Same. Let's log off.
-07/10/2026, 17:50 - Sneha: Bye see you tomorrow.
-09/10/2026, 12:54 - Sneha: What are we doing for lunch?
-09/10/2026, 13:07 - Anjali: I brought dabba but I'm craving junk food.
-09/10/2026, 13:10 - Sneha: Let's order pizza? We can split.
-09/10/2026, 13:15 - Anjali: Yes please. Order from the place near our office.
-09/10/2026, 13:19 - Sneha: Done, ordering now. Should arrive in 30 mins.
-13/10/2026, 17:27 - Sneha: I am so done with today.
-13/10/2026, 17:40 - Anjali: Same. Let's log off.
-13/10/2026, 17:48 - Sneha: Bye see you tomorrow.
-15/10/2026, 02:06 - Anjali: Did you hear about the new manager in sales?
-15/10/2026, 02:15 - Sneha: No what happened?? Spill the tea.
-15/10/2026, 02:19 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-15/10/2026, 02:22 - Sneha: Omg that's insane. Poor intern.
-15/10/2026, 02:26 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-15/10/2026, 02:27 - Sneha: Okkk coming to your desk.
-16/10/2026, 17:36 - Anjali: Did you hear about the new manager in sales?
-16/10/2026, 17:44 - Sneha: No what happened?? Spill the tea.
-16/10/2026, 17:46 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-16/10/2026, 17:49 - Sneha: Omg that's insane. Poor intern.
-16/10/2026, 17:52 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-16/10/2026, 17:53 - Sneha: Okkk coming to your desk.
-16/10/2026, 17:17 - Sneha: It's 5 PM. Can we leave now?
-16/10/2026, 17:30 - Anjali: Boss is still here. Let's wait till 5:30.
-16/10/2026, 17:42 - Sneha: I'm literally just staring at my wallpaper.
-16/10/2026, 17:51 - Anjali: Same. Ok he just packed his bag. Let's go!
-16/10/2026, 17:52 - Sneha: YASSS WEEKEND!!!
-19/10/2026, 07:11 - Anjali: Did you hear about the new manager in sales?
-19/10/2026, 07:15 - Sneha: No what happened?? Spill the tea.
-19/10/2026, 07:20 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-19/10/2026, 07:22 - Sneha: Omg that's insane. Poor intern.
-19/10/2026, 07:27 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-19/10/2026, 07:28 - Sneha: Okkk coming to your desk.
-21/10/2026, 09:52 - Sneha: Are you in office yet?
-21/10/2026, 10:02 - Anjali: Just reached. Metro was so crowded today ugh.
-21/10/2026, 10:07 - Sneha: Come down for coffee? I can't start working without it.
-21/10/2026, 10:10 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-21/10/2026, 10:13 - Sneha: Done.
-22/10/2026, 16:51 - Anjali: Omg this meeting could have been an email.
-22/10/2026, 16:54 - Sneha: Literally. Why is HR speaking for 45 minutes?
-22/10/2026, 16:55 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-22/10/2026, 16:56 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-22/10/2026, 16:57 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-22/10/2026, 16:58 - Sneha: typing furiously right now
-23/10/2026, 12:39 - Sneha: What are we doing for lunch?
-23/10/2026, 12:45 - Anjali: I brought dabba but I'm craving junk food.
-23/10/2026, 12:50 - Sneha: Let's order pizza? We can split.
-23/10/2026, 12:52 - Anjali: Yes please. Order from the place near our office.
-23/10/2026, 12:55 - Sneha: Done, ordering now. Should arrive in 30 mins.
-26/10/2026, 12:50 - Sneha: What are we doing for lunch?
-26/10/2026, 13:05 - Anjali: I brought dabba but I'm craving junk food.
-26/10/2026, 13:07 - Sneha: Let's order pizza? We can split.
-26/10/2026, 13:09 - Anjali: Yes please. Order from the place near our office.
-26/10/2026, 13:11 - Sneha: Done, ordering now. Should arrive in 30 mins.
-27/10/2026, 12:10 - Anjali: Omg this meeting could have been an email.
-27/10/2026, 12:12 - Sneha: Literally. Why is HR speaking for 45 minutes?
-27/10/2026, 12:15 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-27/10/2026, 12:18 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-27/10/2026, 12:20 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-27/10/2026, 12:21 - Sneha: typing furiously right now
-29/10/2026, 13:16 - Anjali: Omg this meeting could have been an email.
-29/10/2026, 13:19 - Sneha: Literally. Why is HR speaking for 45 minutes?
-29/10/2026, 13:21 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-29/10/2026, 13:24 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-29/10/2026, 13:26 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-29/10/2026, 13:28 - Sneha: typing furiously right now
-30/10/2026, 06:12 - Anjali: Did you hear about the new manager in sales?
-30/10/2026, 06:17 - Sneha: No what happened?? Spill the tea.
-30/10/2026, 06:22 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-30/10/2026, 06:26 - Sneha: Omg that's insane. Poor intern.
-30/10/2026, 06:30 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-30/10/2026, 06:32 - Sneha: Okkk coming to your desk.
-30/10/2026, 17:27 - Sneha: It's 5 PM. Can we leave now?
-30/10/2026, 17:41 - Anjali: Boss is still here. Let's wait till 5:30.
-30/10/2026, 17:50 - Sneha: I'm literally just staring at my wallpaper.
-30/10/2026, 17:58 - Anjali: Same. Ok he just packed his bag. Let's go!
-30/10/2026, 18:01 - Sneha: YASSS WEEKEND!!!
-02/11/2026, 09:46 - Sneha: Are you in office yet?
-02/11/2026, 09:52 - Anjali: Just reached. Metro was so crowded today ugh.
-02/11/2026, 09:57 - Sneha: Come down for coffee? I can't start working without it.
-02/11/2026, 10:02 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-02/11/2026, 10:06 - Sneha: Done.
-04/11/2026, 09:35 - Anjali: Did you hear about the new manager in sales?
-04/11/2026, 09:39 - Sneha: No what happened?? Spill the tea.
-04/11/2026, 09:42 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-04/11/2026, 09:44 - Sneha: Omg that's insane. Poor intern.
-04/11/2026, 09:48 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-04/11/2026, 09:50 - Sneha: Okkk coming to your desk.
-04/11/2026, 09:59 - Sneha: Are you in office yet?
-04/11/2026, 10:07 - Anjali: Just reached. Metro was so crowded today ugh.
-04/11/2026, 10:12 - Sneha: Come down for coffee? I can't start working without it.
-04/11/2026, 10:15 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-04/11/2026, 10:17 - Sneha: Done.
-06/11/2026, 12:34 - Anjali: Omg this meeting could have been an email.
-06/11/2026, 12:35 - Sneha: Literally. Why is HR speaking for 45 minutes?
-06/11/2026, 12:37 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-06/11/2026, 12:40 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-06/11/2026, 12:41 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-06/11/2026, 12:44 - Sneha: typing furiously right now
-09/11/2026, 06:03 - Anjali: Did you hear about the new manager in sales?
-09/11/2026, 06:12 - Sneha: No what happened?? Spill the tea.
-09/11/2026, 06:14 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-09/11/2026, 06:18 - Sneha: Omg that's insane. Poor intern.
-09/11/2026, 06:21 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-09/11/2026, 06:23 - Sneha: Okkk coming to your desk.
-10/11/2026, 09:50 - Sneha: Are you in office yet?
-10/11/2026, 09:56 - Anjali: Just reached. Metro was so crowded today ugh.
-10/11/2026, 10:01 - Sneha: Come down for coffee? I can't start working without it.
-10/11/2026, 10:03 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-10/11/2026, 10:07 - Sneha: Done.
-12/11/2026, 01:31 - Anjali: Did you hear about the new manager in sales?
-12/11/2026, 01:41 - Sneha: No what happened?? Spill the tea.
-12/11/2026, 01:43 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-12/11/2026, 01:46 - Sneha: Omg that's insane. Poor intern.
-12/11/2026, 01:50 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-12/11/2026, 01:51 - Sneha: Okkk coming to your desk.
-13/11/2026, 12:11 - Anjali: Omg this meeting could have been an email.
-13/11/2026, 12:13 - Sneha: Literally. Why is HR speaking for 45 minutes?
-13/11/2026, 12:16 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-13/11/2026, 12:19 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-13/11/2026, 12:20 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-13/11/2026, 12:23 - Sneha: typing furiously right now
-13/11/2026, 17:14 - Sneha: It's 5 PM. Can we leave now?
-13/11/2026, 17:21 - Anjali: Boss is still here. Let's wait till 5:30.
-13/11/2026, 17:31 - Sneha: I'm literally just staring at my wallpaper.
-13/11/2026, 17:44 - Anjali: Same. Ok he just packed his bag. Let's go!
-13/11/2026, 17:46 - Sneha: YASSS WEEKEND!!!
-13/11/2026, 12:39 - Sneha: What are we doing for lunch?
-13/11/2026, 12:54 - Anjali: I brought dabba but I'm craving junk food.
-13/11/2026, 12:59 - Sneha: Let's order pizza? We can split.
-13/11/2026, 13:01 - Anjali: Yes please. Order from the place near our office.
-13/11/2026, 13:06 - Sneha: Done, ordering now. Should arrive in 30 mins.
-17/11/2026, 12:58 - Sneha: What are we doing for lunch?
-17/11/2026, 13:08 - Anjali: I brought dabba but I'm craving junk food.
-17/11/2026, 13:12 - Sneha: Let's order pizza? We can split.
-17/11/2026, 13:16 - Anjali: Yes please. Order from the place near our office.
-17/11/2026, 13:18 - Sneha: Done, ordering now. Should arrive in 30 mins.
-18/11/2026, 12:57 - Sneha: What are we doing for lunch?
-18/11/2026, 13:02 - Anjali: I brought dabba but I'm craving junk food.
-18/11/2026, 13:04 - Sneha: Let's order pizza? We can split.
-18/11/2026, 13:06 - Anjali: Yes please. Order from the place near our office.
-18/11/2026, 13:09 - Sneha: Done, ordering now. Should arrive in 30 mins.
-20/11/2026, 16:53 - Anjali: Omg this meeting could have been an email.
-20/11/2026, 16:56 - Sneha: Literally. Why is HR speaking for 45 minutes?
-20/11/2026, 16:59 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-20/11/2026, 17:02 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-20/11/2026, 17:04 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-20/11/2026, 17:05 - Sneha: typing furiously right now
-24/11/2026, 17:29 - Sneha: I am so done with today.
-24/11/2026, 17:39 - Anjali: Same. Let's log off.
-24/11/2026, 17:45 - Sneha: Bye see you tomorrow.
-25/11/2026, 09:32 - Sneha: Are you in office yet?
-25/11/2026, 09:37 - Anjali: Just reached. Metro was so crowded today ugh.
-25/11/2026, 09:42 - Sneha: Come down for coffee? I can't start working without it.
-25/11/2026, 09:45 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-25/11/2026, 09:48 - Sneha: Done.
-26/11/2026, 12:31 - Anjali: Did you hear about the new manager in sales?
-26/11/2026, 12:35 - Sneha: No what happened?? Spill the tea.
-26/11/2026, 12:40 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-26/11/2026, 12:45 - Sneha: Omg that's insane. Poor intern.
-26/11/2026, 12:49 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-26/11/2026, 12:51 - Sneha: Okkk coming to your desk.
-26/11/2026, 17:11 - Anjali: Did you hear about the new manager in sales?
-26/11/2026, 17:21 - Sneha: No what happened?? Spill the tea.
-26/11/2026, 17:25 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-26/11/2026, 17:28 - Sneha: Omg that's insane. Poor intern.
-26/11/2026, 17:33 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-26/11/2026, 17:35 - Sneha: Okkk coming to your desk.
-26/11/2026, 17:17 - Sneha: I am so done with today.
-26/11/2026, 17:28 - Anjali: Same. Let's log off.
-26/11/2026, 17:35 - Sneha: Bye see you tomorrow.
-27/11/2026, 15:38 - Anjali: Omg this meeting could have been an email.
-27/11/2026, 15:41 - Sneha: Literally. Why is HR speaking for 45 minutes?
-27/11/2026, 15:44 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-27/11/2026, 15:46 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-27/11/2026, 15:49 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-27/11/2026, 15:51 - Sneha: typing furiously right now
-01/12/2026, 12:34 - Sneha: What are we doing for lunch?
-01/12/2026, 12:43 - Anjali: I brought dabba but I'm craving junk food.
-01/12/2026, 12:45 - Sneha: Let's order pizza? We can split.
-01/12/2026, 12:47 - Anjali: Yes please. Order from the place near our office.
-01/12/2026, 12:52 - Sneha: Done, ordering now. Should arrive in 30 mins.
-02/12/2026, 11:55 - Anjali: Omg this meeting could have been an email.
-02/12/2026, 11:57 - Sneha: Literally. Why is HR speaking for 45 minutes?
-02/12/2026, 11:58 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-02/12/2026, 12:00 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-02/12/2026, 12:01 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-02/12/2026, 12:02 - Sneha: typing furiously right now
-03/12/2026, 15:16 - Anjali: Omg this meeting could have been an email.
-03/12/2026, 15:18 - Sneha: Literally. Why is HR speaking for 45 minutes?
-03/12/2026, 15:21 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-03/12/2026, 15:24 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-03/12/2026, 15:25 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-03/12/2026, 15:26 - Sneha: typing furiously right now
-07/12/2026, 11:23 - Anjali: Omg this meeting could have been an email.
-07/12/2026, 11:24 - Sneha: Literally. Why is HR speaking for 45 minutes?
-07/12/2026, 11:25 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-07/12/2026, 11:28 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-07/12/2026, 11:31 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-07/12/2026, 11:32 - Sneha: typing furiously right now
-08/12/2026, 12:51 - Sneha: What are we doing for lunch?
-08/12/2026, 13:03 - Anjali: I brought dabba but I'm craving junk food.
-08/12/2026, 13:08 - Sneha: Let's order pizza? We can split.
-08/12/2026, 13:12 - Anjali: Yes please. Order from the place near our office.
-08/12/2026, 13:17 - Sneha: Done, ordering now. Should arrive in 30 mins.
-08/12/2026, 12:41 - Sneha: What are we doing for lunch?
-08/12/2026, 12:48 - Anjali: I brought dabba but I'm craving junk food.
-08/12/2026, 12:51 - Sneha: Let's order pizza? We can split.
-08/12/2026, 12:56 - Anjali: Yes please. Order from the place near our office.
-08/12/2026, 12:58 - Sneha: Done, ordering now. Should arrive in 30 mins.
-09/12/2026, 12:57 - Sneha: What are we doing for lunch?
-09/12/2026, 13:04 - Anjali: I brought dabba but I'm craving junk food.
-09/12/2026, 13:09 - Sneha: Let's order pizza? We can split.
-09/12/2026, 13:12 - Anjali: Yes please. Order from the place near our office.
-09/12/2026, 13:14 - Sneha: Done, ordering now. Should arrive in 30 mins.
-11/12/2026, 15:22 - Anjali: Omg this meeting could have been an email.
-11/12/2026, 15:25 - Sneha: Literally. Why is HR speaking for 45 minutes?
-11/12/2026, 15:26 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-11/12/2026, 15:28 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-11/12/2026, 15:29 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-11/12/2026, 15:31 - Sneha: typing furiously right now
-15/12/2026, 04:29 - Anjali: Did you hear about the new manager in sales?
-15/12/2026, 04:34 - Sneha: No what happened?? Spill the tea.
-15/12/2026, 04:36 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-15/12/2026, 04:41 - Sneha: Omg that's insane. Poor intern.
-15/12/2026, 04:45 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-15/12/2026, 04:47 - Sneha: Okkk coming to your desk.
-16/12/2026, 09:40 - Sneha: Are you in office yet?
-16/12/2026, 09:50 - Anjali: Just reached. Metro was so crowded today ugh.
-16/12/2026, 09:54 - Sneha: Come down for coffee? I can't start working without it.
-16/12/2026, 09:56 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-16/12/2026, 10:00 - Sneha: Done.
-17/12/2026, 11:53 - Anjali: Omg this meeting could have been an email.
-17/12/2026, 11:55 - Sneha: Literally. Why is HR speaking for 45 minutes?
-17/12/2026, 11:56 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-17/12/2026, 11:58 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-17/12/2026, 12:01 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-17/12/2026, 12:03 - Sneha: typing furiously right now
-18/12/2026, 12:42 - Sneha: What are we doing for lunch?
-18/12/2026, 12:47 - Anjali: I brought dabba but I'm craving junk food.
-18/12/2026, 12:51 - Sneha: Let's order pizza? We can split.
-18/12/2026, 12:53 - Anjali: Yes please. Order from the place near our office.
-18/12/2026, 12:55 - Sneha: Done, ordering now. Should arrive in 30 mins.
-22/12/2026, 17:21 - Sneha: I am so done with today.
-22/12/2026, 17:26 - Anjali: Same. Let's log off.
-22/12/2026, 17:31 - Sneha: Bye see you tomorrow.
-22/12/2026, 17:19 - Sneha: I am so done with today.
-22/12/2026, 17:28 - Anjali: Same. Let's log off.
-22/12/2026, 17:38 - Sneha: Bye see you tomorrow.
-23/12/2026, 12:43 - Sneha: What are we doing for lunch?
-23/12/2026, 12:57 - Anjali: I brought dabba but I'm craving junk food.
-23/12/2026, 13:02 - Sneha: Let's order pizza? We can split.
-23/12/2026, 13:04 - Anjali: Yes please. Order from the place near our office.
-23/12/2026, 13:07 - Sneha: Done, ordering now. Should arrive in 30 mins.
-25/12/2026, 01:43 - Anjali: Did you hear about the new manager in sales?
-25/12/2026, 01:52 - Sneha: No what happened?? Spill the tea.
-25/12/2026, 01:56 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-25/12/2026, 01:58 - Sneha: Omg that's insane. Poor intern.
-25/12/2026, 02:00 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-25/12/2026, 02:01 - Sneha: Okkk coming to your desk.
-28/12/2026, 12:37 - Sneha: What are we doing for lunch?
-28/12/2026, 12:42 - Anjali: I brought dabba but I'm craving junk food.
-28/12/2026, 12:46 - Sneha: Let's order pizza? We can split.
-28/12/2026, 12:50 - Anjali: Yes please. Order from the place near our office.
-28/12/2026, 12:55 - Sneha: Done, ordering now. Should arrive in 30 mins.
-29/12/2026, 18:20 - Anjali: Did you hear about the new manager in sales?
-29/12/2026, 18:28 - Sneha: No what happened?? Spill the tea.
-29/12/2026, 18:30 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-29/12/2026, 18:35 - Sneha: Omg that's insane. Poor intern.
-29/12/2026, 18:37 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-29/12/2026, 18:39 - Sneha: Okkk coming to your desk.
-30/12/2026, 00:21 - Anjali: Did you hear about the new manager in sales?
-30/12/2026, 00:27 - Sneha: No what happened?? Spill the tea.
-30/12/2026, 00:29 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-30/12/2026, 00:32 - Sneha: Omg that's insane. Poor intern.
-30/12/2026, 00:34 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-30/12/2026, 00:35 - Sneha: Okkk coming to your desk.
-30/12/2026, 12:30 - Sneha: What are we doing for lunch?
-30/12/2026, 12:40 - Anjali: I brought dabba but I'm craving junk food.
-30/12/2026, 12:43 - Sneha: Let's order pizza? We can split.
-30/12/2026, 12:45 - Anjali: Yes please. Order from the place near our office.
-30/12/2026, 12:50 - Sneha: Done, ordering now. Should arrive in 30 mins.
-01/01/2027, 17:02 - Sneha: It's 5 PM. Can we leave now?
-01/01/2027, 17:11 - Anjali: Boss is still here. Let's wait till 5:30.
-01/01/2027, 17:16 - Sneha: I'm literally just staring at my wallpaper.
-01/01/2027, 17:25 - Anjali: Same. Ok he just packed his bag. Let's go!
-01/01/2027, 17:27 - Sneha: YASSS WEEKEND!!!
-05/01/2027, 09:38 - Sneha: Are you in office yet?
-05/01/2027, 09:46 - Anjali: Just reached. Metro was so crowded today ugh.
-05/01/2027, 09:49 - Sneha: Come down for coffee? I can't start working without it.
-05/01/2027, 09:53 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-05/01/2027, 09:55 - Sneha: Done.
-05/01/2027, 17:10 - Sneha: I am so done with today.
-05/01/2027, 17:22 - Anjali: Same. Let's log off.
-05/01/2027, 17:37 - Sneha: Bye see you tomorrow.
-05/01/2027, 22:38 - Anjali: Did you hear about the new manager in sales?
-05/01/2027, 22:43 - Sneha: No what happened?? Spill the tea.
-05/01/2027, 22:47 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-05/01/2027, 22:49 - Sneha: Omg that's insane. Poor intern.
-05/01/2027, 22:51 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-05/01/2027, 22:53 - Sneha: Okkk coming to your desk.
-06/01/2027, 14:39 - Anjali: Omg this meeting could have been an email.
-06/01/2027, 14:41 - Sneha: Literally. Why is HR speaking for 45 minutes?
-06/01/2027, 14:43 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-06/01/2027, 14:44 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-06/01/2027, 14:47 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-06/01/2027, 14:50 - Sneha: typing furiously right now
-07/01/2027, 17:30 - Sneha: I am so done with today.
-07/01/2027, 17:41 - Anjali: Same. Let's log off.
-07/01/2027, 17:46 - Sneha: Bye see you tomorrow.
-11/01/2027, 13:11 - Anjali: Omg this meeting could have been an email.
-11/01/2027, 13:14 - Sneha: Literally. Why is HR speaking for 45 minutes?
-11/01/2027, 13:15 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-11/01/2027, 13:16 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-11/01/2027, 13:17 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-11/01/2027, 13:20 - Sneha: typing furiously right now
-13/01/2027, 09:52 - Sneha: Are you in office yet?
-13/01/2027, 09:55 - Anjali: Just reached. Metro was so crowded today ugh.
-13/01/2027, 09:57 - Sneha: Come down for coffee? I can't start working without it.
-13/01/2027, 10:01 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-13/01/2027, 10:04 - Sneha: Done.
-13/01/2027, 17:23 - Sneha: I am so done with today.
-13/01/2027, 17:35 - Anjali: Same. Let's log off.
-13/01/2027, 17:45 - Sneha: Bye see you tomorrow.
-14/01/2027, 12:48 - Sneha: What are we doing for lunch?
-14/01/2027, 12:58 - Anjali: I brought dabba but I'm craving junk food.
-14/01/2027, 13:01 - Sneha: Let's order pizza? We can split.
-14/01/2027, 13:06 - Anjali: Yes please. Order from the place near our office.
-14/01/2027, 13:08 - Sneha: Done, ordering now. Should arrive in 30 mins.
-14/01/2027, 13:56 - Anjali: Omg this meeting could have been an email.
-14/01/2027, 13:59 - Sneha: Literally. Why is HR speaking for 45 minutes?
-14/01/2027, 14:02 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-14/01/2027, 14:04 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-14/01/2027, 14:07 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-14/01/2027, 14:09 - Sneha: typing furiously right now
-18/01/2027, 09:33 - Sneha: Are you in office yet?
-18/01/2027, 09:37 - Anjali: Just reached. Metro was so crowded today ugh.
-18/01/2027, 09:42 - Sneha: Come down for coffee? I can't start working without it.
-18/01/2027, 09:44 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-18/01/2027, 09:46 - Sneha: Done.
-20/01/2027, 11:35 - Anjali: Omg this meeting could have been an email.
-20/01/2027, 11:37 - Sneha: Literally. Why is HR speaking for 45 minutes?
-20/01/2027, 11:39 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-20/01/2027, 11:42 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-20/01/2027, 11:45 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-20/01/2027, 11:48 - Sneha: typing furiously right now
-22/01/2027, 17:30 - Sneha: It's 5 PM. Can we leave now?
-22/01/2027, 17:37 - Anjali: Boss is still here. Let's wait till 5:30.
-22/01/2027, 17:47 - Sneha: I'm literally just staring at my wallpaper.
-22/01/2027, 17:56 - Anjali: Same. Ok he just packed his bag. Let's go!
-22/01/2027, 17:57 - Sneha: YASSS WEEKEND!!!
-26/01/2027, 18:24 - Anjali: Did you hear about the new manager in sales?
-26/01/2027, 18:31 - Sneha: No what happened?? Spill the tea.
-26/01/2027, 18:36 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-26/01/2027, 18:39 - Sneha: Omg that's insane. Poor intern.
-26/01/2027, 18:42 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-26/01/2027, 18:43 - Sneha: Okkk coming to your desk.
-27/01/2027, 12:55 - Sneha: What are we doing for lunch?
-27/01/2027, 13:06 - Anjali: I brought dabba but I'm craving junk food.
-27/01/2027, 13:11 - Sneha: Let's order pizza? We can split.
-27/01/2027, 13:13 - Anjali: Yes please. Order from the place near our office.
-27/01/2027, 13:16 - Sneha: Done, ordering now. Should arrive in 30 mins.
-28/01/2027, 12:35 - Sneha: What are we doing for lunch?
-28/01/2027, 12:49 - Anjali: I brought dabba but I'm craving junk food.
-28/01/2027, 12:52 - Sneha: Let's order pizza? We can split.
-28/01/2027, 12:57 - Anjali: Yes please. Order from the place near our office.
-28/01/2027, 12:59 - Sneha: Done, ordering now. Should arrive in 30 mins.
-29/01/2027, 09:42 - Sneha: Are you in office yet?
-29/01/2027, 09:49 - Anjali: Just reached. Metro was so crowded today ugh.
-29/01/2027, 09:53 - Sneha: Come down for coffee? I can't start working without it.
-29/01/2027, 09:56 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-29/01/2027, 10:00 - Sneha: Done.
-02/02/2027, 09:34 - Sneha: Are you in office yet?
-02/02/2027, 09:40 - Anjali: Just reached. Metro was so crowded today ugh.
-02/02/2027, 09:42 - Sneha: Come down for coffee? I can't start working without it.
-02/02/2027, 09:46 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-02/02/2027, 09:51 - Sneha: Done.
-03/02/2027, 14:57 - Anjali: Omg this meeting could have been an email.
-03/02/2027, 14:58 - Sneha: Literally. Why is HR speaking for 45 minutes?
-03/02/2027, 14:59 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-03/02/2027, 15:00 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-03/02/2027, 15:01 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-03/02/2027, 15:03 - Sneha: typing furiously right now
-03/02/2027, 17:24 - Sneha: I am so done with today.
-03/02/2027, 17:33 - Anjali: Same. Let's log off.
-03/02/2027, 17:42 - Sneha: Bye see you tomorrow.
-05/02/2027, 12:42 - Anjali: Omg this meeting could have been an email.
-05/02/2027, 12:45 - Sneha: Literally. Why is HR speaking for 45 minutes?
-05/02/2027, 12:46 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-05/02/2027, 12:49 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-05/02/2027, 12:52 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-05/02/2027, 12:54 - Sneha: typing furiously right now
-08/02/2027, 21:25 - Anjali: Did you hear about the new manager in sales?
-08/02/2027, 21:27 - Sneha: No what happened?? Spill the tea.
-08/02/2027, 21:29 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-08/02/2027, 21:33 - Sneha: Omg that's insane. Poor intern.
-08/02/2027, 21:38 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-08/02/2027, 21:39 - Sneha: Okkk coming to your desk.
-10/02/2027, 17:05 - Sneha: I am so done with today.
-10/02/2027, 17:18 - Anjali: Same. Let's log off.
-10/02/2027, 17:31 - Sneha: Bye see you tomorrow.
-12/02/2027, 09:56 - Sneha: Are you in office yet?
-12/02/2027, 10:00 - Anjali: Just reached. Metro was so crowded today ugh.
-12/02/2027, 10:03 - Sneha: Come down for coffee? I can't start working without it.
-12/02/2027, 10:08 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-12/02/2027, 10:12 - Sneha: Done.
-15/02/2027, 10:03 - Anjali: Did you hear about the new manager in sales?
-15/02/2027, 10:12 - Sneha: No what happened?? Spill the tea.
-15/02/2027, 10:16 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-15/02/2027, 10:21 - Sneha: Omg that's insane. Poor intern.
-15/02/2027, 10:24 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-15/02/2027, 10:26 - Sneha: Okkk coming to your desk.
-15/02/2027, 17:21 - Sneha: I am so done with today.
-15/02/2027, 17:33 - Anjali: Same. Let's log off.
-15/02/2027, 17:39 - Sneha: Bye see you tomorrow.
-17/02/2027, 12:34 - Sneha: What are we doing for lunch?
-17/02/2027, 12:44 - Anjali: I brought dabba but I'm craving junk food.
-17/02/2027, 12:47 - Sneha: Let's order pizza? We can split.
-17/02/2027, 12:52 - Anjali: Yes please. Order from the place near our office.
-17/02/2027, 12:56 - Sneha: Done, ordering now. Should arrive in 30 mins.
-17/02/2027, 23:35 - Anjali: Did you hear about the new manager in sales?
-17/02/2027, 23:38 - Sneha: No what happened?? Spill the tea.
-17/02/2027, 23:41 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-17/02/2027, 23:46 - Sneha: Omg that's insane. Poor intern.
-17/02/2027, 23:48 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-17/02/2027, 23:50 - Sneha: Okkk coming to your desk.
-19/02/2027, 15:50 - Anjali: Omg this meeting could have been an email.
-19/02/2027, 15:53 - Sneha: Literally. Why is HR speaking for 45 minutes?
-19/02/2027, 15:55 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-19/02/2027, 15:57 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-19/02/2027, 15:58 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-19/02/2027, 16:01 - Sneha: typing furiously right now
-22/02/2027, 14:41 - Anjali: Omg this meeting could have been an email.
-22/02/2027, 14:42 - Sneha: Literally. Why is HR speaking for 45 minutes?
-22/02/2027, 14:45 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-22/02/2027, 14:46 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-22/02/2027, 14:47 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-22/02/2027, 14:50 - Sneha: typing furiously right now
-24/02/2027, 15:54 - Anjali: Omg this meeting could have been an email.
-24/02/2027, 15:57 - Sneha: Literally. Why is HR speaking for 45 minutes?
-24/02/2027, 15:59 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-24/02/2027, 16:02 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-24/02/2027, 16:03 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-24/02/2027, 16:06 - Sneha: typing furiously right now
-25/02/2027, 12:13 - Anjali: Omg this meeting could have been an email.
-25/02/2027, 12:16 - Sneha: Literally. Why is HR speaking for 45 minutes?
-25/02/2027, 12:17 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-25/02/2027, 12:19 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-25/02/2027, 12:21 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-25/02/2027, 12:23 - Sneha: typing furiously right now
-01/03/2027, 12:55 - Anjali: Omg this meeting could have been an email.
-01/03/2027, 12:58 - Sneha: Literally. Why is HR speaking for 45 minutes?
-01/03/2027, 13:00 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-01/03/2027, 13:02 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-01/03/2027, 13:04 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-01/03/2027, 13:06 - Sneha: typing furiously right now
-01/03/2027, 16:37 - Anjali: Omg this meeting could have been an email.
-01/03/2027, 16:39 - Sneha: Literally. Why is HR speaking for 45 minutes?
-01/03/2027, 16:42 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-01/03/2027, 16:45 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-01/03/2027, 16:47 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-01/03/2027, 16:49 - Sneha: typing furiously right now
-03/03/2027, 15:21 - Anjali: Did you hear about the new manager in sales?
-03/03/2027, 15:25 - Sneha: No what happened?? Spill the tea.
-03/03/2027, 15:28 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-03/03/2027, 15:31 - Sneha: Omg that's insane. Poor intern.
-03/03/2027, 15:36 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-03/03/2027, 15:37 - Sneha: Okkk coming to your desk.
-05/03/2027, 12:58 - Sneha: What are we doing for lunch?
-05/03/2027, 13:08 - Anjali: I brought dabba but I'm craving junk food.
-05/03/2027, 13:10 - Sneha: Let's order pizza? We can split.
-05/03/2027, 13:13 - Anjali: Yes please. Order from the place near our office.
-05/03/2027, 13:18 - Sneha: Done, ordering now. Should arrive in 30 mins.
-09/03/2027, 13:25 - Anjali: Omg this meeting could have been an email.
-09/03/2027, 13:28 - Sneha: Literally. Why is HR speaking for 45 minutes?
-09/03/2027, 13:31 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-09/03/2027, 13:32 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-09/03/2027, 13:33 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-09/03/2027, 13:34 - Sneha: typing furiously right now
-09/03/2027, 17:02 - Sneha: I am so done with today.
-09/03/2027, 17:10 - Anjali: Same. Let's log off.
-09/03/2027, 17:19 - Sneha: Bye see you tomorrow.
-11/03/2027, 12:36 - Sneha: What are we doing for lunch?
-11/03/2027, 12:50 - Anjali: I brought dabba but I'm craving junk food.
-11/03/2027, 12:53 - Sneha: Let's order pizza? We can split.
-11/03/2027, 12:56 - Anjali: Yes please. Order from the place near our office.
-11/03/2027, 13:00 - Sneha: Done, ordering now. Should arrive in 30 mins.
-15/03/2027, 17:20 - Sneha: I am so done with today.
-15/03/2027, 17:34 - Anjali: Same. Let's log off.
-15/03/2027, 17:39 - Sneha: Bye see you tomorrow.
-16/03/2027, 11:41 - Anjali: Omg this meeting could have been an email.
-16/03/2027, 11:43 - Sneha: Literally. Why is HR speaking for 45 minutes?
-16/03/2027, 11:46 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-16/03/2027, 11:48 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-16/03/2027, 11:50 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-16/03/2027, 11:52 - Sneha: typing furiously right now
-17/03/2027, 16:17 - Anjali: Omg this meeting could have been an email.
-17/03/2027, 16:18 - Sneha: Literally. Why is HR speaking for 45 minutes?
-17/03/2027, 16:19 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-17/03/2027, 16:22 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-17/03/2027, 16:25 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-17/03/2027, 16:28 - Sneha: typing furiously right now
-18/03/2027, 09:36 - Sneha: Are you in office yet?
-18/03/2027, 09:46 - Anjali: Just reached. Metro was so crowded today ugh.
-18/03/2027, 09:51 - Sneha: Come down for coffee? I can't start working without it.
-18/03/2027, 09:54 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-18/03/2027, 09:58 - Sneha: Done.
-19/03/2027, 17:00 - Sneha: It's 5 PM. Can we leave now?
-19/03/2027, 17:11 - Anjali: Boss is still here. Let's wait till 5:30.
-19/03/2027, 17:21 - Sneha: I'm literally just staring at my wallpaper.
-19/03/2027, 17:30 - Anjali: Same. Ok he just packed his bag. Let's go!
-19/03/2027, 17:32 - Sneha: YASSS WEEKEND!!!
-23/03/2027, 04:46 - Anjali: Did you hear about the new manager in sales?
-23/03/2027, 04:56 - Sneha: No what happened?? Spill the tea.
-23/03/2027, 04:58 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-23/03/2027, 05:01 - Sneha: Omg that's insane. Poor intern.
-23/03/2027, 05:05 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-23/03/2027, 05:06 - Sneha: Okkk coming to your desk.
-23/03/2027, 17:29 - Sneha: I am so done with today.
-23/03/2027, 17:43 - Anjali: Same. Let's log off.
-23/03/2027, 17:49 - Sneha: Bye see you tomorrow.
-25/03/2027, 12:50 - Sneha: What are we doing for lunch?
-25/03/2027, 13:05 - Anjali: I brought dabba but I'm craving junk food.
-25/03/2027, 13:09 - Sneha: Let's order pizza? We can split.
-25/03/2027, 13:12 - Anjali: Yes please. Order from the place near our office.
-25/03/2027, 13:17 - Sneha: Done, ordering now. Should arrive in 30 mins.
-29/03/2027, 12:57 - Sneha: What are we doing for lunch?
-29/03/2027, 13:10 - Anjali: I brought dabba but I'm craving junk food.
-29/03/2027, 13:15 - Sneha: Let's order pizza? We can split.
-29/03/2027, 13:19 - Anjali: Yes please. Order from the place near our office.
-29/03/2027, 13:22 - Sneha: Done, ordering now. Should arrive in 30 mins.
-30/03/2027, 13:44 - Anjali: Omg this meeting could have been an email.
-30/03/2027, 13:47 - Sneha: Literally. Why is HR speaking for 45 minutes?
-30/03/2027, 13:48 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-30/03/2027, 13:49 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-30/03/2027, 13:51 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-30/03/2027, 13:54 - Sneha: typing furiously right now
-31/03/2027, 17:15 - Anjali: Did you hear about the new manager in sales?
-31/03/2027, 17:19 - Sneha: No what happened?? Spill the tea.
-31/03/2027, 17:24 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-31/03/2027, 17:27 - Sneha: Omg that's insane. Poor intern.
-31/03/2027, 17:30 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-31/03/2027, 17:32 - Sneha: Okkk coming to your desk.
-02/04/2027, 09:58 - Sneha: Are you in office yet?
-02/04/2027, 10:07 - Anjali: Just reached. Metro was so crowded today ugh.
-02/04/2027, 10:11 - Sneha: Come down for coffee? I can't start working without it.
-02/04/2027, 10:16 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-02/04/2027, 10:18 - Sneha: Done.
-05/04/2027, 12:59 - Sneha: What are we doing for lunch?
-05/04/2027, 13:10 - Anjali: I brought dabba but I'm craving junk food.
-05/04/2027, 13:12 - Sneha: Let's order pizza? We can split.
-05/04/2027, 13:16 - Anjali: Yes please. Order from the place near our office.
-05/04/2027, 13:18 - Sneha: Done, ordering now. Should arrive in 30 mins.
-07/04/2027, 12:51 - Sneha: What are we doing for lunch?
-07/04/2027, 12:57 - Anjali: I brought dabba but I'm craving junk food.
-07/04/2027, 13:01 - Sneha: Let's order pizza? We can split.
-07/04/2027, 13:05 - Anjali: Yes please. Order from the place near our office.
-07/04/2027, 13:10 - Sneha: Done, ordering now. Should arrive in 30 mins.
-09/04/2027, 09:30 - Sneha: Are you in office yet?
-09/04/2027, 09:34 - Anjali: Just reached. Metro was so crowded today ugh.
-09/04/2027, 09:36 - Sneha: Come down for coffee? I can't start working without it.
-09/04/2027, 09:39 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-09/04/2027, 09:42 - Sneha: Done.
-09/04/2027, 20:13 - Anjali: Did you hear about the new manager in sales?
-09/04/2027, 20:23 - Sneha: No what happened?? Spill the tea.
-09/04/2027, 20:28 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-09/04/2027, 20:33 - Sneha: Omg that's insane. Poor intern.
-09/04/2027, 20:38 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-09/04/2027, 20:40 - Sneha: Okkk coming to your desk.
-13/04/2027, 17:02 - Sneha: I am so done with today.
-13/04/2027, 17:07 - Anjali: Same. Let's log off.
-13/04/2027, 17:22 - Sneha: Bye see you tomorrow.
-14/04/2027, 17:25 - Sneha: I am so done with today.
-14/04/2027, 17:37 - Anjali: Same. Let's log off.
-14/04/2027, 17:43 - Sneha: Bye see you tomorrow.
-14/04/2027, 20:03 - Anjali: Did you hear about the new manager in sales?
-14/04/2027, 20:05 - Sneha: No what happened?? Spill the tea.
-14/04/2027, 20:09 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-14/04/2027, 20:14 - Sneha: Omg that's insane. Poor intern.
-14/04/2027, 20:17 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-14/04/2027, 20:18 - Sneha: Okkk coming to your desk.
-15/04/2027, 09:15 - Anjali: Did you hear about the new manager in sales?
-15/04/2027, 09:21 - Sneha: No what happened?? Spill the tea.
-15/04/2027, 09:23 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-15/04/2027, 09:25 - Sneha: Omg that's insane. Poor intern.
-15/04/2027, 09:29 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-15/04/2027, 09:31 - Sneha: Okkk coming to your desk.
-15/04/2027, 11:12 - Anjali: Omg this meeting could have been an email.
-15/04/2027, 11:13 - Sneha: Literally. Why is HR speaking for 45 minutes?
-15/04/2027, 11:16 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-15/04/2027, 11:17 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-15/04/2027, 11:18 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-15/04/2027, 11:20 - Sneha: typing furiously right now
-15/04/2027, 09:31 - Sneha: Are you in office yet?
-15/04/2027, 09:39 - Anjali: Just reached. Metro was so crowded today ugh.
-15/04/2027, 09:42 - Sneha: Come down for coffee? I can't start working without it.
-15/04/2027, 09:44 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-15/04/2027, 09:48 - Sneha: Done.
-16/04/2027, 12:33 - Sneha: What are we doing for lunch?
-16/04/2027, 12:42 - Anjali: I brought dabba but I'm craving junk food.
-16/04/2027, 12:45 - Sneha: Let's order pizza? We can split.
-16/04/2027, 12:48 - Anjali: Yes please. Order from the place near our office.
-16/04/2027, 12:50 - Sneha: Done, ordering now. Should arrive in 30 mins.
-20/04/2027, 14:32 - Anjali: Omg this meeting could have been an email.
-20/04/2027, 14:34 - Sneha: Literally. Why is HR speaking for 45 minutes?
-20/04/2027, 14:37 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-20/04/2027, 14:40 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-20/04/2027, 14:41 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-20/04/2027, 14:44 - Sneha: typing furiously right now
-22/04/2027, 17:19 - Sneha: I am so done with today.
-22/04/2027, 17:30 - Anjali: Same. Let's log off.
-22/04/2027, 17:41 - Sneha: Bye see you tomorrow.
-22/04/2027, 12:46 - Sneha: What are we doing for lunch?
-22/04/2027, 12:58 - Anjali: I brought dabba but I'm craving junk food.
-22/04/2027, 13:01 - Sneha: Let's order pizza? We can split.
-22/04/2027, 13:04 - Anjali: Yes please. Order from the place near our office.
-22/04/2027, 13:08 - Sneha: Done, ordering now. Should arrive in 30 mins.
-23/04/2027, 09:55 - Sneha: Are you in office yet?
-23/04/2027, 10:03 - Anjali: Just reached. Metro was so crowded today ugh.
-23/04/2027, 10:08 - Sneha: Come down for coffee? I can't start working without it.
-23/04/2027, 10:12 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-23/04/2027, 10:16 - Sneha: Done.
-26/04/2027, 09:42 - Sneha: Are you in office yet?
-26/04/2027, 09:45 - Anjali: Just reached. Metro was so crowded today ugh.
-26/04/2027, 09:49 - Sneha: Come down for coffee? I can't start working without it.
-26/04/2027, 09:54 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-26/04/2027, 09:57 - Sneha: Done.
-27/04/2027, 09:49 - Sneha: Are you in office yet?
-27/04/2027, 09:57 - Anjali: Just reached. Metro was so crowded today ugh.
-27/04/2027, 10:01 - Sneha: Come down for coffee? I can't start working without it.
-27/04/2027, 10:06 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-27/04/2027, 10:09 - Sneha: Done.
-28/04/2027, 12:44 - Sneha: What are we doing for lunch?
-28/04/2027, 12:59 - Anjali: I brought dabba but I'm craving junk food.
-28/04/2027, 13:03 - Sneha: Let's order pizza? We can split.
-28/04/2027, 13:06 - Anjali: Yes please. Order from the place near our office.
-28/04/2027, 13:11 - Sneha: Done, ordering now. Should arrive in 30 mins.
-30/04/2027, 12:49 - Sneha: What are we doing for lunch?
-30/04/2027, 13:03 - Anjali: I brought dabba but I'm craving junk food.
-30/04/2027, 13:06 - Sneha: Let's order pizza? We can split.
-30/04/2027, 13:11 - Anjali: Yes please. Order from the place near our office.
-30/04/2027, 13:16 - Sneha: Done, ordering now. Should arrive in 30 mins.
-04/05/2027, 17:00 - Sneha: I am so done with today.
-04/05/2027, 17:11 - Anjali: Same. Let's log off.
-04/05/2027, 17:21 - Sneha: Bye see you tomorrow.
-06/05/2027, 12:38 - Anjali: Omg this meeting could have been an email.
-06/05/2027, 12:39 - Sneha: Literally. Why is HR speaking for 45 minutes?
-06/05/2027, 12:40 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-06/05/2027, 12:41 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-06/05/2027, 12:42 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-06/05/2027, 12:43 - Sneha: typing furiously right now
-10/05/2027, 17:15 - Sneha: I am so done with today.
-10/05/2027, 17:24 - Anjali: Same. Let's log off.
-10/05/2027, 17:37 - Sneha: Bye see you tomorrow.
-11/05/2027, 09:50 - Sneha: Are you in office yet?
-11/05/2027, 09:54 - Anjali: Just reached. Metro was so crowded today ugh.
-11/05/2027, 09:59 - Sneha: Come down for coffee? I can't start working without it.
-11/05/2027, 10:02 - Anjali: Yes let me just put my bag on the desk. Meet you at the cafeteria in 5.
-11/05/2027, 10:07 - Sneha: Done.
-11/05/2027, 19:33 - Anjali: Did you hear about the new manager in sales?
-11/05/2027, 19:43 - Sneha: No what happened?? Spill the tea.
-11/05/2027, 19:47 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-11/05/2027, 19:50 - Sneha: Omg that's insane. Poor intern.
-11/05/2027, 19:54 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-11/05/2027, 19:55 - Sneha: Okkk coming to your desk.
-13/05/2027, 13:15 - Anjali: Omg this meeting could have been an email.
-13/05/2027, 13:17 - Sneha: Literally. Why is HR speaking for 45 minutes?
-13/05/2027, 13:19 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-13/05/2027, 13:21 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-13/05/2027, 13:22 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-13/05/2027, 13:24 - Sneha: typing furiously right now
-14/05/2027, 15:40 - Anjali: Omg this meeting could have been an email.
-14/05/2027, 15:41 - Sneha: Literally. Why is HR speaking for 45 minutes?
-14/05/2027, 15:44 - Anjali: And look at Raj's face, he is definitely sleeping with his eyes open 😂
-14/05/2027, 15:45 - Sneha: Don't make me laugh out loud I'm sitting in the first row!!
-14/05/2027, 15:46 - Anjali: Boss is looking at you, look at your laptop screen and pretend to type!
-14/05/2027, 15:48 - Sneha: typing furiously right now
-18/05/2027, 12:45 - Sneha: What are we doing for lunch?
-18/05/2027, 12:59 - Anjali: I brought dabba but I'm craving junk food.
-18/05/2027, 13:01 - Sneha: Let's order pizza? We can split.
-18/05/2027, 13:03 - Anjali: Yes please. Order from the place near our office.
-18/05/2027, 13:05 - Sneha: Done, ordering now. Should arrive in 30 mins.
-20/05/2027, 05:05 - Anjali: Did you hear about the new manager in sales?
-20/05/2027, 05:12 - Sneha: No what happened?? Spill the tea.
-20/05/2027, 05:16 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-20/05/2027, 05:21 - Sneha: Omg that's insane. Poor intern.
-20/05/2027, 05:24 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-20/05/2027, 05:26 - Sneha: Okkk coming to your desk.
-21/05/2027, 06:47 - Anjali: Did you hear about the new manager in sales?
-21/05/2027, 06:50 - Sneha: No what happened?? Spill the tea.
-21/05/2027, 06:54 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-21/05/2027, 06:59 - Sneha: Omg that's insane. Poor intern.
-21/05/2027, 07:04 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-21/05/2027, 07:06 - Sneha: Okkk coming to your desk.
-24/05/2027, 17:14 - Sneha: I am so done with today.
-24/05/2027, 17:23 - Anjali: Same. Let's log off.
-24/05/2027, 17:30 - Sneha: Bye see you tomorrow.
-25/05/2027, 21:32 - Anjali: Did you hear about the new manager in sales?
-25/05/2027, 21:42 - Sneha: No what happened?? Spill the tea.
-25/05/2027, 21:45 - Anjali: Apparently he yelled at the intern on the first day and HR had to get involved.
-25/05/2027, 21:50 - Sneha: Omg that's insane. Poor intern.
-25/05/2027, 21:55 - Anjali: Yeah, wait I'll tell you the rest in person, someone is standing behind me.
-25/05/2027, 21:57 - Sneha: Okkk coming to your desk.
-26/05/2027, 12:47 - Sneha: What are we doing for lunch?
-26/05/2027, 12:53 - Anjali: I brought dabba but I'm craving junk food.
-26/05/2027, 12:56 - Sneha: Let's order pizza? We can split.
-26/05/2027, 12:58 - Anjali: Yes please. Order from the place near our office.
-26/05/2027, 13:02 - Sneha: Done, ordering now. Should arrive in 30 mins.
+02/07/2026, 09:15 - Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them. Tap to learn more.
+03/07/2026, 18:05 - Anjali: the survey results are out, mixed feedback
+03/07/2026, 18:08 - Sneha: expected honestly
+06/07/2026, 16:52 - Sneha: three months in and honestly no regrets
+06/07/2026, 18:22 - Anjali: i'm so happy for you sneha, genuinely
+06/07/2026, 18:25 - Sneha: couldn't have done it without your pep talks
+06/07/2026, 18:29 - Anjali: you did the hard part, i just cheered from the sidelines
+08/07/2026, 11:08 - Anjali: can you send me that budget sheet from last week
+08/07/2026, 11:12 - Sneha: sending now, one sec
+08/07/2026, 11:17 - Sneha: <Media omitted>
+10/07/2026, 17:10 - Sneha: cleared out half my drawer today, found so much random stuff
+10/07/2026, 17:14 - Anjali: like what
+10/07/2026, 17:16 - Sneha: three years of old ID cards and a broken stapler
+10/07/2026, 17:20 - Anjali: the stapler is a whole personality trait at this point
+12/07/2026, 18:27 - Anjali: want to grab dinner after work today?
+12/07/2026, 18:32 - Sneha: yes please, i can't cook tonight
+12/07/2026, 18:35 - Anjali: that new thai place?
+12/07/2026, 18:37 - Sneha: perfect, 7pm?
+12/07/2026, 18:39 - Anjali: see you there
+14/07/2026, 20:44 - Sneha: still processing everything from yesterday
+14/07/2026, 22:14 - Anjali: take your time. how are you feeling this morning
+14/07/2026, 22:17 - Sneha: good i think. scared to tell manager honestly
+14/07/2026, 22:21 - Anjali: whenever you're ready, i'm here
+14/07/2026, 22:24 - Sneha: thank you for being so calm about this, i was scared you'd feel abandoned
+14/07/2026, 22:29 - Anjali: never. you deserve this
+17/07/2026, 13:25 - Anjali: You deleted this message
+17/07/2026, 13:29 - Sneha: lol what did you delete
+17/07/2026, 13:31 - Anjali: nothing important, sent to the wrong person by mistake
+17/07/2026, 13:34 - Sneha: the classic office group chat mixup
+20/07/2026, 14:28 - Anjali: training session got rescheduled again
+20/07/2026, 14:31 - Sneha: third time this month
+22/07/2026, 10:15 - Sneha: This message was deleted
+22/07/2026, 11:45 - Anjali: everything okay?
+22/07/2026, 11:47 - Sneha: yeah just venting somewhere i shouldn't have, all good now
+22/07/2026, 11:51 - Anjali: i'm here if you want to actually vent to me
+23/07/2026, 14:01 - Anjali: new intern joined our team today
+23/07/2026, 14:06 - Sneha: how is he
+23/07/2026, 14:09 - Anjali: seems sharp, asked good questions in standup
+23/07/2026, 14:13 - Sneha: better than the last one who slept through onboarding
+23/07/2026, 14:16 - Anjali: lol don't remind me
+25/07/2026, 12:37 - Sneha: random memory but remember our disastrous team building trip
+25/07/2026, 14:07 - Anjali: omg the rafting one? never bringing that up again
+25/07/2026, 14:10 - Sneha: i still have the bruise scar story ready for parties
+25/07/2026, 14:14 - Anjali: iconic weekend honestly, chaos but iconic
+26/07/2026, 10:45 - Anjali: random but do you remember the wifi password for the client floor
+26/07/2026, 10:49 - Sneha: check the sticky note on the printer lol
+26/07/2026, 10:52 - Anjali: found it, thanks
+27/07/2026, 12:04 - Anjali: that escalation finally got resolved
+27/07/2026, 12:07 - Sneha: thank god, i lost sleep over it
+28/07/2026, 10:32 - Sneha: are you in yet
+28/07/2026, 10:35 - Anjali: just got off the metro, it was PACKED today
+28/07/2026, 10:39 - Sneha: same story every monday honestly
+28/07/2026, 10:41 - Anjali: coffee before we start? i cannot function
+28/07/2026, 10:44 - Sneha: obviously, cafeteria in 5
+28/07/2026, 10:46 - Anjali: bringing my laptop, need to finish that mail first
+28/07/2026, 10:50 - Sneha: ok i'll grab the table near the window
+29/07/2026, 19:31 - Anjali: boss loved my slide today, shocking
+29/07/2026, 19:34 - Sneha: proof miracles happen
+31/07/2026, 11:46 - Anjali: that vendor call ran 40 mins over
+31/07/2026, 11:49 - Sneha: my calendar is ruined for the day
+02/08/2026, 16:15 - Anjali: did the invoice get approved finally
+02/08/2026, 16:18 - Sneha: yes after three follow up emails
+04/08/2026, 12:06 - Anjali: finance sent the new reimbursement policy
+04/08/2026, 12:09 - Sneha: 10 more pages to ignore
+07/08/2026, 15:22 - Anjali: client praised the deck in the call today
+07/08/2026, 15:25 - Sneha: screenshot that immediately
+09/08/2026, 16:55 - Anjali: got assigned a new project, cross functional with the US team
+09/08/2026, 17:00 - Sneha: ooh fancy, late night calls incoming?
+09/08/2026, 17:03 - Anjali: unfortunately yes, 9pm standups now
+09/08/2026, 17:07 - Sneha: rip your evenings, send help
+10/08/2026, 19:41 - Anjali: laptop is being so slow today
+10/08/2026, 19:44 - Sneha: restart it, works like magic sometimes
+11/08/2026, 09:25 - Anjali: the parking app finally works properly now
+11/08/2026, 09:28 - Sneha: small joys honestly
+12/08/2026, 10:15 - Sneha: raining so hard outside, hope you brought an umbrella
+12/08/2026, 11:45 - Anjali: nope of course not, typical
+12/08/2026, 11:48 - Sneha: i have an extra one, come by my desk
+12/08/2026, 11:52 - Anjali: you're a real one
+13/08/2026, 17:28 - Anjali: new hire asked me for lunch spot recos
+13/08/2026, 17:31 - Sneha: hope you gave her the good list
+15/08/2026, 11:17 - Anjali: boss wants weekly instead of monthly updates now
+15/08/2026, 11:20 - Sneha: more admin work, yay
+16/08/2026, 10:28 - Anjali: the office cat showed up again today
+16/08/2026, 10:31 - Sneha: best coworker we have honestly
+17/08/2026, 09:41 - Anjali: someone microwaved popcorn, smells amazing in here
+17/08/2026, 09:44 - Sneha: bring some to my desk
+18/08/2026, 10:59 - Anjali: manager finally got transferred to another team, i actually feel bad admitting i'm relieved
+18/08/2026, 12:29 - Sneha: don't feel bad, you survived a lot with him
+18/08/2026, 12:32 - Anjali: true. new manager starts monday, fingers crossed
+18/08/2026, 12:36 - Sneha: lower your expectations just in case lol
+19/08/2026, 15:31 - Anjali: boss is out sick today
+19/08/2026, 15:34 - Sneha: calm before the storm honestly
+20/08/2026, 15:57 - Anjali: someone's ringtone went off mid meeting, so loud
+20/08/2026, 16:00 - Sneha: everyone jumped lol
+21/08/2026, 15:00 - Sneha: omg check this out
+21/08/2026, 15:03 - Sneha: https://www.example.com/office-memes
+21/08/2026, 15:05 - Anjali: hahahaha this is literally our office
+21/08/2026, 15:09 - Sneha: the resemblance is uncanny
+22/08/2026, 16:18 - Anjali: that cafe was so good, we should make this a monthly thing
+22/08/2026, 17:48 - Sneha: deal. same time next month?
+22/08/2026, 17:51 - Anjali: calendar invite incoming
+25/08/2026, 20:50 - Anjali: new seating arrangement draft is out, check your name
+25/08/2026, 20:53 - Sneha: found mine, still next to you thankfully
+28/08/2026, 20:31 - Anjali: badge scanner acting up at the gate
+28/08/2026, 20:34 - Sneha: security let me in manually, chaos
+29/08/2026, 13:13 - Sneha: last day is officially friday
+29/08/2026, 13:18 - Anjali: circling that date in red on my calendar
+29/08/2026, 13:21 - Sneha: don't make a big deal out of it pls
+29/08/2026, 13:23 - Anjali: too late, already ordered a cake
+31/08/2026, 20:34 - Anjali: did you get the calendar invite for tomorrow
+31/08/2026, 20:37 - Sneha: yes, blocked already
+03/09/2026, 14:03 - Sneha: how's team lead life treating you
+03/09/2026, 15:33 - Anjali: stressful but good stressful, if that makes sense
+03/09/2026, 15:36 - Sneha: totally makes sense
+03/09/2026, 15:38 - Anjali: miss having you to vent to in person though
+03/09/2026, 15:42 - Sneha: call me tonight, i'm free after 8
+05/09/2026, 16:32 - Anjali: weekend plans?
+05/09/2026, 18:02 - Sneha: nothing much, thinking of just resting honestly
+05/09/2026, 18:05 - Anjali: same, this month has been a lot
+05/09/2026, 18:09 - Sneha: movie marathon at mine sunday?
+05/09/2026, 18:11 - Anjali: yes please, bringing snacks
+06/09/2026, 09:32 - Anjali: did the training certificate come through
+06/09/2026, 09:35 - Sneha: yes finally, added to linkedin already
+07/09/2026, 10:38 - Anjali: did you hear the new sales manager screamed at the intern this morning
+07/09/2026, 10:40 - Sneha: WHAT no way, which intern
+07/09/2026, 10:43 - Anjali: the new one, Priya's cousin i think, he made her redo the deck 4 times in front of everyone
+07/09/2026, 10:47 - Sneha: that's so unnecessary honestly
+07/09/2026, 10:49 - Anjali: HR had to step in apparently, someone complained
+07/09/2026, 10:54 - Sneha: good. these old school bosses need to learn
+07/09/2026, 10:57 - Anjali: anyway tell you more at lunch, boss walking by
+07/09/2026, 10:59 - Sneha: okkk
+07/09/2026, 11:29 - Sneha: i'm so tired already and it's not even 11
+07/09/2026, 12:59 - Anjali: same, this week is cursed
+07/09/2026, 13:07 - Sneha: see you tmrw, logging off
+07/09/2026, 13:12 - Anjali: night
+10/09/2026, 12:25 - Sneha: i think i'm going to apply to that opening at the fintech company
+10/09/2026, 13:55 - Anjali: wait what opening??
+10/09/2026, 13:57 - Sneha: a friend forwarded me a referral for a product analyst role
+10/09/2026, 14:00 - Anjali: omg are you serious. why didn't you tell me sooner
+10/09/2026, 14:02 - Sneha: i wasn't sure if i even wanted to but this place is draining me lately
+10/09/2026, 14:06 - Anjali: i get it. don't rush though, think it through
+10/09/2026, 14:09 - Sneha: yeah just exploring for now, don't tell anyone in the office pls
+10/09/2026, 14:11 - Anjali: obviously not, your secret is safe
+12/09/2026, 12:37 - Sneha: CASE STUDY ROUND DONE
+12/09/2026, 14:07 - Anjali: AND???
+12/09/2026, 14:09 - Sneha: i think it went really well actually!
+12/09/2026, 14:12 - Anjali: YESSS i knew it
+12/09/2026, 14:14 - Sneha: they said i'll hear back in a week
+12/09/2026, 14:18 - Anjali: fingers and toes crossed
+13/09/2026, 18:05 - Sneha: got the offer
+13/09/2026, 19:35 - Anjali: WAIT WHAT
+13/09/2026, 19:36 - Sneha: they just called, offer is official
+13/09/2026, 19:39 - Anjali: SNEHA OMG CONGRATULATIONS
+13/09/2026, 19:41 - Sneha: i'm shaking, i don't even know what to feel
+13/09/2026, 19:45 - Anjali: proud, excited, nervous, all of it probably
+13/09/2026, 19:48 - Sneha: exactly that
+13/09/2026, 19:52 - Anjali: we need to talk properly, call me tonight
+16/09/2026, 18:36 - Sneha: still processing everything from yesterday
+16/09/2026, 20:06 - Anjali: take your time. how are you feeling this morning
+16/09/2026, 20:09 - Sneha: good i think. scared to tell manager honestly
+16/09/2026, 20:13 - Anjali: whenever you're ready, i'm here
+16/09/2026, 20:16 - Sneha: thank you for being so calm about this, i was scared you'd feel abandoned
+16/09/2026, 20:21 - Anjali: never. you deserve this
+17/09/2026, 13:13 - Anjali: how did the notice period conversation go
+17/09/2026, 14:43 - Sneha: told him this morning, he wasn't happy but professional about it
+17/09/2026, 14:46 - Anjali: how are you feeling
+17/09/2026, 14:50 - Sneha: relieved honestly. also a little sad, weird combo
+17/09/2026, 14:53 - Anjali: makes total sense
+20/09/2026, 14:15 - Sneha: HR sent the exit formalities checklist, so many steps
+20/09/2026, 14:19 - Anjali: ugh corporate bureaucracy till the very end
+20/09/2026, 14:22 - Sneha: literally 11 items on this list
+20/09/2026, 14:26 - Anjali: i'll help you with the handover doc if you want
+20/09/2026, 14:29 - Sneha: you're the best, seriously
+22/09/2026, 11:42 - Anjali: team is planning a farewell for you, don't tell anyone i told you
+22/09/2026, 11:48 - Sneha: omg i wasn't supposed to know that yet
+22/09/2026, 11:50 - Anjali: oops. act surprised please
+22/09/2026, 11:53 - Sneha: i promise i will
+23/09/2026, 16:20 - Sneha: last day is officially friday
+23/09/2026, 16:25 - Anjali: circling that date in red on my calendar
+23/09/2026, 16:28 - Sneha: don't make a big deal out of it pls
+23/09/2026, 16:30 - Anjali: too late, already ordered a cake
+24/09/2026, 16:39 - Anjali: farewell cake was amazing, everyone cried a little including me
+24/09/2026, 16:47 - Sneha: i cried A LOT not gonna lie
+24/09/2026, 16:51 - Anjali: you deserved every bit of that send off
+24/09/2026, 16:54 - Sneha: thank you for making today so special
+24/09/2026, 16:58 - Anjali: you're family, of course we did
+25/09/2026, 10:34 - Sneha: first day at the new place tomorrow, so nervous
+25/09/2026, 12:04 - Anjali: you're going to be amazing, they're lucky to have you
+25/09/2026, 12:07 - Sneha: thank you, needed to hear that tonight
+25/09/2026, 12:11 - Anjali: text me the second you're free tomorrow
+25/09/2026, 12:14 - Sneha: will do, night bestie
+27/09/2026, 13:08 - Sneha: survived day one!
+27/09/2026, 14:38 - Anjali: AND??
+27/09/2026, 14:40 - Sneha: people seem nice, systems are confusing though
+27/09/2026, 14:44 - Anjali: give it a week, you'll figure it out
+27/09/2026, 14:47 - Sneha: missed our lunch table ngl
+27/09/2026, 14:51 - Anjali: it's not the same without you here honestly
+28/09/2026, 12:23 - Anjali: who am i going to complain about meetings to now
+28/09/2026, 13:53 - Sneha: i'm still going to be on whatsapp don't worry
+28/09/2026, 13:56 - Anjali: it's not the same and you know it
+28/09/2026, 14:00 - Sneha: i know. going to miss our coffee runs so much
+28/09/2026, 14:05 - Anjali: we're doing a proper coffee date before your last day, no excuses
+29/09/2026, 16:53 - Sneha: notice period is dragging so slowly
+29/09/2026, 16:57 - Anjali: just 3 weeks left right?
+29/09/2026, 17:00 - Sneha: 2 weeks 4 days, not that i'm counting
+29/09/2026, 17:02 - Anjali: lol you're counting
+02/10/2026, 13:39 - Anjali: new laptop bag arrived, so nice
+02/10/2026, 13:42 - Sneha: matching set energy now
+04/10/2026, 09:42 - Anjali: client asked for a call at 8pm
+04/10/2026, 09:45 - Sneha: on a normal day i'd say no but ok
+05/10/2026, 19:06 - Anjali: did you finish the timesheet
+05/10/2026, 19:09 - Sneha: doing it right now, don't judge
+06/10/2026, 10:56 - Anjali: quarterly review coming up, i'm dreading it already
+06/10/2026, 12:26 - Sneha: you've got this, you always do
+06/10/2026, 12:29 - Anjali: thanks for the confidence boost, needed it
+09/10/2026, 17:09 - Anjali: new seating chart posted, we're still together
+09/10/2026, 17:12 - Sneha: phew, was worried for a sec
+10/10/2026, 18:13 - Anjali: someone's alarm went off during the town hall
+10/10/2026, 18:16 - Sneha: the secondhand embarrassment was real
+11/10/2026, 12:43 - Anjali: it's really hitting me that you're leaving next week
+11/10/2026, 12:48 - Sneha: don't make me cry at my desk anjali
+11/10/2026, 12:51 - Anjali: sorry sorry. just going to miss you a lot
+11/10/2026, 12:55 - Sneha: i'll be two metro stops away, we'll still see each other all the time
+11/10/2026, 12:58 - Anjali: promise?
+11/10/2026, 12:59 - Sneha: promise
+12/10/2026, 17:31 - Sneha: appraisal season again for me at the new place, so nervous
+12/10/2026, 19:01 - Anjali: you'll do great, you always undersell yourself
+12/10/2026, 19:04 - Sneha: trying to be more confident this time around
+12/10/2026, 19:08 - Anjali: that's the spirit
+13/10/2026, 10:40 - Anjali: someone's phone kept ringing in the meeting
+13/10/2026, 10:43 - Sneha: so awkward, nobody owned up to it
+14/10/2026, 09:00 - Anjali: can't believe we're coming up on our friendship anniversary of surviving that office together
+14/10/2026, 10:30 - Sneha: omg it really has been that long
+14/10/2026, 10:33 - Anjali: best thing that came out of that horrible old office honestly
+14/10/2026, 10:37 - Sneha: agreed completely, worth every bad meeting
+15/10/2026, 19:16 - Anjali: someone left the AC on full blast again
+15/10/2026, 19:19 - Sneha: i'm freezing, bringing a jacket tomorrow
+18/10/2026, 16:35 - Anjali: parking lot is full again
+18/10/2026, 16:38 - Sneha: had to park two blocks away
+20/10/2026, 17:00 - Anjali: client wants a call at 7am tomorrow
+20/10/2026, 17:03 - Sneha: the horror, setting three alarms
+21/10/2026, 20:57 - Anjali: ugh this meeting could have literally been one email
+21/10/2026, 20:58 - Sneha: i know, 40 mins on a slide with 3 bullet points
+21/10/2026, 21:00 - Anjali: look at Rajesh's face, he's asleep with his eyes open again
+21/10/2026, 21:02 - Sneha: stoppp i'll laugh out loud and i'm in the front row
+21/10/2026, 21:03 - Anjali: boss is looking your way, pretend to type something
+21/10/2026, 21:04 - Sneha: typing furiously rn lol
+21/10/2026, 21:07 - Anjali: crisis averted
+23/10/2026, 09:53 - Anjali: boss asked me to mentor the new hire
+23/10/2026, 09:56 - Sneha: exciting but also terrifying
+25/10/2026, 17:09 - Anjali: someone parked in the visitor spot again
+25/10/2026, 17:12 - Sneha: security towed it finally lol
+26/10/2026, 09:19 - Anjali: forgot to charge my laptop last night
+26/10/2026, 09:22 - Sneha: borrow the charger from the front desk
+27/10/2026, 14:13 - Anjali: prepping for your case study round this weekend, wish us luck
+27/10/2026, 14:17 - Sneha: omg thank you for doing this with me
+27/10/2026, 14:20 - Anjali: of course, what are besties for
+27/10/2026, 14:24 - Sneha: seriously means a lot
+28/10/2026, 19:06 - Sneha: thinking about our first ever conversation in this chat, feels like ages ago
+28/10/2026, 20:36 - Anjali: omg the intern drama, i remember exactly
+28/10/2026, 20:39 - Sneha: so much has changed since then
+28/10/2026, 20:43 - Anjali: but some things stayed exactly the same, like our coffee obsession
+28/10/2026, 20:46 - Sneha: never changing that
+30/10/2026, 15:39 - Anjali: elevator is out of order again
+30/10/2026, 15:42 - Sneha: stairs it is, good for the legs i guess
+31/10/2026, 12:55 - Anjali: free coffee vouchers in the pantry today
+31/10/2026, 12:58 - Sneha: running down immediately
+01/11/2026, 15:01 - Anjali: cafeteria has samosas today
+01/11/2026, 15:04 - Sneha: running down right now
+04/11/2026, 14:50 - Anjali: remember when we used to complain about the old manager daily
+04/11/2026, 14:55 - Sneha: lol those were unhinged times
+04/11/2026, 14:58 - Anjali: honestly some good stories came out of it though
+04/11/2026, 15:02 - Sneha: very true, silver linings
+07/11/2026, 20:51 - Anjali: new dress code reminder email again
+07/11/2026, 20:54 - Sneha: they really love sending these
+08/11/2026, 11:50 - Anjali: did HR send the policy update
+08/11/2026, 11:53 - Sneha: yes, 20 pages nobody will read
+09/11/2026, 15:55 - Anjali: did you submit the expense report
+09/11/2026, 15:58 - Sneha: just did, fingers crossed it gets approved fast
+11/11/2026, 12:12 - Sneha: work trip to the Bangalore office got approved for me
+11/11/2026, 12:17 - Anjali: omg when
+11/11/2026, 12:19 - Sneha: next month, some vendor onboarding thing
+11/11/2026, 12:23 - Anjali: lucky!! bring me filter coffee
+11/11/2026, 12:26 - Sneha: obviously, non negotiable
+12/11/2026, 13:52 - Anjali: new hire brought samosas on day one, love her already
+12/11/2026, 13:55 - Sneha: instant favorite
+13/11/2026, 09:42 - Anjali: someone left their laptop unlocked at lunch
+13/11/2026, 09:45 - Sneha: security nightmare honestly
+15/11/2026, 14:17 - Sneha: heard the old office is getting renovated
+15/11/2026, 15:47 - Anjali: omg really, our floor?
+15/11/2026, 15:50 - Sneha: yes apparently new cafeteria and everything
+15/11/2026, 15:54 - Anjali: typical, they do it right after i still worked there... wait i still do lol
+15/11/2026, 15:57 - Sneha: you're still there don't worry, you didn't quit yet
+16/11/2026, 14:41 - Anjali: the appraisal hike this year is actually solid, 18 percent
+16/11/2026, 16:11 - Sneha: look at you go, so proud
+16/11/2026, 16:14 - Anjali: couldn't have gotten through this year without your advice honestly
+16/11/2026, 16:18 - Sneha: anytime, that's what besties are for
+18/11/2026, 19:53 - Anjali: boss asked for the report a day early
+18/11/2026, 19:56 - Sneha: of course he did
+19/11/2026, 09:07 - Anjali: team dinner tonight, wish you were here
+19/11/2026, 10:37 - Sneha: aw next time invite me as an honorary member
+19/11/2026, 10:40 - Anjali: already planning on it, don't worry
+20/11/2026, 18:16 - Sneha: appraisal results just dropped for me too
+20/11/2026, 18:20 - Anjali: and??
+20/11/2026, 18:22 - Sneha: 8 percent. after everything i did this year
+20/11/2026, 18:26 - Anjali: that's really low sneha, i'm sorry
+20/11/2026, 18:29 - Sneha: yeah. this is exactly why i'm looking elsewhere honestly
+20/11/2026, 18:34 - Anjali: i don't blame you at all
+21/11/2026, 18:27 - Anjali: boss wants the report reformatted again, third time
+21/11/2026, 18:30 - Sneha: i'm losing my mind slowly
+24/11/2026, 14:27 - Anjali: someone left cake in the pantry, no occasion
+24/11/2026, 14:30 - Sneha: not complaining, free cake is free cake
+26/11/2026, 10:24 - Sneha: free this saturday? want to catch up properly
+26/11/2026, 11:54 - Anjali: yes! that new cafe near your place?
+26/11/2026, 11:57 - Sneha: perfect, 11am?
+26/11/2026, 11:59 - Anjali: can't wait, feels like forever
+27/11/2026, 13:02 - Anjali: that report finally got approved after 3 rounds
+27/11/2026, 13:05 - Sneha: finally some peace
+29/11/2026, 09:33 - Anjali: laptop battery draining so fast lately
+29/11/2026, 09:36 - Sneha: might be time for a replacement request
+02/12/2026, 20:47 - Anjali: did you see the office photo from the event
+02/12/2026, 20:50 - Sneha: yes we look so tired in it lol
+05/12/2026, 12:23 - Anjali: the new monitor makes such a difference
+05/12/2026, 12:26 - Sneha: upgrade your life honestly
+06/12/2026, 19:58 - Anjali: did you get the calendar reminder for tomorrow's review
+06/12/2026, 20:01 - Sneha: yes, dreading it already
+08/12/2026, 14:42 - Anjali: client sent a thank you email today
+08/12/2026, 14:45 - Sneha: screenshot it for the appraisal doc
+11/12/2026, 13:32 - Anjali: client moved the call to tomorrow
+11/12/2026, 13:35 - Sneha: one more day of prep time then
+14/12/2026, 15:20 - Anjali: power went out for ten minutes
+14/12/2026, 15:23 - Sneha: half the floor panicked about their unsaved work
+17/12/2026, 13:35 - Anjali: survey link for employee satisfaction is out
+17/12/2026, 13:38 - Sneha: filling it out with brutal honesty this time
+18/12/2026, 15:42 - Anjali: that client finally paid the overdue invoice
+18/12/2026, 15:45 - Sneha: miracles do happen
+21/12/2026, 20:57 - Anjali: free snacks left over from some event
+21/12/2026, 21:00 - Sneha: raiding the pantry, want anything
+23/12/2026, 18:19 - Anjali: did you catch the town hall today
+23/12/2026, 18:22 - Sneha: half listened, was multitasking
+25/12/2026, 09:19 - Anjali: standup got cancelled today
+25/12/2026, 09:22 - Sneha: best news i've heard all week
+26/12/2026, 15:50 - Anjali: got selected to lead the next project, kind of terrified
+26/12/2026, 17:20 - Sneha: ANJALI THAT'S HUGE, congratulations!!
+26/12/2026, 17:22 - Anjali: thank you, still can't believe it
+26/12/2026, 17:25 - Sneha: you earned every bit of this, don't doubt yourself
+26/12/2026, 17:29 - Anjali: means a lot coming from you
+28/12/2026, 19:20 - Sneha: manager just cancelled our team outing
+28/12/2026, 19:25 - Anjali: WHY. we planned that for weeks
+28/12/2026, 19:28 - Sneha: said budget got cut this quarter
+28/12/2026, 19:32 - Anjali: this is so demotivating honestly
+28/12/2026, 19:35 - Sneha: yeah morale is at an all time low rn
+30/12/2026, 16:43 - Anjali: new hire sat next to me today, seems nice
+30/12/2026, 16:46 - Sneha: good, we need more normal people here
+01/01/2027, 16:50 - Sneha: let's plan something for our friendship anniversary
+01/01/2027, 18:20 - Anjali: yes!! dinner and drinks?
+01/01/2027, 18:23 - Sneha: perfect, i'm booking the place
+01/01/2027, 18:25 - Anjali: can't wait, this year flew by
+02/01/2027, 19:05 - Anjali: manager scheduled a review at 6pm on a FRIDAY
+02/01/2027, 19:10 - Sneha: who does that. that's just cruel
+02/01/2027, 19:13 - Anjali: i had dinner plans too, ugh
+02/01/2027, 19:17 - Sneha: push it if you can, or just keep it short and vague
+02/01/2027, 19:20 - Anjali: trying. will update you after
+04/01/2027, 19:40 - Anjali: random thought but i'm really grateful for you, just wanted to say that
+04/01/2027, 21:10 - Sneha: omg where is this coming from, i'm getting emotional now
+04/01/2027, 21:13 - Anjali: just thinking about how far we've both come this year
+04/01/2027, 21:17 - Sneha: right back at you anjali, seriously. couldn't have survived any of it without you
+04/01/2027, 21:22 - Anjali: here's to many more years of chaos together
+05/01/2027, 10:52 - Anjali: the office AC finally got fixed
+05/01/2027, 10:55 - Sneha: freezing perfectly again, love it
+08/01/2027, 13:14 - Anjali: did the client reply to your mail
+08/01/2027, 13:17 - Sneha: not yet, still waiting
+09/01/2027, 09:02 - Anjali: boss wants a status update by EOD and i haven't even started
+09/01/2027, 09:07 - Sneha: want help? i can take the data section
+09/01/2027, 09:10 - Anjali: you're an angel, sending you the sheet
+09/01/2027, 09:12 - Anjali: <Media omitted>
+11/01/2027, 18:54 - Anjali: meeting got pushed to 3
+11/01/2027, 18:57 - Sneha: thank god, needed the extra hour
+13/01/2027, 15:56 - Anjali: finance team rejected my expense claim
+13/01/2027, 15:59 - Sneha: ugh why now
+15/01/2027, 12:45 - Anjali: did the invoice finally clear
+15/01/2027, 12:48 - Sneha: yes after ages, finance is so slow
+17/01/2027, 16:25 - Anjali: someone brought samosas for the whole floor
+17/01/2027, 16:28 - Sneha: best person in this office honestly
+18/01/2027, 19:44 - Sneha: movie night was so needed, thank you
+18/01/2027, 21:14 - Anjali: anytime, we should do this more often
+18/01/2027, 21:17 - Sneha: agreed, life gets busy but we should prioritize this
+19/01/2027, 15:14 - Anjali: can you send that old photo from the diwali party, i want to post it
+19/01/2027, 15:18 - Sneha: looking for it, one sec
+19/01/2027, 15:23 - Sneha: <Media omitted>
+19/01/2027, 15:26 - Anjali: perfect thank you
+22/01/2027, 17:29 - Anjali: boss cancelled the review, rescheduled to next week
+22/01/2027, 17:32 - Sneha: one more week of peace
+24/01/2027, 12:58 - Anjali: office is so quiet without you causing chaos
+24/01/2027, 14:28 - Sneha: i did NOT cause chaos
+24/01/2027, 14:31 - Anjali: remember the time you knocked over the entire coffee tray
+24/01/2027, 14:35 - Sneha: one time! ONE TIME
+24/01/2027, 14:37 - Anjali: legendary moment though
+26/01/2027, 11:51 - Sneha: free for a quick vent
+26/01/2027, 12:01 - Anjali: always. what happened
+26/01/2027, 12:03 - Sneha: client changed the requirements again, third time this month
+26/01/2027, 12:06 - Anjali: that's insane, did you push back
+26/01/2027, 12:10 - Sneha: tried but manager just said make it work
+26/01/2027, 12:13 - Anjali: i'm so sorry, that phrase should be banned honestly
+26/01/2027, 12:17 - Sneha: thanks for listening, needed that
+29/01/2027, 17:35 - Anjali: client on the call sounded annoyed
+29/01/2027, 17:38 - Sneha: weren't they always though
+30/01/2027, 16:39 - Anjali: that new hire brought homemade cookies today
+30/01/2027, 16:42 - Sneha: marry me instantly
+01/02/2027, 15:53 - Anjali: laptop update taking forever
+01/02/2027, 15:56 - Sneha: story of my life today
+03/02/2027, 11:47 - Sneha: just had my 1:1, it was fine i guess
+03/02/2027, 11:50 - Anjali: what did he say about your numbers
+03/02/2027, 11:54 - Sneha: said solid but wants more visibility, whatever that means
+03/02/2027, 11:57 - Anjali: classic corporate nothing-speak
+03/02/2027, 11:59 - Sneha: exactly. i said okay and nodded a lot
+03/02/2027, 12:03 - Anjali: lol the universal survival strategy
+05/02/2027, 13:48 - Anjali: weather app says rain later
+05/02/2027, 13:51 - Sneha: carrying my umbrella just in case
+08/02/2027, 13:49 - Sneha: got a call back from that fintech company
+08/02/2027, 15:19 - Anjali: OMG AND
+08/02/2027, 15:21 - Sneha: second round next week, case study round
+08/02/2027, 15:25 - Anjali: you're going to crush it
+08/02/2027, 15:28 - Sneha: i hope so, so nervous already
+08/02/2027, 15:32 - Anjali: we'll prep this weekend if you want
+10/02/2027, 19:15 - Anjali: did you eat lunch yet
+10/02/2027, 19:18 - Sneha: just now, finally
+12/02/2027, 10:45 - Anjali: appraisal cycle emails just went out
+12/02/2027, 10:48 - Sneha: oh no here we go
+12/02/2027, 10:50 - Anjali: self appraisal form has literally 14 sections this year
+12/02/2027, 10:53 - Sneha: who has time for this. i have actual work to do
+12/02/2027, 10:57 - Anjali: let's fill it together during lunch, moral support
+12/02/2027, 10:59 - Sneha: deal, bring snacks though
+13/02/2027, 13:21 - Anjali: my sister's wedding shopping starts this weekend
+13/02/2027, 14:51 - Sneha: omg exciting! what are you looking for first
+13/02/2027, 14:54 - Anjali: lehenga hunting, wish me luck
+13/02/2027, 14:58 - Sneha: send pics of the options, i want to vote
+13/02/2027, 15:00 - Anjali: will do, you're basically my style consultant now
+15/02/2027, 10:08 - Sneha: new manager here actually listens in meetings, wild concept
+15/02/2027, 11:38 - Anjali: must be nice
+15/02/2027, 11:41 - Sneha: i know, i'm not used to it yet
+15/02/2027, 11:45 - Anjali: enjoy it while it lasts lol
+16/02/2027, 15:44 - Anjali: forgot my earphones today
+16/02/2027, 15:47 - Sneha: borrow mine, i have a spare
+19/02/2027, 12:04 - Sneha: new manager update?
+19/02/2027, 13:34 - Anjali: actually really chill so far, i'm suspicious
+19/02/2027, 13:37 - Sneha: give it two weeks before you trust it fully
+19/02/2027, 13:41 - Anjali: wise advice noted
+21/02/2027, 14:34 - Anjali: cafeteria menu finally changed after MONTHS
+21/02/2027, 14:38 - Sneha: thank god, i couldn't eat that aloo sabzi one more time
+21/02/2027, 14:41 - Anjali: they added a pasta counter
+21/02/2027, 14:43 - Sneha: okay now i'm actually excited for lunch
+23/02/2027, 09:13 - Anjali: new vending machine on our floor
+23/02/2027, 09:16 - Sneha: finally, the old one ate my money for months
+25/02/2027, 18:44 - Sneha: can't believe it's already appraisal season again, time flies
+25/02/2027, 18:49 - Anjali: i know, feels like just yesterday it was january
+25/02/2027, 18:53 - Sneha: this year went by in a blur honestly
+25/02/2027, 18:56 - Anjali: same, mostly a blur of meetings
+27/02/2027, 15:30 - Anjali: new logo on the building sign today
+27/02/2027, 15:33 - Sneha: looks the exact same to me lol
+28/02/2027, 13:48 - Anjali: did you see the group email about the new seating plan
+28/02/2027, 13:52 - Sneha: yes and i'm NOT happy, they're splitting our row
+28/02/2027, 13:55 - Anjali: WHAT. we need to fight this
+28/02/2027, 13:57 - Sneha: i already asked facilities if we can swap
+28/02/2027, 14:02 - Anjali: keep me posted, i'll back you up
+02/03/2027, 17:47 - Sneha: how's the US team project going
+02/03/2027, 19:17 - Anjali: exhausting but i'm learning a lot honestly
+02/03/2027, 19:20 - Sneha: silver lining i guess
+02/03/2027, 19:22 - Anjali: trying to see it that way, some days easier than others
+04/03/2027, 18:57 - Anjali: boss in a good mood today?
+04/03/2027, 19:00 - Sneha: surprisingly yes, don't jinx it
+06/03/2027, 12:17 - Anjali: traffic is insane on the highway today
+06/03/2027, 12:20 - Sneha: take the flyover, faster
+08/03/2027, 09:24 - Anjali: i think our manager forgot my name in the meeting today
+08/03/2027, 09:30 - Sneha: NO he did not
+08/03/2027, 09:33 - Anjali: he called me the girl from finance, i don't even work in finance
+08/03/2027, 09:37 - Sneha: i'm actually speechless
+08/03/2027, 09:40 - Anjali: i wanted to disappear into my chair
+11/03/2027, 19:51 - Anjali: team lunch friday, you in?
+11/03/2027, 19:54 - Sneha: obviously, wouldn't miss it
+14/03/2027, 11:53 - Anjali: the new badge system is so much faster
+14/03/2027, 11:56 - Sneha: finally, no more queue at the gate
+15/03/2027, 18:34 - Anjali: the new hire's laptop still hasn't arrived
+15/03/2027, 18:37 - Sneha: poor thing, using a loaner
+17/03/2027, 18:36 - Anjali: printer is jammed again on our floor
+17/03/2027, 18:39 - Sneha: use the one near HR, always works
+18/03/2027, 10:41 - Anjali: boss actually said good job today, shocking
+18/03/2027, 10:44 - Sneha: screenshot that for the records
+19/03/2027, 16:11 - Anjali: the elevator music today is oddly soothing
+19/03/2027, 16:14 - Sneha: never thought i'd say that about elevator music
+20/03/2027, 15:20 - Anjali: what's the wifi situation today
+20/03/2027, 15:23 - Sneha: stable for once, miracle
+22/03/2027, 14:21 - Anjali: new plant on my desk, feels very corporate of me
+22/03/2027, 14:24 - Sneha: adulting hard i see
+23/03/2027, 15:16 - Sneha: lunch plan?
+23/03/2027, 15:21 - Anjali: i brought dabba today but ngl craving something fried
+23/03/2027, 15:25 - Sneha: there's a new momos stall near gate 2 i heard
+23/03/2027, 15:28 - Anjali: omg yes let's go check it out instead of the usual place
+23/03/2027, 15:30 - Sneha: 11:45 at the lobby?
+23/03/2027, 15:31 - Anjali: perfect
+25/03/2027, 09:47 - Sneha: can you believe it's almost been a year since i left
+25/03/2027, 11:17 - Anjali: wait it actually has been almost a year??
+25/03/2027, 11:20 - Sneha: time is so weird
+25/03/2027, 11:22 - Anjali: we should celebrate the anniversary of your escape
+25/03/2027, 11:26 - Sneha: i love that idea unironically
+26/03/2027, 14:14 - Anjali: did the courier for the new monitors arrive
+26/03/2027, 14:17 - Sneha: yes, setting mine up now
+27/03/2027, 19:02 - Anjali: AC repair guy finally came
+27/03/2027, 19:05 - Sneha: about time, it's been weeks
+28/03/2027, 12:53 - Anjali: our old team lead finally quit too lol
+28/03/2027, 14:23 - Sneha: NO WAY. after everything he put people through
+28/03/2027, 14:26 - Anjali: karma really said not today
+28/03/2027, 14:30 - Sneha: tell me everything, don't leave a single detail out
+30/03/2027, 11:15 - Anjali: conference room double booked again
+30/03/2027, 11:18 - Sneha: classic, nobody checks the calendar
+01/04/2027, 19:07 - Anjali: someone's out sick, we're covering their tickets today
+01/04/2027, 19:10 - Sneha: double the workload, fun
+02/04/2027, 16:44 - Anjali: guess who got put on the annoying client account
+02/04/2027, 18:14 - Sneha: oh no not THAT one
+02/04/2027, 18:17 - Anjali: yes THAT one
+02/04/2027, 18:19 - Sneha: my condolences in advance
+02/04/2027, 18:23 - Anjali: i'll need emotional support texts daily now
+03/04/2027, 11:38 - Anjali: that new coffee blend is way too strong
+03/04/2027, 11:41 - Sneha: i actually love it though
+06/04/2027, 20:07 - Anjali: client wants an in person meeting next week
+06/04/2027, 20:10 - Sneha: travel time then, ugh
+07/04/2027, 10:37 - Anjali: client rescheduled again, third time this week
+07/04/2027, 10:40 - Sneha: at this point just cancel it
+08/04/2027, 18:43 - Anjali: office plants finally got watered after weeks
+08/04/2027, 18:46 - Sneha: overdue honestly, poor things
+10/04/2027, 20:12 - Sneha: work is genuinely busy this week, might go quiet
+10/04/2027, 21:42 - Anjali: no worries, whenever you're free
+10/04/2027, 21:45 - Sneha: thanks for understanding as always
+12/04/2027, 20:53 - Sneha: got my first bonus at the new job!!
+12/04/2027, 22:23 - Anjali: omg how much
+12/04/2027, 22:25 - Sneha: can't say exact number but i'm treating you to dinner
+12/04/2027, 22:28 - Anjali: say less, i'm free tonight
+13/04/2027, 10:44 - Sneha: do you have 5 mins to review my email before i send it to the client
+13/04/2027, 10:52 - Anjali: sure send it over
+13/04/2027, 10:56 - Sneha: <Media omitted>
+13/04/2027, 11:01 - Anjali: looks good, maybe soften the second paragraph a bit
+13/04/2027, 11:05 - Sneha: good call, editing now
+16/04/2027, 18:51 - Anjali: the wifi in our floor is so bad today
+16/04/2027, 18:54 - Sneha: IT ticket raised already, said 2 hours
+16/04/2027, 18:58 - Anjali: 2 hours?? i have a client call in 20 mins
+16/04/2027, 19:00 - Sneha: use the hotspot from my phone, i'll send you the password
+16/04/2027, 19:03 - Anjali: you're a lifesaver
+16/04/2027, 19:05 - Sneha: anytime bestie
+18/04/2027, 09:22 - Sneha: coffee run?
+18/04/2027, 09:24 - Anjali: yes but let's try the new machine on the 3rd floor
+18/04/2027, 09:27 - Sneha: heard it makes better cappuccino than ours
+18/04/2027, 09:29 - Anjali: finally some good news today
+18/04/2027, 09:33 - Sneha: meet you by the stairs in 5
+20/04/2027, 19:23 - Anjali: did you see the new dress code memo
+20/04/2027, 19:26 - Sneha: yes and it's oddly specific about shoes
+22/04/2027, 19:21 - Anjali: someone spilled coffee on the shared printer
+22/04/2027, 19:24 - Sneha: classic tuesday chaos
+24/04/2027, 16:06 - Anjali: quarterly numbers came out, we hit target!!
+24/04/2027, 16:11 - Sneha: omg finally some good news
+24/04/2027, 16:14 - Anjali: team lunch to celebrate?
+24/04/2027, 16:16 - Sneha: absolutely, my treat this time
+24/04/2027, 16:20 - Anjali: you don't have to but i won't stop you
+25/04/2027, 19:57 - Anjali: the new intern is really quick, impressed
+25/04/2027, 20:00 - Sneha: good hire then
+28/04/2027, 11:27 - Anjali: appraisal results are out
+28/04/2027, 11:33 - Sneha: and???
+28/04/2027, 11:35 - Anjali: decent hike, not what i hoped but okay
+28/04/2027, 11:39 - Sneha: how much
+28/04/2027, 11:42 - Anjali: 12 percent
+28/04/2027, 11:44 - Sneha: that's actually not bad this year given the freeze talk
+28/04/2027, 11:47 - Anjali: true, could be worse
+01/05/2027, 17:41 - Sneha: @Sneha are you coming?
+01/05/2027, 17:44 - Anjali: wait that's my line, wrong person
+01/05/2027, 17:46 - Sneha: omg autocorrect fail, i meant to ask if YOU'RE coming to the reunion lunch
+01/05/2027, 17:49 - Anjali: yes obviously, wouldn't miss it
+03/05/2027, 17:49 - Anjali: null
+03/05/2027, 19:19 - Sneha: uh what does that mean lol
+03/05/2027, 19:22 - Anjali: sorry app glitched, ignore that
+03/05/2027, 19:24 - Sneha: technology is not working in our favor today apparently
+05/05/2027, 15:52 - Anjali: my email for the new client project is anjali.newproject@example.com if you ever need to loop me in officially lol
+05/05/2027, 15:57 - Sneha: noted, very fancy of you
+05/05/2027, 16:00 - Anjali: trying to look professional for once
+07/05/2027, 13:20 - Sneha: how was your weekend
+07/05/2027, 14:50 - Anjali: good! went to my cousin's engagement, so much food
+07/05/2027, 14:53 - Sneha: omg pics or it didn't happen
+07/05/2027, 14:55 - Anjali: <Media omitted>
+07/05/2027, 14:59 - Sneha: you look gorgeous in that saree!!
+07/05/2027, 15:01 - Anjali: thank youu, my mom picked it out actually
+07/05/2027, 15:04 - Sneha: my weekend was boring, just slept and did laundry
+07/05/2027, 15:07 - Anjali: sometimes that's exactly what you need honestly
+08/05/2027, 13:56 - Anjali: did you finish the deck for tomorrow
+08/05/2027, 14:01 - Sneha: almost, stuck on the summary slide
+08/05/2027, 14:05 - Anjali: want me to take a look tonight
+08/05/2027, 14:08 - Sneha: would love that, sending now
+08/05/2027, 14:10 - Sneha: <Media omitted>
+09/05/2027, 16:36 - Anjali: someone brought their kid to the office today
+09/05/2027, 16:39 - Sneha: so cute, brightened the whole floor
+12/05/2027, 15:21 - Sneha: can you believe it's almost been a full year since i left the old job
+12/05/2027, 16:51 - Anjali: time genuinely flew by
+12/05/2027, 16:54 - Sneha: thank you for sticking with me through all of it
+12/05/2027, 16:58 - Anjali: always. that's not changing anytime soon
+12/05/2027, 17:01 - Sneha: love you anjali, truly
+12/05/2027, 17:03 - Anjali: love you too, my forever work bestie even though we don't work together anymore
+12/05/2027, 19:09 - Anjali: any movement on the access request?
+12/05/2027, 19:19 - Sneha: a little movement on the access request, should close out this week
+12/05/2027, 21:26 - Anjali: status on the survey results?
+12/05/2027, 21:31 - Sneha: done with the survey results actually, forgot to tell you
+12/05/2027, 23:59 - Anjali: news on the referral bonus process?
+13/05/2027, 00:17 - Sneha: still pending on the referral bonus process, will update post lunch
+13/05/2027, 01:02 - Anjali: any movement on the team building budget?
+13/05/2027, 01:21 - Sneha: a little movement on the team building budget, should close out this week
+13/05/2027, 04:04 - Anjali: status on the laptop refresh?
+13/05/2027, 04:19 - Sneha: done with the laptop refresh actually, forgot to tell you
+13/05/2027, 05:17 - Anjali: any movement on the training module?
+13/05/2027, 05:25 - Sneha: a little movement on the training module, should close out this week
+13/05/2027, 08:22 - Anjali: any movement on the handover notes?
+13/05/2027, 08:35 - Sneha: a little movement on the handover notes, should close out this week
+13/05/2027, 11:59 - Anjali: news on the offsite planning?
+13/05/2027, 12:16 - Sneha: still pending on the offsite planning, will update post lunch
+13/05/2027, 15:41 - Anjali: any update on the parking situation?
+13/05/2027, 15:57 - Sneha: checking on the parking situation now, will confirm by evening
+13/05/2027, 19:56 - Anjali: any update on the leave policy update?
+13/05/2027, 19:59 - Sneha: checking on the leave policy update now, will confirm by evening
+13/05/2027, 21:36 - Anjali: status on the training module?
+13/05/2027, 21:46 - Sneha: done with the training module actually, forgot to tell you
+14/05/2027, 00:51 - Anjali: did we hear back about the security audit?
+14/05/2027, 00:57 - Sneha: yes the security audit is sorted, forwarding details in a bit
+14/05/2027, 02:55 - Anjali: any update on the new org chart?
+14/05/2027, 03:11 - Sneha: checking on the new org chart now, will confirm by evening
+14/05/2027, 06:54 - Anjali: did we hear back about the holiday calendar?
+14/05/2027, 07:11 - Sneha: yes the holiday calendar is sorted, forwarding details in a bit
+14/05/2027, 08:27 - Anjali: did we hear back about the client deck revisions?
+14/05/2027, 08:29 - Sneha: yes the client deck revisions is sorted, forwarding details in a bit
+14/05/2027, 11:55 - Anjali: quick check on the team building budget?
+14/05/2027, 12:04 - Sneha: not yet on the team building budget, chasing it right now
+14/05/2027, 15:50 - Anjali: news on the security audit?
+14/05/2027, 15:57 - Sneha: still pending on the security audit, will update post lunch
+14/05/2027, 18:01 - Anjali: status on the audit prep?
+14/05/2027, 18:20 - Sneha: done with the audit prep actually, forgot to tell you
+14/05/2027, 19:08 - Anjali: news on the client contract renewal?
+14/05/2027, 19:27 - Sneha: still pending on the client contract renewal, will update post lunch
+14/05/2027, 21:56 - Anjali: news on the wifi upgrade?
+14/05/2027, 22:00 - Sneha: still pending on the wifi upgrade, will update post lunch
+14/05/2027, 23:42 - Anjali: any movement on the new badge system?
+14/05/2027, 23:47 - Sneha: a little movement on the new badge system, should close out this week
+15/05/2027, 02:30 - Anjali: news on the printer replacement?
+15/05/2027, 02:35 - Sneha: still pending on the printer replacement, will update post lunch
+15/05/2027, 06:05 - Anjali: any update on the access request?
+15/05/2027, 06:11 - Sneha: checking on the access request now, will confirm by evening
+15/05/2027, 09:03 - Anjali: quick check on the parking situation?
+15/05/2027, 09:14 - Sneha: not yet on the parking situation, chasing it right now
+15/05/2027, 12:09 - Anjali: quick check on the referral bonus process?
+15/05/2027, 12:19 - Sneha: not yet on the referral bonus process, chasing it right now
+15/05/2027, 14:50 - Anjali: any movement on the offsite planning?
+15/05/2027, 15:07 - Sneha: a little movement on the offsite planning, should close out this week
+15/05/2027, 17:52 - Anjali: news on the survey results?
+15/05/2027, 18:01 - Sneha: still pending on the survey results, will update post lunch
+15/05/2027, 20:42 - Anjali: did we hear back about the cafeteria menu poll?
+15/05/2027, 21:01 - Sneha: yes the cafeteria menu poll is sorted, forwarding details in a bit
+15/05/2027, 22:23 - Anjali: any movement on the appraisal template?
+15/05/2027, 22:37 - Sneha: a little movement on the appraisal template, should close out this week
+16/05/2027, 00:10 - Anjali: any movement on the client contract renewal?
+16/05/2027, 00:28 - Sneha: a little movement on the client contract renewal, should close out this week
+16/05/2027, 04:24 - Anjali: any update on the HR portal?
+16/05/2027, 04:30 - Sneha: checking on the HR portal now, will confirm by evening
+16/05/2027, 05:32 - Anjali: any movement on the wifi upgrade?
+16/05/2027, 05:42 - Sneha: a little movement on the wifi upgrade, should close out this week
+16/05/2027, 08:13 - Anjali: quick check on the software license renewal?
+16/05/2027, 08:25 - Sneha: not yet on the software license renewal, chasing it right now
+16/05/2027, 11:19 - Anjali: did we hear back about the intern's project?
+16/05/2027, 11:29 - Sneha: yes the intern's project is sorted, forwarding details in a bit
+16/05/2027, 12:14 - Anjali: did we hear back about the referral bonus process?
+16/05/2027, 12:25 - Sneha: yes the referral bonus process is sorted, forwarding details in a bit
+16/05/2027, 16:15 - Anjali: did we hear back about the vendor meeting?
+16/05/2027, 16:26 - Sneha: yes the vendor meeting is sorted, forwarding details in a bit
+16/05/2027, 19:41 - Anjali: did we hear back about the CRM tool?
+16/05/2027, 20:01 - Sneha: yes the CRM tool is sorted, forwarding details in a bit
+16/05/2027, 23:34 - Anjali: any movement on the performance review cycle?
+16/05/2027, 23:51 - Sneha: a little movement on the performance review cycle, should close out this week
+17/05/2027, 01:14 - Anjali: any update on the vendor meeting?
+17/05/2027, 01:30 - Sneha: checking on the vendor meeting now, will confirm by evening
+17/05/2027, 04:32 - Anjali: news on the performance review cycle?
+17/05/2027, 04:49 - Sneha: still pending on the performance review cycle, will update post lunch
+17/05/2027, 07:02 - Anjali: news on the budget approval?
+17/05/2027, 07:14 - Sneha: still pending on the budget approval, will update post lunch
+17/05/2027, 10:20 - Anjali: any update on the cab policy update?
+17/05/2027, 10:39 - Sneha: checking on the cab policy update now, will confirm by evening
+17/05/2027, 13:00 - Anjali: status on the referral bonus process?
+17/05/2027, 13:16 - Sneha: done with the referral bonus process actually, forgot to tell you
+17/05/2027, 15:23 - Anjali: any movement on the CRM tool?
+17/05/2027, 15:31 - Sneha: a little movement on the CRM tool, should close out this week
+17/05/2027, 19:14 - Anjali: news on the new org chart?
+17/05/2027, 19:23 - Sneha: still pending on the new org chart, will update post lunch
+17/05/2027, 22:34 - Anjali: any movement on the referral bonus process?
+17/05/2027, 22:48 - Sneha: a little movement on the referral bonus process, should close out this week
+18/05/2027, 00:32 - Anjali: did we hear back about the onboarding doc?
+18/05/2027, 00:47 - Sneha: yes the onboarding doc is sorted, forwarding details in a bit
+18/05/2027, 01:43 - Anjali: news on the new hire paperwork?
+18/05/2027, 01:55 - Sneha: still pending on the new hire paperwork, will update post lunch
+18/05/2027, 05:50 - Anjali: any movement on the client escalation?
+18/05/2027, 06:07 - Sneha: a little movement on the client escalation, should close out this week
+18/05/2027, 09:52 - Anjali: did we hear back about the town hall recording?
+18/05/2027, 10:06 - Sneha: yes the town hall recording is sorted, forwarding details in a bit
+18/05/2027, 12:29 - Anjali: did we hear back about the new hire paperwork?
+18/05/2027, 12:35 - Sneha: yes the new hire paperwork is sorted, forwarding details in a bit
+18/05/2027, 15:26 - Anjali: quick check on the printer replacement?
+18/05/2027, 15:29 - Sneha: not yet on the printer replacement, chasing it right now
+18/05/2027, 16:46 - Anjali: quick check on the vendor meeting?
+18/05/2027, 17:04 - Sneha: not yet on the vendor meeting, chasing it right now
+18/05/2027, 20:20 - Anjali: did we hear back about the expense policy?
+18/05/2027, 20:32 - Sneha: yes the expense policy is sorted, forwarding details in a bit
+18/05/2027, 21:42 - Anjali: any update on the travel reimbursement?
+18/05/2027, 21:58 - Sneha: checking on the travel reimbursement now, will confirm by evening
+18/05/2027, 23:08 - Anjali: any update on the performance review cycle?
+18/05/2027, 23:26 - Sneha: checking on the performance review cycle now, will confirm by evening
+19/05/2027, 02:07 - Anjali: did we hear back about the handover notes?
+19/05/2027, 02:09 - Sneha: yes the handover notes is sorted, forwarding details in a bit
+19/05/2027, 05:58 - Anjali: quick check on the access request?
+19/05/2027, 06:04 - Sneha: not yet on the access request, chasing it right now
+19/05/2027, 08:33 - Anjali: quick check on the intern's project?
+19/05/2027, 08:39 - Sneha: not yet on the intern's project, chasing it right now
+19/05/2027, 09:43 - Anjali: quick check on the performance review cycle?
+19/05/2027, 10:00 - Sneha: not yet on the performance review cycle, chasing it right now
+19/05/2027, 11:52 - Anjali: status on the expense policy?
+19/05/2027, 12:04 - Sneha: done with the expense policy actually, forgot to tell you
+19/05/2027, 15:28 - Anjali: quick check on the onboarding doc?
+19/05/2027, 15:42 - Sneha: not yet on the onboarding doc, chasing it right now
+19/05/2027, 19:13 - Anjali: quick check on the audit prep?
+19/05/2027, 19:17 - Sneha: not yet on the audit prep, chasing it right now
+19/05/2027, 21:26 - Anjali: did we hear back about the new badge system?
+19/05/2027, 21:45 - Sneha: yes the new badge system is sorted, forwarding details in a bit
+20/05/2027, 00:07 - Anjali: any update on the desk booking system?
+20/05/2027, 00:19 - Sneha: checking on the desk booking system now, will confirm by evening
+20/05/2027, 03:44 - Anjali: any movement on the client deck revisions?
+20/05/2027, 04:01 - Sneha: a little movement on the client deck revisions, should close out this week
+20/05/2027, 07:04 - Anjali: any movement on the desk booking system?
+20/05/2027, 07:07 - Sneha: a little movement on the desk booking system, should close out this week
+20/05/2027, 10:30 - Anjali: news on the appraisal template?
+20/05/2027, 10:34 - Sneha: still pending on the appraisal template, will update post lunch
+20/05/2027, 12:19 - Anjali: did we hear back about the town hall invite?
+20/05/2027, 12:30 - Sneha: yes the town hall invite is sorted, forwarding details in a bit
+20/05/2027, 14:13 - Anjali: status on the handover notes?
+20/05/2027, 14:17 - Sneha: done with the handover notes actually, forgot to tell you
+20/05/2027, 16:53 - Anjali: status on the leave policy update?
+20/05/2027, 16:58 - Sneha: done with the leave policy update actually, forgot to tell you
+20/05/2027, 20:57 - Anjali: quick check on the client escalation?
+20/05/2027, 21:02 - Sneha: not yet on the client escalation, chasing it right now
+20/05/2027, 23:40 - Anjali: status on the performance review cycle?
+20/05/2027, 23:47 - Sneha: done with the performance review cycle actually, forgot to tell you
+21/05/2027, 03:29 - Anjali: any movement on the software license renewal?
+21/05/2027, 03:40 - Sneha: a little movement on the software license renewal, should close out this week
+21/05/2027, 04:32 - Anjali: any update on the budget approval?
+21/05/2027, 04:35 - Sneha: checking on the budget approval now, will confirm by evening
+21/05/2027, 06:43 - Anjali: quick check on the budget approval?
+21/05/2027, 06:46 - Sneha: not yet on the budget approval, chasing it right now
+21/05/2027, 08:46 - Anjali: any movement on the intern's project?
+21/05/2027, 08:59 - Sneha: a little movement on the intern's project, should close out this week
+21/05/2027, 11:19 - Anjali: any update on the team building budget?
+21/05/2027, 11:34 - Sneha: checking on the team building budget now, will confirm by evening
+21/05/2027, 12:56 - Anjali: status on the offsite planning?
+21/05/2027, 13:05 - Sneha: done with the offsite planning actually, forgot to tell you
+21/05/2027, 16:05 - Anjali: any update on the wifi upgrade?
+21/05/2027, 16:20 - Sneha: checking on the wifi upgrade now, will confirm by evening
+21/05/2027, 19:29 - Anjali: did we hear back about the client contract renewal?
+21/05/2027, 19:36 - Sneha: yes the client contract renewal is sorted, forwarding details in a bit
+21/05/2027, 21:04 - Anjali: news on the insurance renewal form?
+21/05/2027, 21:11 - Sneha: still pending on the insurance renewal form, will update post lunch
+21/05/2027, 22:16 - Anjali: did we hear back about the wifi upgrade?
+21/05/2027, 22:30 - Sneha: yes the wifi upgrade is sorted, forwarding details in a bit
+22/05/2027, 01:53 - Anjali: any update on the training module?
+22/05/2027, 02:02 - Sneha: checking on the training module now, will confirm by evening
+22/05/2027, 04:54 - Anjali: any update on the laptop refresh?
+22/05/2027, 05:14 - Sneha: checking on the laptop refresh now, will confirm by evening
+22/05/2027, 06:35 - Anjali: any movement on the expense policy?
+22/05/2027, 06:44 - Sneha: a little movement on the expense policy, should close out this week
+22/05/2027, 09:27 - Anjali: news on the audit prep?
+22/05/2027, 09:37 - Sneha: still pending on the audit prep, will update post lunch
+22/05/2027, 12:19 - Anjali: any update on the CRM tool?
+22/05/2027, 12:29 - Sneha: checking on the CRM tool now, will confirm by evening
+22/05/2027, 16:04 - Anjali: status on the client deck revisions?
+22/05/2027, 16:06 - Sneha: done with the client deck revisions actually, forgot to tell you
+22/05/2027, 18:50 - Anjali: status on the parking situation?
+22/05/2027, 19:01 - Sneha: done with the parking situation actually, forgot to tell you
+22/05/2027, 22:39 - Anjali: any movement on the security audit?
+22/05/2027, 22:58 - Sneha: a little movement on the security audit, should close out this week
+23/05/2027, 00:23 - Anjali: news on the town hall invite?
+23/05/2027, 00:27 - Sneha: still pending on the town hall invite, will update post lunch
+23/05/2027, 03:05 - Anjali: did we hear back about the printer replacement?
+23/05/2027, 03:18 - Sneha: yes the printer replacement is sorted, forwarding details in a bit
+23/05/2027, 06:33 - Anjali: quick check on the town hall invite?
+23/05/2027, 06:44 - Sneha: not yet on the town hall invite, chasing it right now
+23/05/2027, 10:12 - Anjali: news on the parking situation?
+23/05/2027, 10:27 - Sneha: still pending on the parking situation, will update post lunch
+23/05/2027, 14:08 - Anjali: did we hear back about the performance review cycle?
+23/05/2027, 14:18 - Sneha: yes the performance review cycle is sorted, forwarding details in a bit
+23/05/2027, 16:59 - Anjali: status on the appraisal template?
+23/05/2027, 17:10 - Sneha: done with the appraisal template actually, forgot to tell you
+23/05/2027, 18:45 - Anjali: status on the HR portal?
+23/05/2027, 18:59 - Sneha: done with the HR portal actually, forgot to tell you
+23/05/2027, 21:47 - Anjali: did we hear back about the access request?
+23/05/2027, 21:52 - Sneha: yes the access request is sorted, forwarding details in a bit
+23/05/2027, 23:37 - Anjali: status on the new hire paperwork?
+23/05/2027, 23:51 - Sneha: done with the new hire paperwork actually, forgot to tell you
+24/05/2027, 03:02 - Anjali: status on the new org chart?
+24/05/2027, 03:15 - Sneha: done with the new org chart actually, forgot to tell you
+24/05/2027, 06:27 - Anjali: any update on the client escalation?
+24/05/2027, 06:38 - Sneha: checking on the client escalation now, will confirm by evening
+24/05/2027, 10:22 - Anjali: status on the printer replacement?
+24/05/2027, 10:33 - Sneha: done with the printer replacement actually, forgot to tell you
+24/05/2027, 11:23 - Anjali: news on the software license renewal?
+24/05/2027, 11:37 - Sneha: still pending on the software license renewal, will update post lunch
+24/05/2027, 13:32 - Anjali: did we hear back about the parking situation?
+24/05/2027, 13:34 - Sneha: yes the parking situation is sorted, forwarding details in a bit
+24/05/2027, 16:43 - Anjali: news on the handover notes?
+24/05/2027, 16:46 - Sneha: still pending on the handover notes, will update post lunch
+24/05/2027, 20:06 - Anjali: did we hear back about the laptop refresh?
+24/05/2027, 20:23 - Sneha: yes the laptop refresh is sorted, forwarding details in a bit
+24/05/2027, 22:21 - Anjali: status on the wifi upgrade?
+24/05/2027, 22:30 - Sneha: done with the wifi upgrade actually, forgot to tell you
+25/05/2027, 01:50 - Anjali: any update on the referral bonus process?
+25/05/2027, 02:03 - Sneha: checking on the referral bonus process now, will confirm by evening
+25/05/2027, 03:44 - Anjali: did we hear back about the team building budget?
+25/05/2027, 03:52 - Sneha: yes the team building budget is sorted, forwarding details in a bit
+25/05/2027, 07:15 - Anjali: quick check on the expense policy?
+25/05/2027, 07:25 - Sneha: not yet on the expense policy, chasing it right now
+25/05/2027, 11:03 - Anjali: status on the new badge system?
+25/05/2027, 11:09 - Sneha: done with the new badge system actually, forgot to tell you
+25/05/2027, 14:34 - Anjali: status on the access request?
+25/05/2027, 14:39 - Sneha: done with the access request actually, forgot to tell you
+25/05/2027, 18:04 - Anjali: status on the new dashboard?
+25/05/2027, 18:07 - Sneha: done with the new dashboard actually, forgot to tell you
+25/05/2027, 20:11 - Anjali: news on the desk booking system?
+25/05/2027, 20:27 - Sneha: still pending on the desk booking system, will update post lunch
+25/05/2027, 21:20 - Anjali: status on the insurance renewal form?
+25/05/2027, 21:40 - Sneha: done with the insurance renewal form actually, forgot to tell you
+25/05/2027, 23:58 - Anjali: status on the budget approval?
+26/05/2027, 00:04 - Sneha: done with the budget approval actually, forgot to tell you
+26/05/2027, 01:12 - Anjali: news on the HR portal?
+26/05/2027, 01:23 - Sneha: still pending on the HR portal, will update post lunch
+26/05/2027, 03:31 - Anjali: did we hear back about the survey results?
+26/05/2027, 03:46 - Sneha: yes the survey results is sorted, forwarding details in a bit
+26/05/2027, 05:15 - Anjali: any movement on the budget approval?
+26/05/2027, 05:23 - Sneha: a little movement on the budget approval, should close out this week
+26/05/2027, 06:41 - Anjali: news on the town hall recording?
+26/05/2027, 07:00 - Sneha: still pending on the town hall recording, will update post lunch
+26/05/2027, 09:18 - Anjali: quick check on the new badge system?
+26/05/2027, 09:36 - Sneha: not yet on the new badge system, chasing it right now
+26/05/2027, 12:29 - Anjali: any movement on the audit prep?
+26/05/2027, 12:39 - Sneha: a little movement on the audit prep, should close out this week
+26/05/2027, 14:06 - Anjali: did we hear back about the budget approval?
+26/05/2027, 14:16 - Sneha: yes the budget approval is sorted, forwarding details in a bit
+26/05/2027, 17:04 - Anjali: did we hear back about the insurance renewal form?
+26/05/2027, 17:15 - Sneha: yes the insurance renewal form is sorted, forwarding details in a bit
+26/05/2027, 21:11 - Anjali: status on the client escalation?
+26/05/2027, 21:23 - Sneha: done with the client escalation actually, forgot to tell you
+26/05/2027, 22:37 - Anjali: did we hear back about the appraisal template?
+26/05/2027, 22:53 - Sneha: yes the appraisal template is sorted, forwarding details in a bit
+26/05/2027, 23:57 - Anjali: status on the desk booking system?
+27/05/2027, 00:03 - Sneha: done with the desk booking system actually, forgot to tell you
+27/05/2027, 04:01 - Anjali: status on the client contract renewal?
+27/05/2027, 04:10 - Sneha: done with the client contract renewal actually, forgot to tell you
+27/05/2027, 07:48 - Anjali: news on the new badge system?
+27/05/2027, 08:02 - Sneha: still pending on the new badge system, will update post lunch
+27/05/2027, 11:09 - Anjali: quick check on the wifi upgrade?
+27/05/2027, 11:22 - Sneha: not yet on the wifi upgrade, chasing it right now
+27/05/2027, 12:30 - Anjali: did we hear back about the travel reimbursement?
+27/05/2027, 12:44 - Sneha: yes the travel reimbursement is sorted, forwarding details in a bit
+27/05/2027, 13:32 - Anjali: any update on the town hall invite?
+27/05/2027, 13:42 - Sneha: checking on the town hall invite now, will confirm by evening
+27/05/2027, 16:44 - Anjali: any movement on the laptop refresh?
+27/05/2027, 16:49 - Sneha: a little movement on the laptop refresh, should close out this week
+27/05/2027, 19:30 - Anjali: any update on the offsite planning?
+27/05/2027, 19:43 - Sneha: checking on the offsite planning now, will confirm by evening
+27/05/2027, 23:20 - Anjali: news on the client escalation?
+27/05/2027, 23:30 - Sneha: still pending on the client escalation, will update post lunch
+28/05/2027, 02:44 - Anjali: any movement on the HR portal?
+28/05/2027, 02:58 - Sneha: a little movement on the HR portal, should close out this week
+28/05/2027, 06:26 - Anjali: any movement on the travel reimbursement?
+28/05/2027, 06:39 - Sneha: a little movement on the travel reimbursement, should close out this week
+28/05/2027, 07:51 - Anjali: did we hear back about the leave policy update?
+28/05/2027, 08:00 - Sneha: yes the leave policy update is sorted, forwarding details in a bit
+28/05/2027, 10:45 - Anjali: status on the security audit?
+28/05/2027, 10:47 - Sneha: done with the security audit actually, forgot to tell you
+28/05/2027, 14:10 - Anjali: any update on the holiday calendar?
+28/05/2027, 14:29 - Sneha: checking on the holiday calendar now, will confirm by evening
+28/05/2027, 16:37 - Anjali: quick check on the insurance renewal form?
+28/05/2027, 16:46 - Sneha: not yet on the insurance renewal form, chasing it right now
+28/05/2027, 20:16 - Anjali: news on the expense policy?
+28/05/2027, 20:20 - Sneha: still pending on the expense policy, will update post lunch
+28/05/2027, 23:47 - Anjali: quick check on the compliance training?
+29/05/2027, 00:03 - Sneha: not yet on the compliance training, chasing it right now
+29/05/2027, 03:47 - Anjali: any update on the compliance training?
+29/05/2027, 03:58 - Sneha: checking on the compliance training now, will confirm by evening
+29/05/2027, 07:29 - Anjali: news on the team building budget?
+29/05/2027, 07:44 - Sneha: still pending on the team building budget, will update post lunch
+29/05/2027, 08:58 - Anjali: quick check on the laptop refresh?
+29/05/2027, 09:04 - Sneha: not yet on the laptop refresh, chasing it right now
+29/05/2027, 10:00 - Anjali: quick check on the client contract renewal?
+29/05/2027, 10:03 - Sneha: not yet on the client contract renewal, chasing it right now
+29/05/2027, 12:05 - Anjali: quick check on the HR portal?
+29/05/2027, 12:22 - Sneha: not yet on the HR portal, chasing it right now
+29/05/2027, 13:36 - Anjali: status on the software license renewal?
+29/05/2027, 13:41 - Sneha: done with the software license renewal actually, forgot to tell you
+29/05/2027, 15:26 - Anjali: any update on the client contract renewal?
+29/05/2027, 15:45 - Sneha: checking on the client contract renewal now, will confirm by evening
+29/05/2027, 17:04 - Anjali: quick check on the town hall recording?
+29/05/2027, 17:18 - Sneha: not yet on the town hall recording, chasing it right now
+29/05/2027, 19:59 - Anjali: any update on the new hire paperwork?
+29/05/2027, 20:12 - Sneha: checking on the new hire paperwork now, will confirm by evening
+29/05/2027, 23:48 - Anjali: did we hear back about the client escalation?
+30/05/2027, 00:07 - Sneha: yes the client escalation is sorted, forwarding details in a bit
+30/05/2027, 02:39 - Anjali: any movement on the parking situation?
+30/05/2027, 02:59 - Sneha: a little movement on the parking situation, should close out this week
+30/05/2027, 06:54 - Anjali: quick check on the new org chart?
+30/05/2027, 07:00 - Sneha: not yet on the new org chart, chasing it right now
+30/05/2027, 09:31 - Anjali: quick check on the appraisal template?
+30/05/2027, 09:36 - Sneha: not yet on the appraisal template, chasing it right now
+30/05/2027, 12:26 - Anjali: news on the cafeteria menu poll?
+30/05/2027, 12:41 - Sneha: still pending on the cafeteria menu poll, will update post lunch
+30/05/2027, 14:37 - Anjali: status on the CRM tool?
+30/05/2027, 14:40 - Sneha: done with the CRM tool actually, forgot to tell you
+30/05/2027, 18:21 - Anjali: any movement on the town hall recording?
+30/05/2027, 18:34 - Sneha: a little movement on the town hall recording, should close out this week
+30/05/2027, 20:14 - Anjali: status on the vendor meeting?
+30/05/2027, 20:30 - Sneha: done with the vendor meeting actually, forgot to tell you
+30/05/2027, 23:08 - Anjali: quick check on the client deck revisions?
+30/05/2027, 23:17 - Sneha: not yet on the client deck revisions, chasing it right now
+31/05/2027, 01:34 - Anjali: news on the new dashboard?
+31/05/2027, 01:39 - Sneha: still pending on the new dashboard, will update post lunch
+31/05/2027, 05:19 - Anjali: did we hear back about the software license renewal?
+31/05/2027, 05:32 - Sneha: yes the software license renewal is sorted, forwarding details in a bit
+31/05/2027, 08:36 - Anjali: any movement on the new org chart?
+31/05/2027, 08:49 - Sneha: a little movement on the new org chart, should close out this week
+31/05/2027, 09:49 - Anjali: did we hear back about the HR portal?
+31/05/2027, 10:03 - Sneha: yes the HR portal is sorted, forwarding details in a bit
+31/05/2027, 11:58 - Anjali: any update on the town hall recording?
+31/05/2027, 12:06 - Sneha: checking on the town hall recording now, will confirm by evening
+31/05/2027, 13:22 - Anjali: any movement on the cab policy update?
+31/05/2027, 13:38 - Sneha: a little movement on the cab policy update, should close out this week
+31/05/2027, 14:46 - Anjali: quick check on the cafeteria menu poll?
+31/05/2027, 14:54 - Sneha: not yet on the cafeteria menu poll, chasing it right now
+31/05/2027, 18:23 - Anjali: any update on the security audit?
+31/05/2027, 18:25 - Sneha: checking on the security audit now, will confirm by evening
+31/05/2027, 19:22 - Anjali: quick check on the cab policy update?
+31/05/2027, 19:34 - Sneha: not yet on the cab policy update, chasing it right now
+31/05/2027, 21:21 - Anjali: status on the compliance training?
+31/05/2027, 21:27 - Sneha: done with the compliance training actually, forgot to tell you
+01/06/2027, 00:36 - Anjali: did we hear back about the new dashboard?
+01/06/2027, 00:44 - Sneha: yes the new dashboard is sorted, forwarding details in a bit
+01/06/2027, 01:46 - Anjali: news on the holiday calendar?
+01/06/2027, 02:05 - Sneha: still pending on the holiday calendar, will update post lunch
+01/06/2027, 03:43 - Anjali: any movement on the vendor meeting?
+01/06/2027, 04:03 - Sneha: a little movement on the vendor meeting, should close out this week
+01/06/2027, 05:43 - Anjali: any movement on the cafeteria menu poll?
+01/06/2027, 05:52 - Sneha: a little movement on the cafeteria menu poll, should close out this week
+01/06/2027, 08:01 - Anjali: any movement on the leave policy update?
+01/06/2027, 08:07 - Sneha: a little movement on the leave policy update, should close out this week
+01/06/2027, 11:24 - Anjali: quick check on the survey results?
+01/06/2027, 11:26 - Sneha: not yet on the survey results, chasing it right now
+01/06/2027, 13:21 - Anjali: did we hear back about the audit prep?
+01/06/2027, 13:27 - Sneha: yes the audit prep is sorted, forwarding details in a bit
+01/06/2027, 14:45 - Anjali: any update on the appraisal template?
+01/06/2027, 15:04 - Sneha: checking on the appraisal template now, will confirm by evening
+01/06/2027, 16:53 - Anjali: any movement on the new dashboard?
+01/06/2027, 17:00 - Sneha: a little movement on the new dashboard, should close out this week
+01/06/2027, 18:13 - Anjali: news on the training module?
+01/06/2027, 18:15 - Sneha: still pending on the training module, will update post lunch
+01/06/2027, 19:33 - Anjali: any movement on the new hire paperwork?
+01/06/2027, 19:35 - Sneha: a little movement on the new hire paperwork, should close out this week
+01/06/2027, 21:51 - Anjali: status on the onboarding doc?
+01/06/2027, 22:00 - Sneha: done with the onboarding doc actually, forgot to tell you
+02/06/2027, 01:15 - Anjali: quick check on the handover notes?
+02/06/2027, 01:27 - Sneha: not yet on the handover notes, chasing it right now
+02/06/2027, 02:16 - Anjali: news on the cab policy update?
+02/06/2027, 02:23 - Sneha: still pending on the cab policy update, will update post lunch
+02/06/2027, 04:15 - Anjali: any movement on the insurance renewal form?
+02/06/2027, 04:18 - Sneha: a little movement on the insurance renewal form, should close out this week
+02/06/2027, 05:35 - Anjali: any update on the intern's project?
+02/06/2027, 05:50 - Sneha: checking on the intern's project now, will confirm by evening
+02/06/2027, 08:49 - Anjali: quick check on the travel reimbursement?
+02/06/2027, 08:54 - Sneha: not yet on the travel reimbursement, chasing it right now
+02/06/2027, 12:49 - Anjali: any update on the expense policy?
+02/06/2027, 12:53 - Sneha: checking on the expense policy now, will confirm by evening
+02/06/2027, 15:39 - Anjali: news on the intern's project?
+02/06/2027, 15:55 - Sneha: still pending on the intern's project, will update post lunch
+02/06/2027, 18:12 - Anjali: status on the cafeteria menu poll?
+02/06/2027, 18:30 - Sneha: done with the cafeteria menu poll actually, forgot to tell you
+02/06/2027, 21:46 - Anjali: status on the travel reimbursement?
+02/06/2027, 21:51 - Sneha: done with the travel reimbursement actually, forgot to tell you
+03/06/2027, 00:31 - Anjali: any update on the printer replacement?
+03/06/2027, 00:49 - Sneha: checking on the printer replacement now, will confirm by evening
+03/06/2027, 02:30 - Anjali: news on the client deck revisions?
+03/06/2027, 02:33 - Sneha: still pending on the client deck revisions, will update post lunch
+03/06/2027, 06:24 - Anjali: news on the laptop refresh?
+03/06/2027, 06:42 - Sneha: still pending on the laptop refresh, will update post lunch
+03/06/2027, 08:44 - Anjali: did we hear back about the new org chart?
+03/06/2027, 09:00 - Sneha: yes the new org chart is sorted, forwarding details in a bit
+03/06/2027, 12:29 - Anjali: any update on the survey results?
+03/06/2027, 12:31 - Sneha: checking on the survey results now, will confirm by evening

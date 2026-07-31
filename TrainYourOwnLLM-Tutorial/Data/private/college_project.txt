@@ -1,1000 +1,936 @@
-14/07/2026, 18:30 - Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them. Tap to learn more.
-02/08/2026, 23:25 - Arjun: Rohan did you finish the slides?
-03/08/2026, 01:00 - Neha: Rohan???
-03/08/2026, 03:00 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-03/08/2026, 03:15 - Rohan: chill bro sending in 5 mins
-03/08/2026, 03:59 - Neha: It's been an hour...
-05/08/2026, 03:54 - Arjun: I submitted it. Finally.
-05/08/2026, 03:56 - Neha: Thank god. I'm so stressed.
-05/08/2026, 04:08 - Kritika: Yay team! We did it!
-05/08/2026, 04:09 - Rohan: party when?
-05/08/2026, 04:10 - Neha: I'm sleeping for 3 days.
-06/08/2026, 21:11 - Arjun: Guys we need to start the report. Who is doing what?
-06/08/2026, 21:31 - Neha: I can do the introduction and literature review.
-06/08/2026, 21:59 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-06/08/2026, 22:49 - Kritika: What is the topic again?
-06/08/2026, 22:52 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-06/08/2026, 22:57 - Kritika: Oh right! I can do the conclusion.
-07/08/2026, 01:25 - Arjun: @Rohan you have to do the slides.
-07/08/2026, 04:18 - Rohan: ok bro cool
-07/08/2026, 23:08 - Arjun: I submitted it. Finally.
-07/08/2026, 23:15 - Neha: Thank god. I'm so stressed.
-07/08/2026, 23:26 - Kritika: Yay team! We did it!
-07/08/2026, 23:30 - Rohan: party when?
-07/08/2026, 23:34 - Neha: I'm sleeping for 3 days.
-08/08/2026, 08:05 - Arjun: Guys we need to start the report. Who is doing what?
-08/08/2026, 08:25 - Neha: I can do the introduction and literature review.
-08/08/2026, 08:42 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-08/08/2026, 10:09 - Kritika: What is the topic again?
-08/08/2026, 10:12 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-08/08/2026, 10:17 - Kritika: Oh right! I can do the conclusion.
-08/08/2026, 15:12 - Arjun: @Rohan you have to do the slides.
-08/08/2026, 17:42 - Rohan: ok bro cool
-10/08/2026, 12:10 - Arjun: I submitted it. Finally.
-10/08/2026, 12:20 - Neha: Thank god. I'm so stressed.
-10/08/2026, 12:36 - Kritika: Yay team! We did it!
-10/08/2026, 12:37 - Rohan: party when?
-10/08/2026, 12:38 - Neha: I'm sleeping for 3 days.
-11/08/2026, 22:31 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-11/08/2026, 22:41 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-11/08/2026, 22:48 - Neha: What about Rohan and Kritika??
-11/08/2026, 23:12 - Neha: HELLO???
-11/08/2026, 23:50 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-11/08/2026, 23:53 - Neha: We need time to format it! Please do it now.
-11/08/2026, 23:54 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-12/08/2026, 01:20 - Rohan: my laptop is hanging bro give me some time
-13/08/2026, 21:41 - Arjun: Guys we need to start the report. Who is doing what?
-13/08/2026, 21:49 - Neha: I can do the introduction and literature review.
-13/08/2026, 22:09 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-14/08/2026, 00:09 - Kritika: What is the topic again?
-14/08/2026, 00:13 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-14/08/2026, 00:18 - Kritika: Oh right! I can do the conclusion.
-14/08/2026, 03:49 - Arjun: @Rohan you have to do the slides.
-14/08/2026, 06:10 - Rohan: ok bro cool
-14/08/2026, 18:06 - Arjun: Guys we need to start the report. Who is doing what?
-14/08/2026, 18:24 - Neha: I can do the introduction and literature review.
-14/08/2026, 18:34 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-14/08/2026, 19:38 - Kritika: What is the topic again?
-14/08/2026, 19:41 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-14/08/2026, 19:42 - Kritika: Oh right! I can do the conclusion.
-15/08/2026, 00:19 - Arjun: @Rohan you have to do the slides.
-15/08/2026, 04:24 - Rohan: ok bro cool
-16/08/2026, 04:22 - Arjun: Rohan did you finish the slides?
-16/08/2026, 05:27 - Neha: Rohan???
-16/08/2026, 07:27 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-16/08/2026, 07:39 - Rohan: chill bro sending in 5 mins
-16/08/2026, 08:22 - Neha: It's been an hour...
-16/08/2026, 22:26 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-16/08/2026, 22:33 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-16/08/2026, 22:40 - Neha: What about Rohan and Kritika??
-16/08/2026, 22:56 - Neha: HELLO???
-16/08/2026, 23:46 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-16/08/2026, 23:48 - Neha: We need time to format it! Please do it now.
-16/08/2026, 23:50 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-17/08/2026, 01:41 - Rohan: my laptop is hanging bro give me some time
-17/08/2026, 08:08 - Arjun: Rohan did you finish the slides?
-17/08/2026, 09:47 - Neha: Rohan???
-17/08/2026, 12:47 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-17/08/2026, 12:57 - Rohan: chill bro sending in 5 mins
-17/08/2026, 13:56 - Neha: It's been an hour...
-17/08/2026, 23:32 - Arjun: I submitted it. Finally.
-17/08/2026, 23:41 - Neha: Thank god. I'm so stressed.
-17/08/2026, 23:59 - Kritika: Yay team! We did it!
-18/08/2026, 00:00 - Rohan: party when?
-18/08/2026, 00:03 - Neha: I'm sleeping for 3 days.
-18/08/2026, 20:04 - Arjun: Guys we need to start the report. Who is doing what?
-18/08/2026, 20:32 - Neha: I can do the introduction and literature review.
-18/08/2026, 20:39 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-18/08/2026, 21:15 - Kritika: What is the topic again?
-18/08/2026, 21:16 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-18/08/2026, 21:19 - Kritika: Oh right! I can do the conclusion.
-19/08/2026, 00:19 - Arjun: @Rohan you have to do the slides.
-19/08/2026, 04:17 - Rohan: ok bro cool
-19/08/2026, 16:45 - Arjun: Rohan did you finish the slides?
-19/08/2026, 18:26 - Neha: Rohan???
-19/08/2026, 22:26 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-19/08/2026, 22:41 - Rohan: chill bro sending in 5 mins
-19/08/2026, 23:16 - Neha: It's been an hour...
-21/08/2026, 22:56 - Arjun: Rohan did you finish the slides?
-22/08/2026, 00:27 - Neha: Rohan???
-22/08/2026, 02:27 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-22/08/2026, 02:39 - Rohan: chill bro sending in 5 mins
-22/08/2026, 03:20 - Neha: It's been an hour...
-22/08/2026, 22:25 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-22/08/2026, 22:32 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-22/08/2026, 22:37 - Neha: What about Rohan and Kritika??
-22/08/2026, 23:03 - Neha: HELLO???
-23/08/2026, 00:02 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-23/08/2026, 00:06 - Neha: We need time to format it! Please do it now.
-23/08/2026, 00:11 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-23/08/2026, 01:54 - Rohan: my laptop is hanging bro give me some time
-24/08/2026, 22:08 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-24/08/2026, 22:14 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-24/08/2026, 22:17 - Neha: What about Rohan and Kritika??
-24/08/2026, 22:33 - Neha: HELLO???
-24/08/2026, 23:15 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-24/08/2026, 23:17 - Neha: We need time to format it! Please do it now.
-24/08/2026, 23:20 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-25/08/2026, 00:36 - Rohan: my laptop is hanging bro give me some time
-26/08/2026, 07:23 - Arjun: Guys we need to start the report. Who is doing what?
-26/08/2026, 07:37 - Neha: I can do the introduction and literature review.
-26/08/2026, 08:03 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-26/08/2026, 09:18 - Kritika: What is the topic again?
-26/08/2026, 09:22 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-26/08/2026, 09:26 - Kritika: Oh right! I can do the conclusion.
-26/08/2026, 13:51 - Arjun: @Rohan you have to do the slides.
-26/08/2026, 17:59 - Rohan: ok bro cool
-28/08/2026, 13:04 - Arjun: I submitted it. Finally.
-28/08/2026, 13:12 - Neha: Thank god. I'm so stressed.
-28/08/2026, 13:32 - Kritika: Yay team! We did it!
-28/08/2026, 13:37 - Rohan: party when?
-28/08/2026, 13:42 - Neha: I'm sleeping for 3 days.
-30/08/2026, 13:52 - Arjun: Guys we need to start the report. Who is doing what?
-30/08/2026, 14:05 - Neha: I can do the introduction and literature review.
-30/08/2026, 14:29 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-30/08/2026, 14:59 - Kritika: What is the topic again?
-30/08/2026, 15:00 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-30/08/2026, 15:03 - Kritika: Oh right! I can do the conclusion.
-30/08/2026, 19:45 - Arjun: @Rohan you have to do the slides.
-31/08/2026, 00:22 - Rohan: ok bro cool
-31/08/2026, 22:37 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-31/08/2026, 22:43 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-31/08/2026, 22:50 - Neha: What about Rohan and Kritika??
-31/08/2026, 23:07 - Neha: HELLO???
-31/08/2026, 23:43 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-31/08/2026, 23:45 - Neha: We need time to format it! Please do it now.
-31/08/2026, 23:46 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-01/09/2026, 00:46 - Rohan: my laptop is hanging bro give me some time
-02/09/2026, 21:37 - Arjun: I submitted it. Finally.
-02/09/2026, 21:39 - Neha: Thank god. I'm so stressed.
-02/09/2026, 21:54 - Kritika: Yay team! We did it!
-02/09/2026, 21:57 - Rohan: party when?
-02/09/2026, 22:01 - Neha: I'm sleeping for 3 days.
-04/09/2026, 01:18 - Arjun: Rohan did you finish the slides?
-04/09/2026, 03:14 - Neha: Rohan???
-04/09/2026, 05:14 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-04/09/2026, 05:26 - Rohan: chill bro sending in 5 mins
-04/09/2026, 06:05 - Neha: It's been an hour...
-05/09/2026, 16:23 - Arjun: I submitted it. Finally.
-05/09/2026, 16:32 - Neha: Thank god. I'm so stressed.
-05/09/2026, 16:55 - Kritika: Yay team! We did it!
-05/09/2026, 17:00 - Rohan: party when?
-05/09/2026, 17:01 - Neha: I'm sleeping for 3 days.
-07/09/2026, 17:54 - Arjun: Rohan did you finish the slides?
-07/09/2026, 19:41 - Neha: Rohan???
-08/09/2026, 00:41 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-08/09/2026, 00:49 - Rohan: chill bro sending in 5 mins
-08/09/2026, 01:35 - Neha: It's been an hour...
-08/09/2026, 22:14 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-08/09/2026, 22:17 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-08/09/2026, 22:21 - Neha: What about Rohan and Kritika??
-08/09/2026, 22:38 - Neha: HELLO???
-08/09/2026, 23:33 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-08/09/2026, 23:37 - Neha: We need time to format it! Please do it now.
-08/09/2026, 23:39 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-09/09/2026, 01:39 - Rohan: my laptop is hanging bro give me some time
-09/09/2026, 05:58 - Arjun: Guys we need to start the report. Who is doing what?
-09/09/2026, 06:12 - Neha: I can do the introduction and literature review.
-09/09/2026, 06:41 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-09/09/2026, 08:03 - Kritika: What is the topic again?
-09/09/2026, 08:04 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-09/09/2026, 08:06 - Kritika: Oh right! I can do the conclusion.
-09/09/2026, 10:11 - Arjun: @Rohan you have to do the slides.
-09/09/2026, 12:41 - Rohan: ok bro cool
-09/09/2026, 16:32 - Arjun: Rohan did you finish the slides?
-09/09/2026, 18:28 - Neha: Rohan???
-09/09/2026, 23:28 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-09/09/2026, 23:39 - Rohan: chill bro sending in 5 mins
-10/09/2026, 00:30 - Neha: It's been an hour...
-11/09/2026, 13:06 - Arjun: Rohan did you finish the slides?
-11/09/2026, 14:39 - Neha: Rohan???
-11/09/2026, 17:39 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-11/09/2026, 17:48 - Rohan: chill bro sending in 5 mins
-11/09/2026, 18:22 - Neha: It's been an hour...
-13/09/2026, 07:49 - Arjun: I submitted it. Finally.
-13/09/2026, 07:57 - Neha: Thank god. I'm so stressed.
-13/09/2026, 08:13 - Kritika: Yay team! We did it!
-13/09/2026, 08:14 - Rohan: party when?
-13/09/2026, 08:15 - Neha: I'm sleeping for 3 days.
-13/09/2026, 22:22 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-13/09/2026, 22:25 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-13/09/2026, 22:33 - Neha: What about Rohan and Kritika??
-13/09/2026, 22:57 - Neha: HELLO???
-13/09/2026, 23:32 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-13/09/2026, 23:35 - Neha: We need time to format it! Please do it now.
-13/09/2026, 23:37 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-14/09/2026, 01:21 - Rohan: my laptop is hanging bro give me some time
-14/09/2026, 22:19 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-14/09/2026, 22:26 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-14/09/2026, 22:29 - Neha: What about Rohan and Kritika??
-14/09/2026, 22:40 - Neha: HELLO???
-14/09/2026, 23:14 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-14/09/2026, 23:15 - Neha: We need time to format it! Please do it now.
-14/09/2026, 23:20 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-15/09/2026, 00:53 - Rohan: my laptop is hanging bro give me some time
-16/09/2026, 12:48 - Arjun: Guys we need to start the report. Who is doing what?
-16/09/2026, 12:54 - Neha: I can do the introduction and literature review.
-16/09/2026, 13:22 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-16/09/2026, 14:20 - Kritika: What is the topic again?
-16/09/2026, 14:23 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-16/09/2026, 14:27 - Kritika: Oh right! I can do the conclusion.
-16/09/2026, 19:03 - Arjun: @Rohan you have to do the slides.
-16/09/2026, 23:22 - Rohan: ok bro cool
-18/09/2026, 17:59 - Arjun: Rohan did you finish the slides?
-18/09/2026, 19:15 - Neha: Rohan???
-18/09/2026, 21:15 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-18/09/2026, 21:26 - Rohan: chill bro sending in 5 mins
-18/09/2026, 22:17 - Neha: It's been an hour...
-19/09/2026, 22:06 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-19/09/2026, 22:14 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-19/09/2026, 22:24 - Neha: What about Rohan and Kritika??
-19/09/2026, 22:53 - Neha: HELLO???
-19/09/2026, 23:52 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-19/09/2026, 23:54 - Neha: We need time to format it! Please do it now.
-19/09/2026, 23:57 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-20/09/2026, 01:01 - Rohan: my laptop is hanging bro give me some time
-20/09/2026, 10:10 - Arjun: Rohan did you finish the slides?
-20/09/2026, 11:17 - Neha: Rohan???
-20/09/2026, 13:17 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-20/09/2026, 13:28 - Rohan: chill bro sending in 5 mins
-20/09/2026, 14:16 - Neha: It's been an hour...
-21/09/2026, 22:22 - Arjun: Rohan did you finish the slides?
-21/09/2026, 23:34 - Neha: Rohan???
-22/09/2026, 02:34 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-22/09/2026, 02:49 - Rohan: chill bro sending in 5 mins
-22/09/2026, 03:35 - Neha: It's been an hour...
-22/09/2026, 22:19 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-22/09/2026, 22:21 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-22/09/2026, 22:28 - Neha: What about Rohan and Kritika??
-22/09/2026, 22:51 - Neha: HELLO???
-22/09/2026, 23:50 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-22/09/2026, 23:55 - Neha: We need time to format it! Please do it now.
-22/09/2026, 23:57 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-23/09/2026, 01:07 - Rohan: my laptop is hanging bro give me some time
-23/09/2026, 07:21 - Arjun: Guys we need to start the report. Who is doing what?
-23/09/2026, 07:50 - Neha: I can do the introduction and literature review.
-23/09/2026, 08:10 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-23/09/2026, 09:01 - Kritika: What is the topic again?
-23/09/2026, 09:06 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-23/09/2026, 09:08 - Kritika: Oh right! I can do the conclusion.
-23/09/2026, 11:02 - Arjun: @Rohan you have to do the slides.
-23/09/2026, 13:19 - Rohan: ok bro cool
-24/09/2026, 20:19 - Arjun: Guys we need to start the report. Who is doing what?
-24/09/2026, 20:36 - Neha: I can do the introduction and literature review.
-24/09/2026, 20:57 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-24/09/2026, 21:49 - Kritika: What is the topic again?
-24/09/2026, 21:52 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-24/09/2026, 21:57 - Kritika: Oh right! I can do the conclusion.
-24/09/2026, 23:11 - Arjun: @Rohan you have to do the slides.
-25/09/2026, 00:46 - Rohan: ok bro cool
-26/09/2026, 22:44 - Arjun: Guys we need to start the report. Who is doing what?
-26/09/2026, 22:52 - Neha: I can do the introduction and literature review.
-26/09/2026, 23:07 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-27/09/2026, 00:15 - Kritika: What is the topic again?
-27/09/2026, 00:18 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-27/09/2026, 00:21 - Kritika: Oh right! I can do the conclusion.
-27/09/2026, 02:08 - Arjun: @Rohan you have to do the slides.
-27/09/2026, 06:18 - Rohan: ok bro cool
-27/09/2026, 17:47 - Arjun: I submitted it. Finally.
-27/09/2026, 17:57 - Neha: Thank god. I'm so stressed.
-27/09/2026, 18:27 - Kritika: Yay team! We did it!
-27/09/2026, 18:29 - Rohan: party when?
-27/09/2026, 18:32 - Neha: I'm sleeping for 3 days.
-29/09/2026, 22:50 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-29/09/2026, 22:59 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-29/09/2026, 23:04 - Neha: What about Rohan and Kritika??
-29/09/2026, 23:18 - Neha: HELLO???
-30/09/2026, 00:13 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-30/09/2026, 00:17 - Neha: We need time to format it! Please do it now.
-30/09/2026, 00:22 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-30/09/2026, 02:08 - Rohan: my laptop is hanging bro give me some time
-30/09/2026, 14:32 - Arjun: Rohan did you finish the slides?
-30/09/2026, 15:57 - Neha: Rohan???
-30/09/2026, 18:57 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-30/09/2026, 19:04 - Rohan: chill bro sending in 5 mins
-30/09/2026, 19:55 - Neha: It's been an hour...
-02/10/2026, 07:55 - Arjun: Guys we need to start the report. Who is doing what?
-02/10/2026, 08:04 - Neha: I can do the introduction and literature review.
-02/10/2026, 08:16 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-02/10/2026, 08:55 - Kritika: What is the topic again?
-02/10/2026, 08:56 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-02/10/2026, 08:57 - Kritika: Oh right! I can do the conclusion.
-02/10/2026, 13:38 - Arjun: @Rohan you have to do the slides.
-02/10/2026, 14:40 - Rohan: ok bro cool
-03/10/2026, 22:10 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-03/10/2026, 22:14 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-03/10/2026, 22:22 - Neha: What about Rohan and Kritika??
-03/10/2026, 22:32 - Neha: HELLO???
-03/10/2026, 23:09 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-03/10/2026, 23:10 - Neha: We need time to format it! Please do it now.
-03/10/2026, 23:11 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-04/10/2026, 01:04 - Rohan: my laptop is hanging bro give me some time
-04/10/2026, 20:51 - Arjun: Guys we need to start the report. Who is doing what?
-04/10/2026, 21:11 - Neha: I can do the introduction and literature review.
-04/10/2026, 21:37 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-04/10/2026, 22:36 - Kritika: What is the topic again?
-04/10/2026, 22:41 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-04/10/2026, 22:42 - Kritika: Oh right! I can do the conclusion.
-05/10/2026, 03:10 - Arjun: @Rohan you have to do the slides.
-05/10/2026, 06:26 - Rohan: ok bro cool
-05/10/2026, 08:30 - Arjun: Guys we need to start the report. Who is doing what?
-05/10/2026, 08:37 - Neha: I can do the introduction and literature review.
-05/10/2026, 09:03 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-05/10/2026, 09:41 - Kritika: What is the topic again?
-05/10/2026, 09:46 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-05/10/2026, 09:50 - Kritika: Oh right! I can do the conclusion.
-05/10/2026, 13:41 - Arjun: @Rohan you have to do the slides.
-05/10/2026, 15:48 - Rohan: ok bro cool
-05/10/2026, 21:08 - Arjun: Rohan did you finish the slides?
-05/10/2026, 22:18 - Neha: Rohan???
-06/10/2026, 03:18 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-06/10/2026, 03:27 - Rohan: chill bro sending in 5 mins
-06/10/2026, 04:07 - Neha: It's been an hour...
-08/10/2026, 00:47 - Arjun: Guys we need to start the report. Who is doing what?
-08/10/2026, 01:17 - Neha: I can do the introduction and literature review.
-08/10/2026, 01:44 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-08/10/2026, 02:30 - Kritika: What is the topic again?
-08/10/2026, 02:34 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-08/10/2026, 02:37 - Kritika: Oh right! I can do the conclusion.
-08/10/2026, 03:43 - Arjun: @Rohan you have to do the slides.
-08/10/2026, 06:18 - Rohan: ok bro cool
-09/10/2026, 22:43 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-09/10/2026, 22:51 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-09/10/2026, 22:58 - Neha: What about Rohan and Kritika??
-09/10/2026, 23:24 - Neha: HELLO???
-10/10/2026, 00:00 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-10/10/2026, 00:02 - Neha: We need time to format it! Please do it now.
-10/10/2026, 00:03 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-10/10/2026, 01:54 - Rohan: my laptop is hanging bro give me some time
-10/10/2026, 22:53 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-10/10/2026, 22:56 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-10/10/2026, 23:02 - Neha: What about Rohan and Kritika??
-10/10/2026, 23:28 - Neha: HELLO???
-11/10/2026, 00:28 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-11/10/2026, 00:33 - Neha: We need time to format it! Please do it now.
-11/10/2026, 00:36 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-11/10/2026, 02:02 - Rohan: my laptop is hanging bro give me some time
-11/10/2026, 10:17 - Arjun: Guys we need to start the report. Who is doing what?
-11/10/2026, 10:33 - Neha: I can do the introduction and literature review.
-11/10/2026, 10:51 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-11/10/2026, 12:03 - Kritika: What is the topic again?
-11/10/2026, 12:06 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-11/10/2026, 12:10 - Kritika: Oh right! I can do the conclusion.
-11/10/2026, 16:26 - Arjun: @Rohan you have to do the slides.
-11/10/2026, 18:43 - Rohan: ok bro cool
-13/10/2026, 22:37 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-13/10/2026, 22:45 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-13/10/2026, 22:51 - Neha: What about Rohan and Kritika??
-13/10/2026, 23:07 - Neha: HELLO???
-13/10/2026, 23:39 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-13/10/2026, 23:44 - Neha: We need time to format it! Please do it now.
-13/10/2026, 23:49 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-14/10/2026, 01:29 - Rohan: my laptop is hanging bro give me some time
-16/10/2026, 00:36 - Arjun: I submitted it. Finally.
-16/10/2026, 00:40 - Neha: Thank god. I'm so stressed.
-16/10/2026, 00:57 - Kritika: Yay team! We did it!
-16/10/2026, 01:00 - Rohan: party when?
-16/10/2026, 01:03 - Neha: I'm sleeping for 3 days.
-16/10/2026, 05:14 - Arjun: Rohan did you finish the slides?
-16/10/2026, 07:12 - Neha: Rohan???
-16/10/2026, 10:12 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-16/10/2026, 10:25 - Rohan: chill bro sending in 5 mins
-16/10/2026, 11:08 - Neha: It's been an hour...
-18/10/2026, 04:42 - Arjun: Guys we need to start the report. Who is doing what?
-18/10/2026, 04:58 - Neha: I can do the introduction and literature review.
-18/10/2026, 05:07 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-18/10/2026, 07:07 - Kritika: What is the topic again?
-18/10/2026, 07:10 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-18/10/2026, 07:13 - Kritika: Oh right! I can do the conclusion.
-18/10/2026, 10:05 - Arjun: @Rohan you have to do the slides.
-18/10/2026, 12:51 - Rohan: ok bro cool
-18/10/2026, 18:45 - Arjun: I submitted it. Finally.
-18/10/2026, 18:47 - Neha: Thank god. I'm so stressed.
-18/10/2026, 19:08 - Kritika: Yay team! We did it!
-18/10/2026, 19:11 - Rohan: party when?
-18/10/2026, 19:12 - Neha: I'm sleeping for 3 days.
-18/10/2026, 22:46 - Arjun: Guys we need to start the report. Who is doing what?
-18/10/2026, 23:10 - Neha: I can do the introduction and literature review.
-18/10/2026, 23:18 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-19/10/2026, 00:18 - Kritika: What is the topic again?
-19/10/2026, 00:23 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-19/10/2026, 00:26 - Kritika: Oh right! I can do the conclusion.
-19/10/2026, 05:25 - Arjun: @Rohan you have to do the slides.
-19/10/2026, 08:13 - Rohan: ok bro cool
-20/10/2026, 06:35 - Arjun: Guys we need to start the report. Who is doing what?
-20/10/2026, 06:43 - Neha: I can do the introduction and literature review.
-20/10/2026, 06:54 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-20/10/2026, 07:33 - Kritika: What is the topic again?
-20/10/2026, 07:37 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-20/10/2026, 07:40 - Kritika: Oh right! I can do the conclusion.
-20/10/2026, 12:12 - Arjun: @Rohan you have to do the slides.
-20/10/2026, 13:44 - Rohan: ok bro cool
-20/10/2026, 21:04 - Arjun: I submitted it. Finally.
-20/10/2026, 21:09 - Neha: Thank god. I'm so stressed.
-20/10/2026, 21:38 - Kritika: Yay team! We did it!
-20/10/2026, 21:43 - Rohan: party when?
-20/10/2026, 21:47 - Neha: I'm sleeping for 3 days.
-22/10/2026, 03:56 - Arjun: I submitted it. Finally.
-22/10/2026, 04:00 - Neha: Thank god. I'm so stressed.
-22/10/2026, 04:16 - Kritika: Yay team! We did it!
-22/10/2026, 04:17 - Rohan: party when?
-22/10/2026, 04:22 - Neha: I'm sleeping for 3 days.
-22/10/2026, 08:44 - Arjun: Guys we need to start the report. Who is doing what?
-22/10/2026, 09:02 - Neha: I can do the introduction and literature review.
-22/10/2026, 09:23 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-22/10/2026, 11:14 - Kritika: What is the topic again?
-22/10/2026, 11:17 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-22/10/2026, 11:21 - Kritika: Oh right! I can do the conclusion.
-22/10/2026, 13:02 - Arjun: @Rohan you have to do the slides.
-22/10/2026, 15:45 - Rohan: ok bro cool
-22/10/2026, 21:23 - Arjun: I submitted it. Finally.
-22/10/2026, 21:31 - Neha: Thank god. I'm so stressed.
-22/10/2026, 21:45 - Kritika: Yay team! We did it!
-22/10/2026, 21:50 - Rohan: party when?
-22/10/2026, 21:55 - Neha: I'm sleeping for 3 days.
-24/10/2026, 17:48 - Arjun: Guys we need to start the report. Who is doing what?
-24/10/2026, 18:09 - Neha: I can do the introduction and literature review.
-24/10/2026, 18:29 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-24/10/2026, 19:03 - Kritika: What is the topic again?
-24/10/2026, 19:04 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-24/10/2026, 19:08 - Kritika: Oh right! I can do the conclusion.
-24/10/2026, 21:45 - Arjun: @Rohan you have to do the slides.
-25/10/2026, 01:30 - Rohan: ok bro cool
-25/10/2026, 13:46 - Arjun: I submitted it. Finally.
-25/10/2026, 13:54 - Neha: Thank god. I'm so stressed.
-25/10/2026, 14:18 - Kritika: Yay team! We did it!
-25/10/2026, 14:22 - Rohan: party when?
-25/10/2026, 14:25 - Neha: I'm sleeping for 3 days.
-26/10/2026, 12:05 - Arjun: Guys we need to start the report. Who is doing what?
-26/10/2026, 12:21 - Neha: I can do the introduction and literature review.
-26/10/2026, 12:40 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-26/10/2026, 13:17 - Kritika: What is the topic again?
-26/10/2026, 13:18 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-26/10/2026, 13:23 - Kritika: Oh right! I can do the conclusion.
-26/10/2026, 15:48 - Arjun: @Rohan you have to do the slides.
-26/10/2026, 17:21 - Rohan: ok bro cool
-28/10/2026, 16:23 - Arjun: Rohan did you finish the slides?
-28/10/2026, 18:05 - Neha: Rohan???
-28/10/2026, 21:05 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-28/10/2026, 21:18 - Rohan: chill bro sending in 5 mins
-28/10/2026, 21:58 - Neha: It's been an hour...
-30/10/2026, 13:30 - Arjun: Rohan did you finish the slides?
-30/10/2026, 15:28 - Neha: Rohan???
-30/10/2026, 18:28 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-30/10/2026, 18:36 - Rohan: chill bro sending in 5 mins
-30/10/2026, 19:11 - Neha: It's been an hour...
-31/10/2026, 06:12 - Arjun: I submitted it. Finally.
-31/10/2026, 06:21 - Neha: Thank god. I'm so stressed.
-31/10/2026, 06:44 - Kritika: Yay team! We did it!
-31/10/2026, 06:48 - Rohan: party when?
-31/10/2026, 06:49 - Neha: I'm sleeping for 3 days.
-01/11/2026, 19:28 - Arjun: Rohan did you finish the slides?
-01/11/2026, 20:56 - Neha: Rohan???
-01/11/2026, 23:56 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-02/11/2026, 00:06 - Rohan: chill bro sending in 5 mins
-02/11/2026, 01:01 - Neha: It's been an hour...
-04/11/2026, 00:39 - Arjun: I submitted it. Finally.
-04/11/2026, 00:43 - Neha: Thank god. I'm so stressed.
-04/11/2026, 01:12 - Kritika: Yay team! We did it!
-04/11/2026, 01:17 - Rohan: party when?
-04/11/2026, 01:20 - Neha: I'm sleeping for 3 days.
-04/11/2026, 05:20 - Arjun: Rohan did you finish the slides?
-04/11/2026, 06:51 - Neha: Rohan???
-04/11/2026, 08:51 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-04/11/2026, 09:06 - Rohan: chill bro sending in 5 mins
-04/11/2026, 09:48 - Neha: It's been an hour...
-05/11/2026, 22:10 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-05/11/2026, 22:13 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-05/11/2026, 22:22 - Neha: What about Rohan and Kritika??
-05/11/2026, 22:41 - Neha: HELLO???
-05/11/2026, 23:36 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-05/11/2026, 23:38 - Neha: We need time to format it! Please do it now.
-05/11/2026, 23:41 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-06/11/2026, 01:33 - Rohan: my laptop is hanging bro give me some time
-07/11/2026, 08:08 - Arjun: Rohan did you finish the slides?
-07/11/2026, 09:26 - Neha: Rohan???
-07/11/2026, 13:26 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-07/11/2026, 13:36 - Rohan: chill bro sending in 5 mins
-07/11/2026, 14:10 - Neha: It's been an hour...
-08/11/2026, 14:11 - Arjun: I submitted it. Finally.
-08/11/2026, 14:14 - Neha: Thank god. I'm so stressed.
-08/11/2026, 14:37 - Kritika: Yay team! We did it!
-08/11/2026, 14:42 - Rohan: party when?
-08/11/2026, 14:45 - Neha: I'm sleeping for 3 days.
-10/11/2026, 14:23 - Arjun: Rohan did you finish the slides?
-10/11/2026, 15:30 - Neha: Rohan???
-10/11/2026, 20:30 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-10/11/2026, 20:40 - Rohan: chill bro sending in 5 mins
-10/11/2026, 21:37 - Neha: It's been an hour...
-11/11/2026, 23:35 - Arjun: Guys we need to start the report. Who is doing what?
-11/11/2026, 23:51 - Neha: I can do the introduction and literature review.
-12/11/2026, 00:14 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-12/11/2026, 00:49 - Kritika: What is the topic again?
-12/11/2026, 00:50 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-12/11/2026, 00:55 - Kritika: Oh right! I can do the conclusion.
-12/11/2026, 03:13 - Arjun: @Rohan you have to do the slides.
-12/11/2026, 05:28 - Rohan: ok bro cool
-12/11/2026, 08:34 - Arjun: Rohan did you finish the slides?
-12/11/2026, 10:06 - Neha: Rohan???
-12/11/2026, 15:06 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-12/11/2026, 15:19 - Rohan: chill bro sending in 5 mins
-12/11/2026, 16:05 - Neha: It's been an hour...
-14/11/2026, 22:48 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-14/11/2026, 22:58 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-14/11/2026, 23:00 - Neha: What about Rohan and Kritika??
-14/11/2026, 23:29 - Neha: HELLO???
-15/11/2026, 00:16 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-15/11/2026, 00:17 - Neha: We need time to format it! Please do it now.
-15/11/2026, 00:19 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-15/11/2026, 01:37 - Rohan: my laptop is hanging bro give me some time
-17/11/2026, 02:09 - Arjun: I submitted it. Finally.
-17/11/2026, 02:13 - Neha: Thank god. I'm so stressed.
-17/11/2026, 02:31 - Kritika: Yay team! We did it!
-17/11/2026, 02:33 - Rohan: party when?
-17/11/2026, 02:35 - Neha: I'm sleeping for 3 days.
-18/11/2026, 22:25 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-18/11/2026, 22:34 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-18/11/2026, 22:39 - Neha: What about Rohan and Kritika??
-18/11/2026, 22:52 - Neha: HELLO???
-18/11/2026, 23:44 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-18/11/2026, 23:48 - Neha: We need time to format it! Please do it now.
-18/11/2026, 23:49 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-19/11/2026, 01:44 - Rohan: my laptop is hanging bro give me some time
-21/11/2026, 00:30 - Arjun: Guys we need to start the report. Who is doing what?
-21/11/2026, 00:35 - Neha: I can do the introduction and literature review.
-21/11/2026, 01:03 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-21/11/2026, 02:13 - Kritika: What is the topic again?
-21/11/2026, 02:18 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-21/11/2026, 02:22 - Kritika: Oh right! I can do the conclusion.
-21/11/2026, 03:31 - Arjun: @Rohan you have to do the slides.
-21/11/2026, 05:46 - Rohan: ok bro cool
-23/11/2026, 00:43 - Arjun: Rohan did you finish the slides?
-23/11/2026, 01:44 - Neha: Rohan???
-23/11/2026, 04:44 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-23/11/2026, 04:49 - Rohan: chill bro sending in 5 mins
-23/11/2026, 05:29 - Neha: It's been an hour...
-24/11/2026, 04:23 - Arjun: I submitted it. Finally.
-24/11/2026, 04:30 - Neha: Thank god. I'm so stressed.
-24/11/2026, 04:51 - Kritika: Yay team! We did it!
-24/11/2026, 04:55 - Rohan: party when?
-24/11/2026, 04:59 - Neha: I'm sleeping for 3 days.
-25/11/2026, 22:13 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-25/11/2026, 22:21 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-25/11/2026, 22:23 - Neha: What about Rohan and Kritika??
-25/11/2026, 22:43 - Neha: HELLO???
-25/11/2026, 23:41 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-25/11/2026, 23:43 - Neha: We need time to format it! Please do it now.
-25/11/2026, 23:46 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-26/11/2026, 01:28 - Rohan: my laptop is hanging bro give me some time
-27/11/2026, 00:56 - Arjun: Rohan did you finish the slides?
-27/11/2026, 02:05 - Neha: Rohan???
-27/11/2026, 04:05 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-27/11/2026, 04:13 - Rohan: chill bro sending in 5 mins
-27/11/2026, 05:10 - Neha: It's been an hour...
-28/11/2026, 07:09 - Arjun: I submitted it. Finally.
-28/11/2026, 07:12 - Neha: Thank god. I'm so stressed.
-28/11/2026, 07:24 - Kritika: Yay team! We did it!
-28/11/2026, 07:27 - Rohan: party when?
-28/11/2026, 07:28 - Neha: I'm sleeping for 3 days.
-29/11/2026, 13:20 - Arjun: I submitted it. Finally.
-29/11/2026, 13:28 - Neha: Thank god. I'm so stressed.
-29/11/2026, 13:57 - Kritika: Yay team! We did it!
-29/11/2026, 14:02 - Rohan: party when?
-29/11/2026, 14:07 - Neha: I'm sleeping for 3 days.
-01/12/2026, 08:15 - Arjun: Guys we need to start the report. Who is doing what?
-01/12/2026, 08:36 - Neha: I can do the introduction and literature review.
-01/12/2026, 09:02 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-01/12/2026, 10:26 - Kritika: What is the topic again?
-01/12/2026, 10:29 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-01/12/2026, 10:31 - Kritika: Oh right! I can do the conclusion.
-01/12/2026, 14:22 - Arjun: @Rohan you have to do the slides.
-01/12/2026, 15:43 - Rohan: ok bro cool
-02/12/2026, 07:42 - Arjun: I submitted it. Finally.
-02/12/2026, 07:44 - Neha: Thank god. I'm so stressed.
-02/12/2026, 07:58 - Kritika: Yay team! We did it!
-02/12/2026, 08:02 - Rohan: party when?
-02/12/2026, 08:07 - Neha: I'm sleeping for 3 days.
-03/12/2026, 04:23 - Arjun: Rohan did you finish the slides?
-03/12/2026, 05:32 - Neha: Rohan???
-03/12/2026, 09:32 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-03/12/2026, 09:47 - Rohan: chill bro sending in 5 mins
-03/12/2026, 10:29 - Neha: It's been an hour...
-03/12/2026, 22:37 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-03/12/2026, 22:40 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-03/12/2026, 22:44 - Neha: What about Rohan and Kritika??
-03/12/2026, 23:01 - Neha: HELLO???
-03/12/2026, 23:33 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-03/12/2026, 23:37 - Neha: We need time to format it! Please do it now.
-03/12/2026, 23:41 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-04/12/2026, 01:08 - Rohan: my laptop is hanging bro give me some time
-04/12/2026, 14:06 - Arjun: I submitted it. Finally.
-04/12/2026, 14:13 - Neha: Thank god. I'm so stressed.
-04/12/2026, 14:25 - Kritika: Yay team! We did it!
-04/12/2026, 14:29 - Rohan: party when?
-04/12/2026, 14:33 - Neha: I'm sleeping for 3 days.
-05/12/2026, 01:19 - Arjun: I submitted it. Finally.
-05/12/2026, 01:27 - Neha: Thank god. I'm so stressed.
-05/12/2026, 01:53 - Kritika: Yay team! We did it!
-05/12/2026, 01:54 - Rohan: party when?
-05/12/2026, 01:58 - Neha: I'm sleeping for 3 days.
-06/12/2026, 01:38 - Arjun: Rohan did you finish the slides?
-06/12/2026, 03:22 - Neha: Rohan???
-06/12/2026, 06:22 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-06/12/2026, 06:31 - Rohan: chill bro sending in 5 mins
-06/12/2026, 07:06 - Neha: It's been an hour...
-06/12/2026, 22:59 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-06/12/2026, 23:04 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-06/12/2026, 23:14 - Neha: What about Rohan and Kritika??
-06/12/2026, 23:24 - Neha: HELLO???
-07/12/2026, 00:02 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-07/12/2026, 00:03 - Neha: We need time to format it! Please do it now.
-07/12/2026, 00:05 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-07/12/2026, 01:20 - Rohan: my laptop is hanging bro give me some time
-08/12/2026, 18:56 - Arjun: I submitted it. Finally.
-08/12/2026, 19:00 - Neha: Thank god. I'm so stressed.
-08/12/2026, 19:16 - Kritika: Yay team! We did it!
-08/12/2026, 19:21 - Rohan: party when?
-08/12/2026, 19:22 - Neha: I'm sleeping for 3 days.
-10/12/2026, 22:27 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-10/12/2026, 22:34 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-10/12/2026, 22:40 - Neha: What about Rohan and Kritika??
-10/12/2026, 23:01 - Neha: HELLO???
-10/12/2026, 23:49 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-10/12/2026, 23:50 - Neha: We need time to format it! Please do it now.
-10/12/2026, 23:52 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-11/12/2026, 01:02 - Rohan: my laptop is hanging bro give me some time
-11/12/2026, 23:38 - Arjun: Rohan did you finish the slides?
-12/12/2026, 00:43 - Neha: Rohan???
-12/12/2026, 04:43 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-12/12/2026, 04:51 - Rohan: chill bro sending in 5 mins
-12/12/2026, 05:46 - Neha: It's been an hour...
-12/12/2026, 22:38 - Arjun: Rohan did you finish the slides?
-13/12/2026, 00:29 - Neha: Rohan???
-13/12/2026, 02:29 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-13/12/2026, 02:36 - Rohan: chill bro sending in 5 mins
-13/12/2026, 03:09 - Neha: It's been an hour...
-13/12/2026, 22:51 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-13/12/2026, 22:55 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-13/12/2026, 23:03 - Neha: What about Rohan and Kritika??
-13/12/2026, 23:25 - Neha: HELLO???
-14/12/2026, 00:14 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-14/12/2026, 00:15 - Neha: We need time to format it! Please do it now.
-14/12/2026, 00:16 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-14/12/2026, 02:15 - Rohan: my laptop is hanging bro give me some time
-15/12/2026, 22:22 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-15/12/2026, 22:31 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-15/12/2026, 22:41 - Neha: What about Rohan and Kritika??
-15/12/2026, 23:04 - Neha: HELLO???
-15/12/2026, 23:48 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-15/12/2026, 23:51 - Neha: We need time to format it! Please do it now.
-15/12/2026, 23:56 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-16/12/2026, 01:26 - Rohan: my laptop is hanging bro give me some time
-17/12/2026, 17:07 - Arjun: Guys we need to start the report. Who is doing what?
-17/12/2026, 17:30 - Neha: I can do the introduction and literature review.
-17/12/2026, 17:53 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-17/12/2026, 19:30 - Kritika: What is the topic again?
-17/12/2026, 19:34 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-17/12/2026, 19:35 - Kritika: Oh right! I can do the conclusion.
-17/12/2026, 21:36 - Arjun: @Rohan you have to do the slides.
-17/12/2026, 23:14 - Rohan: ok bro cool
-19/12/2026, 22:29 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-19/12/2026, 22:35 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-19/12/2026, 22:40 - Neha: What about Rohan and Kritika??
-19/12/2026, 22:51 - Neha: HELLO???
-19/12/2026, 23:42 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-19/12/2026, 23:44 - Neha: We need time to format it! Please do it now.
-19/12/2026, 23:47 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-20/12/2026, 01:12 - Rohan: my laptop is hanging bro give me some time
-21/12/2026, 02:53 - Arjun: I submitted it. Finally.
-21/12/2026, 02:58 - Neha: Thank god. I'm so stressed.
-21/12/2026, 03:18 - Kritika: Yay team! We did it!
-21/12/2026, 03:19 - Rohan: party when?
-21/12/2026, 03:22 - Neha: I'm sleeping for 3 days.
-21/12/2026, 18:22 - Arjun: Guys we need to start the report. Who is doing what?
-21/12/2026, 18:29 - Neha: I can do the introduction and literature review.
-21/12/2026, 18:37 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-21/12/2026, 19:24 - Kritika: What is the topic again?
-21/12/2026, 19:28 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-21/12/2026, 19:32 - Kritika: Oh right! I can do the conclusion.
-21/12/2026, 23:57 - Arjun: @Rohan you have to do the slides.
-22/12/2026, 03:45 - Rohan: ok bro cool
-23/12/2026, 02:19 - Arjun: Rohan did you finish the slides?
-23/12/2026, 03:26 - Neha: Rohan???
-23/12/2026, 07:26 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-23/12/2026, 07:34 - Rohan: chill bro sending in 5 mins
-23/12/2026, 08:29 - Neha: It's been an hour...
-24/12/2026, 06:35 - Arjun: Guys we need to start the report. Who is doing what?
-24/12/2026, 06:45 - Neha: I can do the introduction and literature review.
-24/12/2026, 07:07 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-24/12/2026, 07:52 - Kritika: What is the topic again?
-24/12/2026, 07:53 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-24/12/2026, 07:57 - Kritika: Oh right! I can do the conclusion.
-24/12/2026, 12:49 - Arjun: @Rohan you have to do the slides.
-24/12/2026, 15:23 - Rohan: ok bro cool
-25/12/2026, 22:50 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-25/12/2026, 22:52 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-25/12/2026, 22:59 - Neha: What about Rohan and Kritika??
-25/12/2026, 23:20 - Neha: HELLO???
-25/12/2026, 23:50 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-25/12/2026, 23:54 - Neha: We need time to format it! Please do it now.
-25/12/2026, 23:58 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-26/12/2026, 01:46 - Rohan: my laptop is hanging bro give me some time
-27/12/2026, 14:38 - Arjun: Guys we need to start the report. Who is doing what?
-27/12/2026, 14:50 - Neha: I can do the introduction and literature review.
-27/12/2026, 15:19 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-27/12/2026, 17:04 - Kritika: What is the topic again?
-27/12/2026, 17:06 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-27/12/2026, 17:10 - Kritika: Oh right! I can do the conclusion.
-27/12/2026, 21:43 - Arjun: @Rohan you have to do the slides.
-28/12/2026, 01:42 - Rohan: ok bro cool
-28/12/2026, 22:39 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-28/12/2026, 22:43 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-28/12/2026, 22:45 - Neha: What about Rohan and Kritika??
-28/12/2026, 22:59 - Neha: HELLO???
-28/12/2026, 23:38 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-28/12/2026, 23:40 - Neha: We need time to format it! Please do it now.
-28/12/2026, 23:43 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-29/12/2026, 01:39 - Rohan: my laptop is hanging bro give me some time
-30/12/2026, 10:36 - Arjun: Rohan did you finish the slides?
-30/12/2026, 12:20 - Neha: Rohan???
-30/12/2026, 14:20 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-30/12/2026, 14:32 - Rohan: chill bro sending in 5 mins
-30/12/2026, 15:13 - Neha: It's been an hour...
-31/12/2026, 15:06 - Arjun: Rohan did you finish the slides?
-31/12/2026, 16:28 - Neha: Rohan???
-31/12/2026, 18:28 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-31/12/2026, 18:36 - Rohan: chill bro sending in 5 mins
-31/12/2026, 19:09 - Neha: It's been an hour...
-01/01/2027, 01:47 - Arjun: I submitted it. Finally.
-01/01/2027, 01:51 - Neha: Thank god. I'm so stressed.
-01/01/2027, 02:19 - Kritika: Yay team! We did it!
-01/01/2027, 02:23 - Rohan: party when?
-01/01/2027, 02:27 - Neha: I'm sleeping for 3 days.
-01/01/2027, 15:40 - Arjun: Rohan did you finish the slides?
-01/01/2027, 17:37 - Neha: Rohan???
-01/01/2027, 21:37 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-01/01/2027, 21:52 - Rohan: chill bro sending in 5 mins
-01/01/2027, 22:35 - Neha: It's been an hour...
-02/01/2027, 08:18 - Arjun: I submitted it. Finally.
-02/01/2027, 08:26 - Neha: Thank god. I'm so stressed.
-02/01/2027, 08:55 - Kritika: Yay team! We did it!
-02/01/2027, 08:59 - Rohan: party when?
-02/01/2027, 09:03 - Neha: I'm sleeping for 3 days.
-02/01/2027, 14:10 - Arjun: I submitted it. Finally.
-02/01/2027, 14:14 - Neha: Thank god. I'm so stressed.
-02/01/2027, 14:35 - Kritika: Yay team! We did it!
-02/01/2027, 14:39 - Rohan: party when?
-02/01/2027, 14:43 - Neha: I'm sleeping for 3 days.
-02/01/2027, 17:03 - Arjun: Guys we need to start the report. Who is doing what?
-02/01/2027, 17:30 - Neha: I can do the introduction and literature review.
-02/01/2027, 17:42 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-02/01/2027, 18:36 - Kritika: What is the topic again?
-02/01/2027, 18:37 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-02/01/2027, 18:39 - Kritika: Oh right! I can do the conclusion.
-02/01/2027, 22:47 - Arjun: @Rohan you have to do the slides.
-03/01/2027, 00:55 - Rohan: ok bro cool
-03/01/2027, 19:32 - Arjun: Rohan did you finish the slides?
-03/01/2027, 21:04 - Neha: Rohan???
-03/01/2027, 23:04 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-03/01/2027, 23:12 - Rohan: chill bro sending in 5 mins
-03/01/2027, 23:44 - Neha: It's been an hour...
-05/01/2027, 23:23 - Arjun: Guys we need to start the report. Who is doing what?
-05/01/2027, 23:32 - Neha: I can do the introduction and literature review.
-05/01/2027, 23:52 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-06/01/2027, 00:41 - Kritika: What is the topic again?
-06/01/2027, 00:44 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-06/01/2027, 00:45 - Kritika: Oh right! I can do the conclusion.
-06/01/2027, 02:33 - Arjun: @Rohan you have to do the slides.
-06/01/2027, 04:27 - Rohan: ok bro cool
-06/01/2027, 12:15 - Arjun: I submitted it. Finally.
-06/01/2027, 12:25 - Neha: Thank god. I'm so stressed.
-06/01/2027, 12:55 - Kritika: Yay team! We did it!
-06/01/2027, 13:00 - Rohan: party when?
-06/01/2027, 13:05 - Neha: I'm sleeping for 3 days.
-06/01/2027, 22:04 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-06/01/2027, 22:06 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-06/01/2027, 22:14 - Neha: What about Rohan and Kritika??
-06/01/2027, 22:27 - Neha: HELLO???
-06/01/2027, 23:20 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-06/01/2027, 23:21 - Neha: We need time to format it! Please do it now.
-06/01/2027, 23:26 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-07/01/2027, 00:36 - Rohan: my laptop is hanging bro give me some time
-07/01/2027, 22:46 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-07/01/2027, 22:52 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-07/01/2027, 22:56 - Neha: What about Rohan and Kritika??
-07/01/2027, 23:08 - Neha: HELLO???
-07/01/2027, 23:38 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-07/01/2027, 23:40 - Neha: We need time to format it! Please do it now.
-07/01/2027, 23:42 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-08/01/2027, 01:30 - Rohan: my laptop is hanging bro give me some time
-09/01/2027, 22:40 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-09/01/2027, 22:42 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-09/01/2027, 22:51 - Neha: What about Rohan and Kritika??
-09/01/2027, 23:02 - Neha: HELLO???
-09/01/2027, 23:57 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-10/01/2027, 00:01 - Neha: We need time to format it! Please do it now.
-10/01/2027, 00:05 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-10/01/2027, 02:00 - Rohan: my laptop is hanging bro give me some time
-11/01/2027, 17:23 - Arjun: I submitted it. Finally.
-11/01/2027, 17:28 - Neha: Thank god. I'm so stressed.
-11/01/2027, 17:41 - Kritika: Yay team! We did it!
-11/01/2027, 17:46 - Rohan: party when?
-11/01/2027, 17:51 - Neha: I'm sleeping for 3 days.
-12/01/2027, 10:38 - Arjun: I submitted it. Finally.
-12/01/2027, 10:42 - Neha: Thank god. I'm so stressed.
-12/01/2027, 11:09 - Kritika: Yay team! We did it!
-12/01/2027, 11:14 - Rohan: party when?
-12/01/2027, 11:19 - Neha: I'm sleeping for 3 days.
-13/01/2027, 06:36 - Arjun: Rohan did you finish the slides?
-13/01/2027, 07:50 - Neha: Rohan???
-13/01/2027, 12:50 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-13/01/2027, 12:59 - Rohan: chill bro sending in 5 mins
-13/01/2027, 13:33 - Neha: It's been an hour...
-13/01/2027, 20:00 - Arjun: Rohan did you finish the slides?
-13/01/2027, 21:49 - Neha: Rohan???
-13/01/2027, 23:49 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-13/01/2027, 23:54 - Rohan: chill bro sending in 5 mins
-14/01/2027, 00:42 - Neha: It's been an hour...
-16/01/2027, 00:48 - Arjun: Rohan did you finish the slides?
-16/01/2027, 02:31 - Neha: Rohan???
-16/01/2027, 06:31 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-16/01/2027, 06:45 - Rohan: chill bro sending in 5 mins
-16/01/2027, 07:36 - Neha: It's been an hour...
-16/01/2027, 11:10 - Arjun: Rohan did you finish the slides?
-16/01/2027, 13:08 - Neha: Rohan???
-16/01/2027, 15:08 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-16/01/2027, 15:21 - Rohan: chill bro sending in 5 mins
-16/01/2027, 15:54 - Neha: It's been an hour...
-18/01/2027, 22:23 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-18/01/2027, 22:29 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-18/01/2027, 22:37 - Neha: What about Rohan and Kritika??
-18/01/2027, 23:05 - Neha: HELLO???
-18/01/2027, 23:35 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-18/01/2027, 23:37 - Neha: We need time to format it! Please do it now.
-18/01/2027, 23:40 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-19/01/2027, 01:24 - Rohan: my laptop is hanging bro give me some time
-20/01/2027, 04:16 - Arjun: I submitted it. Finally.
-20/01/2027, 04:21 - Neha: Thank god. I'm so stressed.
-20/01/2027, 04:51 - Kritika: Yay team! We did it!
-20/01/2027, 04:52 - Rohan: party when?
-20/01/2027, 04:53 - Neha: I'm sleeping for 3 days.
-21/01/2027, 06:32 - Arjun: I submitted it. Finally.
-21/01/2027, 06:34 - Neha: Thank god. I'm so stressed.
-21/01/2027, 06:44 - Kritika: Yay team! We did it!
-21/01/2027, 06:46 - Rohan: party when?
-21/01/2027, 06:48 - Neha: I'm sleeping for 3 days.
-22/01/2027, 05:30 - Arjun: Rohan did you finish the slides?
-22/01/2027, 06:45 - Neha: Rohan???
-22/01/2027, 10:45 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-22/01/2027, 10:55 - Rohan: chill bro sending in 5 mins
-22/01/2027, 11:37 - Neha: It's been an hour...
-23/01/2027, 01:47 - Arjun: Guys we need to start the report. Who is doing what?
-23/01/2027, 02:01 - Neha: I can do the introduction and literature review.
-23/01/2027, 02:21 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-23/01/2027, 03:53 - Kritika: What is the topic again?
-23/01/2027, 03:55 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-23/01/2027, 03:57 - Kritika: Oh right! I can do the conclusion.
-23/01/2027, 08:41 - Arjun: @Rohan you have to do the slides.
-23/01/2027, 10:40 - Rohan: ok bro cool
-23/01/2027, 23:54 - Arjun: I submitted it. Finally.
-23/01/2027, 23:59 - Neha: Thank god. I'm so stressed.
-24/01/2027, 00:12 - Kritika: Yay team! We did it!
-24/01/2027, 00:13 - Rohan: party when?
-24/01/2027, 00:17 - Neha: I'm sleeping for 3 days.
-25/01/2027, 22:33 - Arjun: Guys we need to start the report. Who is doing what?
-25/01/2027, 22:48 - Neha: I can do the introduction and literature review.
-25/01/2027, 23:18 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-26/01/2027, 00:29 - Kritika: What is the topic again?
-26/01/2027, 00:32 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-26/01/2027, 00:37 - Kritika: Oh right! I can do the conclusion.
-26/01/2027, 04:23 - Arjun: @Rohan you have to do the slides.
-26/01/2027, 08:50 - Rohan: ok bro cool
-28/01/2027, 22:58 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-28/01/2027, 23:00 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-28/01/2027, 23:08 - Neha: What about Rohan and Kritika??
-28/01/2027, 23:21 - Neha: HELLO???
-29/01/2027, 00:17 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-29/01/2027, 00:20 - Neha: We need time to format it! Please do it now.
-29/01/2027, 00:23 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-29/01/2027, 01:48 - Rohan: my laptop is hanging bro give me some time
-30/01/2027, 11:15 - Arjun: Guys we need to start the report. Who is doing what?
-30/01/2027, 11:44 - Neha: I can do the introduction and literature review.
-30/01/2027, 12:00 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-30/01/2027, 13:29 - Kritika: What is the topic again?
-30/01/2027, 13:32 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-30/01/2027, 13:33 - Kritika: Oh right! I can do the conclusion.
-30/01/2027, 15:51 - Arjun: @Rohan you have to do the slides.
-30/01/2027, 19:45 - Rohan: ok bro cool
-01/02/2027, 14:08 - Arjun: Rohan did you finish the slides?
-01/02/2027, 16:00 - Neha: Rohan???
-01/02/2027, 18:00 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-01/02/2027, 18:13 - Rohan: chill bro sending in 5 mins
-01/02/2027, 18:48 - Neha: It's been an hour...
-02/02/2027, 20:15 - Arjun: Guys we need to start the report. Who is doing what?
-02/02/2027, 20:20 - Neha: I can do the introduction and literature review.
-02/02/2027, 20:33 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-02/02/2027, 21:35 - Kritika: What is the topic again?
-02/02/2027, 21:37 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-02/02/2027, 21:42 - Kritika: Oh right! I can do the conclusion.
-03/02/2027, 00:22 - Arjun: @Rohan you have to do the slides.
-03/02/2027, 02:46 - Rohan: ok bro cool
-04/02/2027, 22:56 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-04/02/2027, 23:06 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-04/02/2027, 23:09 - Neha: What about Rohan and Kritika??
-04/02/2027, 23:27 - Neha: HELLO???
-04/02/2027, 23:58 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-05/02/2027, 00:03 - Neha: We need time to format it! Please do it now.
-05/02/2027, 00:06 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-05/02/2027, 01:36 - Rohan: my laptop is hanging bro give me some time
-05/02/2027, 08:43 - Arjun: I submitted it. Finally.
-05/02/2027, 08:49 - Neha: Thank god. I'm so stressed.
-05/02/2027, 09:18 - Kritika: Yay team! We did it!
-05/02/2027, 09:22 - Rohan: party when?
-05/02/2027, 09:27 - Neha: I'm sleeping for 3 days.
-06/02/2027, 22:10 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
-06/02/2027, 22:20 - Arjun: I'm almost done with my section, will upload to drive in 10 mins.
-06/02/2027, 22:24 - Neha: What about Rohan and Kritika??
-06/02/2027, 22:41 - Neha: HELLO???
-06/02/2027, 23:34 - Kritika: Sorry I was asleep. I'll do it tomorrow morning.
-06/02/2027, 23:38 - Neha: We need time to format it! Please do it now.
-06/02/2027, 23:40 - Arjun: I'll just format whatever we have by 8 PM tomorrow.
-07/02/2027, 01:28 - Rohan: my laptop is hanging bro give me some time
-07/02/2027, 08:48 - Arjun: Guys we need to start the report. Who is doing what?
-07/02/2027, 09:08 - Neha: I can do the introduction and literature review.
-07/02/2027, 09:17 - Arjun: Ok, I'll do the methodology and data analysis. Rohan, Kritika?
-07/02/2027, 11:01 - Kritika: What is the topic again?
-07/02/2027, 11:06 - Neha: Omg Kritika we decided this last week... Machine Learning in Healthcare
-07/02/2027, 11:11 - Kritika: Oh right! I can do the conclusion.
-07/02/2027, 12:12 - Arjun: @Rohan you have to do the slides.
-07/02/2027, 15:21 - Rohan: ok bro cool
-07/02/2027, 20:19 - Arjun: I submitted it. Finally.
-07/02/2027, 20:27 - Neha: Thank god. I'm so stressed.
-07/02/2027, 20:45 - Kritika: Yay team! We did it!
-07/02/2027, 20:48 - Rohan: party when?
-07/02/2027, 20:51 - Neha: I'm sleeping for 3 days.
-09/02/2027, 00:42 - Arjun: I submitted it. Finally.
-09/02/2027, 00:50 - Neha: Thank god. I'm so stressed.
-09/02/2027, 01:11 - Kritika: Yay team! We did it!
-09/02/2027, 01:16 - Rohan: party when?
-09/02/2027, 01:17 - Neha: I'm sleeping for 3 days.
-09/02/2027, 17:16 - Arjun: I submitted it. Finally.
-09/02/2027, 17:26 - Neha: Thank god. I'm so stressed.
-09/02/2027, 17:49 - Kritika: Yay team! We did it!
-09/02/2027, 17:53 - Rohan: party when?
-09/02/2027, 17:56 - Neha: I'm sleeping for 3 days.
-11/02/2027, 01:23 - Arjun: Rohan did you finish the slides?
-11/02/2027, 03:01 - Neha: Rohan???
-11/02/2027, 07:01 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-11/02/2027, 07:16 - Rohan: chill bro sending in 5 mins
-11/02/2027, 07:58 - Neha: It's been an hour...
-12/02/2027, 15:05 - Arjun: Rohan did you finish the slides?
-12/02/2027, 16:55 - Neha: Rohan???
-12/02/2027, 19:55 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-12/02/2027, 20:02 - Rohan: chill bro sending in 5 mins
-12/02/2027, 20:55 - Neha: It's been an hour...
-14/02/2027, 20:06 - Arjun: Rohan did you finish the slides?
-14/02/2027, 21:34 - Neha: Rohan???
-15/02/2027, 02:34 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-15/02/2027, 02:48 - Rohan: chill bro sending in 5 mins
-15/02/2027, 03:42 - Neha: It's been an hour...
-15/02/2027, 18:59 - Arjun: I submitted it. Finally.
-15/02/2027, 19:03 - Neha: Thank god. I'm so stressed.
-15/02/2027, 19:13 - Kritika: Yay team! We did it!
-15/02/2027, 19:16 - Rohan: party when?
-15/02/2027, 19:18 - Neha: I'm sleeping for 3 days.
-16/02/2027, 00:41 - Arjun: Rohan did you finish the slides?
-16/02/2027, 02:40 - Neha: Rohan???
-16/02/2027, 07:40 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-16/02/2027, 07:47 - Rohan: chill bro sending in 5 mins
-16/02/2027, 08:34 - Neha: It's been an hour...
-17/02/2027, 12:30 - Arjun: Rohan did you finish the slides?
-17/02/2027, 14:21 - Neha: Rohan???
-17/02/2027, 16:21 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-17/02/2027, 16:32 - Rohan: chill bro sending in 5 mins
-17/02/2027, 17:03 - Neha: It's been an hour...
-18/02/2027, 13:27 - Arjun: Rohan did you finish the slides?
-18/02/2027, 15:21 - Neha: Rohan???
-18/02/2027, 17:21 - Arjun: If you don't send it by 5 PM I'm telling the professor we did it without you.
-18/02/2027, 17:33 - Rohan: chill bro sending in 5 mins
-18/02/2027, 18:29 - Neha: It's been an hour...
-20/02/2027, 22:09 - Neha: Guys the deadline is tomorrow at 11:59 PM!! Where is everyone's part?
+02/08/2026, 10:05 - Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them. Tap to learn more.
+06/08/2026, 05:22 - Arjun: hey guys are we all set for the group formation form? deadline is friday
+06/08/2026, 05:25 - Neha: yes I already filled ours. group name: NeuralNinjas lol
+06/08/2026, 05:29 - Kritika: who approved that name
+06/08/2026, 05:32 - Neha: me, just now
+06/08/2026, 05:33 - Rohan: fine by me
+06/08/2026, 05:42 - Arjun: topic still undecided though
+06/08/2026, 05:48 - Neha: I was thinking something in ML, healthcare angle maybe
+06/08/2026, 05:57 - Kritika: or computer vision, easier datasets available
+06/08/2026, 05:58 - Arjun: let's discuss with sir on monday
+06/08/2026, 06:07 - Rohan: ok
+09/08/2026, 05:32 - Neha: meeting with Prof. Iyer confirmed monday 11am, cabin 214
+09/08/2026, 05:39 - Arjun: noted
+09/08/2026, 05:41 - Kritika: do we need to bring anything
+09/08/2026, 05:49 - Neha: just the one page proposal draft, I'll share tonight
+09/08/2026, 05:55 - Rohan: cant make it 11, i have a lab
+09/08/2026, 05:57 - Neha: Rohan this is the FIRST meeting
+09/08/2026, 06:00 - Rohan: i know i know ill try to swap
+09/08/2026, 06:06 - Arjun: please try, first impressions matter
+09/08/2026, 06:08 - Rohan: chill i said ill try
+11/08/2026, 05:19 - Neha: <Media omitted>
+11/08/2026, 05:25 - Neha: this is the draft, read before tonight
+11/08/2026, 05:27 - Kritika: reading... reading...
+11/08/2026, 05:35 - Kritika: the intro is very vague no offense
+11/08/2026, 05:40 - Neha: its a DRAFT kritika
+11/08/2026, 05:42 - Arjun: i think objectives section needs 2 more points
+11/08/2026, 05:47 - Neha: like what
+11/08/2026, 05:50 - Arjun: scalability and real time inference
+11/08/2026, 05:54 - Neha: ok adding
+11/08/2026, 06:03 - Rohan: looks fine to me
+11/08/2026, 06:12 - Kritika: of course it does you read it for 4 seconds
+12/08/2026, 09:26 - Arjun: how did the meeting go
+12/08/2026, 09:31 - Neha: sir liked the healthcare ML idea but wants a narrower scope
+12/08/2026, 09:34 - Kritika: narrower how
+12/08/2026, 09:38 - Neha: like predicting one specific disease not general diagnosis
+12/08/2026, 09:47 - Arjun: diabetes? there's decent datasets for that
+12/08/2026, 09:51 - Neha: yeah he mentioned kaggle has a few
+12/08/2026, 09:55 - Rohan: sounds good
+12/08/2026, 10:02 - Rohan: did he ask about me not being there
+12/08/2026, 10:06 - Neha: he asked where the 4th member was lol
+12/08/2026, 10:14 - Rohan: oh no
+12/08/2026, 10:15 - Neha: i said you had a lab, don't make me a liar next time
+13/08/2026, 01:40 - Kritika: found a diabetes dataset on kaggle, 768 rows though, kinda small
+13/08/2026, 01:46 - Arjun: link?
+13/08/2026, 01:52 - Kritika: https://www.example.com/datasets/pima-diabetes
+13/08/2026, 01:58 - Arjun: checking
+13/08/2026, 02:00 - Arjun: yeah small but usable for a college project i think
+13/08/2026, 02:04 - Neha: let's also look for a bigger one just in case
+13/08/2026, 02:12 - Rohan: i can search tonight
+13/08/2026, 02:13 - Neha: you always say that
+13/08/2026, 02:19 - Rohan: and i always deliver eventually
+13/08/2026, 02:21 - Kritika: eventually being the operative word
+13/08/2026, 21:10 - Arjun: project title finalised: Early Diabetes Risk Prediction using Ensemble Learning
+13/08/2026, 21:14 - Neha: bit long but ok
+13/08/2026, 21:17 - Kritika: sounds fancy, sir will like ensemble learning
+13/08/2026, 21:23 - Rohan: whats ensemble learning again
+13/08/2026, 21:30 - Arjun: combining multiple models bro, we covered this in ML class
+13/08/2026, 21:32 - Rohan: oh right yes
+13/08/2026, 21:35 - Neha: Rohan please attend classes
+13/08/2026, 21:36 - Rohan: i attend! i just dont retain lol
+15/08/2026, 07:59 - Neha: ok dividing work for literature review. 5 papers each
+15/08/2026, 08:07 - Arjun: 5 EACH? thats 20 papers total
+15/08/2026, 08:13 - Neha: yes thats how lit review works arjun
+15/08/2026, 08:22 - Kritika: where do we even find 20 relevant papers
+15/08/2026, 08:23 - Neha: google scholar, ieee xplore, sci-hub if desperate
+15/08/2026, 08:25 - Rohan: lol sci-hub
+15/08/2026, 08:28 - Neha: i didnt say that
+15/08/2026, 08:32 - Arjun: noted for the record she said that
+15/08/2026, 08:36 - Kritika: this chat could get us in trouble one day
+15/08/2026, 23:32 - Rohan: found a paper, random forest for diabetes prediction, 94% accuracy claimed
+15/08/2026, 23:38 - Arjun: 94 seems high for that dataset ngl
+15/08/2026, 23:45 - Rohan: its what the paper says bro
+15/08/2026, 23:46 - Neha: send me the pdf
+15/08/2026, 23:52 - Rohan: <Media omitted>
+16/08/2026, 00:01 - Neha: this is from 2016, kinda old but fine as baseline reference
+16/08/2026, 00:10 - Kritika: everything in ML from 2016 feels ancient now
+16/08/2026, 00:13 - Arjun: facts
+17/08/2026, 18:08 - Kritika: guys i cannot understand this paper's methodology section at all
+17/08/2026, 18:09 - Arjun: which one
+17/08/2026, 18:12 - Kritika: the SVM one, too much math notation
+17/08/2026, 18:20 - Arjun: send it ill try to explain
+17/08/2026, 18:22 - Kritika: <Media omitted>
+17/08/2026, 18:28 - Arjun: ok give me an hour
+17/08/2026, 18:37 - Kritika: take your time, not like we have a deadline lmaooo
+17/08/2026, 18:39 - Neha: we do have a deadline btw. lit review draft due 20th
+17/08/2026, 18:40 - Kritika: i was being sarcastic neha
+17/08/2026, 18:45 - Neha: i know but wanted to remind everyone anyway
+18/08/2026, 20:45 - Neha: status check. how many papers has everyone summarised
+18/08/2026, 20:47 - Arjun: 4 done
+18/08/2026, 20:56 - Kritika: 2, working on 3rd
+18/08/2026, 21:00 - Rohan: .
+18/08/2026, 21:08 - Neha: Rohan that's a period not a number
+18/08/2026, 21:16 - Rohan: 1
+18/08/2026, 21:20 - Neha: ONE?? its been 5 days
+18/08/2026, 21:25 - Rohan: i had two internals this week neha
+18/08/2026, 21:29 - Arjun: we all had internals rohan
+18/08/2026, 21:32 - Rohan: ok ok ill catch up this weekend
+20/08/2026, 05:39 - Arjun: did everyone submit the internal marks form
+20/08/2026, 05:43 - Neha: yes
+20/08/2026, 05:47 - Kritika: yep done
+20/08/2026, 05:49 - Rohan: whats this form
+20/08/2026, 05:52 - Arjun: ROHAN
+20/08/2026, 05:58 - Rohan: kidding kidding i submitted it yesterday relax
+20/08/2026, 06:01 - Arjun: not funny man my heart rate went up
+20/08/2026, 06:05 - Rohan: lmaooo sorry
+20/08/2026, 20:38 - Neha: lit review draft compiled, 14 pages so far
+20/08/2026, 20:42 - Neha: <Media omitted>
+20/08/2026, 20:49 - Kritika: wow that's a lot of reading for sir to do
+20/08/2026, 20:56 - Arjun: he'll skim it tbh, they all do
+20/08/2026, 21:00 - Neha: don't say that, put effort anyway
+20/08/2026, 21:02 - Rohan: agreed but also arjun isnt wrong
+20/08/2026, 21:03 - Neha: not helping rohan
+22/08/2026, 07:34 - Kritika: random thought, should we do a comparative study of 3 algorithms instead of just ensemble
+22/08/2026, 07:43 - Arjun: that could strengthen the results section actually
+22/08/2026, 07:52 - Neha: more work though
+22/08/2026, 07:54 - Kritika: more work = better project = better grade, simple math
+22/08/2026, 07:58 - Neha: fine, logistic regression, random forest, and xgboost?
+22/08/2026, 08:00 - Arjun: add svm too for baseline
+22/08/2026, 08:05 - Rohan: 4 models is a lot of code to write
+22/08/2026, 08:08 - Arjun: we'll split it
+22/08/2026, 08:11 - Rohan: ok i can do logistic regression, its simplest
+22/08/2026, 08:16 - Kritika: of course you pick the simplest one
+23/08/2026, 09:49 - Neha: guide meeting rescheduled to thursday 3pm
+23/08/2026, 09:51 - Arjun: why
+23/08/2026, 09:54 - Neha: he has a conference thing apparently
+23/08/2026, 09:56 - Rohan: thursday works better for me tbh
+23/08/2026, 09:57 - Neha: convenient
+23/08/2026, 10:02 - Kritika: 🙂
+24/08/2026, 00:14 - Arjun: started writing the preprocessing code
+24/08/2026, 00:22 - Arjun: dataset has missing values coded as 0 in weird columns like blood pressure
+24/08/2026, 00:31 - Kritika: classic pima dataset issue, saw that mentioned in a paper
+24/08/2026, 00:36 - Arjun: yeah replacing with median for now
+24/08/2026, 00:37 - Neha: should we mention that limitation in the report
+24/08/2026, 00:41 - Arjun: definitely, good catch
+24/08/2026, 00:44 - Rohan: can someone send me the cleaned csv when done
+24/08/2026, 00:47 - Arjun: will push to drive tonight
+25/08/2026, 02:50 - Arjun: pushed the cleaned dataset
+25/08/2026, 02:54 - Arjun: <Media omitted>
+25/08/2026, 03:03 - Rohan: got it thanks
+25/08/2026, 03:08 - Kritika: logistic regression running yet rohan
+25/08/2026, 03:09 - Rohan: starting now
+25/08/2026, 03:10 - Kritika: you said that yesterday
+25/08/2026, 03:19 - Rohan: and today im actually doing it, big difference
+25/08/2026, 23:45 - Rohan: guys my code is throwing an error
+25/08/2026, 23:53 - Rohan: ValueError: Input X contains NaN
+26/08/2026, 00:00 - Arjun: did you use the cleaned csv or the original
+26/08/2026, 00:09 - Rohan: original i think
+26/08/2026, 00:16 - Arjun: THATS why
+26/08/2026, 00:21 - Rohan: oh lol my bad
+26/08/2026, 00:25 - Kritika: this man
+26/08/2026, 00:28 - Rohan: using cleaned one now, running again
+26/08/2026, 00:34 - Rohan: ok it works now, accuracy 76%
+26/08/2026, 00:37 - Arjun: not bad for a baseline
+27/08/2026, 01:35 - Neha: random forest results in, 81.2% accuracy
+27/08/2026, 01:42 - Kritika: svm gives 78.5%
+27/08/2026, 01:47 - Arjun: xgboost 83.9%, best so far
+27/08/2026, 01:52 - Rohan: logistic regression was 76.3%
+27/08/2026, 01:55 - Neha: nice spread for comparison table
+27/08/2026, 02:03 - Kritika: should we tune hyperparameters or leave as is
+27/08/2026, 02:09 - Arjun: let's at least do grid search for xgboost since its our best model
+27/08/2026, 02:18 - Neha: agreed, that becomes our proposed model
+27/08/2026, 19:06 - Arjun: grid search running, taking forever on my laptop
+27/08/2026, 19:09 - Arjun: fan is so loud rn
+27/08/2026, 19:16 - Kritika: lmao rip your laptop
+27/08/2026, 19:21 - Arjun: it's been 40 mins
+27/08/2026, 19:25 - Neha: use fewer param combinations next time
+27/08/2026, 19:26 - Arjun: too late now, letting it finish
+27/08/2026, 19:28 - Arjun: done!! 86.4% accuracy after tuning
+27/08/2026, 19:29 - Neha: yesss that's a solid number for the report
+27/08/2026, 19:34 - Rohan: nice
+30/08/2026, 00:19 - Kritika: sir wants a mid-sem review presentation next week
+30/08/2026, 00:22 - Neha: how many slides
+30/08/2026, 00:29 - Kritika: he didnt specify, usually 10-12
+30/08/2026, 00:37 - Arjun: who's presenting
+30/08/2026, 00:40 - Neha: we should all speak, one section each
+30/08/2026, 00:49 - Rohan: can i just stand there and nod
+30/08/2026, 00:58 - Neha: no rohan you present the methodology section
+30/08/2026, 01:07 - Rohan: ugh fine
+30/08/2026, 18:01 - Neha: slides draft up, check and add your parts
+30/08/2026, 18:02 - Neha: <Media omitted>
+30/08/2026, 18:08 - Arjun: looks clean, added my results slide
+30/08/2026, 18:15 - Kritika: added references slide at the end
+30/08/2026, 18:24 - Rohan: still working on methodology slide, need better diagram
+30/08/2026, 18:25 - Neha: use draw.io its free
+30/08/2026, 18:29 - Rohan: never used it
+30/08/2026, 18:30 - Kritika: not hard, watch a 5 min tutorial
+30/08/2026, 18:32 - Rohan: ok ok
+03/09/2026, 10:11 - Rohan: diagram done, does this flow make sense
+03/09/2026, 10:20 - Rohan: <Media omitted>
+03/09/2026, 10:28 - Arjun: arrow between preprocessing and split should probably come before feature selection
+03/09/2026, 10:30 - Rohan: oh yeah fixing
+03/09/2026, 10:34 - Kritika: otherwise looks decent rohan, proud of you
+03/09/2026, 10:38 - Rohan: dont be sarcastic im fragile rn
+03/09/2026, 10:46 - Kritika: who said i was being sarcastic
+04/09/2026, 05:17 - Neha: mid sem review tomorrow 10am, seminar hall 3
+04/09/2026, 05:22 - Neha: everyone reach by 9:45, we need to test the projector
+04/09/2026, 05:26 - Arjun: ok (again)
+04/09/2026, 05:29 - Kritika: alright noted
+04/09/2026, 05:34 - Rohan: got it
+04/09/2026, 05:37 - Neha: Rohan i mean it, 9:45 not 9:55
+04/09/2026, 05:38 - Rohan: understood commander
+06/09/2026, 20:53 - Arjun: how do you guys think it went
+06/09/2026, 20:58 - Neha: overall fine, panel asked tough questions on the confusion matrix though
+06/09/2026, 21:03 - Kritika: that one panel lady grilled me for 5 straight minutes
+06/09/2026, 21:11 - Arjun: she asked me about class imbalance and i blanked ngl
+06/09/2026, 21:20 - Neha: we should add SMOTE or something to handle that before final review
+06/09/2026, 21:22 - Rohan: my part went ok i think, didnt stutter too much
+06/09/2026, 21:23 - Kritika: you did stutter once when she asked about the diagram
+06/09/2026, 21:25 - Rohan: ONE time
+08/09/2026, 07:29 - Neha: panel feedback sheet, read it
+08/09/2026, 07:33 - Neha: <Media omitted>
+08/09/2026, 07:35 - Arjun: 'improve literature review with recent papers' noted
+08/09/2026, 07:44 - Kritika: 'address class imbalance' as predicted
+08/09/2026, 07:50 - Arjun: 'clarify novelty of the work' hmm this one is tricky
+08/09/2026, 07:59 - Neha: we'll discuss novelty angle with sir separately
+08/09/2026, 20:56 - Kritika: implementing SMOTE for class imbalance
+08/09/2026, 21:04 - Kritika: from imblearn.over_sampling import SMOTE
+08/09/2026, 21:07 - Arjun: did accuracy change
+08/09/2026, 21:15 - Kritika: xgboost now 84.1%, slightly lower but recall improved a lot
+08/09/2026, 21:22 - Neha: recall matters more here honestly, its a medical prediction problem
+08/09/2026, 21:25 - Arjun: agreed, false negatives are worse than false positives in this context
+08/09/2026, 21:32 - Kritika: good, adding that justification to the report
+11/09/2026, 03:11 - Arjun: found 3 recent papers from 2023-2024, sending for lit review update
+11/09/2026, 03:18 - Arjun: https://www.example.com/journal/ml-diabetes-2024
+11/09/2026, 03:22 - Neha: perfect this addresses the panel comment
+11/09/2026, 03:27 - Kritika: i'll rewrite the lit review section with these
+11/09/2026, 03:29 - Rohan: need help with anything
+11/09/2026, 03:31 - Kritika: you could format the references in IEEE style, thats tedious
+11/09/2026, 03:38 - Rohan: ok sending you a template
+11/09/2026, 03:39 - Rohan: <Media omitted>
+11/09/2026, 19:03 - Neha: guys plagiarism check tool access, who has premium turnitin
+11/09/2026, 19:06 - Arjun: college library has access i think
+11/09/2026, 19:11 - Kritika: ask the librarian, she's nice
+11/09/2026, 19:17 - Neha: ok will go tomorrow
+11/09/2026, 19:23 - Rohan: what if we cross the limit
+11/09/2026, 19:30 - Neha: then we rewrite whatever's flagged, simple
+11/09/2026, 19:37 - Rohan: simple she says
+12/09/2026, 23:53 - Neha: plagiarism report: 18%
+13/09/2026, 00:00 - Arjun: thats above the 15% limit right
+13/09/2026, 00:03 - Neha: yes need to bring it down
+13/09/2026, 00:08 - Kritika: which sections are flagged
+13/09/2026, 00:17 - Neha: mostly the dataset description part, hard to paraphrase technical stuff
+13/09/2026, 00:25 - Arjun: try restructuring sentences instead of just synonym swapping
+13/09/2026, 00:30 - Neha: yeah working on it
+16/09/2026, 01:34 - Neha: rechecked, 11% now, we're good
+16/09/2026, 01:43 - Kritika: nice work
+16/09/2026, 01:45 - Arjun: phew
+16/09/2026, 01:48 - Rohan: great job team 👏
+16/09/2026, 01:57 - Neha: you didnt even help with this part rohan
+16/09/2026, 02:05 - Rohan: emotional support counts as help
+16/09/2026, 02:13 - Kritika: does it though
+17/09/2026, 07:35 - Arjun: guys the college wants abstract submitted separately for the symposium
+17/09/2026, 07:39 - Neha: what symposium
+17/09/2026, 07:45 - Arjun: the inter college one, sir mentioned it in mail
+17/09/2026, 07:51 - Neha: i didnt get that mail
+17/09/2026, 07:56 - Arjun: checking, sending you the forward
+17/09/2026, 08:00 - Arjun: <Media omitted>
+17/09/2026, 08:07 - Kritika: are we even doing the symposium, extra work for no credit
+17/09/2026, 08:16 - Arjun: sir seemed to expect it ngl
+17/09/2026, 08:21 - Neha: let's just submit the abstract, doesn't hurt
+17/09/2026, 18:41 - Rohan: who is writing the abstract
+17/09/2026, 18:47 - Neha: I'll draft it, send me the final accuracy numbers
+17/09/2026, 18:56 - Arjun: xgboost 84.1% after SMOTE, that's our best
+17/09/2026, 19:00 - Neha: ok drafting now
+17/09/2026, 19:04 - Neha: <Media omitted>
+17/09/2026, 19:12 - Kritika: looks good, maybe shorten the last sentence
+17/09/2026, 19:17 - Neha: done, submitting
+18/09/2026, 17:14 - Kritika: random but does anyone else feel like we're always working at 11pm
+18/09/2026, 17:22 - Arjun: story of engineering college fr
+18/09/2026, 17:30 - Neha: sleep is a myth this semester
+18/09/2026, 17:37 - Rohan: i sleep fine tbh
+18/09/2026, 17:46 - Kritika: we know rohan, we know
+18/09/2026, 17:54 - Rohan: rude
+20/09/2026, 20:22 - Neha: report structure finalised, sharing the outline
+20/09/2026, 20:24 - Neha: <Media omitted>
+20/09/2026, 20:32 - Arjun: abstract, intro, lit review, methodology, results, conclusion, references. standard stuff
+20/09/2026, 20:33 - Kritika: should we add a 'future scope' section too
+20/09/2026, 20:36 - Neha: yes good idea, panels love that section
+20/09/2026, 20:37 - Rohan: who writes future scope
+20/09/2026, 20:42 - Kritika: i can, i have ideas about deploying it as a web app
+20/09/2026, 20:47 - Neha: perfect add that
+22/09/2026, 06:51 - Arjun: methodology section draft done
+22/09/2026, 06:56 - Arjun: <Media omitted>
+22/09/2026, 07:00 - Neha: reading now
+22/09/2026, 07:04 - Neha: good but add the flowchart here too, not just in slides
+22/09/2026, 07:05 - Arjun: oh right,
+forgot the report needs its own diagrams
+22/09/2026, 07:10 - Kritika: classic arjun forgetting the obvious
+22/09/2026, 07:15 - Arjun: one mistake and im branded for life
+23/09/2026, 00:44 - Rohan: results table looks weird when i paste it in word
+23/09/2026, 00:48 - Rohan: <Media omitted>
+23/09/2026, 00:55 - Neha: use insert table not copy paste from excel directly
+23/09/2026, 01:00 - Rohan: how do i do that
+23/09/2026, 01:04 - Kritika: select the data in excel, copy, then in word do paste special > formatted text
+23/09/2026, 01:11 - Rohan: trying
+23/09/2026, 01:15 - Rohan: ok that worked thanks kritika
+23/09/2026, 01:21 - Kritika: finally someone appreciates me
+23/09/2026, 18:55 - Neha: formatting check, are we all using the same font and margins
+23/09/2026, 19:01 - Arjun: times new roman 12pt right
+23/09/2026, 19:05 - Neha: yes and 1.5 line spacing,
+1 inch margins all sides
+23/09/2026, 19:10 - Kritika: my heading font is different i think, fixing
+23/09/2026, 19:19 - Rohan: mine too probably
+23/09/2026, 19:27 - Neha: just use the template i shared originally guys
+25/09/2026, 02:58 - Kritika: citation style question, IEEE numbered or APA
+25/09/2026, 03:02 - Neha: IEEE, sir specified that in the guidelines doc
+25/09/2026, 03:07 - Kritika: ugh IEEE reference formatting is so finicky
+25/09/2026, 03:15 - Arjun: use Mendeley or Zotero, auto formats it
+25/09/2026, 03:19 - Kritika: never set that up before
+25/09/2026, 03:20 - Arjun: its easy, ill share a guide
+25/09/2026, 03:23 - Arjun: https://www.example.com/guides/zotero-ieee
+25/09/2026, 03:24 - Kritika: thanks, trying it now
+25/09/2026, 21:32 - Neha: final report page count check
+25/09/2026, 21:35 - Arjun: currently 42 pages
+25/09/2026, 21:41 - Neha: guideline says minimum 40, we're fine then
+25/09/2026, 21:43 - Kritika: should we add appendix with full code
+25/09/2026, 21:49 - Neha: yes as appendix A, doesn't count toward main page limit usually
+25/09/2026, 21:58 - Rohan: how much code are we even talking, its like 300 lines
+25/09/2026, 21:59 - Kritika: still add it, looks thorough
+27/09/2026, 06:04 - Arjun: does anyone have professor's cabin hours updated, want to ask about the appendix thing
+27/09/2026, 06:12 - Neha: mon wed fri 2-4pm i think
+27/09/2026, 06:13 - Kritika: he changed it last month, check the noticeboard
+27/09/2026, 06:15 - Arjun: ok will check tomorrow
+27/09/2026, 06:17 - Rohan: tell him i said hi
+27/09/2026, 06:21 - Neha: this isnt a social visit rohan
+28/09/2026, 03:04 - Neha: guys we need a project synopsis submitted to the department office by friday
+28/09/2026, 03:12 - Neha: separate from the main report, just 2 pages
+28/09/2026, 03:21 - Arjun: who's doing this one
+28/09/2026, 03:25 - Neha: i already have a draft from the abstract, just reformatting
+28/09/2026, 03:33 - Kritika: efficient as always
+28/09/2026, 03:40 - Neha: someone has to be
+28/09/2026, 03:47 - Rohan: 🫡
+28/09/2026, 18:36 - Rohan: guys sorry havent been active, family function this week
+28/09/2026, 18:37 - Neha: its fine, just don't fall behind on your part
+28/09/2026, 18:39 - Rohan: i wont, promise
+28/09/2026, 18:45 - Arjun: which part is pending from you again
+28/09/2026, 18:51 - Rohan: limitations and future scope, some of it
+28/09/2026, 18:52 - Kritika: i already drafted future scope though
+28/09/2026, 18:58 - Rohan: oh then just limitations, my bad
+30/09/2026, 02:07 - Rohan: limitations section done, check it
+30/09/2026, 02:11 - Rohan: <Media omitted>
+30/09/2026, 02:19 - Arjun: decent, add something about dataset size being small too
+30/09/2026, 02:26 - Rohan: oh yeah true, 768 samples is not a lot
+30/09/2026, 02:33 - Neha: good catch arjun
+30/09/2026, 02:36 - Rohan: adding now
+30/09/2026, 22:10 - Kritika: has anyone actually read the whole report front to back yet
+30/09/2026, 22:13 - Arjun: not yet, been focused on my sections
+30/09/2026, 22:19 - Neha: we should do a full read through this weekend, all four of us
+30/09/2026, 22:27 - Rohan: saturday? i have a wedding to attend
+30/09/2026, 22:29 - Neha: sunday then
+30/09/2026, 22:36 - Kritika: sunday works
+30/09/2026, 22:40 - Arjun: sunday it is, 6pm on the group call
+01/10/2026, 18:44 - Neha: ok starting the read through, everyone open the doc
+01/10/2026, 18:47 - Kritika: present
+01/10/2026, 18:49 - Arjun: present too
+01/10/2026, 18:54 - Rohan: here, 10 mins late sorry
+01/10/2026, 18:58 - Neha: of course you are
+01/10/2026, 19:06 - Rohan: its a personal record actually, usually its 20
+03/10/2026, 07:20 - Arjun: page 12, this sentence doesn't make grammatical sense
+03/10/2026, 07:28 - Neha: which sentence
+03/10/2026, 07:32 - Arjun: the model was trained using was accuracy of 84%, doesn't parse
+03/10/2026, 07:34 - Neha: lol that's a typo, fixing
+03/10/2026, 07:39 - Kritika: there's probably more of those, we typed this at 1am half the time
+03/10/2026, 07:44 - Neha: true, everyone reread your own sections carefully after this call
+04/10/2026, 01:25 - Rohan: found a repeated paragraph in the lit review, same text twice
+04/10/2026, 01:29 - Rohan: page 8 and page 9
+04/10/2026, 01:34 - Kritika: oh that was me copy pasting between subsections, oops
+04/10/2026, 01:38 - Kritika: removing the duplicate
+04/10/2026, 01:45 - Arjun: good catch rohan, didnt expect that from you ngl
+04/10/2026, 01:49 - Rohan: wow ok
+05/10/2026, 00:48 - Neha: read through done, overall solid. just need final formatting pass
+05/10/2026, 00:49 - Arjun: who's doing formatting pass
+05/10/2026, 00:57 - Neha: i can do it tomorrow, send me final versions of your sections tonight
+05/10/2026, 01:01 - Kritika: sending mine now
+05/10/2026, 01:07 - Arjun: sending mine in 20 mins, still polishing conclusion
+05/10/2026, 01:12 - Rohan: mine's already sent from before
+05/10/2026, 01:13 - Neha: confirmed got all three, thanks team
+06/10/2026, 00:06 - Neha: report finalised and formatted, 44 pages final
+06/10/2026, 00:09 - Neha: <Media omitted>
+06/10/2026, 00:14 - Arjun: looks professional ngl, good job neha
+06/10/2026, 00:15 - Kritika: the cover page looks really clean
+06/10/2026, 00:21 - Rohan: when's the submission deadline again
+06/10/2026, 00:27 - Neha: 20th, this friday. print 3 spiral bound copies plus soft copy on the portal
+06/10/2026, 00:28 - Rohan: ok noted
+08/10/2026, 01:11 - Arjun: xerox shop near gate 2 is charging 3rs per page now, inflation is real
+08/10/2026, 01:17 - Kritika: try the one behind the hostel, cheaper
+08/10/2026, 01:23 - Arjun: worth the walk for 3 copies i guess
+08/10/2026, 01:28 - Rohan: can someone get mine too, i have a class
+08/10/2026, 01:29 - Neha: of course rohan has a class right when there's actual work
+08/10/2026, 01:38 - Rohan: its a genuine clash i swear
+08/10/2026, 01:45 - Arjun: fine ill get yours too, pay me back
+11/10/2026, 05:56 - Neha: soft copy uploaded to portal successfully
+11/10/2026, 06:05 - Arjun: hard copies submitted to department office too, got the receipt
+11/10/2026, 06:08 - Kritika: finally!! one milestone down
+11/10/2026, 06:13 - Rohan: does this mean we can relax now
+11/10/2026, 06:18 - Neha: viva is next, so no
+11/10/2026, 06:25 - Rohan: oh right
+13/10/2026, 02:58 - Kritika: viva date announced, 15th next month
+13/10/2026, 02:59 - Arjun: that's not much prep time
+13/10/2026, 03:05 - Neha: we should start mock viva sessions among ourselves
+13/10/2026, 03:12 - Kritika: good idea, we can grill rohan first since he needs the most practice
+13/10/2026, 03:16 - Rohan: excuse me
+13/10/2026, 03:23 - Neha: no offense but she's not wrong
+13/10/2026, 03:30 - Rohan: fine, when do we start
+13/10/2026, 19:36 - Neha: mock viva session 1, saturday 4pm on call
+13/10/2026, 19:39 - Arjun: questions prepared?
+13/10/2026, 19:40 - Neha: yes, common ones like why this topic, what's the novelty, explain your model
+13/10/2026, 19:47 - Kritika: also be ready for what if dataset was 10x bigger type hypotheticals
+13/10/2026, 19:53 - Rohan: those are the scary ones
+13/10/2026, 19:56 - Arjun: practice makes it less scary, let's just start
+16/10/2026, 02:24 - Neha: ok rohan, explain xgboost in one minute, go
+16/10/2026, 02:26 - Rohan: uh... its like... boosting trees together
+16/10/2026, 02:34 - Kritika: thats it? thats your whole answer?
+16/10/2026, 02:38 - Rohan: give me a sec i panicked
+16/10/2026, 02:39 - Arjun: take your time, explain the boosting concept properly
+16/10/2026, 02:47 - Rohan: ok let me try again, its an ensemble method that builds trees sequentially where each tree corrects errors of the previous one
+16/10/2026, 02:54 - Neha: better! much better
+16/10/2026, 02:57 - Kritika: see you can do it when you actually think
+17/10/2026, 00:51 - Arjun: my turn to be grilled i guess
+17/10/2026, 00:55 - Neha: why did you choose SMOTE over other imbalance techniques
+17/10/2026, 00:58 - Arjun: because it generates synthetic samples rather than just duplicating, avoids overfitting compared to random oversampling
+17/10/2026, 00:59 - Kritika: solid answer ngl
+17/10/2026, 01:08 - Neha: good, next question. what's your model's biggest limitation
+17/10/2026, 01:14 - Arjun: small dataset size and its from a specific population demographic so generalizability is limited
+17/10/2026, 01:18 - Neha: perfect, exactly what we want to hear
+18/10/2026, 23:16 - Kritika: viva prep going well i think, we're actually sounding coherent now
+18/10/2026, 23:17 - Arjun: 2 more mock sessions before the real thing though
+18/10/2026, 23:23 - Neha: agreed, don't get overconfident
+18/10/2026, 23:31 - Rohan: can we also prep for what does each team member's role look like type question
+18/10/2026, 23:36 - Neha: good point, panels do ask that sometimes
+18/10/2026, 23:41 - Kritika: i'll draft individual contribution summaries tonight
+20/10/2026, 06:35 - Neha: guys quick reminder wear formals for viva, not just college id
+20/10/2026, 06:43 - Kritika: obviously neha
+20/10/2026, 06:44 - Rohan: does a plain shirt count as formal
+20/10/2026, 06:52 - Neha: preferably with a collar rohan, and no sneakers
+20/10/2026, 07:00 - Rohan: damn ok i need to buy shoes then
+20/10/2026, 07:08 - Arjun: 2 days left and you dont have formal shoes??
+20/10/2026, 07:16 - Rohan: i have loafers somewhere i think, will find them
+20/10/2026, 19:19 - Kritika: nervous about tomorrow ngl
+20/10/2026, 19:21 - Neha: we've prepped well, we'll be fine
+20/10/2026, 19:30 - Arjun: cant sleep, keep thinking of edge case questions they might ask
+20/10/2026, 19:31 - Neha: sleep is more important right now than extra prep, seriously
+20/10/2026, 19:34 - Rohan: i slept fine don't worry about me
+20/10/2026, 19:40 - Kritika: shocking absolutely no one
+22/10/2026, 09:11 - Neha: VIVA DAY. everyone reach by 9am sharp
+22/10/2026, 09:18 - Arjun: already awake, too nervous to sleep more anyway
+22/10/2026, 09:21 - Kritika: om nom nom eating breakfast fast,
+see you there
+22/10/2026, 09:23 - Rohan: otw
+22/10/2026, 09:25 - Neha: good luck team, we've got this
+23/10/2026, 08:26 - Arjun: how did it go for you guys
+23/10/2026, 08:30 - Kritika: i think decent, they asked about deployment which we hadnt fully prepped
+23/10/2026, 08:36 - Neha: same experience, but overall panel seemed satisfied
+23/10/2026, 08:41 - Rohan: mine went better than expected honestly, that mock session helped a lot
+23/10/2026, 08:46 - Arjun: genuinely proud of you rohan
+23/10/2026, 08:54 - Rohan: dont make it weird arjun
+23/10/2026, 09:03 - Kritika: let him have his moment arjun
+25/10/2026, 08:23 - Neha: results usually take 2-3 weeks after viva right
+25/10/2026, 08:27 - Arjun: yeah last year's seniors said around that time
+25/10/2026, 08:28 - Kritika: the waiting is the worst part honestly
+25/10/2026, 08:35 - Rohan: at least we can relax a bit now
+25/10/2026, 08:40 - Neha: don't relax too much, we still owe the department a project poster for the exhibition
+25/10/2026, 08:47 - Rohan: there's ALWAYS one more thing
+28/10/2026, 01:21 - Kritika: poster template, thoughts?
+28/10/2026, 01:27 - Kritika: <Media omitted>
+28/10/2026, 01:35 - Arjun: good layout, maybe bigger font for the results graph
+28/10/2026, 01:37 - Neha: agreed, panels stand far away when reading these
+28/10/2026, 01:46 - Kritika: fixing font size now
+28/10/2026, 01:53 - Rohan: looks professional, nice work kritika
+29/10/2026, 04:28 - Neha: project exhibition is next tuesday, who's manning the stall
+29/10/2026, 04:31 - Arjun: i can do morning shift
+29/10/2026, 04:33 - Kritika: i'll do afternoon
+29/10/2026, 04:36 - Neha: i'll float between both
+29/10/2026, 04:37 - Rohan: i have a family thing tuesday morning, can join after 1
+29/10/2026, 04:46 - Neha: of course you do
+29/10/2026, 04:52 - Rohan: its genuinely a cousin's engagement neha i cant skip that
+29/10/2026, 04:53 - Neha: fine fine, just be there by 1
+30/10/2026, 02:51 - Arjun: exhibition went well, lots of juniors asking about our model
+30/10/2026, 02:57 - Kritika: one junior asked if we used deep learning, had to explain why we didnt need to for this dataset size
+30/10/2026, 03:00 - Neha: good explanation practice for future interviews honestly
+30/10/2026, 03:01 - Rohan: sorry again for being late,
+engagement ran long
+30/10/2026, 03:02 - Neha: its fine, you made it eventually
+31/10/2026, 04:26 - Kritika: random update, i emailed the professor asking about paper publication possibility
+31/10/2026, 04:35 - Kritika: kritika.sharma@example.com is the email i used lol just for reference
+31/10/2026, 04:41 - Arjun: publication?? that would be huge for our resumes
+31/10/2026, 04:50 - Neha: did he reply
+31/10/2026, 04:54 - Kritika: not yet, sent it yesterday
+31/10/2026, 05:01 - Rohan: fingers crossed
+01/11/2026, 02:45 - Kritika: sir replied! he's willing to guide us for a conference paper submission
+01/11/2026, 02:49 - Arjun: LETS GOOO
+01/11/2026, 02:55 - Neha: this is amazing news
+01/11/2026, 03:03 - Rohan: does this mean more work though
+01/11/2026, 03:06 - Kritika: yes rohan, good things require work sometimes
+01/11/2026, 03:09 - Rohan: fair enough, im in
+02/11/2026, 18:08 - Neha: conference paper deadline is tight, 3 weeks from now
+02/11/2026, 18:11 - Arjun: need to restructure our report into paper format, its very different
+02/11/2026, 18:19 - Kritika: IEEE conference template, 6 pages max, two column
+02/11/2026, 18:21 - Neha: i'll start converting the abstract and intro tonight
+02/11/2026, 18:23 - Rohan: what can i do to help
+02/11/2026, 18:26 - Neha: condense the methodology into like half a page, its currently 4 pages in the report
+02/11/2026, 18:31 - Rohan: tough but ok, starting now
+04/11/2026, 06:01 - Arjun: results section condensed, only keeping the best 2 models comparison now
+04/11/2026, 06:02 - Kritika: good, papers dont need every single table we had
+04/11/2026, 06:03 - Neha: references also need trimming, max 15-20 for a conference paper
+04/11/2026, 06:12 - Kritika: we have like 32 currently, cutting the weakest ones
+05/11/2026, 04:51 - Rohan: methodology condensed version done
+05/11/2026, 05:00 - Arjun: this is actually really good rohan, well written
+05/11/2026, 05:08 - Rohan: thanks, took me way longer than i expected though
+05/11/2026, 05:12 - Neha: proud of you fr, this is a big improvement from earlier days
+05/11/2026, 05:15 - Rohan: growth arc unlocked 😤
+05/11/2026, 17:08 - Neha: paper draft complete, sending to sir for review
+05/11/2026, 17:17 - Kritika: fingers crossed he doesn't want major changes
+05/11/2026, 17:18 - Arjun: he will, he always does lol
+05/11/2026, 17:25 - Rohan: true, remember the report review
+05/11/2026, 17:28 - Neha: lets just wait and see
+07/11/2026, 00:16 - Neha: sir's comments are back
+07/11/2026, 00:18 - Arjun: not too bad actually, mostly language polishing
+07/11/2026, 00:19 - Kritika: he wants the abstract rewritten though, says its too result-focused not enough motivation
+07/11/2026, 00:28 - Neha: ok i'll redo it tonight
+07/11/2026, 00:32 - Rohan: need any help
+07/11/2026, 00:35 - Neha: just moral support at this point lol
+08/11/2026, 06:26 - Neha: abstract v2 done, better?
+08/11/2026, 06:35 - Arjun: much better flow now
+08/11/2026, 06:42 - Kritika: agreed, sending to sir
+08/11/2026, 06:45 - Kritika: null
+08/11/2026, 06:54 - Kritika: sorry ignore that, phone glitched
+08/11/2026, 06:59 - Arjun: lol ok
+08/11/2026, 19:25 - Neha: paper submitted to the conference portal!!
+08/11/2026, 19:33 - Kritika: omg finally
+08/11/2026, 19:42 - Arjun: huge milestone honestly, didnt think we'd get here when rohan missed the first meeting
+08/11/2026, 19:43 - Rohan: let it go arjun its been 7 months
+08/11/2026, 19:50 - Neha: he's not wrong though
+08/11/2026, 19:57 - Kritika: character development for all of us tbh
+10/11/2026, 07:18 - Arjun: results day is announced for our main project, 18th
+10/11/2026, 07:21 - Neha: omg the actual grades
+10/11/2026, 07:25 - Kritika: nervous again, thought we were done being nervous
+10/11/2026, 07:27 - Rohan: never truly done in engineering college
+10/11/2026, 07:32 - Neha: true wisdom from the man who almost missed submission day
+10/11/2026, 07:36 - Rohan: one more time and i swear
+11/11/2026, 18:18 - Neha: RESULTS ARE OUT
+11/11/2026, 18:23 - Arjun: checking checking
+11/11/2026, 18:24 - Kritika: WE GOT A
+11/11/2026, 18:29 - Rohan: WAIT REALLY
+11/11/2026, 18:38 - Arjun: YESSS A GRADE LETS GOOO
+11/11/2026, 18:45 - Neha: i literally cried a little not gonna lie <This message was edited>
+11/11/2026, 18:54 - Kritika: this deserves a group photo honestly
+13/11/2026, 01:27 - Arjun: cant believe this is actually over
+13/11/2026, 01:29 - Neha: 7 months, one dataset, way too many deadlines
+13/11/2026, 01:38 - Kritika: and one rohan who took 7 months to become reliable
+13/11/2026, 01:39 - Rohan: i prefer 'developed under pressure' thank you
+13/11/2026, 01:42 - Neha: honestly guys this was a good team, proud of us
+13/11/2026, 01:47 - Arjun: couldnt have asked for a better group tbh
+13/11/2026, 01:51 - Kritika: get ready for the reunion post whenever the paper gets accepted
+13/11/2026, 01:55 - Rohan: that's a future rohan problem
+13/11/2026, 01:58 - Neha: some things never change 😂
+14/11/2026, 03:24 - Rohan: You deleted this message
+14/11/2026, 03:30 - Neha: what did you send
+14/11/2026, 03:34 - Rohan: wrong group lol ignore
+14/11/2026, 03:41 - Kritika: suspicious
+15/11/2026, 08:44 - Arjun: anyone know the guide's alternate email in case portal is down
+15/11/2026, 08:45 - Neha: iyer.guide@example.edu i think, check the notice
+15/11/2026, 08:46 - Arjun: thanks
+15/11/2026, 08:53 - Kritika: why not just message him on portal
+15/11/2026, 08:57 - Arjun: portal was down yesterday, just being safe
+16/11/2026, 02:59 - Neha: @Rohan are you coming?
+16/11/2026, 03:06 - Rohan: 5 mins away
+16/11/2026, 03:08 - Neha: you said that 15 mins ago
+16/11/2026, 03:11 - Rohan: traffic near the college gate is insane today
+16/11/2026, 03:14 - Neha: fine hurry
+18/11/2026, 18:08 - Kritika: This message was deleted
+18/11/2026, 18:10 - Arjun: lol what was that
+18/11/2026, 18:13 - Kritika: nothing, wrong chat again, everyone's doing it today
+18/11/2026, 18:19 - Rohan: group curse
+19/11/2026, 21:50 - Arjun: guys library extended hours during exam week, till 10pm
+19/11/2026, 21:51 - Neha: good, need the space to finalise slides
+19/11/2026, 21:52 - Kritika: AC in the library is actually decent too
+19/11/2026, 21:55 - Rohan: count me in for once
+19/11/2026, 21:56 - Neha: shocking
+20/11/2026, 19:53 - Neha: dataset citation, are we citing kaggle properly in references
+20/11/2026, 19:55 - Arjun: yes added the dataset DOI if it has one
+20/11/2026, 20:01 - Kritika: double check the format, IEEE wants specific fields for datasets
+20/11/2026, 20:05 - Neha: checking now
+20/11/2026, 20:14 - Arjun: looks fine actually
+22/11/2026, 20:08 - Rohan: bro i think i broke my venv, nothing imports anymore
+22/11/2026, 20:10 - Arjun: did you install a new package that conflicted
+22/11/2026, 20:14 - Rohan: yeah tried tensorflow, total mess after that
+22/11/2026, 20:18 - Arjun: just make a fresh venv honestly, faster than debugging
+22/11/2026, 20:22 - Rohan: ugh fine, redoing setup
+22/11/2026, 20:24 - Rohan: ok working again, lesson learned
+24/11/2026, 18:09 - Kritika: guys sir mentioned bringing our laptops for the final review, live demo maybe
+24/11/2026, 18:14 - Neha: oh no live demos always go wrong
+24/11/2026, 18:22 - Arjun: we should have a backup video recording just in case
+24/11/2026, 18:24 - Kritika: good idea, i'll record a run through tonight
+24/11/2026, 18:27 - Rohan: record with captions, in case audio is bad in the hall
+24/11/2026, 18:29 - Kritika: smart actually, didnt expect that from you
+24/11/2026, 18:33 - Rohan: i have my moments
+26/11/2026, 02:31 - Neha: did the demo recording come out ok
+26/11/2026, 02:38 - Kritika: yeah decent, 3 minutes covering input to output
+26/11/2026, 02:43 - Arjun: send it here let's all check
+26/11/2026, 02:44 - Arjun: good pace, not rushed
+26/11/2026, 02:50 - Neha: perfect backup then
+28/11/2026, 02:09 - Neha: guys can we push the weekly sync to 8pm instead of 7, stuck in extra class
+28/11/2026, 02:10 - Arjun: fine by me (again)
+28/11/2026, 02:16 - Kritika: works for me
+28/11/2026, 02:22 - Rohan: sure thing
+30/11/2026, 09:40 - Arjun: found a bug in the accuracy calculation function, we were computing it on train set not test set this whole time
+30/11/2026, 09:41 - Neha: WAIT WHAT. so all our numbers are wrong??
+30/11/2026, 09:48 - Arjun: recalculating now, hold on
+30/11/2026, 09:49 - Kritika: this is bad timing, review is in 4 days
+30/11/2026, 09:56 - Arjun: ok recalculated, test accuracy for xgboost is 82.7%, still respectable just lower than before
+30/11/2026, 10:05 - Neha: phew ok update the slides and report immediately
+30/11/2026, 10:07 - Rohan: good thing you caught it honestly
+01/12/2026, 04:36 - Kritika: sir asked us to add a comparison with a recent 2024 paper's results
+01/12/2026, 04:45 - Neha: which paper
+01/12/2026, 04:49 - Kritika: the one using neural networks on a similar dataset, got 88%
+01/12/2026, 04:51 - Arjun: ours is lower then, how do we frame that
+01/12/2026, 04:56 - Neha: frame it as trade-off, simpler model, more interpretable, less compute
+01/12/2026, 04:59 - Kritika: good angle, adding that to discussion section
+02/12/2026, 06:14 - Rohan: guys my system restarted overnight and i lost unsaved changes in the report
+02/12/2026, 06:18 - Neha: did you not save as you went??
+02/12/2026, 06:23 - Rohan: i thought word autosaves, apparently not on this old laptop
+02/12/2026, 06:24 - Kritika: rookie mistake rohan
+02/12/2026, 06:25 - Rohan: lesson learned, redoing the section now
+02/12/2026, 06:31 - Arjun: use google docs next time, autosaves constantly
+02/12/2026, 06:39 - Rohan: yeah moving my draft there now
+02/12/2026, 20:39 - Neha: who booked the seminar hall for our practice run tomorrow
+02/12/2026, 20:47 - Arjun: i did, 4-5pm slot
+02/12/2026, 20:53 - Kritika: need the projector remote too, ask the peon uncle
+02/12/2026, 21:02 - Arjun: already asked, he'll leave it in the drawer
+02/12/2026, 21:07 - Rohan: perfect
+05/12/2026, 22:27 - Kritika: practice run notes, arjun spoke too fast in the results section
+05/12/2026, 22:31 - Arjun: did i really
+05/12/2026, 22:39 - Neha: yes noticeably, slow down especially on the numbers
+05/12/2026, 22:42 - Arjun: noted, will practice pacing tonight
+05/12/2026, 22:44 - Rohan: my part was too short apparently, need to add more explanation
+05/12/2026, 22:46 - Kritika: yeah stretch it by explaining the confusion matrix properly
+08/12/2026, 09:04 - Arjun: guys had a random thought, should we mention ethical considerations of using medical data
+08/12/2026, 09:06 - Neha: oh good point, panels sometimes ask about data privacy
+08/12/2026, 09:12 - Kritika: dataset is anonymized and public so we're fine, but worth a paragraph
+08/12/2026, 09:18 - Neha: adding an ethics subsection tonight
+08/12/2026, 09:20 - Rohan: nice touch, makes us look thorough
+09/12/2026, 06:11 - Neha: guys the professor wants an individual reflection note from each of us, half a page
+09/12/2026, 06:13 - Rohan: reflection on what exactly
+09/12/2026, 06:20 - Neha: your learning experience through the project i guess
+09/12/2026, 06:21 - Kritika: easy, i'll write about the panel grilling me lol
+09/12/2026, 06:27 - Arjun: mine's gonna be about that accuracy bug moment honestly
+09/12/2026, 06:31 - Rohan: mine will be about how i almost didnt survive this group's expectations
+09/12/2026, 06:36 - Neha: fair enough
+11/12/2026, 01:41 - Kritika: random, does anyone have a spare pen drive, need to submit code separately too apparently
+11/12/2026, 01:50 - Arjun: i have one, 16gb, that enough
+11/12/2026, 01:53 - Kritika: more than enough, our code is like 2mb
+11/12/2026, 02:00 - Arjun: bringing it tomorrow
+11/12/2026, 02:04 - Rohan: should we also submit a requirements.txt with the code
+11/12/2026, 02:12 - Neha: yes good idea, list the python and library versions we used
+11/12/2026, 21:40 - Arjun: guys had a dream about the viva last night, panel was asking me to explain gradient boosting in hindi
+11/12/2026, 21:46 - Kritika: LMAOOO
+11/12/2026, 21:52 - Neha: the stress is really getting to you huh
+11/12/2026, 22:01 - Arjun: apparently yes
+11/12/2026, 22:04 - Rohan: atleast prepare a hindi explanation just in case, you never know with our panel
+11/12/2026, 22:12 - Arjun: not funny rohan, or maybe slightly funny
+14/12/2026, 03:23 - Neha: final checklist before submission, someone verify all page numbers match table of contents
+14/12/2026, 03:31 - Kritika: checking now (again)
+14/12/2026, 03:36 - Kritika: page 23 is off by one, fixing the TOC
+14/12/2026, 03:40 - Neha: good catch, anything else
+14/12/2026, 03:43 - Arjun: captions on figures all numbered correctly, verified
+14/12/2026, 03:49 - Rohan: references list matches in-text citations, i checked mine
+14/12/2026, 03:57 - Neha: great, we're actually ready
+16/12/2026, 00:41 - Rohan: guys quick question, does the appendix need to be spiral bound with the main report or separate
+16/12/2026, 00:46 - Neha: same binding, one document
+16/12/2026, 00:51 - Rohan: ok makes it easier honestly
+16/12/2026, 00:54 - Kritika: for once something is easier for you
+16/12/2026, 00:57 - Rohan: i contain multitudes kritika
+17/12/2026, 00:57 - Arjun: sir's secretary said submission counter closes at 4pm sharp tomorrow, not 5
+17/12/2026, 01:06 - Neha: wait that changes our whole plan
+17/12/2026, 01:12 - Kritika: xerox shop opens at 9, should be enough time if we go early
+17/12/2026, 01:15 - Neha: ok everyone reach xerox shop by 9:30 sharp
+17/12/2026, 01:19 - Rohan: understood, setting three alarms
+18/12/2026, 03:22 - Neha: guys I'm oddly calm about tomorrow, is that normal
+18/12/2026, 03:24 - Kritika: the calm before the chaos usually
+18/12/2026, 03:27 - Arjun: don't jinx it neha
+18/12/2026, 03:29 - Rohan: i've been calm this whole project, look where that got us
+18/12/2026, 03:33 - Kritika: exactly why you shouldn't be the benchmark for calm
+19/12/2026, 05:17 - Arjun: submitted!! hard copies and soft copy both done
+19/12/2026, 05:22 - Neha: omg it's actually done
+19/12/2026, 05:27 - Kritika: group hug energy rn
+19/12/2026, 05:34 - Rohan: proud of us honestly, real talk
+19/12/2026, 05:39 - Neha: couldn't have done it without everyone, even you rohan
+19/12/2026, 05:43 - Rohan: EVEN me, wow thanks
+19/12/2026, 20:47 - Kritika: does anyone know if the viva panel is internal or external examiners this year
+19/12/2026, 20:52 - Neha: heard its one internal one external
+19/12/2026, 20:56 - Arjun: external ones are usually stricter from what seniors say
+19/12/2026, 21:03 - Rohan: great, more reason to be nervous
+19/12/2026, 21:11 - Neha: we'll be fine, we know our project inside out by now
+20/12/2026, 18:12 - Rohan: guys should we prepare a one page cheat sheet of key numbers just in case we blank
+20/12/2026, 18:19 - Arjun: good idea actually, accuracy, precision, recall, f1 for all models
+20/12/2026, 18:23 - Neha: i'll compile it tonight and share
+20/12/2026, 18:32 - Kritika: add dataset size and feature count too, they love asking that
+20/12/2026, 18:37 - Neha: adding
+22/12/2026, 07:09 - Neha: cheat sheet ready
+22/12/2026, 07:14 - Neha: <Media omitted>
+22/12/2026, 07:21 - Arjun: perfect, printing a copy for myself too
+22/12/2026, 07:22 - Kritika: memorizing the recall numbers specifically, always forget those
+22/12/2026, 07:26 - Rohan: same honestly, recall vs precision still confuses me sometimes
+22/12/2026, 07:33 - Arjun: recall is about catching all positives, precision is about being right when you say positive
+22/12/2026, 07:40 - Rohan: ok that actually helped, thanks
+23/12/2026, 00:51 - Kritika: guys after care of paper submission acceptance email might take weeks right
+23/12/2026, 00:54 - Neha: yeah conferences are slow with review usually
+23/12/2026, 00:56 - Arjun: in the meantime lets just focus on placements prep tbh
+23/12/2026, 01:04 - Rohan: adding this project to my resume already, feels good to finally have something solid
+23/12/2026, 01:11 - Neha: same, this whole thing taught me more than most classes honestly
+24/12/2026, 03:23 - Arjun: guys resume review time, can someone check my project description line
+24/12/2026, 03:30 - Neha: looks good, maybe quantify the accuracy improvement more clearly
+24/12/2026, 03:34 - Kritika: also mention the tech stack explicitly, recruiters skim for keywords
+24/12/2026, 03:41 - Arjun: good points, editing now
+24/12/2026, 22:28 - Neha: guys does anyone want to do a follow up project together after this, like extend it further
+24/12/2026, 22:36 - Kritika: ooh like adding more diseases to predict
+24/12/2026, 22:44 - Arjun: could be a solid open source project honestly
+24/12/2026, 22:45 - Rohan: im down, this group actually works well together when we're not fighting deadlines
+24/12/2026, 22:52 - Neha: let's revisit the idea after placements settle down
+26/12/2026, 09:51 - Kritika: random thought, we should make a private note doc of everything we learned for juniors next year
+26/12/2026, 09:57 - Arjun: great idea, save them from repeating our mistakes
+26/12/2026, 09:58 - Neha: especially the plagiarism check timing, do it way earlier than we did
+26/12/2026, 10:05 - Rohan: and the venv mess, tell them to always use fresh environments
+26/12/2026, 10:13 - Kritika: compiling a document tonight
+26/12/2026, 20:12 - Arjun: guys sir mentioned our project might be showcased in the department's annual report
+26/12/2026, 20:21 - Neha: wait really, that's huge
+26/12/2026, 20:25 - Kritika: need to send him a high res version of the poster then
+26/12/2026, 20:28 - Arjun: sending tonight
+26/12/2026, 20:32 - Rohan: proud moment for NeuralNinjas honestly
+28/12/2026, 09:29 - Neha: conference reviewer comments came back, minor revisions requested
+28/12/2026, 09:37 - Arjun: not bad at all, mostly asking for one more baseline comparison
+28/12/2026, 09:46 - Kritika: doable within the timeline they gave
+28/12/2026, 09:50 - Rohan: i can run the extra baseline this weekend
+28/12/2026, 09:58 - Neha: perfect, deadline for revision is 10 days
+29/12/2026, 09:12 - Rohan: extra baseline done, naive bayes gives 74.1%
+29/12/2026, 09:21 - Arjun: good, adds another point of comparison in the table
+29/12/2026, 09:27 - Neha: updating the paper with this now
+29/12/2026, 09:34 - Kritika: almost there, revision submission ready by tomorrow
+30/12/2026, 07:21 - Neha: revised paper submitted!!
+30/12/2026, 07:28 - Kritika: fingers crossed for final acceptance now
+30/12/2026, 07:37 - Arjun: this has been such a long journey honestly
+30/12/2026, 07:39 - Rohan: worth it though, learned so much more than i expected to
+30/12/2026, 07:45 - Neha: same, genuinely
+30/12/2026, 18:26 - Kritika: guys does anyone have the guide's signature scan for the certificate form
+30/12/2026, 18:33 - Arjun: i have a copy from last semester's form, checking if its still valid
+30/12/2026, 18:40 - Neha: should still be fine, format hasn't changed
+30/12/2026, 18:41 - Kritika: great, filling the form now
+30/12/2026, 18:42 - Rohan: let me know if you need anything signed physically, i pass by his cabin daily
+01/01/2027, 19:38 - Arjun: department is asking for a 2 minute video testimonial about the project for their youtube channel
+01/01/2027, 19:44 - Neha: who's doing the talking
+01/01/2027, 19:49 - Kritika: not me, camera shy
+01/01/2027, 19:51 - Rohan: i can do it actually, kind of enjoy talking about this project now
+01/01/2027, 19:55 - Arjun: growth arc continues
+01/01/2027, 20:00 - Rohan: stop bringing that phrase back up
+04/01/2027, 05:42 - Neha: video testimonial done, rohan did surprisingly well
+04/01/2027, 05:49 - Kritika: ok he's actually good on camera, wasn't expecting that
+04/01/2027, 05:57 - Arjun: new career path unlocked maybe
+04/01/2027, 06:01 - Rohan: i'll take the compliment for once without a comeback
+04/01/2027, 22:15 - Kritika: guys quick reminder, alumni meet is next month, we're invited to present
+04/01/2027, 22:19 - Neha: as in present our project again
+04/01/2027, 22:27 - Kritika: yeah a shortened version, 10 minutes
+04/01/2027, 22:36 - Arjun: we basically have this memorized by now honestly
+04/01/2027, 22:40 - Rohan: true, could probably present it in my sleep at this point
+04/01/2027, 22:43 - Neha: let's not test that theory
+06/01/2027, 04:54 - Arjun: alumni meet presentation went great, got some good networking contacts too
+06/01/2027, 05:02 - Neha: yeah that one alum working at a health tech startup seemed really interested
+06/01/2027, 05:07 - Kritika: she asked for our contact info, said she might reach out
+06/01/2027, 05:16 - Rohan: would be wild if this project actually led somewhere real
+06/01/2027, 05:19 - Neha: fingers crossed honestly
+07/01/2027, 08:31 - Kritika: paper got accepted!!!!
+07/01/2027, 08:36 - Arjun: NO WAY. ARE YOU SERIOUS
+07/01/2027, 08:43 - Neha: I NEED TO SIT DOWN THIS IS INSANE
+07/01/2027, 08:48 - Rohan: WE ARE PUBLISHED AUTHORS LETS GOOOO
+07/01/2027, 08:55 - Neha: genuinely didn't think this would happen when we started in august
+07/01/2027, 08:58 - Kritika: from copy pasted paragraphs to an actual accepted paper, wild journey
+07/01/2027, 09:06 - Rohan: best final year project group honestly, no bias
+07/01/2027, 09:07 - Arjun: full bias but agreed completely
+08/01/2027, 01:31 - Neha: registration fee for the conference needs to be paid by friday
+08/01/2027, 01:36 - Arjun: how much per person
+08/01/2027, 01:42 - Neha: splitting four ways, around 2000 each
+08/01/2027, 01:50 - Kritika: worth it for a publication honestly
+08/01/2027, 01:58 - Rohan: paying my share tonight
+11/01/2027, 06:46 - Arjun: who's actually presenting the paper at the conference, only one of us can go i think
+11/01/2027, 06:52 - Neha: funding only covers one delegate apparently
+11/01/2027, 06:55 - Kritika: let arjun go, he wrote most of the technical sections
+11/01/2027, 07:00 - Rohan: agreed, makes sense
+11/01/2027, 07:07 - Arjun: really? you guys sure
+11/01/2027, 07:08 - Neha: yes go make us proud
+11/01/2027, 20:03 - Arjun: presented the paper today, got some good questions from the audience
+11/01/2027, 20:06 - Neha: how did it go
+11/01/2027, 20:15 - Arjun: nervous at first but settled in, someone asked about extending to other diseases
+11/01/2027, 20:21 - Kritika: that's literally what we discussed doing next lol
+11/01/2027, 20:22 - Rohan: great minds
+11/01/2027, 20:23 - Arjun: proud moment for the whole team honestly, wish you all were there
+12/01/2027, 23:14 - Neha: department wants a group photo for the annual magazine, wear college blazers
+12/01/2027, 23:19 - Kritika: when's the shoot
+12/01/2027, 23:21 - Neha: thursday 3pm, photography room
+12/01/2027, 23:24 - Arjun: noted (again)
+12/01/2027, 23:28 - Rohan: do i need to iron the blazer or is wrinkled fine
+12/01/2027, 23:31 - Kritika: iron it rohan, its a magazine photo
+14/01/2027, 07:30 - Arjun: magazine photo turned out nice actually
+14/01/2027, 07:34 - Neha: we all look surprisingly presentable
+14/01/2027, 07:41 - Kritika: rohan even smiled properly for once
+14/01/2027, 07:50 - Rohan: i can smile normally when i want to
+14/01/2027, 07:53 - Neha: the evidence suggests otherwise but ok
+15/01/2027, 19:56 - Kritika: random but i still have nightmares about that plagiarism percentage
+15/01/2027, 20:01 - Neha: 18% still haunts you huh
+15/01/2027, 20:05 - Kritika: it was genuinely terrifying at the time
+15/01/2027, 20:13 - Arjun: we got through it though, thats what matters
+15/01/2027, 20:17 - Rohan: character building experience honestly
+17/01/2027, 09:18 - Neha: guys can't believe the semester's basically over now
+17/01/2027, 09:20 - Arjun: feels weird not having a deadline looming for once
+17/01/2027, 09:29 - Kritika: enjoy it while it lasts, next sem brings new chaos
+17/01/2027, 09:31 - Rohan: let's not think about that yet, let me enjoy this win
+17/01/2027, 09:36 - Neha: fair, we earned this
+19/01/2027, 06:22 - Arjun: last thing, should we keep this group chat active after graduation
+19/01/2027, 06:30 - Neha: obviously, where else would i complain about work stuff
+19/01/2027, 06:38 - Kritika: definitely keeping it, this chat has actual historical value at this point
+19/01/2027, 06:47 - Rohan: agreed, this group made the whole degree bearable honestly
+19/01/2027, 06:48 - Neha: couldn't have said it better
+19/01/2027, 06:56 - Kritika: NeuralNinjas forever i guess
+19/01/2027, 07:04 - Arjun: forever it is
+20/01/2027, 21:57 - Arjun: guys sir wants us to also add a ROC curve plot, forgot to mention it earlier
+20/01/2027, 22:01 - Kritika: of course he did, last minute as always
+20/01/2027, 22:09 - Arjun: plotting it now, shouldn't take long
+20/01/2027, 22:12 - Neha: AUC score while you're at it, panels love that number
+20/01/2027, 22:21 - Arjun: 0.89 AUC for xgboost, adding to results
+20/01/2027, 22:22 - Kritika: solid number, add it to the abstract too
+21/01/2027, 23:04 - Rohan: does anyone have a good icon for the flowchart, need a database symbol
+21/01/2027, 23:12 - Kritika: flaticon has free ones, just credit if required
+21/01/2027, 23:20 - Rohan: checking now (again)
+21/01/2027, 23:25 - Kritika: https://www.example.com/icons/flaticon-db
+21/01/2027, 23:33 - Rohan: perfect thanks
+23/01/2027, 04:39 - Neha: guys is anyone else's laptop fan sounding like a jet engine during training
+23/01/2027, 04:41 - Arjun: constantly, my room feels warmer honestly
+23/01/2027, 04:44 - Kritika: mine too, might be time to actually clean the fans
+23/01/2027, 04:50 - Rohan: get canned air, works wonders
+23/01/2027, 04:51 - Neha: adding to my shopping list
+23/01/2027, 17:45 - Arjun: found a typo in the title on the cover page, says 'Predicton' not 'Prediction'
+23/01/2027, 17:51 - Neha: OMG how did none of us catch that
+23/01/2027, 17:53 - Kritika: glad we caught it before printing at least
+23/01/2027, 18:02 - Rohan: imagine submitting with that typo lol
+23/01/2027, 18:10 - Neha: dont even joke, fixing now
+26/01/2027, 08:56 - Kritika: sir's cabin was locked today, missed our appointment
+26/01/2027, 08:57 - Neha: did you message him
+26/01/2027, 09:01 - Kritika: yeah, he said sorry got called into a meeting, rescheduling to tomorrow
+26/01/2027, 09:08 - Arjun: these last minute cancellations are stressful ngl
+26/01/2027, 09:11 - Neha: nothing we can do, just adjust
+27/01/2027, 03:17 - Rohan: guys should the code repo be public or private on github
+27/01/2027, 03:23 - Arjun: private for now, until the paper's officially published at least
+27/01/2027, 03:31 - Neha: good call, dont want anyone scooping the idea
+27/01/2027, 03:40 - Kritika: making it private now
+27/01/2027, 03:49 - Rohan: done
+27/01/2027, 23:30 - Neha: random, does anyone remember our very first meeting notes, want to add it as an appendix showing project timeline
+27/01/2027, 23:36 - Kritika: that's actually a nice touch for the report
+27/01/2027, 23:43 - Arjun: i think i still have the notes somewhere, checking
+27/01/2027, 23:48 - Arjun: found it, from way back in august
+27/01/2027, 23:57 - Neha: feels like ages ago honestly
+28/01/2027, 19:02 - Kritika: guys quick one, whats everyone's shirt size for the department tshirts
+28/01/2027, 19:07 - Arjun: L
+28/01/2027, 19:13 - Neha: M
+28/01/2027, 19:21 - Rohan: XL apparently, gym is working
+28/01/2027, 19:28 - Kritika: noted, submitting the sizes
+30/01/2027, 03:42 - Arjun: sir approved final slides for the review, no more changes needed
+30/01/2027, 03:51 - Neha: finally some good news
+30/01/2027, 03:57 - Kritika: printing handouts just in case projector fails again
+30/01/2027, 04:01 - Rohan: good thinking, projector betrayed us last time
+30/01/2027, 04:09 - Neha: never again
+30/01/2027, 20:30 - Neha: guys weather looks bad for viva day, heavy rain predicted
+30/01/2027, 20:36 - Arjun: great, more stress leaving early then
+30/01/2027, 20:41 - Kritika: leave an hour early just to be safe
+30/01/2027, 20:44 - Rohan: carrying an extra shirt in case i get soaked
+30/01/2027, 20:46 - Neha: smart actually
+02/02/2027, 18:39 - Kritika: does the report need a plagiarism certificate attached or just the report itself
+02/02/2027, 18:46 - Neha: certificate too, sir mentioned it in the guidelines
+02/02/2027, 18:55 - Arjun: i have the pdf from the library check, sending
+02/02/2027, 18:56 - Kritika: perfect, attaching to appendix
+04/02/2027, 05:26 - Rohan: guys forgot to ask, do we need hard copy of the plagiarism report too or just soft copy
+04/02/2027, 05:27 - Neha: hard copy, one page summary is enough
+04/02/2027, 05:28 - Rohan: ok noted, printing tonight
+04/02/2027, 05:32 - Arjun: don't forget this time rohan
+04/02/2027, 05:40 - Rohan: i wont, i promise on my life
+05/02/2027, 19:04 - Neha: final report cover needs department logo, does anyone have the high res version
+05/02/2027, 19:13 - Kritika: i have it from the synopsis file
+05/02/2027, 19:20 - Kritika: <Media omitted>
+05/02/2027, 19:23 - Neha: perfect, using this
+05/02/2027, 19:25 - Arjun: looks official now
+06/02/2027, 23:15 - Arjun: guys the panel for final review is announced, dr mehta and dr rao
+06/02/2027, 23:18 - Kritika: dr rao is supposedly really tough with statistics questions
+06/02/2027, 23:20 - Neha: great, more prep needed on the stats side then
+06/02/2027, 23:23 - Rohan: can someone explain p-values to me one more time before the review
+06/02/2027, 23:24 - Arjun: i'll make you a one pager tonight
+09/02/2027, 06:56 - Neha: did everyone get the p-value cheat sheet arjun made
+09/02/2027, 06:57 - Kritika: yep got it, actually really clear
+09/02/2027, 07:03 - Rohan: reading it now, makes way more sense than the textbook version
+09/02/2027, 07:06 - Arjun: glad it helped
+10/02/2027, 02:45 - Kritika: guys forgot to mention, sir wants us to include a limitations vs future work comparison table
+10/02/2027, 02:50 - Neha: that's a nice structural addition honestly
+10/02/2027, 02:53 - Arjun: i can whip that up quickly, have most of the content already
+10/02/2027, 03:00 - Kritika: perfect, adding it to appendix B
+10/02/2027, 18:26 - Rohan: random thought, are we doing anything to celebrate once this is all actually done
+10/02/2027, 18:33 - Neha: dinner obviously, someplace nice this time not just canteen
+10/02/2027, 18:34 - Kritika: been dreaming about that dinner for months honestly
+10/02/2027, 18:42 - Arjun: count me in fully
+10/02/2027, 18:51 - Rohan: finally something to look forward to
+11/02/2027, 18:59 - Neha: guys quick reminder, ID cards needed to enter viva hall, don't forget
+11/02/2027, 19:06 - Arjun: noted, keeping it in my bag tonight already
+11/02/2027, 19:13 - Kritika: same
+11/02/2027, 19:21 - Rohan: mine's somewhere in my room, will find it
+11/02/2027, 19:23 - Neha: find it TODAY rohan not tomorrow morning
+12/02/2027, 17:55 - Kritika: found my ID card finally, was in an old jacket pocket
+12/02/2027, 17:58 - Neha: classic rohan behavior but from kritika this time
+12/02/2027, 18:06 - Kritika: hey that's unfair, this was a one time thing
+12/02/2027, 18:13 - Arjun: the group's chaos energy is evenly distributed apparently
+12/02/2027, 18:22 - Rohan: see, its not just me
+15/02/2027, 20:18 - Arjun: guys had a good talk with a senior who graduated last year, gave some viva tips
+15/02/2027, 20:22 - Neha: what tips
+15/02/2027, 20:25 - Arjun: dont argue with the panel even if you think they're wrong, just clarify calmly
+15/02/2027, 20:26 - Kritika: good advice honestly, easy to get defensive under pressure
+15/02/2027, 20:33 - Rohan: noting this down mentally
+16/02/2027, 17:07 - Neha: guys the final review room got changed, its now lab 5 not seminar hall
+16/02/2027, 17:09 - Kritika: when did that happen
+16/02/2027, 17:13 - Neha: just got the notice now, some clash apparently
+16/02/2027, 17:15 - Arjun: good thing you're always checking notices
+16/02/2027, 17:18 - Rohan: would've shown up at the wrong room otherwise ngl
+18/02/2027, 08:11 - Kritika: random, does anyone have a good luck ritual before exams or presentations
+18/02/2027, 08:15 - Neha: i always listen to the same playlist beforehand
+18/02/2027, 08:23 - Arjun: i just repeat the key numbers to myself like a mantra
+18/02/2027, 08:26 - Rohan: i eat something sweet, works every time apparently
+18/02/2027, 08:27 - Kritika: interesting strategies all around
+20/02/2027, 04:57 - Neha: guys after the final review lets get chai from the usual place, my treat
+20/02/2027, 04:59 - Kritika: deal, that place makes the best cutting chai honestly
+20/02/2027, 05:04 - Arjun: count me in obviously
+20/02/2027, 05:13 - Rohan: free chai, never saying no to that
+20/02/2027, 05:21 - Neha: see everyone there then

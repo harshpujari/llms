@@ -1,0 +1,503 @@
+14/01/2025, 09:12 - Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them. Tap to learn more.
+14/01/2025, 09:14 - Kabir: morning team. big day, investor call at 11
+14/01/2025, 09:15 - Meera: nervous but ready. deck is final right?
+14/01/2025, 09:16 - Kabir: yes pushed last night, check the drive link
+14/01/2025, 09:17 - Rohan: https://www.example.com/pitchdeck-v9
+14/01/2025, 09:18 - Meera: opening now
+14/01/2025, 09:31 - Meera: slide 12 has old MRR number, can someone fix before the call
+14/01/2025, 09:33 - Kabir: on it
+14/01/2025, 09:41 - Kabir: fixed
+14/01/2025, 10:58 - Rohan: 2 mins guys, join the zoom
+14/01/2025, 11:47 - Meera: how do we think that went??
+14/01/2025, 11:49 - Kabir: honestly hard to read. the partner kept muted video
+14/01/2025, 11:50 - Rohan: he asked good questions tho, about our churn number specifically
+14/01/2025, 11:52 - Meera: yeah that made me sweat a little ngl
+14/01/2025, 11:55 - Kabir: we'll know in a week they said. lets not overthink
+14/01/2025, 18:20 - Rohan: guys runway update, we have 5.2 months left at current burn
+14/01/2025, 18:22 - Meera: ugh. ok noted
+14/01/2025, 18:25 - Kabir: we need this round or we need to cut costs, no in between
+16/01/2025, 08:03 - Meera: couldn't sleep thinking about runway
+16/01/2025, 08:04 - Kabir: same honestly
+16/01/2025, 08:06 - Rohan: lets not panic, we have two more investor calls lined up this week
+16/01/2025, 08:07 - Meera: true. one step at a time
+16/01/2025, 12:40 - Kabir: hey can one of you review the hiring doc for the backend role
+16/01/2025, 12:41 - Rohan: sending feedback in an hour, in a customer call rn
+16/01/2025, 15:02 - Rohan: reviewed. i think we should hold off hiring till round closes
+16/01/2025, 15:05 - Kabir: we literally cannot ship the enterprise stuff without another engineer
+16/01/2025, 15:07 - Meera: can we compromise, hire a contractor for 3 months instead of full time
+16/01/2025, 15:08 - Rohan: that could work actually
+16/01/2025, 15:09 - Kabir: fine, lets try that
+18/01/2025, 10:15 - Meera: demo call with the pilot customer at 3pm today, someone confirm attendance
+18/01/2025, 10:16 - Kabir: I'll be there
+18/01/2025, 10:17 - Rohan: same
+18/01/2025, 14:58 - Meera: joining in 2
+18/01/2025, 15:31 - Kabir: that was rough
+18/01/2025, 15:32 - Meera: the export feature literally crashed mid demo, so embarrassing
+18/01/2025, 15:33 - Rohan: what happened, was it the csv thing
+18/01/2025, 15:34 - Kabir: yeah null pointer somewhere in the export service, staging never caught it
+18/01/2025, 15:36 - Rohan: on it right now, pulling logs
+18/01/2025, 16:20 - Rohan: found it. edge case when the report has zero rows
+18/01/2025, 16:45 - Rohan: fix deployed and tested
+18/01/2025, 16:47 - Kabir: thank god. I'll email the customer an apology and offer a follow up demo
+18/01/2025, 16:50 - Meera: also we NEED a proper staging env with real-ish data, this keeps happening
+18/01/2025, 16:52 - Kabir: agreed, put it on the roadmap for next sprint
+20/01/2025, 09:00 - Rohan: customer replied, they're okay with rescheduling next week
+20/01/2025, 09:02 - Meera: phew. small win
+20/01/2025, 09:03 - Kabir: good, that pilot could turn into our first paid enterprise logo
+22/01/2025, 21:40 - Meera: can't sleep again lol. keep running the numbers in my head
+22/01/2025, 21:42 - Kabir: which numbers
+22/01/2025, 21:43 - Meera: if we don't close funding by march we're basically out of cash by may
+22/01/2025, 21:45 - Kabir: I know. lets talk tomorrow with a clear head
+25/01/2025, 11:10 - Rohan: term sheet came in from Bluepeak
+25/01/2025, 11:10 - Rohan: reading it now, seems decent but the valuation is lower than we hoped
+25/01/2025, 11:12 - Kabir: how much lower
+25/01/2025, 11:13 - Rohan: like 20% lower than our ask
+25/01/2025, 11:15 - Meera: still, a term sheet is a term sheet at this stage. i say we take it seriously
+25/01/2025, 11:17 - Kabir: agree, lets get a lawyer to look at the clauses this week
+27/01/2025, 19:05 - Kabir: had a long call with the lawyer, few red flags in the board seat clause
+27/01/2025, 19:07 - Meera: what kind of red flags
+27/01/2025, 19:09 - Kabir: they want veto rights on hiring decisions above a certain salary band, feels excessive
+27/01/2025, 19:11 - Rohan: we can push back on that in negotiation, its pretty standard to negotiate these
+27/01/2025, 19:13 - Meera: ok lets draft a counter this weekend
+30/01/2025, 10:30 - Rohan: counter sent. now we wait
+30/01/2025, 10:31 - Kabir: fingers crossed
+02/02/2025, 08:45 - Meera: guys good news, Bluepeak accepted most of our counter
+02/02/2025, 08:46 - Kabir: wait seriously??
+02/02/2025, 08:47 - Meera: yes!! just got the email
+02/02/2025, 08:48 - Rohan: this calls for a celebration lunch
+02/02/2025, 08:50 - Kabir: on me today
+04/02/2025, 16:00 - Kabir: signing call scheduled for friday
+04/02/2025, 16:02 - Meera: finally exhaling a little
+06/02/2025, 12:10 - Rohan: interviewing the contractor candidate today, seems solid on paper
+06/02/2025, 12:11 - Kabir: nice, loop me in for the technical round
+06/02/2025, 17:40 - Rohan: went well, sending offer tomorrow
+07/02/2025, 09:20 - Rohan: <Media omitted>
+07/02/2025, 09:21 - Meera: is that the signed offer letter
+07/02/2025, 09:22 - Rohan: yep, he accepted already, starts next monday
+07/02/2025, 09:23 - Kabir: great news to start the week with
+09/02/2025, 14:15 - Kabir: signing done!!! wire should hit in 3-5 business days
+09/02/2025, 14:16 - Meera: omg finally. i could cry
+09/02/2025, 14:17 - Rohan: incredible work team, seriously
+09/02/2025, 14:18 - Kabir: couldn't have done it without both of you honestly
+09/02/2025, 14:20 - Meera: dinner tonight to celebrate properly, my treat
+11/02/2025, 09:00 - Meera: ok back to business. runway is now 14 months, lets not get comfortable
+11/02/2025, 09:02 - Kabir: agreed, discipline doesn't stop because we have money now
+13/02/2025, 11:30 - Rohan: contractor is settling in well, already fixed two bugs on day 3
+13/02/2025, 11:31 - Kabir: good hire
+15/02/2025, 20:12 - Meera: thinking we should hire a fulltime sales person now that we have runway
+15/02/2025, 20:14 - Kabir: strongly disagree, we don't have enough pipeline to justify a dedicated sales hire yet
+15/02/2025, 20:16 - Meera: but if we wait we'll always be behind on pipeline, its a chicken egg problem
+15/02/2025, 20:18 - Kabir: I just think founders should be doing sales at this stage, keeps us close to customers
+15/02/2025, 20:20 - Rohan: can we both be a little right here
+15/02/2025, 20:22 - Meera: how do you mean
+15/02/2025, 20:24 - Rohan: what if Meera takes point on sales for 2 more months, we set a pipeline target, and if we hit it we hire
+15/02/2025, 20:26 - Kabir: hmm. that's actually fair
+15/02/2025, 20:28 - Meera: ok i can live with that. what target
+15/02/2025, 20:31 - Rohan: lets say 15 qualified leads and 3 signed pilots by mid april
+15/02/2025, 20:33 - Kabir: deal
+15/02/2025, 20:34 - Meera: deal. writing this down so nobody weasels out later 😅
+18/02/2025, 09:40 - Kabir: sorry for being stubborn the other day btw
+18/02/2025, 09:42 - Meera: its fine, we both wanted the same outcome different paths
+18/02/2025, 09:43 - Kabir: yeah. glad rohan mediated lol
+20/02/2025, 15:00 - Rohan: quick one, someone approve my PR when free, its the billing webhook fix
+20/02/2025, 15:20 - Kabir: approved
+22/02/2025, 10:05 - Meera: new lead just came in from the website form
+22/02/2025, 10:06 - Meera: nikhil@example.com if either of you want to loop in on the call
+22/02/2025, 10:08 - Rohan: I can join if its afternoon
+22/02/2025, 10:09 - Meera: 4pm works
+25/02/2025, 09:15 - Meera: 4 qualified leads so far this week, feeling good about the target
+25/02/2025, 09:16 - Kabir: love that. keep pushing
+01/03/2025, 08:30 - Rohan: prod is throwing 500s on the signup endpoint since last night
+01/03/2025, 08:31 - Kabir: what!! since when
+01/03/2025, 08:32 - Rohan: looks like it started around 2am, database connection pool maxed out
+01/03/2025, 08:34 - Kabir: how many signups did we lose
+01/03/2025, 08:40 - Rohan: rough estimate maybe 30-40 based on the traffic pattern
+01/03/2025, 08:41 - Meera: ouch. can we fix and send apology emails to whoever we can identify
+01/03/2025, 08:55 - Rohan: fix deployed, bumped the pool size and added a retry queue
+01/03/2025, 09:00 - Kabir: good, lets do a proper postmortem later
+03/03/2025, 19:30 - Kabir: postmortem notes, we need alerting on connection pool usage, nobody caught this for 6 hours
+03/03/2025, 19:32 - Rohan: agreed, setting up a dashboard this week
+03/03/2025, 19:33 - Meera: also maybe a rotating on call even between the two of you
+03/03/2025, 19:35 - Kabir: fair, lets formalize that
+06/03/2025, 12:00 - Meera: update, we're at 12 qualified leads and 2 signed pilots
+06/03/2025, 12:01 - Rohan: so close to target
+06/03/2025, 12:02 - Kabir: great pace honestly
+10/03/2025, 21:00 - Meera: This message was deleted
+10/03/2025, 21:02 - Kabir: lol what did you send
+10/03/2025, 21:03 - Meera: wrong group, sent a meme meant for my college friends 😂
+14/03/2025, 09:00 - Rohan: 15 leads and 3 pilots signed. target hit
+14/03/2025, 09:01 - Kabir: wow ok. i owe you a sales hire then
+14/03/2025, 09:02 - Meera: 🎉🎉
+14/03/2025, 09:03 - Kabir: lets open the role this week, I'll write the JD
+17/03/2025, 11:20 - Kabir: JD draft ready, take a look when you can
+17/03/2025, 11:21 - Rohan: looks good, maybe mention remote-friendly explicitly
+17/03/2025, 11:23 - Kabir: good call, adding that
+20/03/2025, 16:45 - Meera: interviewed 3 candidates today, one really stood out
+20/03/2025, 16:46 - Kabir: tell me more
+20/03/2025, 16:48 - Meera: ex enterprise sales at a fintech, understands long sales cycles, good energy
+20/03/2025, 16:50 - Rohan: sounds promising, loop us in for final round
+24/03/2025, 10:00 - Meera: final round done, we're extending an offer to Priya
+24/03/2025, 10:01 - Kabir: excited to have her onboard
+24/03/2025, 10:02 - Rohan: welcome to the chaos priya lol jk she's not on this chat yet
+28/03/2025, 08:15 - Kabir: launch date discussion, are we still targeting april 15
+28/03/2025, 08:17 - Rohan: engineering wise yes if we freeze scope now
+28/03/2025, 08:19 - Meera: marketing wise also yes, blog post and product hunt draft ready
+28/03/2025, 08:21 - Kabir: ok lets lock it. april 15 it is
+01/04/2025, 10:00 - Rohan: scope frozen, only bug fixes from here
+01/04/2025, 10:02 - Kabir: good, no new features sneaking in please
+03/04/2025, 14:30 - Meera: does anyone know a good photographer for the launch day team photo
+03/04/2025, 14:31 - Rohan: my cousin does this, will send his number
+03/04/2025, 14:32 - Meera: perfect send it
+05/04/2025, 09:45 - Kabir: found a nasty bug in the onboarding flow, step 3 skips validation
+05/04/2025, 09:46 - Rohan: on it, should be quick fix
+05/04/2025, 10:30 - Rohan: fixed and added a test for it
+05/04/2025, 10:31 - Kabir: nice, appreciate the test coverage
+08/04/2025, 20:00 - Meera: product hunt copy is ready, can you both proofread
+08/04/2025, 20:02 - Kabir: reading now
+08/04/2025, 20:15 - Kabir: looks great, one typo in paragraph 2 "recieve" should be "receive"
+08/04/2025, 20:16 - Meera: fixed thanks
+10/04/2025, 09:10 - Rohan: load testing the signup flow before launch, want to avoid a repeat of march
+10/04/2025, 09:11 - Kabir: smart, how's it looking
+10/04/2025, 12:00 - Rohan: handled 500 concurrent signups fine, we should be good
+10/04/2025, 12:01 - Kabir: relief
+12/04/2025, 18:00 - Meera: @Rohan are you coming to the office tomorrow for the final launch prep?
+12/04/2025, 18:05 - Rohan: yes, coming in by 9am
+12/04/2025, 18:06 - Kabir: same, lets do a final run through together
+13/04/2025, 09:15 - Meera: everyone in office, feels like exam day energy lol
+13/04/2025, 09:16 - Kabir: hahaha accurate
+13/04/2025, 17:40 - Rohan: staging looks clean, all green on the test suite
+13/04/2025, 17:41 - Kabir: perfect, we freeze deploys until launch morning now
+14/04/2025, 21:00 - Meera: can't believe tomorrow is the day
+14/04/2025, 21:02 - Kabir: two years of nights like this leading up to it
+14/04/2025, 21:04 - Rohan: lets get some sleep, big day tomorrow
+15/04/2025, 06:30 - Kabir: up early, too nervous to sleep more
+15/04/2025, 06:32 - Meera: same here honestly
+15/04/2025, 07:00 - Rohan: coffee's on, heading to office
+15/04/2025, 09:00 - Kabir: product hunt post is live!! https://www.example.com/launch-day-post
+15/04/2025, 09:02 - Meera: sharing on linkedin now
+15/04/2025, 09:15 - Rohan: upvotes climbing steadily, we're at #4 in today's list
+15/04/2025, 10:00 - Meera: comments section is so wholesome, people are being really kind
+15/04/2025, 11:30 - Kabir: server load is fine, no fires so far knock on wood
+15/04/2025, 13:00 - Rohan: we're #2 now!!
+15/04/2025, 13:01 - Meera: WHAT. no way
+15/04/2025, 13:02 - Kabir: keep sharing everyone, lets push for #1
+15/04/2025, 16:45 - Rohan: guys.....
+15/04/2025, 16:46 - Rohan: we're #1 <This message was edited>
+15/04/2025, 16:47 - Meera: I'M SCREAMING
+15/04/2025, 16:48 - Kabir: after everything this year. wow
+15/04/2025, 16:50 - Meera: this is the moment we remember years from now
+15/04/2025, 20:00 - Kabir: signups today alone beat our entire first quarter
+15/04/2025, 20:02 - Rohan: servers held up the whole day, proud of that load test now
+15/04/2025, 20:05 - Meera: team dinner tonight, no arguments allowed, we're celebrating
+15/04/2025, 22:30 - Kabir: what a day. thank you both for everything
+15/04/2025, 22:32 - Meera: couldn't ask for better co-founders honestly
+15/04/2025, 22:35 - Rohan: onwards. but first, sleep
+17/04/2025, 09:00 - Meera: post launch numbers, 1200 signups, 40 requesting demos
+17/04/2025, 09:02 - Kabir: incredible. lets not lose momentum, following up on demos today
+17/04/2025, 09:03 - Rohan: also watching server costs closely with the traffic bump
+20/04/2025, 11:00 - Meera: priya starts monday, timing couldn't be better with all these demo requests
+20/04/2025, 11:01 - Kabir: perfect timing honestly
+22/04/2025, 15:00 - Rohan: fixing a few rough edges customers flagged post launch, nothing major
+22/04/2025, 15:01 - Kabir: expected, ship the fixes as we go
+25/04/2025, 10:30 - Meera: board update draft ready for review before I send it
+25/04/2025, 10:32 - Kabir: reading
+25/04/2025, 10:50 - Kabir: looks solid, add the retention numbers from this week too
+25/04/2025, 10:52 - Meera: good call, adding
+28/04/2025, 09:00 - Rohan: null
+28/04/2025, 09:01 - Kabir: lol what was that supposed to be
+28/04/2025, 09:02 - Rohan: autocorrect sent an empty message somehow, ignore
+02/05/2025, 14:00 - Meera: hiring another engineer now feels justified given the load
+02/05/2025, 14:02 - Kabir: agreed, lets open that role properly this time, full time not contractor
+02/05/2025, 14:03 - Rohan: about time, I could use the extra hands
+05/05/2025, 09:20 - Meera: quarterly numbers looking healthy, MRR up 3x since launch
+05/05/2025, 09:22 - Kabir: three founders, one wild year, this is just the start
+09/05/2025, 18:00 - Rohan: heading out early today, family thing
+09/05/2025, 18:01 - Kabir: go, we've got it covered
+12/05/2025, 10:00 - Meera: reminder standup at 10:30 instead of 10 today
+12/05/2025, 10:01 - Kabir: noted
+15/05/2025, 20:15 - Meera: proud of us. genuinely
+15/05/2025, 20:16 - Rohan: same. onwards and upwards
+15/05/2025, 20:17 - Kabir: always
+19/05/2025, 09:10 - Rohan: posted the engineer role on the usual boards, already 8 applications
+19/05/2025, 09:11 - Kabir: fast. screen and shortlist by friday?
+19/05/2025, 09:12 - Rohan: yep on it
+21/05/2025, 13:40 - Meera: demo with a mid market client went really well today
+21/05/2025, 13:41 - Kabir: nice, whats their team size
+21/05/2025, 13:42 - Meera: around 200 employees, would be our biggest logo yet
+21/05/2025, 13:45 - Rohan: exciting. lets make sure infra can handle their usage pattern
+23/05/2025, 11:00 - Kabir: shortlist ready, 4 candidates for technical rounds next week
+23/05/2025, 11:02 - Rohan: sharing my calendar for interview slots
+26/05/2025, 15:20 - Meera: mid market client wants a security questionnaire filled before they sign
+26/05/2025, 15:21 - Kabir: ugh those take forever. rohan can you help with the technical parts
+26/05/2025, 15:22 - Rohan: yeah send it over, I'll start tonight
+28/05/2025, 09:30 - Rohan: interviews going well, one candidate especially strong on system design
+28/05/2025, 09:31 - Kabir: love to hear that
+30/05/2025, 17:00 - Rohan: offer going out to Arjun today, the system design guy
+30/05/2025, 17:01 - Meera: exciting, team of 5 now including priya
+02/06/2025, 10:15 - Meera: security questionnaire done and sent, that was painful
+02/06/2025, 10:16 - Kabir: appreciate you grinding through that
+04/06/2025, 08:45 - Rohan: arjun accepted, starts in 3 weeks after his notice period
+04/06/2025, 08:46 - Kabir: great, welcome aboard soon Arjun
+06/06/2025, 19:30 - Meera: mid market deal signed!! biggest contract yet
+06/06/2025, 19:31 - Kabir: LETS GOOO
+06/06/2025, 19:32 - Rohan: incredible. dinner again?
+06/06/2025, 19:33 - Meera: obviously
+09/06/2025, 09:00 - Kabir: reminder we still owe the board that quarterly deck
+09/06/2025, 09:01 - Meera: on my list for this week
+11/06/2025, 14:00 - Rohan: cron job for the billing reconciliation has been silently failing for 4 days
+11/06/2025, 14:01 - Kabir: WHAT how did we not notice
+11/06/2025, 14:02 - Rohan: no alerting on cron failures, adding that now, my bad for missing it
+11/06/2025, 14:30 - Rohan: fixed and backfilled the missed reconciliation runs
+11/06/2025, 14:32 - Meera: any customer impact
+11/06/2025, 14:35 - Rohan: none visible, just internal numbers were stale, we got lucky
+13/06/2025, 10:00 - Kabir: postmortem culture is really paying off, we catch our own mistakes fast now
+13/06/2025, 10:02 - Rohan: yeah the dashboards from march are actually useful now lol
+16/06/2025, 09:15 - Meera: board deck sent, call is thursday
+16/06/2025, 09:16 - Kabir: nervous about the burn multiple question again
+16/06/2025, 09:18 - Meera: we have a good story this time, dont worry
+19/06/2025, 15:00 - Kabir: board call went well, they're happy with the mid market traction
+19/06/2025, 15:01 - Rohan: relief
+19/06/2025, 15:02 - Meera: they asked if we're thinking about series A timeline
+19/06/2025, 15:03 - Kabir: what did you say
+19/06/2025, 15:04 - Meera: said Q1 next year realistically, they agreed
+23/06/2025, 08:30 - Rohan: arjun's first day today
+23/06/2025, 08:31 - Kabir: welcome!! sending onboarding doc now
+23/06/2025, 08:32 - Meera: welcome to the team 🎉
+25/06/2025, 12:00 - Rohan: arjun already found a memory leak in the notification service, impressive
+25/06/2025, 12:01 - Kabir: great hire confirmed
+28/06/2025, 20:00 - Meera: exhausted but in a good way this week
+28/06/2025, 20:01 - Kabir: same. proud of the pace we're keeping
+01/07/2025, 09:00 - Meera: quarterly numbers, MRR crossed our year end target already, in july
+01/07/2025, 09:02 - Rohan: insane. six months early
+01/07/2025, 09:03 - Kabir: time to raise the bar for next quarter then
+03/07/2025, 16:40 - Meera: competitor just launched something similar to our core feature
+03/07/2025, 16:41 - Kabir: saw that. dont panic, ours is still more polished
+03/07/2025, 16:43 - Rohan: agreed, lets just keep shipping and not get distracted watching them
+07/07/2025, 11:00 - Meera: another enterprise lead in, this one's bigger than the last
+07/07/2025, 11:01 - Kabir: how big
+07/07/2025, 11:02 - Meera: could be 3x our current biggest contract if it closes
+07/07/2025, 11:04 - Rohan: no pressure then lol
+10/07/2025, 09:30 - Kabir: infra costs jumped 40% this month, need to look into it
+10/07/2025, 09:31 - Rohan: probably the new client's usage pattern, checking now
+10/07/2025, 14:00 - Rohan: found it, unoptimized query running on every page load for their dashboard
+10/07/2025, 14:01 - Kabir: can we fix without breaking anything for them
+10/07/2025, 15:30 - Rohan: added caching, costs should drop back down by next billing cycle
+14/07/2025, 10:00 - Meera: big enterprise call tomorrow, wish us luck
+14/07/2025, 10:01 - Kabir: we've got this
+15/07/2025, 16:00 - Meera: call went really well, they want a pilot next month
+15/07/2025, 16:01 - Rohan: amazing, I'll make sure infra is ready for their scale
+18/07/2025, 09:00 - Kabir: happy 1 year since we quit our jobs to do this btw
+18/07/2025, 09:02 - Meera: wow has it been a year already
+18/07/2025, 09:03 - Rohan: what a year. wouldn't trade it
+18/07/2025, 09:05 - Kabir: to many more
+22/07/2025, 13:00 - Meera: pilot kickoff scheduled for next tuesday with the big enterprise client
+22/07/2025, 13:01 - Rohan: infra load testing done, we're ready for their scale
+25/07/2025, 09:20 - Kabir: hiring a customer success person now, priya cant handle both sales and support alone
+25/07/2025, 09:21 - Meera: agreed, lets open that role
+29/07/2025, 15:00 - Rohan: pilot kickoff went smoothly, no fires this time
+29/07/2025, 15:01 - Kabir: growth
+01/08/2025, 10:00 - Meera: team of 7 now with the new CS hire starting monday
+01/08/2025, 10:01 - Kabir: crazy to think it was just the 3 of us in a garage a year ago
+01/08/2025, 10:02 - Rohan: technically it was Kabir's spare bedroom but sure, garage sounds cooler
+01/08/2025, 10:03 - Meera: hahaha true
+04/08/2025, 09:00 - Kabir: new CS hire's first day, her name is Divya
+04/08/2025, 09:01 - Meera: welcome Divya, excited to have you
+06/08/2025, 14:20 - Rohan: pilot client hit a rate limit issue, escalating
+06/08/2025, 14:21 - Kabir: how bad
+06/08/2025, 14:22 - Rohan: not critical but annoying for them, raising the limit for enterprise tier now
+06/08/2025, 14:40 - Rohan: done, also documented the tiers properly this time
+09/08/2025, 11:00 - Meera: pilot client wants to convert to full contract, sending terms tomorrow
+09/08/2025, 11:01 - Kabir: this would be huge for us
+09/08/2025, 11:02 - Rohan: fingers crossed
+13/08/2025, 17:00 - Meera: they signed!!! biggest contract by far
+13/08/2025, 17:01 - Kabir: WOW. incredible work Meera
+13/08/2025, 17:02 - Rohan: this changes our whole trajectory honestly
+13/08/2025, 17:05 - Meera: team dinner, again, I know we keep saying this
+13/08/2025, 17:06 - Kabir: never gets old though
+16/08/2025, 09:30 - Kabir: given this contract, should we start prepping for series A now instead of Q1
+16/08/2025, 09:32 - Meera: yeah honestly the timing might be better now while we have momentum
+16/08/2025, 09:34 - Rohan: agreed, lets start pulling the data room together
+19/08/2025, 10:00 - Meera: reaching out to a few VCs we met earlier this year, seeing if they're interested
+19/08/2025, 10:02 - Kabir: keep me posted on responses
+21/08/2025, 15:00 - Rohan: data room draft is up, someone review the financials section
+21/08/2025, 15:01 - Meera: on it
+23/08/2025, 09:00 - Meera: 3 VCs responded positive, scheduling intro calls next week
+23/08/2025, 09:01 - Kabir: lets goooo
+26/08/2025, 12:00 - Rohan: quick heads up, upgrading our postgres version this weekend, small downtime window
+26/08/2025, 12:01 - Kabir: how much downtime
+26/08/2025, 12:02 - Rohan: maybe 10 minutes at 2am, low traffic window
+26/08/2025, 12:03 - Meera: ok, will notify the enterprise client just in case
+30/08/2025, 02:15 - Rohan: upgrade done, everything looks healthy
+30/08/2025, 08:00 - Kabir: nice work overnight
+02/09/2025, 11:00 - Meera: first VC intro call today, went well I think
+02/09/2025, 11:02 - Kabir: what was the vibe
+02/09/2025, 11:03 - Meera: engaged, asked smart questions, wants a follow up with the full team
+04/09/2025, 15:30 - Rohan: second VC call scheduled for friday, I'll join for the technical deep dive
+04/09/2025, 15:31 - Kabir: good, prep the architecture slides
+06/09/2025, 10:00 - Meera: quarterly board update, numbers are genuinely great this time
+06/09/2025, 10:01 - Kabir: love writing these updates when the news is good for once
+09/09/2025, 16:00 - Rohan: technical deep dive went well, they were impressed with our uptime numbers
+09/09/2025, 16:01 - Kabir: all that postmortem discipline paying off in diligence now
+12/09/2025, 09:00 - Meera: getting term sheet interest from two firms now
+12/09/2025, 09:01 - Kabir: this is a good problem to have
+12/09/2025, 09:02 - Rohan: dont get ahead of ourselves but yeah, exciting
+15/09/2025, 14:00 - Meera: first term sheet in, better terms than Bluepeak by a good margin
+15/09/2025, 14:01 - Kabir: our leverage is so different this time around
+15/09/2025, 14:03 - Rohan: growth does that
+18/09/2025, 11:00 - Meera: second term sheet in too, now we get to choose
+18/09/2025, 11:01 - Kabir: good problem. lets set up calls with both to gut check
+20/09/2025, 09:30 - Rohan: reminder, arjun's 3 month review is due this week
+20/09/2025, 09:31 - Kabir: he's been great, lets make sure the review reflects that
+23/09/2025, 16:00 - Meera: went with the second term sheet, better board composition for us
+23/09/2025, 16:01 - Kabir: agreed, that was the right call
+23/09/2025, 16:02 - Rohan: series A, here we go
+26/09/2025, 10:00 - Meera: diligence process starting next week, lawyers on both sides looped in
+26/09/2025, 10:01 - Kabir: lets keep the data room tidy through this
+30/09/2025, 15:00 - Rohan: diligence technical questions coming in, mostly about scalability and security
+30/09/2025, 15:01 - Kabir: expected, we're solid there now compared to a year ago
+03/10/2025, 09:00 - Meera: divya closed her first support ticket backlog completely, team is running smoother
+03/10/2025, 09:01 - Kabir: great, good hire all around this year
+07/10/2025, 13:00 - Rohan: diligence going smoothly so far, no major flags raised
+07/10/2025, 13:01 - Meera: relief, remember how stressful the first round diligence was
+07/10/2025, 13:02 - Kabir: dont remind me, we've come a long way
+10/10/2025, 20:00 - Meera: exhausted from diligence calls all week but its almost done
+10/10/2025, 20:01 - Rohan: hang in there, home stretch
+14/10/2025, 11:00 - Meera: diligence complete!! moving to final docs
+14/10/2025, 11:01 - Kabir: incredible. this year has been a rollercoaster
+17/10/2025, 09:00 - Rohan: quick prod alert, latency spike on the dashboard API this morning
+17/10/2025, 09:01 - Kabir: severity
+17/10/2025, 09:02 - Rohan: moderate, investigating, not customer facing yet
+17/10/2025, 09:30 - Rohan: found it, a background job was hogging db connections, fixed
+17/10/2025, 09:31 - Kabir: good catch before it got worse
+21/10/2025, 15:00 - Meera: final docs review this week, signing could be as early as next friday
+21/10/2025, 15:01 - Kabir: still feels surreal
+24/10/2025, 09:00 - Rohan: hiring another engineer, arjun needs help, backlog is growing with new clients
+24/10/2025, 09:01 - Kabir: makes sense, lets open the role, budget is there now anyway
+28/10/2025, 17:00 - Meera: SIGNED. series A closed
+28/10/2025, 17:01 - Kabir: !!!!!!!!!!
+28/10/2025, 17:02 - Rohan: from garage to series A in under 2 years, unreal
+28/10/2025, 17:03 - Meera: technically Kabir's spare bedroom, rohan, we've been over this
+28/10/2025, 17:04 - Kabir: hahaha never letting that go huh
+28/10/2025, 17:05 - Meera: team dinner tonight, biggest one yet
+28/10/2025, 21:00 - Kabir: what a night. grateful for you both
+28/10/2025, 21:02 - Rohan: couldn't have picked better co-founders
+28/10/2025, 21:03 - Meera: same. onwards, always
+31/10/2025, 10:00 - Meera: press release goes out monday, PR agency sending final draft tonight
+31/10/2025, 10:01 - Kabir: exciting, lets make sure the whole team gets a heads up before it goes public
+03/11/2025, 09:00 - Kabir: press release is live https://www.example.com/series-a-announcement
+03/11/2025, 09:01 - Rohan: inbound is already picking up on linkedin
+03/11/2025, 09:02 - Meera: congrats messages flooding in, feels good
+06/11/2025, 14:00 - Rohan: two new engineer candidates in final rounds this week
+06/11/2025, 14:01 - Kabir: exciting, team's about to double from where we started the year
+10/11/2025, 11:00 - Meera: quarterly planning session monday, lets set ambitious targets for next year
+10/11/2025, 11:01 - Kabir: agreed, big year ahead
+14/11/2025, 09:00 - Rohan: onboarded two new engineers this week, team of 9 now
+14/11/2025, 09:01 - Kabir: wild growth
+14/11/2025, 09:02 - Meera: from three of us arguing in a bedroom to nine people building something real
+18/11/2025, 16:00 - Kabir: looking back at this chat from january, we've come so far
+18/11/2025, 16:01 - Rohan: that demo crash feels like a lifetime ago
+18/11/2025, 16:02 - Meera: and somehow we're still here, still doing this together
+18/11/2025, 16:03 - Kabir: onwards
+21/11/2025, 09:30 - Meera: reminder we have the all hands tomorrow, first one with the full team
+21/11/2025, 09:31 - Kabir: feels weird planning an all hands when we used to just shout across the room
+21/11/2025, 09:33 - Rohan: growing pains in a good way
+24/11/2025, 15:00 - Rohan: new engineers are ramping up fast, already shipping small fixes
+24/11/2025, 15:01 - Kabir: great, culture is holding up so far
+27/11/2025, 11:00 - Meera: another enterprise deal in the pipeline, this one from an inbound referral
+27/11/2025, 11:01 - Kabir: referrals are the best kind of lead, means people are actually happy
+27/11/2025, 11:02 - Rohan: love to hear that
+01/12/2025, 09:00 - Meera: december already, this year went by so fast
+01/12/2025, 09:01 - Kabir: in a good way though
+01/12/2025, 09:02 - Rohan: definitely
+04/12/2025, 14:00 - Kabir: someone remind me to send year end bonuses to the team, they earned it
+04/12/2025, 14:01 - Meera: on it, will coordinate with finance
+08/12/2025, 10:00 - Rohan: infra costs are stable now even with all the new clients, caching work paid off
+08/12/2025, 10:01 - Kabir: good, keep an eye on it through the holidays when traffic patterns shift
+11/12/2025, 16:30 - Meera: referral deal closed, another logo added
+11/12/2025, 16:31 - Kabir: this year just keeps giving
+15/12/2025, 09:00 - Rohan: team offsite planning, thinking a weekend somewhere outside the city
+15/12/2025, 09:01 - Meera: yes please, we all need a break
+15/12/2025, 09:02 - Kabir: agreed, lets find a place with decent wifi still, cant fully disconnect lol
+18/12/2025, 11:00 - Meera: booked a resort for the offsite, first week of january
+18/12/2025, 11:01 - Rohan: excited, been way too long since we did something as a team outside work
+22/12/2025, 09:00 - Kabir: end of year numbers are in, we 5x'd revenue this year
+22/12/2025, 09:01 - Meera: FIVE X. say that again
+22/12/2025, 09:02 - Rohan: still doesn't feel real honestly
+24/12/2025, 15:00 - Meera: happy almost new year, both of you. thank you for this year
+24/12/2025, 15:01 - Kabir: right back at you, couldn't imagine doing this with anyone else
+24/12/2025, 15:02 - Rohan: same here. see you both at the offsite
+31/12/2025, 23:50 - Kabir: 10 minutes to next year
+31/12/2025, 23:52 - Meera: what a year it was
+31/12/2025, 23:55 - Rohan: bring on the next one
+01/01/2026, 00:01 - Kabir: happy new year team
+01/01/2026, 00:02 - Meera: happy new year!! see you both at the offsite in a few days
+01/01/2026, 00:03 - Rohan: happy new year, lets make this one even bigger
+05/01/2026, 08:00 - Meera: heading to the resort now, traffic is brutal already
+05/01/2026, 08:02 - Kabir: same, leaving in 20
+05/01/2026, 08:03 - Rohan: already here, grabbed the best rooms for us jk
+05/01/2026, 20:00 - Meera: today was exactly what we needed
+05/01/2026, 20:01 - Kabir: agreed, good to just talk without a deadline hanging over us
+08/01/2026, 09:00 - Rohan: back to reality, standup at 10
+08/01/2026, 09:01 - Kabir: back to it
+12/01/2026, 11:00 - Meera: kicking off Q1 planning properly today
+12/01/2026, 11:01 - Kabir: targets for series B groundwork should be in there too
+12/01/2026, 11:02 - Rohan: agreed, lets not repeat the last minute scramble from series A
+15/01/2026, 09:00 - Meera: 2 year anniversary of the company next week
+15/01/2026, 09:01 - Kabir: cant believe its been 2 years already
+15/01/2026, 09:02 - Rohan: from a cracked demo and 5 months of runway to here
+19/01/2026, 12:00 - Kabir: 2 years today. thank you both for building this with me
+19/01/2026, 12:01 - Meera: best decision I ever made, quitting that job to do this
+19/01/2026, 12:02 - Rohan: onwards, always. many more years to come
+22/01/2026, 10:00 - Meera: series B prep kickoff, starting the data room early this time
+22/01/2026, 10:01 - Kabir: smart, no last minute scramble like last time
+22/01/2026, 10:02 - Rohan: agreed, lets keep the metrics dashboard updated weekly from now
+26/01/2026, 14:30 - Rohan: hiring a devops person, we're spending too much founder time on infra firefighting
+26/01/2026, 14:31 - Kabir: long overdue honestly, go ahead and open it
+29/01/2026, 09:00 - Meera: another referral lead came in overnight
+29/01/2026, 09:01 - Kabir: our best channel by far now
+02/02/2026, 11:00 - Meera: interviewing devops candidates this week
+02/02/2026, 11:01 - Rohan: send me the strong ones for a technical round
+05/02/2026, 15:00 - Kabir: quarterly all hands went well, morale is high
+05/02/2026, 15:01 - Meera: team seems genuinely happy, good sign
+09/02/2026, 10:00 - Rohan: devops hire finalized, starts in 2 weeks
+09/02/2026, 10:01 - Kabir: great, one less thing on our plate
+12/02/2026, 16:00 - Meera: two more enterprise deals in late stage negotiation
+12/02/2026, 16:01 - Kabir: this quarter is shaping up nicely
+16/02/2026, 09:00 - Rohan: devops onboarding starts monday, excited to hand off the pager finally
+16/02/2026, 09:01 - Kabir: you've earned that handoff after 2 years on call
+19/02/2026, 13:00 - Meera: first enterprise deal of the two closed
+19/02/2026, 13:01 - Kabir: excellent, one more to go
+23/02/2026, 15:00 - Meera: second one closed too, both in the same week
+23/02/2026, 15:01 - Rohan: incredible week
+23/02/2026, 15:02 - Kabir: this team just keeps delivering
+26/02/2026, 10:00 - Kabir: devops person already set up proper alerting, no more silent cron failures
+26/02/2026, 10:01 - Rohan: honestly relieved someone else owns that now
+02/03/2026, 09:00 - Meera: series B investor outreach starting this week, sending the first batch of emails
+02/03/2026, 09:01 - Kabir: exciting, lets see who bites
+05/03/2026, 14:00 - Rohan: quick one, staging is down, someone's migration script left it in a bad state
+05/03/2026, 14:01 - Kabir: who ran it
+05/03/2026, 14:02 - Rohan: me, my bad, reverting now
+05/03/2026, 14:20 - Rohan: reverted, staging is back
+05/03/2026, 14:21 - Kabir: happens to the best of us
+09/03/2026, 11:00 - Meera: 5 VCs responded to outreach already, strong signal
+09/03/2026, 11:01 - Kabir: our story is a lot easier to tell this time around
+12/03/2026, 15:00 - Meera: first series B intro call scheduled for next week
+12/03/2026, 15:01 - Rohan: lets nail the technical deep dive again like last time
+16/03/2026, 10:00 - Meera: intro call went great, moving to partner meeting
+16/03/2026, 10:01 - Kabir: momentum building nicely
+19/03/2026, 09:00 - Rohan: two years, five months in, and it still feels like day one some mornings
+19/03/2026, 09:01 - Meera: the good kind of feeling though
+19/03/2026, 09:02 - Kabir: the good kind, yeah
+23/03/2026, 14:00 - Meera: partner meeting scheduled for next friday
+23/03/2026, 14:01 - Rohan: sending the updated deck tonight, added the last two enterprise wins
+23/03/2026, 14:02 - Kabir: good, those closed deals make the growth story even stronger
+26/03/2026, 09:00 - Kabir: reminder standup moved to 9:30 this week because of the partner meeting prep
+26/03/2026, 09:01 - Meera: noted
+26/03/2026, 09:02 - Rohan: noted too
+27/03/2026, 16:00 - Meera: partner meeting went really well, they seem serious
+27/03/2026, 16:01 - Kabir: fingers crossed for a term sheet soon
+27/03/2026, 16:02 - Rohan: whatever happens, look how far we've come already
+30/03/2026, 10:00 - Meera: term sheet came in this morning
+30/03/2026, 10:01 - Kabir: already?? that was fast
+30/03/2026, 10:02 - Meera: guess our numbers speak for themselves now
+30/03/2026, 10:03 - Rohan: unreal. lets get the lawyers on it
