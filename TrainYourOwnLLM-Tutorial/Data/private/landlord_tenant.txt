@@ -498,9 +498,9 @@ just the one scuff mark on the living room wall near the switchboard
 30/01/2027, 19:06 - Suresh Landlord: I'll process the transfer by 2nd Feb once I confirm the last electricity bill is cleared.
 31/01/2027, 10:00 - Ankit: sir handed the keys to the watchman as discussed, also gave your extra set back
 31/01/2027, 10:20 - Suresh Landlord: Received confirmation from the watchman, thank you.
+31/01/2027, 10:21 - Ankit: it's been a good two years sir, thank you for being an easy landlord to deal with, genuinely
 31/01/2027, 10:22 - Ankit: also left the wifi router for the new tenant if they want to keep the same provider, figured it might help
 31/01/2027, 10:25 - Suresh Landlord: That's thoughtful, will mention it to them.
-31/01/2027, 10:21 - Ankit: it's been a good two years sir, thank you for being an easy landlord to deal with, genuinely
 31/01/2027, 10:30 - Suresh Landlord: Likewise Ankit, you were a responsible tenant, always paid on time and kept the place well. All the best in Pune.
 02/02/2027, 12:00 - Suresh Landlord: Transferred the 17500 refund, please confirm receipt.
 02/02/2027, 12:30 - Ankit: received, thank you sir, all settled
