@@ -350,6 +350,9 @@ looks decent, matched the paint shade pretty well actually
 16/11/2026, 15:02 - Ankit: ok noted
 18/11/2026, 13:00 - Ankit: fixed, loose wire connection apparently, common issue he said
 18/11/2026, 13:05 - Suresh Landlord: Good to know, thanks for getting it sorted.
+19/11/2026, 09:00 - Ankit: sir does the society send a reminder before the annual fire extinguisher expiry check or should I track it myself
+19/11/2026, 09:20 - Suresh Landlord: They send a notice, you don't need to track it separately, it's part of their compliance checklist.
+19/11/2026, 09:21 - Ankit: ok good, one less thing to remember
 20/11/2026, 11:00 - Ankit: sir does the society allow ordering gas cylinders directly or does it need approval each time
 20/11/2026, 11:20 - Suresh Landlord: No approval needed, just inform the watchman when the delivery truck arrives at the gate.
 20/11/2026, 11:21 - Ankit: ok simple enough
@@ -398,12 +401,12 @@ looks decent, matched the paint shade pretty well actually
 16/12/2026, 12:00 - Ankit: sir got my relieving letter date confirmed, last working day here is 28th jan
 16/12/2026, 12:20 - Suresh Landlord: Thanks for confirming, I'll let Vinod know so he can plan viewings around that.
 16/12/2026, 12:21 - Ankit: sounds good
+17/12/2026, 20:00 - Ankit: sir is it ok if the broker starts bringing prospective tenants for viewing from january, I'll coordinate timing
+17/12/2026, 20:20 - Suresh Landlord: Yes that's fine, just give reasonable notice before each visit.
+17/12/2026, 20:21 - Ankit: sure will do
 18/12/2026, 20:00 - Ankit: sir also, will you need me present for the fresh paint or whitewash before the new tenant moves in, or does that happen after I leave
 18/12/2026, 20:20 - Suresh Landlord: That'll happen after you vacate, no need for you to coordinate that part.
 18/12/2026, 20:21 - Ankit: ok good, one less thing on my plate
-15/12/2026, 20:00 - Ankit: sir is it ok if the broker starts bringing prospective tenants for viewing from january, I'll coordinate timing
-15/12/2026, 20:20 - Suresh Landlord: Yes that's fine, just give reasonable notice before each visit.
-15/12/2026, 20:21 - Ankit: sure will do
 20/12/2026, 18:00 - Ankit: merry christmas sir, in advance
 20/12/2026, 18:30 - Suresh Landlord: Thank you, same to you.
 22/12/2026, 09:00 - Ankit: sir movers quote finalized, going with the 11k package, seems reasonable for the amount of stuff I have
@@ -421,13 +424,13 @@ looks decent, matched the paint shade pretty well actually
 30/12/2026, 17:05 - Ankit: ok noted, I'll tidy up beforehand
 31/12/2026, 20:00 - Ankit: sir happy new year eve, hope pune goes well for me next year lol
 31/12/2026, 20:20 - Suresh Landlord: Ha, all the best for the move and the new job phase.
+01/01/2027, 09:00 - Suresh Landlord: Happy New Year Ankit. Also, January rent still applies as usual since you're vacating end of month, 19500 due 5th.
+01/01/2027, 09:15 - Ankit: happy new year sir, yes understood, will pay as usual
 02/01/2027, 12:00 - Ankit: sir viewing yesterday went fine, they seemed interested, asked a lot of questions about the neighbourhood
 02/01/2027, 12:20 - Suresh Landlord: Good sign, hopefully we get an offer soon.
 04/01/2027, 09:00 - Ankit: sir also, should I start setting aside boxes for stuff I'm donating or selling before the move, or is that not your concern lol
 04/01/2027, 09:15 - Suresh Landlord: Ha, that's entirely your call, just make sure nothing's left behind that isn't yours by mistake.
 04/01/2027, 09:16 - Ankit: noted, will be thorough
-01/01/2027, 09:00 - Suresh Landlord: Happy New Year Ankit. Also, January rent still applies as usual since you're vacating end of month, 19500 due 5th.
-01/01/2027, 09:15 - Ankit: happy new year sir, yes understood, will pay as usual
 05/01/2027, 19:00 - Ankit: paid the full 19500
 05/01/2027, 19:20 - Suresh Landlord: Received, thank you.
 08/01/2027, 11:00 - Broker Vinod: second viewing went well, they might make an offer soon
@@ -458,8 +461,6 @@ looks decent, matched the paint shade pretty well actually
 20/01/2027, 12:20 - Suresh Landlord: Good, that's helpful, should make the inspection quicker.
 21/01/2027, 09:00 - Ankit: sir movers are booked for 29th morning, so flat should be fully empty by evening that day
 21/01/2027, 09:20 - Suresh Landlord: Noted, works well with the 30th inspection slot then.
-23/01/2027, 20:00 - Ankit: sir starting to feel a bit weird packing up two years of living here, sentimental I guess
-23/01/2027, 20:20 - Suresh Landlord: That's natural, it happens with any long stay, hope the next chapter is good for you.
 22/01/2027, 15:00 - Broker Vinod: good news, the second party confirmed, they want to move in by 5th feb
 22/01/2027, 15:05 - Suresh Landlord: Great, that timeline works well with Ankit vacating.
 22/01/2027, 15:10 - Ankit: nice, glad it worked out for everyone
@@ -467,6 +468,8 @@ looks decent, matched the paint shade pretty well actually
 23/01/2027, 12:01 - Broker Vinod: https://www.example.com/listing-flat-2bhk-society
 23/01/2027, 12:10 - Ankit: haha nice photos, looks better than in person almost <This message was edited>
 23/01/2027, 12:11 - Broker Vinod: 😂 that's the job
+23/01/2027, 20:00 - Ankit: sir starting to feel a bit weird packing up two years of living here, sentimental I guess
+23/01/2027, 20:20 - Suresh Landlord: That's natural, it happens with any long stay, hope the next chapter is good for you.
 25/01/2027, 18:00 - Ankit: sir packing has started, place looks like chaos right now but organised chaos
 25/01/2027, 18:20 - Suresh Landlord: Ha, understandable. Let me know if you need any help coordinating the move.
 26/01/2027, 11:00 - Ankit: happy republic day sir, last one I'll spend in this flat
