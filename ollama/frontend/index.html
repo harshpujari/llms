@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Llama 3.2</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --header-bg: rgba(255, 255, 255, 0.72);
+    --sep: rgba(60, 60, 67, 0.18);
+    --text: #000000;
+    --secondary: #8e8e93;
+    --bubble-them: #e9e9eb;
+    --bubble-me: #007aff;
+    --field: #ffffff;
+    --field-border: rgba(60, 60, 67, 0.22);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000;
+      --header-bg: rgba(28, 28, 30, 0.72);
+      --sep: rgba(84, 84, 88, 0.5);
+      --text: #ffffff;
+      --secondary: #98989d;
+      --bubble-them: #26262a;
+      --bubble-me: #0a84ff;
+      --field: #1c1c1e;
+      --field-border: rgba(84, 84, 88, 0.6);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+    font-size: 17px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    padding: 14px 20px calc(14px + env(safe-area-inset-top));
+    text-align: center;
+    background: var(--header-bg);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 0.5px solid var(--sep);
+    z-index: 10;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  header p {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: var(--secondary);
+  }
+
+  #log {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 16px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    scroll-behavior: smooth;
+  }
+
+  .row { display: flex; }
+  .row.me { justify-content: flex-end; }
+
+  .bubble {
+    max-width: min(75%, 560px);
+    padding: 9px 14px;
+    border-radius: 20px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    animation: pop 0.22s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+  }
+
+  @keyframes pop {
+    from { opacity: 0; transform: translateY(6px) scale(0.97); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bubble { animation: none; }
+    #log { scroll-behavior: auto; }
+  }
+
+  .me .bubble {
+    background: var(--bubble-me);
+    color: #fff;
+    border-bottom-right-radius: 6px;
+  }
+
+  .them .bubble {
+    background: var(--bubble-them);
+    color: var(--text);
+    border-bottom-left-radius: 6px;
+  }
+
+  .them .bubble.error {
+    color: #ff3b30;
+    font-size: 15px;
+  }
+
+  /* Three-dot typing indicator, shown until the first token lands. */
+  .dots { display: inline-flex; gap: 4px; padding: 3px 2px; }
+  .dots i {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--secondary);
+    animation: blink 1.3s infinite ease-in-out both;
+  }
+  .dots i:nth-child(2) { animation-delay: 0.16s; }
+  .dots i:nth-child(3) { animation-delay: 0.32s; }
+
+  @keyframes blink {
+    0%, 80%, 100% { opacity: 0.25; transform: scale(0.85); }
+    40%           { opacity: 1;    transform: scale(1); }
+  }
+
+  footer {
+    position: sticky;
+    bottom: 0;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: var(--header-bg);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-top: 0.5px solid var(--sep);
+  }
+
+  form {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  textarea {
+    flex: 1;
+    resize: none;
+    max-height: 140px;
+    padding: 8px 14px;
+    font: inherit;
+    color: var(--text);
+    background: var(--field);
+    border: 1px solid var(--field-border);
+    border-radius: 20px;
+    outline: none;
+  }
+
+  textarea:focus { border-color: var(--bubble-me); }
+
+  button {
+    flex: none;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--bubble-me);
+    color: #fff;
+    font-size: 19px;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.1s;
+  }
+
+  button:disabled { opacity: 0.35; cursor: default; }
+  button:not(:disabled):active { transform: scale(0.92); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Llama 3.2</h1>
+  <p id="status">1B &middot; local</p>
+</header>
+
+<div id="log"></div>
+
+<footer>
+  <form id="form">
+    <textarea id="input" rows="1" placeholder="Message" autofocus></textarea>
+    <button id="send" type="submit" aria-label="Send">&uarr;</button>
+  </form>
+</footer>
+
+<script>
+const API = "http://localhost:8000";
+
+const log = document.getElementById("log");
+const form = document.getElementById("form");
+const input = document.getElementById("input");
+const send = document.getElementById("send");
+const status = document.getElementById("status");
+
+// Ollama keeps no history, so the full transcript is resent every turn.
+const history = [];
+
+fetch(API + "/health")
+  .then(r => r.json())
+  .then(d => { status.textContent = d.ok ? d.model + " · local" : "backend up, Ollama unreachable"; })
+  .catch(() => { status.textContent = "backend unreachable"; });
+
+function addBubble(who, text) {
+  const row = document.createElement("div");
+  row.className = "row " + who;
+  const bubble = document.createElement("div");
+  bubble.className = "bubble";
+  bubble.textContent = text;
+  row.appendChild(bubble);
+  log.appendChild(row);
+  log.scrollTop = log.scrollHeight;
+  return bubble;
+}
+
+// Grow the field with the text, up to the CSS max-height.
+input.addEventListener("input", () => {
+  input.style.height = "auto";
+  input.style.height = input.scrollHeight + "px";
+});
+
+// Enter sends, Shift+Enter makes a newline.
+input.addEventListener("keydown", e => {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+    form.requestSubmit();
+  }
+});
+
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  const text = input.value.trim();
+  if (!text || send.disabled) return;
+
+  addBubble("me", text);
+  history.push({ role: "user", content: text });
+  input.value = "";
+  input.style.height = "auto";
+  send.disabled = true;
+
+  const bubble = addBubble("them", "");
+  bubble.innerHTML = '<span class="dots"><i></i><i></i><i></i></span>';
+  let reply = "";
+
+  try {
+    const res = await fetch(API + "/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ messages: history }),
+    });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+
+    // NDJSON: a chunk can split mid-line, so hold the remainder in the buffer.
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split("\n");
+      buffer = lines.pop();
+
+      for (const line of lines) {
+        if (!line.trim()) continue;
+        const msg = JSON.parse(line);
+        if (msg.error) throw new Error(msg.error);
+        if (msg.token) {
+          reply += msg.token;
+          bubble.textContent = reply;
+          log.scrollTop = log.scrollHeight;
+        }
+      }
+    }
+
+    if (reply) history.push({ role: "assistant", content: reply });
+    else bubble.textContent = "(empty response)";
+  } catch (err) {
+    bubble.classList.add("error");
+    bubble.textContent = "⚠︎ " + err.message;
+    history.pop(); // drop the unanswered turn so the next one isn't poisoned
+  } finally {
+    send.disabled = false;
+    input.focus();
+  }
+});
+</script>
+
+</body>
+</html>
