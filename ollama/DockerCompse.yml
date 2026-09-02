@@ -14,6 +14,11 @@ services:
       MODEL: ${MODEL:-llama3.2:1b}
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    volumes:
+      # Same trick as the UI below: edit backend/main.py and uvicorn --reload
+      # restarts in-place. No rebuild in the refinement loop at all.
+      - ./backend:/app
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
     restart: unless-stopped
 
   web:

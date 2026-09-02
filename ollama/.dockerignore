@@ -1,0 +1,10 @@
+# Keep the build context tiny and stop stray files from busting the COPY cache.
+main.ipynb
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/
+frontend/
+scripts/
+.git/
+.DS_Store

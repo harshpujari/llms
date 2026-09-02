@@ -1,11 +1,19 @@
+# syntax=docker/dockerfile:1
+
 FROM python:3.12-slim
 
 WORKDIR /app
 
-# Requirements first: this layer is cached until the pinned versions change,
-# so editing main.py rebuilds in a second instead of re-resolving pip.
+# Requirements copied alone, before the source: this layer stays cached until the
+# pinned versions actually change, so editing main.py never re-runs pip.
 COPY backend/requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+
+# The cache mount keeps downloaded wheels on the host between builds, so even a
+# real requirements change reinstalls from disk instead of re-fetching from
+# pythonhosted.org (which is slow and flaky from inside the Docker VM).
+# Note: no --no-cache-dir here; that would defeat the mount.
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install --timeout 180 --retries 10 -r requirements.txt
 
 COPY backend/ .
 
