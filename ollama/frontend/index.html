@@ -296,42 +296,71 @@ function inlineMd(s) {
 function renderMarkdown(src) {
   // Escaped up front, so everything below composes tags around inert text.
   const lines = escapeHtml(src).split("\n");
-  let html = "", list = null, inCode = false, code = "";
-  const closeList = () => { if (list) { html += `</${list}>`; list = null; } };
+  let html = "", inCode = false, code = "";
+
+  // Open lists, outermost first, so indented items nest instead of closing the
+  // parent -- otherwise a sub-bullet ends the <ol> and the next item restarts at 1.
+  const stack = [];
+  const closeOne = () => {
+    const top = stack.pop();
+    if (top.liOpen) html += "</li>";
+    html += `</${top.tag}>`;
+  };
+  const closeTo = indent => {
+    while (stack.length && stack[stack.length - 1].indent > indent) closeOne();
+  };
+  const closeAll = () => { while (stack.length) closeOne(); };
 
   for (const line of lines) {
     if (line.trim().startsWith("```")) {
       if (inCode) { html += `<pre><code>${code}</code></pre>`; code = ""; inCode = false; }
-      else { closeList(); inCode = true; }
+      else { closeAll(); inCode = true; }
       continue;
     }
     if (inCode) { code += line + "\n"; continue; }
-    if (!line.trim()) { closeList(); continue; }
+    if (!line.trim()) continue; // blank lines don't end a list; indentation does
 
     const heading = line.match(/^(#{1,4})\s+(.*)$/);
     if (heading) {
-      closeList();
+      closeAll();
       const level = heading[1].length;
       html += `<h${level}>${inlineMd(heading[2])}</h${level}>`;
       continue;
     }
 
-    const ul = line.match(/^\s*[-*+]\s+(.*)$/);
-    const ol = line.match(/^\s*\d+[.)]\s+(.*)$/);
+    // llama3.2 emits "• " far more often than "- " or "* ", so accept both.
+    const ul = line.match(/^([ \t]*)[-*+•·‣]\s+(.*)$/);
+    const ol = line.match(/^([ \t]*)\d+[.)]\s+(.*)$/);
     if (ul || ol) {
+      const [, lead, content] = ul || ol;
       const tag = ul ? "ul" : "ol";
-      if (list !== tag) { closeList(); html += `<${tag}>`; list = tag; }
-      html += `<li>${inlineMd((ul || ol)[1])}</li>`;
+      const indent = lead.replace(/\t/g, "    ").length;
+
+      closeTo(indent);
+      let top = stack[stack.length - 1];
+      if (!top || top.indent < indent) {
+        // Nested list opens inside the parent's still-open <li>.
+        html += `<${tag}>`;
+        stack.push({ tag, indent, liOpen: false });
+      } else if (top.tag !== tag) {
+        closeOne();
+        html += `<${tag}>`;
+        stack.push({ tag, indent, liOpen: false });
+      }
+      top = stack[stack.length - 1];
+      if (top.liOpen) html += "</li>";
+      html += `<li>${inlineMd(content)}`;
+      top.liOpen = true;
       continue;
     }
 
-    closeList();
+    closeAll();
     html += `<p>${inlineMd(line)}</p>`;
   }
 
   // Mid-stream the closing fence hasn't arrived yet; render what's there.
   if (inCode) html += `<pre><code>${code}</code></pre>`;
-  closeList();
+  closeAll();
   return html;
 }
 
