@@ -123,6 +123,38 @@
     font-size: 15px;
   }
 
+  /* Rendered markdown: block elements supply their own spacing, so the
+     pre-wrap used for plain text would double every gap. */
+  .bubble.md { white-space: normal; }
+  .md > :first-child { margin-top: 0; }
+  .md > :last-child { margin-bottom: 0; }
+  .md p { margin: 0 0 8px; }
+  .md h1, .md h2, .md h3, .md h4 {
+    margin: 12px 0 6px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .md ul, .md ol { margin: 6px 0; padding-left: 22px; }
+  .md li { margin: 3px 0; }
+  .md strong { font-weight: 600; }
+  .md a { color: inherit; text-decoration: underline; }
+  .md code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 14px;
+    background: rgba(127, 127, 127, 0.2);
+    padding: 1px 5px;
+    border-radius: 5px;
+  }
+  .md pre {
+    margin: 8px 0;
+    padding: 10px 12px;
+    background: rgba(127, 127, 127, 0.16);
+    border-radius: 12px;
+    overflow-x: auto;
+  }
+  .md pre code { background: none; padding: 0; font-size: 13px; }
+
   /* Three-dot typing indicator, shown until the first token lands. */
   .dots { display: inline-flex; gap: 4px; padding: 3px 2px; }
   .dots i {
@@ -158,20 +190,41 @@
     margin: 0 auto;
   }
 
+  /* The pill is this wrapper, not the textarea. A scrollbar renders at the
+     padding-box edge, so padding-right can't move it -- only giving the
+     textarea its own right margin inside the wrapper pulls it off the border. */
+  .field {
+    flex: 1;
+    display: flex;
+    padding: 8px 6px 8px 14px;
+    background: var(--field);
+    border: 1px solid var(--field-border);
+    border-radius: 20px;
+  }
+
+  .field:focus-within { border-color: var(--bubble-me); }
+
   textarea {
     flex: 1;
     resize: none;
     max-height: 140px;
-    padding: 8px 14px;
+    margin-right: 8px;
+    padding: 0;
     font: inherit;
     color: var(--text);
-    background: var(--field);
-    border: 1px solid var(--field-border);
-    border-radius: 20px;
+    background: none;
+    border: 0;
     outline: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) transparent;
   }
 
-  textarea:focus { border-color: var(--bubble-me); }
+  textarea::-webkit-scrollbar { width: 5px; }
+  textarea::-webkit-scrollbar-track { background: transparent; }
+  textarea::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    border-radius: 3px;
+  }
 
   button {
     flex: none;
@@ -201,7 +254,9 @@
 
 <footer>
   <form id="form">
-    <textarea id="input" rows="1" placeholder="Message" autofocus></textarea>
+    <div class="field">
+      <textarea id="input" rows="1" placeholder="Message" autofocus></textarea>
+    </div>
     <button id="send" type="submit" aria-label="Send">&uarr;</button>
   </form>
 </footer>
@@ -217,6 +272,68 @@ const status = document.getElementById("status");
 
 // Ollama keeps no history, so the full transcript is resent every turn.
 const history = [];
+
+// --- Minimal markdown renderer ------------------------------------------
+// The model emits markdown, and nothing external is loadable here (the page is
+// served offline by nginx), so this covers the subset an LLM actually produces:
+// headings, bold/italic, inline + fenced code, lists, links.
+
+function escapeHtml(s) {
+  return s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}
+
+function inlineMd(s) {
+  return s
+    .replace(/`([^`]+)`/g, "<code>$1</code>")
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/(^|[^*])\*([^*\n]+)\*/g, "$1<em>$2</em>")
+    // Only http(s) becomes a link -- never javascript:, which would execute
+    // whatever the model happened to generate.
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, text, href) =>
+      /^https?:\/\//i.test(href) ? `<a href="${href}" target="_blank" rel="noopener">${text}</a>` : m);
+}
+
+function renderMarkdown(src) {
+  // Escaped up front, so everything below composes tags around inert text.
+  const lines = escapeHtml(src).split("\n");
+  let html = "", list = null, inCode = false, code = "";
+  const closeList = () => { if (list) { html += `</${list}>`; list = null; } };
+
+  for (const line of lines) {
+    if (line.trim().startsWith("```")) {
+      if (inCode) { html += `<pre><code>${code}</code></pre>`; code = ""; inCode = false; }
+      else { closeList(); inCode = true; }
+      continue;
+    }
+    if (inCode) { code += line + "\n"; continue; }
+    if (!line.trim()) { closeList(); continue; }
+
+    const heading = line.match(/^(#{1,4})\s+(.*)$/);
+    if (heading) {
+      closeList();
+      const level = heading[1].length;
+      html += `<h${level}>${inlineMd(heading[2])}</h${level}>`;
+      continue;
+    }
+
+    const ul = line.match(/^\s*[-*+]\s+(.*)$/);
+    const ol = line.match(/^\s*\d+[.)]\s+(.*)$/);
+    if (ul || ol) {
+      const tag = ul ? "ul" : "ol";
+      if (list !== tag) { closeList(); html += `<${tag}>`; list = tag; }
+      html += `<li>${inlineMd((ul || ol)[1])}</li>`;
+      continue;
+    }
+
+    closeList();
+    html += `<p>${inlineMd(line)}</p>`;
+  }
+
+  // Mid-stream the closing fence hasn't arrived yet; render what's there.
+  if (inCode) html += `<pre><code>${code}</code></pre>`;
+  closeList();
+  return html;
+}
 
 fetch(API + "/health")
   .then(r => r.json())
@@ -264,6 +381,19 @@ form.addEventListener("submit", async e => {
   bubble.innerHTML = '<span class="dots"><i></i><i></i><i></i></span>';
   let reply = "";
 
+  // Re-rendering markdown on every token is wasted work at 40 tok/s; coalesce
+  // to one paint per frame instead.
+  let queued = false;
+  const paint = () => {
+    bubble.innerHTML = renderMarkdown(reply);
+    log.scrollTop = log.scrollHeight;
+  };
+  const schedulePaint = () => {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(() => { queued = false; paint(); });
+  };
+
   try {
     const res = await fetch(API + "/chat", {
       method: "POST",
@@ -289,16 +419,21 @@ form.addEventListener("submit", async e => {
         const msg = JSON.parse(line);
         if (msg.error) throw new Error(msg.error);
         if (msg.token) {
+          if (!reply) bubble.classList.add("md"); // first token clears the dots
           reply += msg.token;
-          bubble.textContent = reply;
-          log.scrollTop = log.scrollHeight;
+          schedulePaint();
         }
       }
     }
 
-    if (reply) history.push({ role: "assistant", content: reply });
-    else bubble.textContent = "(empty response)";
+    if (reply) {
+      paint(); // the last scheduled frame may not have run yet
+      history.push({ role: "assistant", content: reply });
+    } else {
+      bubble.textContent = "(empty response)";
+    }
   } catch (err) {
+    bubble.classList.remove("md");
     bubble.classList.add("error");
     bubble.textContent = "⚠︎ " + err.message;
     history.pop(); // drop the unanswered turn so the next one isn't poisoned
