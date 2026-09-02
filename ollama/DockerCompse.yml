@@ -1,6 +1,23 @@
 name: local-llama
 
 services:
+  # Self-contained: the model lives in the ollama-data volume, not on the host.
+  # No Metal inside the Docker VM, so this runs on CPU.
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      # Published so main.ipynb can still reach localhost:11434 unchanged.
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    healthcheck:
+      test: ["CMD-SHELL", "ollama list >/dev/null 2>&1 || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+    restart: unless-stopped
+
   api:
     build:
       context: .
@@ -8,12 +25,11 @@ services:
     ports:
       - "8000:8000"
     environment:
-      # Defaults to the Ollama running natively on the Mac, which keeps Metal.
-      # scripts/start.sh --with-ollama overrides this to http://ollama:11434.
-      OLLAMA_HOST: ${OLLAMA_HOST:-http://host.docker.internal:11434}
+      OLLAMA_HOST: ${OLLAMA_HOST:-http://ollama:11434}
       MODEL: ${MODEL:-llama3.2:1b}
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+    depends_on:
+      ollama:
+        condition: service_healthy
     volumes:
       # Same trick as the UI below: edit backend/main.py and uvicorn --reload
       # restarts in-place. No rebuild in the refinement loop at all.
@@ -30,17 +46,6 @@ services:
       - ./frontend:/usr/share/nginx/html:ro
     depends_on:
       - api
-    restart: unless-stopped
-
-  # Opt-in only (scripts/start.sh --with-ollama). CPU-only on macOS -- no Metal
-  # inside the Docker VM -- and re-downloads the model into its own volume.
-  ollama:
-    profiles: ["with-ollama"]
-    image: ollama/ollama:latest
-    ports:
-      - "11434:11434"
-    volumes:
-      - ollama-data:/root/.ollama
     restart: unless-stopped
 
 volumes:

@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 # Starts the chat stack. Run from anywhere: ./scripts/start.sh
 #
-#   ./scripts/start.sh                 API + UI, talking to the Ollama on your Mac (fast, Metal)
-#   ./scripts/start.sh --build         force a rebuild (needed after requirements.txt changes)
-#   ./scripts/start.sh --with-ollama   also runs Ollama in a container (CPU-only, slow)
-#   ./scripts/start.sh --stop          stop everything
-#   ./scripts/start.sh --logs          follow logs
+#   ./scripts/start.sh           start everything (ollama + api + ui)
+#   ./scripts/start.sh --build   force a rebuild (needed after requirements.txt changes)
+#   ./scripts/start.sh --stop    stop everything
+#   ./scripts/start.sh --logs    follow logs
 #
-# Reuses the existing image by default. backend/ is bind-mounted with uvicorn
-# --reload, so code edits need no rebuild at all -- only dependency changes do.
+# Fully self-contained: Ollama runs in a container and the model lives in the
+# ollama-data volume. Nothing needs to be installed on the host but Docker.
+#
+# Reuses the existing image by default. backend/ and frontend/ are bind-mounted
+# (uvicorn --reload), so code edits need no rebuild -- only dependency changes do.
 set -euo pipefail
 
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
@@ -16,15 +18,13 @@ cd "$(dirname "${BASH_SOURCE[0]}")/.."
 COMPOSE=(docker compose -f DockerCompse.yml)
 MODEL="${MODEL:-llama3.2:1b}"
 BUILD=0
-WANT_OLLAMA=0
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    --build)       BUILD=1 ;;
-    --with-ollama) WANT_OLLAMA=1 ;;
+    --build) BUILD=1 ;;
     --stop)
-      "${COMPOSE[@]}" --profile with-ollama down
-      echo "stopped."
+      "${COMPOSE[@]}" down
+      echo "stopped. (the model stays in the ollama-data volume)"
       exit 0
       ;;
     --logs)
@@ -32,7 +32,7 @@ while [[ $# -gt 0 ]]; do
       ;;
     *)
       echo "unknown option: $1" >&2
-      sed -n '2,9p' "${BASH_SOURCE[0]}" >&2
+      sed -n '2,13p' "${BASH_SOURCE[0]}" >&2
       exit 1
       ;;
   esac
@@ -42,33 +42,6 @@ done
 if ! docker info >/dev/null 2>&1; then
   echo "Docker isn't running. Start Docker Desktop and try again." >&2
   exit 1
-fi
-
-if [[ $WANT_OLLAMA -eq 1 ]]; then
-  # Containerised Ollama owns port 11434, so the brew service can't also hold it.
-  if curl -fsS http://localhost:11434 >/dev/null 2>&1 && ! docker ps --format '{{.Names}}' | grep -q ollama; then
-    echo "Port 11434 is held by the Ollama on your Mac. Stop it first:" >&2
-    echo "  brew services stop ollama" >&2
-    exit 1
-  fi
-  export OLLAMA_HOST="http://ollama:11434"
-  echo "==> mode: Ollama in a container (CPU-only)"
-else
-  echo "==> mode: host Ollama (Metal-accelerated)"
-
-  if ! curl -fsS http://localhost:11434 >/dev/null 2>&1; then
-    echo "Ollama isn't running on the host. Starting it..."
-    brew services start ollama
-    for _ in $(seq 1 30); do
-      curl -fsS http://localhost:11434 >/dev/null 2>&1 && break
-      sleep 1
-    done
-  fi
-
-  if ! ollama list 2>/dev/null | grep -q "$MODEL"; then
-    echo "==> pulling $MODEL"
-    ollama pull "$MODEL"
-  fi
 fi
 
 # compose builds a missing image on its own, so the default path still works on
@@ -83,15 +56,12 @@ else
   echo "==> using existing image (--build to rebuild)"
 fi
 
-if [[ $WANT_OLLAMA -eq 1 ]]; then
-  "${COMPOSE[@]}" --profile with-ollama "${UP[@]}"
-else
-  "${COMPOSE[@]}" "${UP[@]}"
-fi
+"${COMPOSE[@]}" "${UP[@]}"
 
-if [[ $WANT_OLLAMA -eq 1 ]]; then
-  echo "==> pulling $MODEL inside the container (first run downloads ~1.3 GB)"
-  docker compose -f DockerCompse.yml exec -T ollama ollama pull "$MODEL"
+# The volume survives --stop, so this only downloads on a genuinely fresh setup.
+if ! "${COMPOSE[@]}" exec -T ollama ollama list 2>/dev/null | grep -q "$MODEL"; then
+  echo "==> pulling $MODEL into the volume (~1.3 GB, first run only)"
+  "${COMPOSE[@]}" exec -T ollama ollama pull "$MODEL"
 fi
 
 echo "==> waiting for the API"
@@ -116,8 +86,9 @@ if ! curl -fsS http://localhost:8000/health | grep -q '"ok":true'; then
 fi
 
 echo
-echo "  UI   http://localhost:3000"
-echo "  API  http://localhost:8000/docs"
+echo "  UI      http://localhost:3000"
+echo "  API     http://localhost:8000/docs"
+echo "  Ollama  http://localhost:11434"
 echo
 echo "  logs  ./scripts/start.sh --logs"
 echo "  stop  ./scripts/start.sh --stop"
