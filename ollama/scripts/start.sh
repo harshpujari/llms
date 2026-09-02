@@ -1,34 +1,50 @@
 #!/usr/bin/env bash
-# Builds and starts the chat stack. Run from anywhere: ./scripts/start.sh
+# Starts the chat stack. Run from anywhere: ./scripts/start.sh
 #
 #   ./scripts/start.sh                 API + UI, talking to the Ollama on your Mac (fast, Metal)
+#   ./scripts/start.sh --build         force a rebuild (needed after requirements.txt changes)
 #   ./scripts/start.sh --with-ollama   also runs Ollama in a container (CPU-only, slow)
 #   ./scripts/start.sh --stop          stop everything
 #   ./scripts/start.sh --logs          follow logs
+#
+# Reuses the existing image by default. backend/ is bind-mounted with uvicorn
+# --reload, so code edits need no rebuild at all -- only dependency changes do.
 set -euo pipefail
 
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
 COMPOSE=(docker compose -f DockerCompse.yml)
 MODEL="${MODEL:-llama3.2:1b}"
+BUILD=0
+WANT_OLLAMA=0
 
-case "${1:-}" in
-  --stop)
-    "${COMPOSE[@]}" --profile with-ollama down
-    echo "stopped."
-    exit 0
-    ;;
-  --logs)
-    exec "${COMPOSE[@]}" logs -f
-    ;;
-esac
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --build)       BUILD=1 ;;
+    --with-ollama) WANT_OLLAMA=1 ;;
+    --stop)
+      "${COMPOSE[@]}" --profile with-ollama down
+      echo "stopped."
+      exit 0
+      ;;
+    --logs)
+      exec "${COMPOSE[@]}" logs -f
+      ;;
+    *)
+      echo "unknown option: $1" >&2
+      sed -n '2,9p' "${BASH_SOURCE[0]}" >&2
+      exit 1
+      ;;
+  esac
+  shift
+done
 
 if ! docker info >/dev/null 2>&1; then
   echo "Docker isn't running. Start Docker Desktop and try again." >&2
   exit 1
 fi
 
-if [[ "${1:-}" == "--with-ollama" ]]; then
+if [[ $WANT_OLLAMA -eq 1 ]]; then
   # Containerised Ollama owns port 11434, so the brew service can't also hold it.
   if curl -fsS http://localhost:11434 >/dev/null 2>&1 && ! docker ps --format '{{.Names}}' | grep -q ollama; then
     echo "Port 11434 is held by the Ollama on your Mac. Stop it first:" >&2
@@ -36,10 +52,8 @@ if [[ "${1:-}" == "--with-ollama" ]]; then
     exit 1
   fi
   export OLLAMA_HOST="http://ollama:11434"
-  WITH_OLLAMA=1
   echo "==> mode: Ollama in a container (CPU-only)"
 else
-  WITH_OLLAMA=0
   echo "==> mode: host Ollama (Metal-accelerated)"
 
   if ! curl -fsS http://localhost:11434 >/dev/null 2>&1; then
@@ -57,14 +71,25 @@ else
   fi
 fi
 
-echo "==> building"
-if [[ $WITH_OLLAMA -eq 1 ]]; then
-  "${COMPOSE[@]}" --profile with-ollama up --build -d
+# compose builds a missing image on its own, so the default path still works on
+# a clean machine -- it just won't rebuild when one is already there.
+UP=(up -d)
+if [[ $BUILD -eq 1 ]]; then
+  UP=(up --build -d)
+  echo "==> rebuilding"
+elif ! docker image inspect local-llama-api >/dev/null 2>&1; then
+  echo "==> no image yet, building"
 else
-  "${COMPOSE[@]}" up --build -d
+  echo "==> using existing image (--build to rebuild)"
 fi
 
-if [[ $WITH_OLLAMA -eq 1 ]]; then
+if [[ $WANT_OLLAMA -eq 1 ]]; then
+  "${COMPOSE[@]}" --profile with-ollama "${UP[@]}"
+else
+  "${COMPOSE[@]}" "${UP[@]}"
+fi
+
+if [[ $WANT_OLLAMA -eq 1 ]]; then
   echo "==> pulling $MODEL inside the container (first run downloads ~1.3 GB)"
   docker compose -f DockerCompse.yml exec -T ollama ollama pull "$MODEL"
 fi
