@@ -36,6 +36,10 @@ class Message(BaseModel):
 
 class ChatRequest(BaseModel):
     messages: list[Message]
+    # "chat"     -> wrapped in Llama 3.2's instruction template, history included
+    # "generate" -> raw completion, no template, no history: the model just
+    #               continues the text, the way a base model would.
+    mode: str = "chat"
 
 
 @app.get("/health")
@@ -57,15 +61,31 @@ async def health():
 async def chat(req: ChatRequest):
     """Streams NDJSON: one {"token": ...} per chunk, then {"done": true}."""
 
+    options = {"temperature": 0.7, "num_ctx": 4096}
+
     async def stream():
         try:
-            async for chunk in await client.chat(
-                model=MODEL,
-                messages=[m.model_dump() for m in req.messages],
-                stream=True,
-                options={"temperature": 0.7, "num_ctx": 4096},
-            ):
-                yield json.dumps({"token": chunk["message"]["content"]}) + "\n"
+            if req.mode == "generate":
+                # Only the latest user turn: a raw continuation has no notion of
+                # conversation, and num_predict stops it rambling to num_ctx.
+                prompt = next(
+                    (m.content for m in reversed(req.messages) if m.role == "user"), ""
+                )
+                async for chunk in await client.generate(
+                    model=MODEL,
+                    prompt=prompt,
+                    stream=True,
+                    options={**options, "num_predict": 256},
+                ):
+                    yield json.dumps({"token": chunk["response"]}) + "\n"
+            else:
+                async for chunk in await client.chat(
+                    model=MODEL,
+                    messages=[m.model_dump() for m in req.messages],
+                    stream=True,
+                    options=options,
+                ):
+                    yield json.dumps({"token": chunk["message"]["content"]}) + "\n"
             yield json.dumps({"done": True}) + "\n"
         except Exception as exc:
             # The response has already started, so errors ride the stream itself

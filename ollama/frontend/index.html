@@ -68,11 +68,35 @@
     letter-spacing: -0.02em;
   }
 
-  header p {
+  header .sub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
     margin: 2px 0 0;
     font-size: 12px;
     color: var(--secondary);
   }
+
+  /* Chevron drawn as an inline SVG data URI -- no external asset can load here. */
+  #mode {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 1px 16px 1px 8px;
+    font: inherit;
+    font-weight: 500;
+    color: var(--bubble-me);
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23007aff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  #mode:hover { background-color: rgba(127, 127, 127, 0.16); }
+  #mode:focus-visible { outline: 2px solid var(--bubble-me); outline-offset: 1px; }
 
   #log {
     flex: 1;
@@ -211,6 +235,8 @@
     margin-right: 8px;
     padding: 0;
     font: inherit;
+    /* 22 + 16 padding + 2 border = a 40px pill, so the send circle lines up. */
+    line-height: 22px;
     color: var(--text);
     background: none;
     border: 0;
@@ -226,18 +252,24 @@
     border-radius: 3px;
   }
 
+  /* 38px against the pill's 40px: bottom-aligned, so a near match keeps the two
+     from stepping. The arrow is drawn, not typed -- the system font's U+2191 is
+     too light here and sits on its baseline rather than optically centred. */
   button {
     flex: none;
-    width: 34px;
-    height: 34px;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
     border: 0;
     border-radius: 50%;
     background: var(--bubble-me);
     color: #fff;
-    font-size: 19px;
     cursor: pointer;
     transition: opacity 0.15s, transform 0.1s;
   }
+
+  button svg { display: block; }
 
   button:disabled { opacity: 0.35; cursor: default; }
   button:not(:disabled):active { transform: scale(0.92); }
@@ -247,7 +279,13 @@
 
 <header>
   <h1>Llama 3.2</h1>
-  <p id="status">1B &middot; local</p>
+  <p class="sub">
+    <select id="mode" aria-label="Mode">
+      <option value="chat">Chat</option>
+      <option value="generate">Generate</option>
+    </select>
+    <span id="status">local</span>
+  </p>
 </header>
 
 <div id="log"></div>
@@ -257,7 +295,13 @@
     <div class="field">
       <textarea id="input" rows="1" placeholder="Message" autofocus></textarea>
     </div>
-    <button id="send" type="submit" aria-label="Send">&uarr;</button>
+    <button id="send" type="submit" aria-label="Send">
+      <svg width="17" height="17" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M8 13.25V3.25M3.5 7.75 8 3.25l4.5 4.5"
+              fill="none" stroke="currentColor" stroke-width="2.25"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
   </form>
 </footer>
 
@@ -269,9 +313,16 @@ const form = document.getElementById("form");
 const input = document.getElementById("input");
 const send = document.getElementById("send");
 const status = document.getElementById("status");
+const modeSelect = document.getElementById("mode");
 
 // Ollama keeps no history, so the full transcript is resent every turn.
+// Generate mode never touches this: a raw completion has no conversation.
 const history = [];
+
+modeSelect.addEventListener("change", () => {
+  input.placeholder = modeSelect.value === "generate" ? "Text to continue…" : "Message";
+  input.focus();
+});
 
 // --- Minimal markdown renderer ------------------------------------------
 // The model emits markdown, and nothing external is loadable here (the page is
@@ -366,7 +417,7 @@ function renderMarkdown(src) {
 
 fetch(API + "/health")
   .then(r => r.json())
-  .then(d => { status.textContent = d.ok ? d.model + " · local" : "backend up, Ollama unreachable"; })
+  .then(d => { status.textContent = d.ok ? "· " + d.model : "· Ollama unreachable"; })
   .catch(() => { status.textContent = "backend unreachable"; });
 
 function addBubble(who, text) {
@@ -400,8 +451,12 @@ form.addEventListener("submit", async e => {
   const text = input.value.trim();
   if (!text || send.disabled) return;
 
+  const mode = modeSelect.value;
+  const chatting = mode === "chat";
+
   addBubble("me", text);
-  history.push({ role: "user", content: text });
+  // In generate mode the turn is standalone, so it stays out of the transcript.
+  if (chatting) history.push({ role: "user", content: text });
   input.value = "";
   input.style.height = "auto";
   send.disabled = true;
@@ -427,7 +482,10 @@ form.addEventListener("submit", async e => {
     const res = await fetch(API + "/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ messages: history }),
+      body: JSON.stringify({
+        messages: chatting ? history : [{ role: "user", content: text }],
+        mode,
+      }),
     });
     if (!res.ok) throw new Error("HTTP " + res.status);
 
@@ -457,7 +515,7 @@ form.addEventListener("submit", async e => {
 
     if (reply) {
       paint(); // the last scheduled frame may not have run yet
-      history.push({ role: "assistant", content: reply });
+      if (chatting) history.push({ role: "assistant", content: reply });
     } else {
       bubble.textContent = "(empty response)";
     }
@@ -465,7 +523,7 @@ form.addEventListener("submit", async e => {
     bubble.classList.remove("md");
     bubble.classList.add("error");
     bubble.textContent = "⚠︎ " + err.message;
-    history.pop(); // drop the unanswered turn so the next one isn't poisoned
+    if (chatting) history.pop(); // drop the unanswered turn so the next isn't poisoned
   } finally {
     send.disabled = false;
     input.focus();
