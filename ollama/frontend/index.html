@@ -49,10 +49,16 @@
     flex-direction: column;
   }
 
+  /* An iOS navigation bar: leading item, centred title, trailing item. The
+     1fr/auto/1fr grid keeps the title optically centred no matter how wide the
+     buttons get -- which text-align alone can't do. */
   header {
     position: sticky;
     top: 0;
-    padding: 14px 20px calc(14px + env(safe-area-inset-top));
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 14px 12px calc(14px + env(safe-area-inset-top));
     text-align: center;
     background: var(--header-bg);
     backdrop-filter: saturate(180%) blur(20px);
@@ -60,6 +66,26 @@
     border-bottom: 0.5px solid var(--sep);
     z-index: 10;
   }
+
+  header .lead { justify-self: start; }
+  header .trail { justify-self: end; }
+
+  .nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 8px;
+    font: inherit;
+    font-size: 15px;
+    color: var(--bubble-me);
+    background: none;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .nav-btn:hover { background: rgba(127, 127, 127, 0.16); }
+  .nav-btn:active { opacity: 0.5; }
 
   header h1 {
     margin: 0;
@@ -255,7 +281,9 @@
   /* 38px against the pill's 40px: bottom-aligned, so a near match keeps the two
      from stepping. The arrow is drawn, not typed -- the system font's U+2191 is
      too light here and sits on its baseline rather than optically centred. */
-  button {
+  /* Scoped to #send: a bare `button` selector would also style every control
+     in the library panel. */
+  #send {
     flex: none;
     display: grid;
     place-items: center;
@@ -271,26 +299,237 @@
 
   button svg { display: block; }
 
-  button:disabled { opacity: 0.35; cursor: default; }
-  button:not(:disabled):active { transform: scale(0.92); }
+  #send:disabled { opacity: 0.35; cursor: default; }
+  #send:not(:disabled):active { transform: scale(0.92); }
+
+  /* --- Library panel ----------------------------------------------------
+     Slides in over the chat rather than pushing it aside: the conversation
+     keeps its position, and on a narrow window there's no layout to reflow. */
+
+  #backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.32);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.28s ease;
+  }
+
+  #backdrop.open { opacity: 1; pointer-events: auto; }
+
+  #panel {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    width: min(340px, 86vw);
+    background: var(--bg);
+    border-right: 0.5px solid var(--sep);
+    transform: translateX(-100%);
+    /* The iOS sheet curve: fast out, settles without a bounce. */
+    transition: transform 0.32s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  #panel.open { transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    #panel, #backdrop { transition: none; }
+  }
+
+  .panel-head {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 4px;
+    padding: 14px 10px calc(14px + env(safe-area-inset-top));
+    border-bottom: 0.5px solid var(--sep);
+  }
+
+  .panel-head h2 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #panel-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px 0;
+  }
+
+  .panel-foot {
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    border-top: 0.5px solid var(--sep);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* iOS inset-grouped list rows. */
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 14px;
+    font: inherit;
+    color: var(--text);
+    text-align: left;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .item:hover { background: rgba(127, 127, 127, 0.12); }
+  .item + .item { box-shadow: inset 0 0.5px 0 var(--sep); }
+  .item .grow { flex: 1; min-width: 0; }
+  .item .name {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .item .meta { font-size: 12px; color: var(--secondary); }
+  .item .icon { flex: none; color: var(--bubble-me); }
+  .item .chev { flex: none; color: var(--secondary); }
+  .item.active .icon { color: #34c759; }
+
+  .del {
+    flex: none;
+    padding: 4px 6px;
+    font: inherit;
+    font-size: 13px;
+    color: var(--secondary);
+    background: none;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .del:hover { color: #ff3b30; background: rgba(255, 59, 48, 0.12); }
+
+  .empty {
+    padding: 28px 24px;
+    font-size: 14px;
+    color: var(--secondary);
+    text-align: center;
+  }
+
+  .action {
+    padding: 10px 14px;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    background: var(--bubble-me);
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  .action.secondary { color: var(--bubble-me); background: rgba(127, 127, 127, 0.14); }
+  .action:active { opacity: 0.7; }
+
+  /* --- Scope chip -------------------------------------------------------
+     Sits above the composer, where an attachment would: it's per-message
+     state, so it belongs next to the message, not in the title bar. */
+
+  #scope {
+    display: flex;
+    max-width: 760px;
+    margin: 0 auto 8px;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    max-width: 100%;
+    padding: 4px 6px 4px 10px;
+    font-size: 13px;
+    color: var(--bubble-me);
+    background: rgba(0, 122, 255, 0.12);
+    border-radius: 14px;
+  }
+
+  .chip .name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .chip button {
+    display: grid;
+    place-items: center;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    color: inherit;
+    background: rgba(127, 127, 127, 0.22);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Llama 3.2</h1>
-  <p class="sub">
-    <select id="mode" aria-label="Mode">
-      <option value="chat">Chat</option>
-      <option value="generate">Generate</option>
-    </select>
-    <span id="status">local</span>
-  </p>
+  <div class="lead">
+    <button id="library-btn" class="nav-btn" type="button">
+      <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true">
+        <path d="M2.5 5.5a1.5 1.5 0 0 1 1.5-1.5h3.2l1.6 1.8h7.7a1.5 1.5 0 0 1 1.5 1.5v7.2a1.5 1.5 0 0 1-1.5 1.5H4a1.5 1.5 0 0 1-1.5-1.5z"
+              fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </svg>
+      Library
+    </button>
+  </div>
+  <div>
+    <h1>Llama 3.2</h1>
+    <p class="sub">
+      <select id="mode" aria-label="Mode">
+        <option value="chat">Chat</option>
+        <option value="generate">Generate</option>
+      </select>
+      <span id="status">local</span>
+    </p>
+  </div>
+  <div class="trail"></div>
 </header>
+
+<div id="backdrop"></div>
+
+<aside id="panel" aria-label="Library" aria-hidden="true">
+  <div class="panel-head">
+    <div>
+      <button id="panel-back" class="nav-btn" type="button" hidden>
+        <svg width="11" height="16" viewBox="0 0 11 16" aria-hidden="true">
+          <path d="M8.5 2 2.5 8l6 6" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Library
+      </button>
+    </div>
+    <h2 id="panel-title">Library</h2>
+    <div style="justify-self: end">
+      <button id="panel-close" class="nav-btn" type="button">Done</button>
+    </div>
+  </div>
+  <div id="panel-body"></div>
+  <div class="panel-foot" id="panel-foot"></div>
+</aside>
+
+<input type="file" id="file-input" multiple hidden />
 
 <div id="log"></div>
 
 <footer>
+  <div id="scope" hidden></div>
   <form id="form">
     <div class="field">
       <textarea id="input" rows="1" placeholder="Message" autofocus></textarea>
@@ -318,6 +557,273 @@ const modeSelect = document.getElementById("mode");
 // Ollama keeps no history, so the full transcript is resent every turn.
 // Generate mode never touches this: a raw completion has no conversation.
 const history = [];
+
+// --- Library -------------------------------------------------------------
+// Two views in one panel, iOS navigation-stack style: the folder list, and one
+// folder's files. `scope` is the folder the next message will be answered from
+// -- tracked here now, consumed once retrieval is wired up.
+
+const panel = document.getElementById("panel");
+const backdrop = document.getElementById("backdrop");
+const panelBody = document.getElementById("panel-body");
+const panelFoot = document.getElementById("panel-foot");
+const panelTitle = document.getElementById("panel-title");
+const panelBack = document.getElementById("panel-back");
+const fileInput = document.getElementById("file-input");
+const scopeBar = document.getElementById("scope");
+
+let scope = null;    // { id, name } or null
+let openFolder = null;
+
+async function api(path, opts = {}) {
+  const res = await fetch(API + path, opts);
+  if (!res.ok) {
+    // FastAPI puts the message in `detail`; fall back if the body isn't JSON.
+    let msg = "HTTP " + res.status;
+    try { msg = (await res.json()).detail || msg; } catch {}
+    throw new Error(msg);
+  }
+  return res.status === 204 ? null : res.json();
+}
+
+function formatBytes(n) {
+  if (n < 1024) return n + " B";
+  if (n < 1024 * 1024) return (n / 1024).toFixed(0) + " KB";
+  return (n / 1024 / 1024).toFixed(1) + " MB";
+}
+
+function icon(paths, size = 18, box = 20) {
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("width", size);
+  svg.setAttribute("height", size);
+  svg.setAttribute("viewBox", `0 0 ${box} ${box}`);
+  svg.setAttribute("aria-hidden", "true");
+  svg.innerHTML = paths;
+  return svg;
+}
+
+const FOLDER_ICON = `<path d="M2.5 5.5a1.5 1.5 0 0 1 1.5-1.5h3.2l1.6 1.8h7.7a1.5 1.5 0 0 1 1.5 1.5v7.2a1.5 1.5 0 0 1-1.5 1.5H4a1.5 1.5 0 0 1-1.5-1.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>`;
+const DOC_ICON = `<path d="M5 2.5h6l4 4v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-14a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M11 2.5v4.5h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>`;
+const CHEV_ICON = `<path d="M7.5 4.5 13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>`;
+
+function setPanel(open) {
+  panel.classList.toggle("open", open);
+  backdrop.classList.toggle("open", open);
+  panel.setAttribute("aria-hidden", String(!open));
+  if (open) showFolders();
+}
+
+document.getElementById("library-btn").onclick = () => setPanel(true);
+document.getElementById("panel-close").onclick = () => setPanel(false);
+backdrop.onclick = () => setPanel(false);
+panelBack.onclick = () => showFolders();
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && panel.classList.contains("open")) setPanel(false);
+});
+
+function message(text) {
+  const p = document.createElement("p");
+  p.className = "empty";
+  p.textContent = text;
+  return p;
+}
+
+// Every name below goes in via textContent: filenames are user input, and this
+// panel would otherwise be a clean injection path into the page.
+function row({ iconPaths, name, meta, onOpen, onDelete, active, chevron }) {
+  const el = document.createElement(onOpen ? "button" : "div");
+  el.className = "item" + (active ? " active" : "");
+  if (onOpen) {
+    el.type = "button";
+    el.onclick = onOpen;
+  }
+
+  const ic = icon(iconPaths);
+  ic.classList.add("icon");
+  el.appendChild(ic);
+
+  const grow = document.createElement("span");
+  grow.className = "grow";
+  const n = document.createElement("span");
+  n.className = "name";
+  n.textContent = name;
+  grow.appendChild(n);
+  if (meta) {
+    const m = document.createElement("span");
+    m.className = "meta";
+    m.textContent = meta;
+    grow.appendChild(m);
+  }
+  el.appendChild(grow);
+
+  if (onDelete) {
+    const del = document.createElement("button");
+    del.className = "del";
+    del.type = "button";
+    del.textContent = "Delete";
+    del.onclick = e => { e.stopPropagation(); onDelete(); };
+    el.appendChild(del);
+  }
+  if (chevron) {
+    const c = icon(CHEV_ICON);
+    c.classList.add("chev");
+    el.appendChild(c);
+  }
+  return el;
+}
+
+async function showFolders() {
+  openFolder = null;
+  panelTitle.textContent = "Library";
+  panelBack.hidden = true;
+  panelBody.replaceChildren(message("Loading…"));
+  panelFoot.replaceChildren();
+
+  let folders;
+  try {
+    folders = await api("/folders");
+  } catch (err) {
+    panelBody.replaceChildren(message("Couldn't load folders: " + err.message));
+    return;
+  }
+
+  panelBody.replaceChildren();
+  if (!folders.length) {
+    panelBody.appendChild(message("No folders yet. Create one to group related files."));
+  }
+  for (const f of folders) {
+    panelBody.appendChild(row({
+      iconPaths: FOLDER_ICON,
+      name: f.name,
+      meta: `${f.file_count} file${f.file_count === 1 ? "" : "s"} · ${formatBytes(f.total_bytes)}`,
+      active: scope && scope.id === f.id,
+      chevron: true,
+      onOpen: () => showFolder(f),
+      onDelete: async () => {
+        if (!confirm(`Delete "${f.name}" and its ${f.file_count} file(s)?`)) return;
+        await api(`/folders/${f.id}`, { method: "DELETE" });
+        if (scope && scope.id === f.id) setScope(null);
+        showFolders();
+      },
+    }));
+  }
+
+  const add = document.createElement("button");
+  add.className = "action";
+  add.type = "button";
+  add.textContent = "New Folder";
+  add.onclick = async () => {
+    const name = prompt("Folder name");
+    if (!name || !name.trim()) return;
+    try {
+      await api("/folders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: name.trim() }),
+      });
+      showFolders();
+    } catch (err) {
+      alert(err.message);
+    }
+  };
+  panelFoot.replaceChildren(add);
+}
+
+async function showFolder(folder) {
+  openFolder = folder;
+  panelTitle.textContent = folder.name;
+  panelBack.hidden = false;
+  panelBody.replaceChildren(message("Loading…"));
+
+  let files;
+  try {
+    files = await api(`/folders/${folder.id}/files`);
+  } catch (err) {
+    panelBody.replaceChildren(message("Couldn't load files: " + err.message));
+    return;
+  }
+
+  panelBody.replaceChildren();
+  if (!files.length) {
+    panelBody.appendChild(message("Empty. Add files to chat about them."));
+  }
+  for (const f of files) {
+    panelBody.appendChild(row({
+      iconPaths: DOC_ICON,
+      name: f.name,
+      meta: formatBytes(f.bytes),
+      onDelete: async () => {
+        await api(`/files/${f.id}`, { method: "DELETE" });
+        showFolder(folder);
+      },
+    }));
+  }
+
+  const upload = document.createElement("button");
+  upload.className = "action";
+  upload.type = "button";
+  upload.textContent = "Add Files";
+  upload.onclick = () => fileInput.click();
+
+  const selected = scope && scope.id === folder.id;
+  const use = document.createElement("button");
+  use.className = "action secondary";
+  use.type = "button";
+  use.textContent = selected ? "Stop using in chat" : "Chat with this folder";
+  use.onclick = () => {
+    setScope(selected ? null : { id: folder.id, name: folder.name });
+    showFolder(folder);
+    if (!selected) setPanel(false);
+  };
+
+  panelFoot.replaceChildren(upload, use);
+}
+
+fileInput.onchange = async () => {
+  if (!openFolder || !fileInput.files.length) return;
+  const folder = openFolder;
+  const body = new FormData();
+  for (const file of fileInput.files) body.append("files", file);
+  fileInput.value = "";  // so re-picking the same file fires change again
+
+  panelBody.replaceChildren(message("Uploading…"));
+  try {
+    const res = await api(`/folders/${folder.id}/files`, { method: "POST", body });
+    if (res.failed.length) {
+      alert(res.failed.map(f => `${f.name}: ${f.error}`).join("\n"));
+    }
+  } catch (err) {
+    alert(err.message);
+  }
+  showFolder(folder);
+};
+
+function setScope(next) {
+  scope = next;
+  scopeBar.replaceChildren();
+  scopeBar.hidden = !next;
+  if (!next) return;
+
+  const chip = document.createElement("span");
+  chip.className = "chip";
+  const ic = icon(FOLDER_ICON, 14);
+  chip.appendChild(ic);
+  const name = document.createElement("span");
+  name.className = "name";
+  name.textContent = next.name;
+  chip.appendChild(name);
+
+  const clear = document.createElement("button");
+  clear.type = "button";
+  clear.setAttribute("aria-label", "Clear folder");
+  clear.appendChild(icon(
+    `<path d="M3 3l6 6M9 3l-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>`,
+    10, 12));
+  clear.onclick = () => setScope(null);
+  chip.appendChild(clear);
+
+  scopeBar.appendChild(chip);
+}
 
 modeSelect.addEventListener("change", () => {
   input.placeholder = modeSelect.value === "generate" ? "Text to continue…" : "Message";
@@ -485,6 +991,9 @@ form.addEventListener("submit", async e => {
       body: JSON.stringify({
         messages: chatting ? history : [{ role: "user", content: text }],
         mode,
+        // Ignored by the backend until retrieval lands; sent now so the two
+        // sides don't need changing together later.
+        folder_id: chatting && scope ? scope.id : null,
       }),
     });
     if (!res.ok) throw new Error("HTTP " + res.status);

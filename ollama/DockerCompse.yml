@@ -34,6 +34,11 @@ services:
       # Same trick as the UI below: edit backend/main.py and uvicorn --reload
       # restarts in-place. No rebuild in the refinement loop at all.
       - ./backend:/app
+      # Library files, bind-mounted so the folder tree is browsable from Finder.
+      - ./storage:/app/storage
+      # The SQLite file stays in a named volume instead: WAL locking over a
+      # macOS bind mount is unreliable, and this is metadata, not content.
+      - library-data:/app/data
     command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
     restart: unless-stopped
 
@@ -50,3 +55,4 @@ services:
 
 volumes:
   ollama-data:
+  library-data:

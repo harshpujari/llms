@@ -11,6 +11,7 @@
 fastapi==0.121.2
 uvicorn[standard]==0.42.0
 ollama==0.6.2
+python-multipart==0.0.32   # file uploads: FastAPI rejects multipart without it
 
 # --- transitive (do not edit by hand) -------------------------------------
 annotated-doc==0.0.5
