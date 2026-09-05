@@ -218,3 +218,5 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 ollama/storage/
+ollama/backend/data/
+ollama/backend/storage/

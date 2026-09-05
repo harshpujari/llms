@@ -12,16 +12,17 @@ from fastapi import FastAPI, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from ollama import AsyncClient
-from pydantic import BaseModel
 
-import library
+import models
+from models import file, folder
+from models.schemas import ChatRequest, FolderRequest
 
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://host.docker.internal:11434")
 MODEL = os.getenv("MODEL", "llama3.2:1b")
 
 app = FastAPI(title="Local Llama API")
 
-library.init()
+models.init()
 
 app.add_middleware(
     CORSMiddleware,
@@ -31,26 +32,6 @@ app.add_middleware(
 )
 
 client = AsyncClient(host=OLLAMA_HOST)
-
-
-class Message(BaseModel):
-    role: str
-    content: str
-
-
-class ChatRequest(BaseModel):
-    messages: list[Message]
-    # "chat"     -> wrapped in Llama 3.2's instruction template, history included
-    # "generate" -> raw completion, no template, no history: the model just
-    #               continues the text, the way a base model would.
-    mode: str = "chat"
-    # Accepted and ignored until retrieval lands -- the UI already tracks which
-    # library folder the conversation is scoped to, and this is where it arrives.
-    folder_id: int | None = None
-
-
-class FolderRequest(BaseModel):
-    name: str
 
 
 @app.get("/health")
@@ -73,28 +54,28 @@ async def health():
 
 @app.get("/folders")
 async def get_folders():
-    return library.list_folders()
+    return folder.list_all()
 
 
 @app.post("/folders", status_code=201)
 async def post_folder(req: FolderRequest):
     try:
-        return library.create_folder(req.name)
+        return folder.create(req.name)
     except ValueError as exc:
         raise HTTPException(400, str(exc))
 
 
 @app.delete("/folders/{folder_id}", status_code=204)
 async def remove_folder(folder_id: int):
-    if not library.delete_folder(folder_id):
+    if not folder.delete(folder_id):
         raise HTTPException(404, "no such folder")
 
 
 @app.get("/folders/{folder_id}/files")
 async def get_files(folder_id: int):
-    if not library.get_folder(folder_id):
+    if not folder.get(folder_id):
         raise HTTPException(404, "no such folder")
-    return library.list_files(folder_id)
+    return file.list_for(folder_id)
 
 
 @app.post("/folders/{folder_id}/files", status_code=201)
@@ -104,9 +85,9 @@ async def post_files(folder_id: int, files: list[UploadFile]):
     for upload in files:
         try:
             # UploadFile.file is a sync SpooledTemporaryFile, which is what
-            # save_file streams from -- nothing large is held in memory.
+            # file.save streams from -- nothing large is held in memory.
             saved.append(
-                library.save_file(folder_id, upload.filename, upload.file, upload.content_type)
+                file.save(folder_id, upload.filename, upload.file, upload.content_type)
             )
         except LookupError:
             raise HTTPException(404, "no such folder")
@@ -117,7 +98,7 @@ async def post_files(folder_id: int, files: list[UploadFile]):
 
 @app.delete("/files/{file_id}", status_code=204)
 async def remove_file(file_id: int):
-    if not library.delete_file(file_id):
+    if not file.delete(file_id):
         raise HTTPException(404, "no such file")
 
 
