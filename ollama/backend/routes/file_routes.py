@@ -3,7 +3,12 @@
 # Custom libraries
 from db_pool import get_db
 from logger import configure_logging
-from services import extract_service, library_service, storage_service
+from services import (
+    extract_service,
+    extraction_worker,
+    library_service,
+    storage_service,
+)
 
 # Default libraries
 import sqlite3
@@ -39,36 +44,45 @@ async def post_files(
     files: list[UploadFile],
     db: sqlite3.Connection = Depends(get_db),
 ):
-    """Multi-upload. A rejected file doesn't abort the ones beside it."""
+    """Multi-upload. Returns as soon as the bytes are stored -- text extraction
+    is queued and reported through each file's status. A rejected file doesn't
+    abort the ones beside it."""
     saved, failed = [], []
     for upload in files:
         try:
-            # Extraction is synchronous and CPU-bound -- a big PDF would block
-            # the event loop, and with it every in-flight chat stream.
-            # UploadFile.file is a sync SpooledTemporaryFile, so the read side
-            # belongs on the same thread.
-            saved.append(
-                await run_in_threadpool(
-                    library_service.save_file,
-                    db,
-                    folder_id,
-                    upload.filename,
-                    upload.file,
-                    upload.content_type,
-                )
+            # Writing the bytes is blocking I/O, so it goes to a worker thread.
+            # UploadFile.file is a sync SpooledTemporaryFile, which belongs on
+            # the same thread as the read loop that drains it.
+            row = await run_in_threadpool(
+                library_service.save_file,
+                db,
+                folder_id,
+                upload.filename,
+                upload.file,
+                upload.content_type,
             )
         except LookupError:
             raise HTTPException(404, "no such folder")
         except ValueError as exc:
             logger.info("rejected %s: %s", upload.filename, exc)
             failed.append({"name": upload.filename, "error": str(exc)})
-    return {"saved": saved, "failed": failed}
+            continue
+
+        # Back on the event loop after the await, which is the only place the
+        # asyncio queue may be touched.
+        extraction_worker.enqueue(row["id"])
+        saved.append(row)
+
+    return {"saved": saved, "failed": failed, "queued": extraction_worker.pending()}
 
 
 @file_router.post("/extract")
 async def post_extract(db: sqlite3.Connection = Depends(get_db)):
-    """Backfill: convert any file that has no extracted text yet."""
-    return await run_in_threadpool(library_service.backfill, db)
+    """Retry: re-queue every file without text, previous failures included."""
+    ids = library_service.files_missing_text(db)
+    for file_id in ids:
+        extraction_worker.enqueue(file_id)
+    return {"requeued": len(ids), "queued": extraction_worker.pending()}
 
 
 @file_router.get("/files/{file_id}/text")

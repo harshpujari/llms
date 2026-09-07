@@ -405,6 +405,12 @@
   .item .chev { flex: none; color: var(--secondary); }
   .item.active .icon { color: #34c759; }
 
+  /* Extraction states: queued fades, failed goes amber. */
+  .item.is-queued .icon { color: var(--secondary); }
+  .item.is-queued .meta { font-style: italic; }
+  .item.is-failed .icon { color: #ff9500; }
+  .item.is-failed .meta { color: #ff9500; }
+
   .del {
     flex: none;
     padding: 4px 6px;
@@ -633,6 +639,7 @@ const scopeBar = document.getElementById("scope");
 
 let scope = null;    // { id, name } or null
 let openFolder = null;
+let folderPoll = null;
 
 async function api(path, opts = {}) {
   const res = await fetch(API + path, opts);
@@ -689,9 +696,9 @@ function message(text) {
 
 // Every name below goes in via textContent: filenames are user input, and this
 // panel would otherwise be a clean injection path into the page.
-function row({ iconPaths, name, meta, onOpen, onDelete, active, chevron }) {
+function row({ iconPaths, name, meta, onOpen, onDelete, active, chevron, state }) {
   const el = document.createElement(onOpen ? "button" : "div");
-  el.className = "item" + (active ? " active" : "");
+  el.className = "item" + (active ? " active" : "") + (state ? " is-" + state : "");
   if (onOpen) {
     el.type = "button";
     el.onclick = onOpen;
@@ -733,6 +740,7 @@ function row({ iconPaths, name, meta, onOpen, onDelete, active, chevron }) {
 
 async function showFolders() {
   openFolder = null;
+  clearTimeout(folderPoll);
   panelTitle.textContent = "Library";
   panelBack.hidden = true;
   panelBody.replaceChildren(message("Loading…"));
@@ -788,11 +796,29 @@ async function showFolders() {
   panelFoot.replaceChildren(add);
 }
 
+// The three states are derived server-side from two nullable columns:
+// no text and no error means it's still in the queue.
+function fileState(f) {
+  if (f.extract_error) return "failed";
+  if (f.text_chars == null) return "queued";
+  return "done";
+}
+
+function extractionLabel(f) {
+  const state = fileState(f);
+  if (state === "failed") return "⚠︎ " + f.extract_error;
+  if (state === "queued") return "extracting…";
+  return `${f.text_chars.toLocaleString()} chars extracted`;
+}
+
 async function showFolder(folder) {
   openFolder = folder;
   panelTitle.textContent = folder.name;
   panelBack.hidden = false;
   panelBody.replaceChildren(message("Loading…"));
+
+  // Any pending refresh belongs to the view we're leaving.
+  clearTimeout(folderPoll);
 
   let files;
   try {
@@ -800,6 +826,14 @@ async function showFolder(folder) {
   } catch (err) {
     panelBody.replaceChildren(message("Couldn't load files: " + err.message));
     return;
+  }
+
+  // Extraction runs on a background worker, so rows land as "extracting…" and
+  // fill in one at a time. Poll only while something is actually queued.
+  if (files.some(f => fileState(f) === "queued")) {
+    folderPoll = setTimeout(() => {
+      if (openFolder && openFolder.id === folder.id) showFolder(folder);
+    }, 1200);
   }
 
   panelBody.replaceChildren();
@@ -812,11 +846,9 @@ async function showFolder(folder) {
       name: f.name,
       // text_chars is what retrieval will actually see, which is the number
       // worth surfacing -- a 4 MB PDF that extracted to 200 characters is a
-      // problem you want to notice here, not after embedding. null means the
-      // file predates extraction, or wouldn't convert.
-      meta: f.text_chars == null
-        ? `${formatBytes(f.bytes)} · ⚠︎ no text extracted`
-        : `${formatBytes(f.bytes)} · ${f.text_chars.toLocaleString()} chars extracted`,
+      // problem you want to notice here, not after embedding.
+      meta: `${formatBytes(f.bytes)} · ${extractionLabel(f)}`,
+      state: fileState(f),
       onDelete: async () => {
         await api(`/files/${f.id}`, { method: "DELETE" });
         showFolder(folder);
@@ -922,9 +954,9 @@ fileInput.onchange = async () => {
   for (const file of fileInput.files) body.append("files", file);
   fileInput.value = "";  // so re-picking the same file fires change again
 
-  // Extraction runs inside the upload request, so this can take a few seconds
-  // on a large PDF -- say so rather than looking hung.
-  panelBody.replaceChildren(message("Uploading and extracting text…"));
+  // The request returns once the bytes are stored; extraction happens on the
+  // worker afterwards, and the rows show their own progress.
+  panelBody.replaceChildren(message("Uploading…"));
   try {
     const res = await api(`/folders/${folder.id}/files`, { method: "POST", body });
     if (res.failed.length) {

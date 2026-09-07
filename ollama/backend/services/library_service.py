@@ -100,17 +100,12 @@ def save_file(
     display = storage_service.display_name(filename)
     stored = storage_service.unique_name(slug, storage_service.safe_filename(filename))
 
-    target, size, sha = storage_service.write_stream(slug, stored, source)
+    _target, size, sha = storage_service.write_stream(slug, stored, source)
 
-    # Extract before inserting the row. A file we can't convert never becomes
-    # part of the library at all -- no orphan on disk, no row, no silent
-    # zero-chunk document turning up later when retrieval finds nothing.
-    try:
-        text = extract_service.to_markdown(target)
-    except ValueError:
-        storage_service.remove_file(slug, stored)
-        raise
-
+    # The row lands with no text. Conversion is queued, not done here: a big
+    # batch would otherwise hold the request open for minutes. The caller
+    # enqueues the returned id -- this runs on a worker thread, and the queue
+    # can only be touched from the event loop.
     return FileRepository(db).create_file(
         {
             "folder_id": folder_id,
@@ -119,7 +114,6 @@ def save_file(
             "bytes": size,
             "sha256": sha,
             "mime": mime,
-            "text_content": text,
         }
     )
 
@@ -134,25 +128,10 @@ def delete_file(db: sqlite3.Connection, file_id: int) -> bool:
     return True
 
 
-def backfill(db: sqlite3.Connection) -> dict:
-    """Extract any file stored before extraction existed, or whose extraction
-    failed. Non-destructive: a file that still won't convert keeps its bytes and
-    simply stays without text, visible in the UI as un-extracted."""
-    repo = FileRepository(db)
-    done, failed = [], []
+def files_missing_text(db: sqlite3.Connection) -> list[int]:
+    """Ids of every file without extracted text, previous failures included.
 
-    for row in repo.get_files_without_text():
-        path = storage_service.file_path(row["slug"], row["stored_name"])
-        if not path.exists():
-            failed.append({"name": row["name"], "error": "file missing from storage"})
-            continue
-        try:
-            text = extract_service.to_markdown(path)
-        except ValueError as exc:
-            logger.info("backfill skipped %s: %s", row["name"], exc)
-            failed.append({"name": row["name"], "error": str(exc)})
-            continue
-        repo.update_file_text(row["id"], text)
-        done.append({"name": row["name"], "text_chars": len(text)})
-
-    return {"extracted": done, "failed": failed}
+    Retrying a failure is the point here -- this is the manual "try again"
+    path, unlike the worker's startup queue which skips known failures.
+    """
+    return [row["id"] for row in FileRepository(db).get_files_missing_text()]

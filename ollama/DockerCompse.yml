@@ -22,6 +22,17 @@ services:
     build:
       context: .
       dockerfile: DockerFile
+    # Extraction is CPU-bound and was taking ~1.4 cores of the 8-core VM,
+    # starving Ollama next door: chat went from 0.4s to 22s during a 30-file
+    # upload. Measured with a warm model, chat latency while 20 PDFs extract:
+    #
+    #   uncapped   22s      (unusable)
+    #   cpus: 2.0  1.1-6.8s (spiky)
+    #   cpus: 1.0  0.7-2.2s (steady)   <- here
+    #
+    # 1.0 makes the queue drain slower, which costs nothing now that extraction
+    # is a background job nobody waits on.
+    cpus: 1.0
     ports:
       - "8000:8000"
     environment:

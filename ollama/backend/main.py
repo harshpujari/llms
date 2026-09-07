@@ -14,7 +14,10 @@ from logger import configure_logging
 from routes.chat_routes import chat_router
 from routes.file_routes import file_router
 from routes.folder_routes import folder_router
-from services import storage_service
+from services import extraction_worker, storage_service
+
+# Default libraries
+from contextlib import asynccontextmanager
 
 # Installed libraries
 from fastapi import FastAPI
@@ -22,7 +25,18 @@ from fastapi.middleware.cors import CORSMiddleware
 
 logger = configure_logging(__name__)
 
-app = FastAPI(title="Local Llama API")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    storage_service.ensure_root()
+    init_db()
+    # Picks up anything a previous run left unextracted.
+    await extraction_worker.start()
+    yield
+    await extraction_worker.stop()
+
+
+app = FastAPI(title="Local Llama API", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
@@ -30,9 +44,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-storage_service.ensure_root()
-init_db()
 
 app.include_router(chat_router)
 app.include_router(folder_router)
