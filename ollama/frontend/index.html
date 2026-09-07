@@ -500,6 +500,152 @@
 
   .notice .limit { display: block; margin-top: 10px; }
 
+  /* --- File viewer ------------------------------------------------------
+     Presents from the bottom like an iOS sheet, over the panel and the chat. */
+
+  #viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    transform: translateY(100%);
+    visibility: hidden;
+    transition: transform 0.36s cubic-bezier(0.32, 0.72, 0, 1), visibility 0.36s;
+  }
+
+  #viewer.open { transform: none; visibility: visible; }
+
+  @media (prefers-reduced-motion: reduce) {
+    #viewer { transition: none; }
+  }
+
+  .viewer-head {
+    flex: none;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 12px calc(12px + env(safe-area-inset-top));
+    background: var(--header-bg);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 0.5px solid var(--sep);
+  }
+
+  .viewer-head h2 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #viewer-open { text-decoration: none; }
+
+  /* iOS segmented control: a recessed track with a raised selected pill. */
+  .seg-wrap {
+    flex: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 12px;
+    border-bottom: 0.5px solid var(--sep);
+  }
+
+  .seg {
+    display: inline-flex;
+    padding: 2px;
+    background: rgba(118, 118, 128, 0.24);
+    border-radius: 9px;
+  }
+
+  .seg button {
+    padding: 5px 18px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    background: none;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+
+  .seg button.on {
+    background: var(--bg);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+  }
+
+  .viewer-body {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 0;
+  }
+
+  .pane {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .pane + .pane { border-left: 0.5px solid var(--sep); }
+
+  .pane-head {
+    flex: none;
+    padding: 8px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    border-bottom: 0.5px solid var(--sep);
+  }
+
+  .pane-head span { font-weight: 400; text-transform: none; letter-spacing: 0; }
+
+  .pane-body {
+    flex: 1;
+    overflow: auto;
+    min-height: 0;
+  }
+
+  #viewer-doc { display: flex; }
+  #viewer-doc iframe { flex: 1; border: 0; background: #fff; }
+
+  #viewer-text {
+    padding: 18px 20px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+  }
+
+  /* Office formats the browser can't render: a card instead of a broken frame. */
+  .no-preview {
+    margin: auto;
+    padding: 32px 24px;
+    font-size: 14px;
+    color: var(--secondary);
+    text-align: center;
+  }
+
+  .no-preview strong { display: block; margin-bottom: 6px; color: var(--text); }
+
+  /* One pane at a time once both no longer fit; the segmented control picks. */
+  @media (max-width: 860px) {
+    .viewer-body { grid-template-columns: 1fr; }
+    .pane { display: none; }
+    .pane.showing { display: flex; }
+    .pane + .pane { border-left: 0; }
+  }
+
+  @media (min-width: 861px) {
+    .seg-wrap { display: none; }
+  }
+
   /* --- Scope chip -------------------------------------------------------
      Sits above the composer, where an attachment would: it's per-message
      state, so it belongs next to the message, not in the title bar. */
@@ -590,6 +736,45 @@
 </aside>
 
 <input type="file" id="file-input" multiple hidden />
+
+<!-- Presented full-screen over everything, the way QuickLook does: the panel
+     is 340px wide, which side-by-side panes can't live in. -->
+<div id="viewer" aria-hidden="true">
+  <div class="viewer-head">
+    <div>
+      <button id="viewer-close" class="nav-btn" type="button">
+        <svg width="11" height="16" viewBox="0 0 11 16" aria-hidden="true">
+          <path d="M8.5 2 2.5 8l6 6" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back
+      </button>
+    </div>
+    <h2 id="viewer-title"></h2>
+    <div style="justify-self: end">
+      <a id="viewer-open" class="nav-btn" target="_blank" rel="noopener">Open</a>
+    </div>
+  </div>
+
+  <!-- Only shown when the window is too narrow for both panes. -->
+  <div class="seg-wrap">
+    <div class="seg" id="viewer-seg" role="tablist">
+      <button type="button" data-pane="doc" class="on" role="tab">Document</button>
+      <button type="button" data-pane="text" role="tab">Extracted</button>
+    </div>
+  </div>
+
+  <div class="viewer-body">
+    <section class="pane" data-pane="doc">
+      <div class="pane-head">Original</div>
+      <div class="pane-body" id="viewer-doc"></div>
+    </section>
+    <section class="pane" data-pane="text">
+      <div class="pane-head">Extracted markdown <span id="viewer-chars"></span></div>
+      <div class="pane-body"><div id="viewer-text" class="md"></div></div>
+    </section>
+  </div>
+</div>
 
 <div id="log"></div>
 
@@ -684,7 +869,10 @@ document.getElementById("panel-close").onclick = () => setPanel(false);
 backdrop.onclick = () => setPanel(false);
 panelBack.onclick = () => showFolders();
 document.addEventListener("keydown", e => {
-  if (e.key === "Escape" && panel.classList.contains("open")) setPanel(false);
+  if (e.key !== "Escape") return;
+  // The viewer sits on top, so it closes first and reveals the panel again.
+  if (viewer.classList.contains("open")) closeViewer();
+  else if (panel.classList.contains("open")) setPanel(false);
 });
 
 function message(text) {
@@ -849,6 +1037,8 @@ async function showFolder(folder) {
       // problem you want to notice here, not after embedding.
       meta: `${formatBytes(f.bytes)} · ${extractionLabel(f)}`,
       state: fileState(f),
+      chevron: true,
+      onOpen: () => openViewer(f),
       onDelete: async () => {
         await api(`/files/${f.id}`, { method: "DELETE" });
         showFolder(folder);
@@ -967,6 +1157,105 @@ fileInput.onchange = async () => {
   }
   showFolder(folder);
 };
+
+// --- File viewer ---------------------------------------------------------
+
+const viewer = document.getElementById("viewer");
+const viewerTitle = document.getElementById("viewer-title");
+const viewerDoc = document.getElementById("viewer-doc");
+const viewerText = document.getElementById("viewer-text");
+const viewerChars = document.getElementById("viewer-chars");
+const viewerOpen = document.getElementById("viewer-open");
+const viewerSeg = document.getElementById("viewer-seg");
+
+// What the browser will render in a frame. Everything else gets a card with a
+// link -- an iframe of a .docx just downloads it or shows nothing.
+const INLINE_VIEWABLE = new Set([
+  ".pdf", ".txt", ".md", ".markdown", ".rst", ".csv", ".json", ".xml", ".html", ".htm",
+]);
+
+function extensionOf(name) {
+  const i = name.lastIndexOf(".");
+  return i < 0 ? "" : name.slice(i).toLowerCase();
+}
+
+function showPane(which) {
+  for (const pane of viewer.querySelectorAll(".pane")) {
+    pane.classList.toggle("showing", pane.dataset.pane === which);
+  }
+  for (const btn of viewerSeg.children) {
+    btn.classList.toggle("on", btn.dataset.pane === which);
+  }
+}
+
+viewerSeg.onclick = e => {
+  const btn = e.target.closest("button");
+  if (btn) showPane(btn.dataset.pane);
+};
+
+function closeViewer() {
+  viewer.classList.remove("open");
+  viewer.setAttribute("aria-hidden", "true");
+  // Drop the frame so the PDF stops holding memory and can't keep loading.
+  viewerDoc.replaceChildren();
+}
+
+document.getElementById("viewer-close").onclick = closeViewer;
+
+async function openViewer(f) {
+  const ext = extensionOf(f.name);
+  viewerTitle.textContent = f.name;
+  viewerOpen.href = `${API}/files/${f.id}/raw`;
+  viewer.classList.add("open");
+  viewer.setAttribute("aria-hidden", "false");
+  showPane("doc");
+
+  // --- original -----------------------------------------------------------
+  if (INLINE_VIEWABLE.has(ext)) {
+    const frame = document.createElement("iframe");
+    frame.src = `${API}/files/${f.id}/raw`;
+    frame.title = f.name;
+    viewerDoc.replaceChildren(frame);
+  } else {
+    const card = document.createElement("div");
+    card.className = "no-preview";
+    const title = document.createElement("strong");
+    title.textContent = `No preview for ${ext || "this format"}`;
+    const note = document.createElement("span");
+    note.textContent =
+      "The browser can't render it. Use Open to download the original — " +
+      "the extracted text beside it is what retrieval will use anyway.";
+    card.append(title, note);
+    viewerDoc.replaceChildren(card);
+  }
+
+  // --- extracted ----------------------------------------------------------
+  const state = fileState(f);
+  viewerChars.textContent = "";
+
+  if (state === "queued") {
+    viewerText.className = "";
+    viewerText.textContent = "Still extracting…";
+    return;
+  }
+  if (state === "failed") {
+    viewerText.className = "";
+    viewerText.textContent = "⚠︎ " + f.extract_error;
+    return;
+  }
+
+  viewerText.className = "";
+  viewerText.textContent = "Loading…";
+  try {
+    const doc = await api(`/files/${f.id}/text`);
+    viewerText.className = "md";
+    viewerText.innerHTML = renderMarkdown(doc.text_content || "");
+    viewerChars.textContent = `· ${(doc.text_content || "").length.toLocaleString()} chars`;
+  } catch (err) {
+    viewerText.className = "";
+    viewerText.textContent = "Couldn't load the extracted text: " + err.message;
+  }
+}
 
 function setScope(next) {
   scope = next;

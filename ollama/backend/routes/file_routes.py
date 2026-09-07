@@ -15,6 +15,8 @@ import sqlite3
 
 # Installed libraries
 from fastapi import APIRouter, Depends, HTTPException, UploadFile
+# Aliased: schemas.file_schema.FileResponse is a different thing entirely.
+from fastapi.responses import FileResponse as RawFile
 from starlette.concurrency import run_in_threadpool
 
 logger = configure_logging(__name__)
@@ -83,6 +85,25 @@ async def post_extract(db: sqlite3.Connection = Depends(get_db)):
     for file_id in ids:
         extraction_worker.enqueue(file_id)
     return {"requeued": len(ids), "queued": extraction_worker.pending()}
+
+
+@file_router.get("/files/{file_id}/raw")
+async def get_file_raw(file_id: int, db: sqlite3.Connection = Depends(get_db)):
+    """The original bytes, for the document pane of the viewer."""
+    found = library_service.file_on_disk(db, file_id)
+    if not found:
+        raise HTTPException(404, "no such file")
+    path, name, media_type = found
+
+    return RawFile(
+        path,
+        media_type=media_type,
+        filename=name,
+        # inline so the browser renders it in the iframe instead of downloading;
+        # nosniff so it can't second-guess the type we just decided on.
+        content_disposition_type="inline",
+        headers={"X-Content-Type-Options": "nosniff"},
+    )
 
 
 @file_router.get("/files/{file_id}/text")

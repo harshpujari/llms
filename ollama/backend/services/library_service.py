@@ -75,8 +75,25 @@ def list_files(db: sqlite3.Connection, folder_id: int) -> list[dict]:
     return FileRepository(db).get_files_by_folder(folder_id)
 
 
+def get_file(db: sqlite3.Connection, file_id: int) -> Optional[dict]:
+    return FileRepository(db).get_file(file_id)
+
+
 def file_text(db: sqlite3.Connection, file_id: int) -> Optional[dict]:
     return FileRepository(db).get_file_text(file_id)
+
+
+def file_on_disk(db: sqlite3.Connection, file_id: int) -> Optional[tuple]:
+    """(path, display name, media type) for serving the original bytes back."""
+    row = FileRepository(db).get_file(file_id)
+    if not row:
+        return None
+
+    path = storage_service.file_path(row["slug"], row["stored_name"])
+    if not path.exists():
+        return None
+
+    return path, row["name"], storage_service.safe_media_type(row["mime"], row["name"])
 
 
 def save_file(

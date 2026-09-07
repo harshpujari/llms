@@ -124,3 +124,43 @@ def write_stream(slug: str, stored: str, source) -> tuple[Path, int, str]:
 
 def remove_file(slug: str, stored_name: str) -> None:
     file_path(slug, stored_name).unlink(missing_ok=True)
+
+
+# Types the browser would execute, or treat as markup, in the API's own origin.
+# Uploaded content is not trusted enough for that, so it goes back as plain text.
+EXECUTABLE_TYPES = {
+    "text/html",
+    "application/xhtml+xml",
+    "image/svg+xml",
+    "application/xml",
+    "text/xml",
+}
+
+# Extensions the browser can render inline; everything else downloads instead.
+VIEWABLE_SUFFIXES = {
+    ".pdf": "application/pdf",
+    ".txt": "text/plain",
+    ".md": "text/plain",
+    ".markdown": "text/plain",
+    ".rst": "text/plain",
+    ".csv": "text/plain",
+    ".json": "text/plain",
+    ".xml": "text/plain",
+    ".html": "text/plain",
+    ".htm": "text/plain",
+}
+
+
+def safe_media_type(mime: str | None, name: str) -> str:
+    """What to serve a stored file as.
+
+    The extension decides, not the browser-supplied mime: the uploader chose
+    that header, and an .html served as text/html would run its scripts on the
+    API's origin.
+    """
+    suffix = Path(name).suffix.lower()
+    if suffix in VIEWABLE_SUFFIXES:
+        return VIEWABLE_SUFFIXES[suffix]
+    if mime and mime.lower() not in EXECUTABLE_TYPES:
+        return mime
+    return "application/octet-stream"
