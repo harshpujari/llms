@@ -1,6 +1,6 @@
-"""Database models. Table definitions and the queries against them, nothing else.
+"""Database models: table definitions only. Every query lives in `repository`.
 
-Importing this package registers every table with db_pool.Model, which is how
+Importing this package registers each table with db_pool.Model, which is how
 init_db() knows what to create -- the same job models/__init__.py does in
 assistcx-platform for SQLAlchemy's Base.
 """

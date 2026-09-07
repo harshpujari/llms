@@ -2,8 +2,8 @@
 
 A folder is a row *and* a directory; a file is a row, some bytes, and the
 markdown extracted from them. Keeping those in step -- and deciding what happens
-when half of it fails -- is this module's job. The models below it only run SQL,
-and storage/extract only touch the filesystem and MarkItDown respectively.
+when half of it fails -- is this module's job. Repositories below it only run
+SQL, and storage/extract only touch the filesystem and MarkItDown respectively.
 """
 
 # Custom libraries
@@ -11,7 +11,12 @@ from logger import configure_logging
 from services import extract_service, storage_service
 
 # Database modules
-from models import file as file_model, folder as folder_model
+from repository.file_repository import FileRepository
+from repository.folder_repository import FolderRepository
+
+# Default libraries
+import sqlite3
+from typing import Optional
 
 logger = configure_logging(__name__)
 
@@ -19,15 +24,15 @@ logger = configure_logging(__name__)
 # --- folders --------------------------------------------------------------
 
 
-def list_folders() -> list[dict]:
-    return folder_model.list_all()
+def list_folders(db: sqlite3.Connection) -> list[dict]:
+    return FolderRepository(db).get_all_folders()
 
 
-def get_folder(folder_id: int) -> dict | None:
-    return folder_model.get(folder_id)
+def get_folder(db: sqlite3.Connection, folder_id: int) -> Optional[dict]:
+    return FolderRepository(db).get_folder(folder_id)
 
 
-def create_folder(name: str) -> dict:
+def create_folder(db: sqlite3.Connection, name: str) -> dict:
     name = (name or "").strip()
     if not name:
         raise ValueError("folder name is required")
@@ -36,26 +41,29 @@ def create_folder(name: str) -> dict:
     if not base:
         raise ValueError("folder name must contain a letter or number")
 
+    repo = FolderRepository(db)
+
     # Two folders may legitimately share a display name; the slug is what has
     # to be unique, since it's a directory.
     slug, n = base, 1
-    while folder_model.slug_taken(slug):
+    while repo.slug_exists(slug):
         n += 1
         slug = f"{base}-{n}"
 
-    row = folder_model.insert(name, slug)
+    row = repo.create_folder({"name": name, "slug": slug})
     storage_service.make_folder(slug)
     return row
 
 
-def delete_folder(folder_id: int) -> bool:
-    row = folder_model.get(folder_id)
+def delete_folder(db: sqlite3.Connection, folder_id: int) -> bool:
+    repo = FolderRepository(db)
+    row = repo.get_folder(folder_id)
     if not row:
         return False
 
     # Row first: if the rmtree fails the folder is already unlisted, which is
     # recoverable. The reverse leaves rows pointing at files that don't exist.
-    folder_model.delete(folder_id)
+    repo.delete_folder(folder_id)
     storage_service.remove_folder(row["slug"])
     return True
 
@@ -63,12 +71,22 @@ def delete_folder(folder_id: int) -> bool:
 # --- files ----------------------------------------------------------------
 
 
-def list_files(folder_id: int) -> list[dict]:
-    return file_model.list_for(folder_id)
+def list_files(db: sqlite3.Connection, folder_id: int) -> list[dict]:
+    return FileRepository(db).get_files_by_folder(folder_id)
 
 
-def save_file(folder_id: int, filename: str, source, mime: str | None = None) -> dict:
-    parent = folder_model.get(folder_id)
+def file_text(db: sqlite3.Connection, file_id: int) -> Optional[dict]:
+    return FileRepository(db).get_file_text(file_id)
+
+
+def save_file(
+    db: sqlite3.Connection,
+    folder_id: int,
+    filename: str,
+    source,
+    mime: Optional[str] = None,
+) -> dict:
+    parent = FolderRepository(db).get_folder(folder_id)
     if not parent:
         raise LookupError("no such folder")
 
@@ -93,29 +111,37 @@ def save_file(folder_id: int, filename: str, source, mime: str | None = None) ->
         storage_service.remove_file(slug, stored)
         raise
 
-    return file_model.insert(folder_id, display, stored, size, sha, mime, text)
+    return FileRepository(db).create_file(
+        {
+            "folder_id": folder_id,
+            "name": display,
+            "stored_name": stored,
+            "bytes": size,
+            "sha256": sha,
+            "mime": mime,
+            "text_content": text,
+        }
+    )
 
 
-def delete_file(file_id: int) -> bool:
-    row = file_model.get(file_id)
+def delete_file(db: sqlite3.Connection, file_id: int) -> bool:
+    repo = FileRepository(db)
+    row = repo.get_file(file_id)
     if not row:
         return False
-    file_model.delete(file_id)
+    repo.delete_file(file_id)
     storage_service.remove_file(row["slug"], row["stored_name"])
     return True
 
 
-def file_text(file_id: int) -> dict | None:
-    return file_model.get_text(file_id)
-
-
-def backfill() -> dict:
+def backfill(db: sqlite3.Connection) -> dict:
     """Extract any file stored before extraction existed, or whose extraction
     failed. Non-destructive: a file that still won't convert keeps its bytes and
     simply stays without text, visible in the UI as un-extracted."""
+    repo = FileRepository(db)
     done, failed = [], []
 
-    for row in file_model.without_text():
+    for row in repo.get_files_without_text():
         path = storage_service.file_path(row["slug"], row["stored_name"])
         if not path.exists():
             failed.append({"name": row["name"], "error": "file missing from storage"})
@@ -123,9 +149,10 @@ def backfill() -> dict:
         try:
             text = extract_service.to_markdown(path)
         except ValueError as exc:
+            logger.info("backfill skipped %s: %s", row["name"], exc)
             failed.append({"name": row["name"], "error": str(exc)})
             continue
-        file_model.set_text(row["id"], text)
+        repo.update_file_text(row["id"], text)
         done.append({"name": row["name"], "text_chars": len(text)})
 
     return {"extracted": done, "failed": failed}

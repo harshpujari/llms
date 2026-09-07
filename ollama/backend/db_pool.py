@@ -46,7 +46,11 @@ def now() -> str:
 
 def connect() -> sqlite3.Connection:
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    db = sqlite3.connect(DB_PATH)
+    # check_same_thread=False because uploads hand the request's connection to a
+    # worker thread (run_in_threadpool) so extraction doesn't block the event
+    # loop. SQLite would otherwise refuse to be touched off its creating thread.
+    # Safe here: a request uses its connection sequentially, never concurrently.
+    db = sqlite3.connect(DB_PATH, check_same_thread=False)
     db.row_factory = sqlite3.Row
     # Off by default in SQLite: without this, ON DELETE CASCADE silently
     # does nothing and deleting a folder orphans all its file rows.
