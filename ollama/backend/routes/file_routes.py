@@ -88,8 +88,18 @@ async def post_extract(db: sqlite3.Connection = Depends(get_db)):
 
 
 @file_router.get("/files/{file_id}/raw")
-async def get_file_raw(file_id: int, db: sqlite3.Connection = Depends(get_db)):
-    """The original bytes, for the document pane of the viewer."""
+async def get_file_raw(
+    file_id: int,
+    download: bool = False,
+    db: sqlite3.Connection = Depends(get_db),
+):
+    """The original bytes.
+
+    Two callers, two dispositions: the viewer's iframe wants `inline` so the
+    browser renders it in place, the Download button wants `attachment` so it
+    saves regardless of type. It has to be decided here -- an <a download> is
+    ignored cross-origin, and the API is on a different port to the page.
+    """
     found = library_service.file_on_disk(db, file_id)
     if not found:
         raise HTTPException(404, "no such file")
@@ -99,9 +109,8 @@ async def get_file_raw(file_id: int, db: sqlite3.Connection = Depends(get_db)):
         path,
         media_type=media_type,
         filename=name,
-        # inline so the browser renders it in the iframe instead of downloading;
-        # nosniff so it can't second-guess the type we just decided on.
-        content_disposition_type="inline",
+        content_disposition_type="attachment" if download else "inline",
+        # nosniff: the browser must not second-guess the type we just decided on.
         headers={"X-Content-Type-Options": "nosniff"},
     )
 

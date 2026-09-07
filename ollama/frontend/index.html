@@ -210,6 +210,48 @@
   }
   .md pre code { background: none; padding: 0; font-size: 13px; }
 
+  /* Tables scroll inside their own box: extracted spec sheets run to a dozen
+     columns, and the page itself must never scroll sideways. */
+  .md .table-wrap {
+    margin: 10px 0;
+    overflow-x: auto;
+    border: 0.5px solid var(--sep);
+    border-radius: 10px;
+  }
+
+  .md table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .md th, .md td {
+    padding: 7px 10px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 0.5px solid var(--sep);
+  }
+
+  .md th + th, .md td + td { border-left: 0.5px solid var(--sep); }
+  .md tbody tr:last-child td { border-bottom: 0; }
+
+  .md thead th {
+    position: sticky;
+    top: 0;
+    font-weight: 600;
+    background: var(--bubble-them);
+  }
+
+  .md tbody tr:nth-child(even) { background: rgba(127, 127, 127, 0.06); }
+
+  .md hr {
+    height: 0;
+    margin: 14px 0;
+    border: 0;
+    border-top: 0.5px solid var(--sep);
+  }
+
   /* Three-dot typing indicator, shown until the first token lands. */
   .dots { display: inline-flex; gap: 4px; padding: 3px 2px; }
   .dots i {
@@ -544,7 +586,7 @@
     text-overflow: ellipsis;
   }
 
-  #viewer-open { text-decoration: none; }
+  #viewer-download { text-decoration: none; }
 
   /* iOS segmented control: a recessed track with a raised selected pill. */
   .seg-wrap {
@@ -752,7 +794,18 @@
     </div>
     <h2 id="viewer-title"></h2>
     <div style="justify-self: end">
-      <a id="viewer-open" class="nav-btn" target="_blank" rel="noopener">Open</a>
+      <!-- Mirrors the leading Back item: same glyph-plus-label shape. -->
+      <a id="viewer-download" class="nav-btn" rel="noopener">
+        <svg width="17" height="17" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M10 2.75v9.5m-3.75-3.75L10 12.25l3.75-3.75"
+                fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4 13v2.5a1.5 1.5 0 0 0 1.5 1.5h9a1.5 1.5 0 0 0 1.5-1.5V13"
+                fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Download
+      </a>
     </div>
   </div>
 
@@ -1165,7 +1218,7 @@ const viewerTitle = document.getElementById("viewer-title");
 const viewerDoc = document.getElementById("viewer-doc");
 const viewerText = document.getElementById("viewer-text");
 const viewerChars = document.getElementById("viewer-chars");
-const viewerOpen = document.getElementById("viewer-open");
+const viewerDownload = document.getElementById("viewer-download");
 const viewerSeg = document.getElementById("viewer-seg");
 
 // What the browser will render in a frame. Everything else gets a card with a
@@ -1205,7 +1258,12 @@ document.getElementById("viewer-close").onclick = closeViewer;
 async function openViewer(f) {
   const ext = extensionOf(f.name);
   viewerTitle.textContent = f.name;
-  viewerOpen.href = `${API}/files/${f.id}/raw`;
+  // ?download=1 makes the server send Content-Disposition: attachment, so this
+  // saves the file whatever its type -- rather than opening a PDF in a tab it
+  // is already showing in the pane below.
+  viewerDownload.href = `${API}/files/${f.id}/raw?download=1`;
+  viewerDownload.setAttribute("aria-label", `Download ${f.name}`);
+  viewerDownload.title = `Download the original ${extensionOf(f.name) || "file"}`;
   viewer.classList.add("open");
   viewer.setAttribute("aria-hidden", "false");
   showPane("doc");
@@ -1309,6 +1367,53 @@ function inlineMd(s) {
       /^https?:\/\//i.test(href) ? `<a href="${href}" target="_blank" rel="noopener">${text}</a>` : m);
 }
 
+// --- GFM pipe tables -----------------------------------------------------
+// MarkItDown turns every PDF table and spreadsheet into one of these, so a
+// renderer without them shows walls of literal pipes.
+
+function splitRow(line) {
+  let t = line.trim();
+  if (t.startsWith("|")) t = t.slice(1);
+  if (t.endsWith("|")) t = t.slice(0, -1);
+  return t.split("|");
+}
+
+function isTableRow(line) {
+  return line.trim().startsWith("|") && line.includes("|", 1);
+}
+
+// The row of dashes under the header: cells of only -, : and space.
+function isDelimiterRow(line) {
+  if (!line.includes("|") || !line.includes("-")) return false;
+  const cells = splitRow(line);
+  return cells.length > 0 && cells.every(c => /^\s*:?-+:?\s*$/.test(c));
+}
+
+function alignOf(cell) {
+  const t = cell.trim();
+  if (t.startsWith(":") && t.endsWith(":")) return "center";
+  if (t.endsWith(":")) return "right";
+  return "";
+}
+
+function renderTable(header, aligns, rows) {
+  const cell = (tag, text, align) =>
+    `<${tag}${align ? ` style="text-align:${align}"` : ""}>${inlineMd(text.trim())}</${tag}>`;
+
+  let out = '<div class="table-wrap"><table><thead><tr>';
+  header.forEach((c, i) => { out += cell("th", c, aligns[i]); });
+  out += "</tr></thead><tbody>";
+
+  for (const row of rows) {
+    out += "<tr>";
+    // Pad and truncate to the header width, the way GFM specifies -- extracted
+    // tables are ragged, and a stray cell would otherwise skew the whole grid.
+    for (let i = 0; i < header.length; i++) out += cell("td", row[i] ?? "", aligns[i]);
+    out += "</tr>";
+  }
+  return out + "</tbody></table></div>";
+}
+
 function renderMarkdown(src) {
   // Escaped up front, so everything below composes tags around inert text.
   const lines = escapeHtml(src).split("\n");
@@ -1327,7 +1432,10 @@ function renderMarkdown(src) {
   };
   const closeAll = () => { while (stack.length) closeOne(); };
 
-  for (const line of lines) {
+  // Indexed, not for..of: tables need to look at the next line to know they're
+  // a table at all, and then consume as many rows as follow.
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
     if (line.trim().startsWith("```")) {
       if (inCode) { html += `<pre><code>${code}</code></pre>`; code = ""; inCode = false; }
       else { closeAll(); inCode = true; }
@@ -1341,6 +1449,31 @@ function renderMarkdown(src) {
       closeAll();
       const level = heading[1].length;
       html += `<h${level}>${inlineMd(heading[2])}</h${level}>`;
+      continue;
+    }
+
+    // A table is a row whose next line is the dashes. Checked before lists,
+    // since a delimiter row on its own would otherwise look like a bullet.
+    if (isTableRow(line) && i + 1 < lines.length && isDelimiterRow(lines[i + 1])) {
+      closeAll();
+      const header = splitRow(line);
+      const aligns = splitRow(lines[i + 1]).map(alignOf);
+
+      const rows = [];
+      let j = i + 2;
+      while (j < lines.length && isTableRow(lines[j]) && !isDelimiterRow(lines[j])) {
+        rows.push(splitRow(lines[j]));
+        j++;
+      }
+      html += renderTable(header, aligns, rows);
+      i = j - 1; // the loop's ++ moves past the last row consumed
+      continue;
+    }
+
+    // A bare rule -- no pipes, so it can't be a table delimiter.
+    if (/^\s*([-*_])\s*(\1\s*){2,}$/.test(line)) {
+      closeAll();
+      html += "<hr>";
       continue;
     }
 
