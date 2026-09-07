@@ -33,6 +33,11 @@
 
   * { box-sizing: border-box; }
 
+  /* The `hidden` attribute only works through the UA stylesheet's
+     [hidden] { display: none }, which any author-level `display` rule outranks
+     -- .nav-btn and #scope both set one. This wins it back. */
+  [hidden] { display: none !important; }
+
   html, body {
     height: 100%;
     margin: 0;
@@ -435,6 +440,60 @@
   .action.secondary { color: var(--bubble-me); background: rgba(127, 127, 127, 0.14); }
   .action:active { opacity: 0.7; }
 
+  /* "Add Files" and its ⓘ share a row; the button takes the slack. */
+  .action-row { display: flex; gap: 8px; }
+  .action-row .action { flex: 1; }
+
+  .info-btn {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    padding: 0;
+    color: var(--bubble-me);
+    background: rgba(127, 127, 127, 0.14);
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  .info-btn[aria-expanded="true"] { color: #fff; background: var(--bubble-me); }
+
+  .notice {
+    padding: 12px 14px;
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--secondary);
+    background: rgba(127, 127, 127, 0.12);
+    border-radius: 12px;
+  }
+
+  .notice dl { margin: 0; }
+  .notice dt {
+    margin-top: 8px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .notice dt:first-child { margin-top: 0; }
+  .notice dd {
+    margin: 2px 0 0;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  /* The scanned-PDF caveat: the one thing here people get wrong. */
+  .notice .warn {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 10px;
+    color: var(--text);
+    background: rgba(255, 149, 0, 0.16);
+    border-radius: 8px;
+  }
+
+  .notice .limit { display: block; margin-top: 10px; }
+
   /* --- Scope chip -------------------------------------------------------
      Sits above the composer, where an attachment would: it's per-message
      state, so it belongs next to the message, not in the title bar. */
@@ -751,7 +810,13 @@ async function showFolder(folder) {
     panelBody.appendChild(row({
       iconPaths: DOC_ICON,
       name: f.name,
-      meta: formatBytes(f.bytes),
+      // text_chars is what retrieval will actually see, which is the number
+      // worth surfacing -- a 4 MB PDF that extracted to 200 characters is a
+      // problem you want to notice here, not after embedding. null means the
+      // file predates extraction, or wouldn't convert.
+      meta: f.text_chars == null
+        ? `${formatBytes(f.bytes)} · ⚠︎ no text extracted`
+        : `${formatBytes(f.bytes)} · ${f.text_chars.toLocaleString()} chars extracted`,
       onDelete: async () => {
         await api(`/files/${f.id}`, { method: "DELETE" });
         showFolder(folder);
@@ -765,6 +830,33 @@ async function showFolder(folder) {
   upload.textContent = "Add Files";
   upload.onclick = () => fileInput.click();
 
+  const info = document.createElement("button");
+  info.className = "info-btn";
+  info.type = "button";
+  info.setAttribute("aria-label", "Supported formats");
+  info.setAttribute("aria-expanded", "false");
+  info.appendChild(icon(
+    `<circle cx="10" cy="10" r="7.75" fill="none" stroke="currentColor" stroke-width="1.6"/>
+     <path d="M10 9v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+     <circle cx="10" cy="6.2" r="1" fill="currentColor"/>`));
+
+  const notice = await formatsNotice();
+  notice.hidden = true;
+
+  // Filters the OS picker to the allowlist. A convenience only -- the browser
+  // lets you override it, which is why the server checks the same list.
+  if (formatsCache) {
+    fileInput.accept = formatsCache.groups.flatMap(g => g.extensions).join(",");
+  }
+  info.onclick = () => {
+    notice.hidden = !notice.hidden;
+    info.setAttribute("aria-expanded", String(!notice.hidden));
+  };
+
+  const actions = document.createElement("div");
+  actions.className = "action-row";
+  actions.append(upload, info);
+
   const selected = scope && scope.id === folder.id;
   const use = document.createElement("button");
   use.className = "action secondary";
@@ -776,7 +868,51 @@ async function showFolder(folder) {
     if (!selected) setPanel(false);
   };
 
-  panelFoot.replaceChildren(upload, use);
+  panelFoot.replaceChildren(notice, actions, use);
+}
+
+// Fetched once from /formats so the allowlist has a single definition -- the
+// backend rejects on the same list this renders.
+let formatsCache = null;
+
+async function formatsNotice() {
+  const box = document.createElement("div");
+  box.className = "notice";
+
+  if (!formatsCache) {
+    try {
+      formatsCache = await api("/formats");
+    } catch {
+      box.textContent = "Couldn't load the list of supported formats.";
+      return box;
+    }
+  }
+
+  const dl = document.createElement("dl");
+  for (const group of formatsCache.groups) {
+    const dt = document.createElement("dt");
+    dt.textContent = group.label;
+    const dd = document.createElement("dd");
+    dd.textContent = group.extensions.join("  ");
+    dl.append(dt, dd);
+  }
+  box.appendChild(dl);
+
+  // Any group carrying a note gets it called out -- today that's the PDF one.
+  for (const group of formatsCache.groups) {
+    if (!group.note) continue;
+    const warn = document.createElement("strong");
+    warn.className = "warn";
+    warn.textContent = group.note;
+    box.appendChild(warn);
+  }
+
+  const limit = document.createElement("span");
+  limit.className = "limit";
+  limit.textContent = `Up to ${formatsCache.max_mb} MB per file. Text is extracted on upload; anything we can't read is rejected.`;
+  box.appendChild(limit);
+
+  return box;
 }
 
 fileInput.onchange = async () => {
@@ -786,11 +922,13 @@ fileInput.onchange = async () => {
   for (const file of fileInput.files) body.append("files", file);
   fileInput.value = "";  // so re-picking the same file fires change again
 
-  panelBody.replaceChildren(message("Uploading…"));
+  // Extraction runs inside the upload request, so this can take a few seconds
+  // on a large PDF -- say so rather than looking hung.
+  panelBody.replaceChildren(message("Uploading and extracting text…"));
   try {
     const res = await api(`/folders/${folder.id}/files`, { method: "POST", body });
     if (res.failed.length) {
-      alert(res.failed.map(f => `${f.name}: ${f.error}`).join("\n"));
+      alert(res.failed.map(f => `${f.name}\n${f.error}`).join("\n\n"));
     }
   } catch (err) {
     alert(err.message);

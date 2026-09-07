@@ -30,6 +30,10 @@ CREATE TABLE IF NOT EXISTS files (
   sha256      TEXT NOT NULL,
   mime        TEXT,
   created_at  TEXT NOT NULL,
+  -- The markdown MarkItDown produced. This, not the original, is what
+  -- retrieval chunks and embeds.
+  text_content TEXT,
+  extracted_at TEXT,
   -- Reserved for retrieval: null until the file has been chunked and embedded.
   indexed_at  TEXT,
   chunk_count INTEGER NOT NULL DEFAULT 0,
@@ -38,6 +42,15 @@ CREATE TABLE IF NOT EXISTS files (
 
 CREATE INDEX IF NOT EXISTS files_folder ON files(folder_id);
 """
+
+# CREATE TABLE IF NOT EXISTS won't alter a table that already exists, so columns
+# added after the first release need backfilling by hand.
+MIGRATIONS = {
+    "files": {
+        "text_content": "TEXT",
+        "extracted_at": "TEXT",
+    },
+}
 
 
 def now() -> str:
@@ -58,3 +71,8 @@ def connect() -> sqlite3.Connection:
 def init_schema() -> None:
     with connect() as db:
         db.executescript(SCHEMA)
+        for table, columns in MIGRATIONS.items():
+            have = {r["name"] for r in db.execute(f"PRAGMA table_info({table})")}
+            for name, ddl in columns.items():
+                if name not in have:
+                    db.execute(f"ALTER TABLE {table} ADD COLUMN {name} {ddl}")

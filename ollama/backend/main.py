@@ -12,9 +12,10 @@ from fastapi import FastAPI, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from ollama import AsyncClient
+from starlette.concurrency import run_in_threadpool
 
 import models
-from models import file, folder
+from models import extract, file, folder
 from models.schemas import ChatRequest, FolderRequest
 
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://host.docker.internal:11434")
@@ -78,22 +79,47 @@ async def get_files(folder_id: int):
     return file.list_for(folder_id)
 
 
+@app.get("/formats")
+async def get_formats():
+    """One source of truth for the upload allowlist -- the UI renders this."""
+    return {"groups": extract.FORMAT_GROUPS, "max_mb": models.paths.MAX_UPLOAD_BYTES // (1024 * 1024)}
+
+
 @app.post("/folders/{folder_id}/files", status_code=201)
 async def post_files(folder_id: int, files: list[UploadFile]):
     """Multi-upload. A rejected file doesn't abort the ones beside it."""
     saved, failed = [], []
     for upload in files:
         try:
-            # UploadFile.file is a sync SpooledTemporaryFile, which is what
-            # file.save streams from -- nothing large is held in memory.
+            # Extraction is synchronous and CPU-bound -- a big PDF would block
+            # the event loop, and with it every in-flight chat stream.
+            # UploadFile.file is a sync SpooledTemporaryFile, so the read side
+            # belongs on the same thread.
             saved.append(
-                file.save(folder_id, upload.filename, upload.file, upload.content_type)
+                await run_in_threadpool(
+                    file.save, folder_id, upload.filename, upload.file, upload.content_type
+                )
             )
         except LookupError:
             raise HTTPException(404, "no such folder")
         except ValueError as exc:
             failed.append({"name": upload.filename, "error": str(exc)})
     return {"saved": saved, "failed": failed}
+
+
+@app.post("/extract")
+async def post_extract():
+    """Backfill: convert any file that has no extracted text yet."""
+    return await run_in_threadpool(file.backfill)
+
+
+@app.get("/files/{file_id}/text")
+async def get_file_text(file_id: int):
+    """The extracted markdown -- what retrieval will chunk, not the original."""
+    row = file.get_text(file_id)
+    if not row:
+        raise HTTPException(404, "no such file")
+    return row
 
 
 @app.delete("/files/{file_id}", status_code=204)
