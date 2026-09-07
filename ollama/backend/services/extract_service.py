@@ -10,8 +10,10 @@ layer, so a scanned or photographed PDF converts to nothing at all -- which is
 why empty extractions are rejected loudly rather than stored as an empty file.
 """
 
+# Default libraries
 from pathlib import Path
 
+# Installed libraries
 from markitdown import MarkItDown
 
 # Anything shorter than this is treated as "nothing came out". A real document

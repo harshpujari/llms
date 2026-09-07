@@ -1,29 +1,28 @@
-"""Thin streaming proxy in front of a local Ollama server.
+"""Application entry point: configuration, middleware, and router mounting.
 
-The container holds no weights. It forwards to whatever OLLAMA_HOST points at --
-by default the Ollama running natively on the Mac, so inference keeps Metal
-acceleration instead of falling back to CPU inside the Docker VM.
+Layering, top to bottom:
+
+    routes    -> HTTP surface, no logic
+    services  -> the business logic
+    models    -> tables and the SQL against them
+    schemas   -> what crosses the HTTP boundary
 """
 
-import json
-import os
+# Custom libraries
+from db_pool import init_db
+from logger import configure_logging
+from routes.chat_routes import chat_router
+from routes.file_routes import file_router
+from routes.folder_routes import folder_router
+from services import storage_service
 
-from fastapi import FastAPI, HTTPException, UploadFile
+# Installed libraries
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
-from ollama import AsyncClient
-from starlette.concurrency import run_in_threadpool
 
-import models
-from models import extract, file, folder
-from models.schemas import ChatRequest, FolderRequest
-
-OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://host.docker.internal:11434")
-MODEL = os.getenv("MODEL", "llama3.2:1b")
+logger = configure_logging(__name__)
 
 app = FastAPI(title="Local Llama API")
-
-models.init()
 
 app.add_middleware(
     CORSMiddleware,
@@ -32,138 +31,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-client = AsyncClient(host=OLLAMA_HOST)
+storage_service.ensure_root()
+init_db()
 
-
-@app.get("/health")
-async def health():
-    """Reports the upstream too -- a 200 here means Ollama is genuinely reachable."""
-    try:
-        models = await client.list()
-        return {
-            "ok": True,
-            "ollama": OLLAMA_HOST,
-            "model": MODEL,
-            "available": [m["model"] for m in models["models"]],
-        }
-    except Exception as exc:
-        return {"ok": False, "ollama": OLLAMA_HOST, "error": str(exc)}
-
-
-# --- library --------------------------------------------------------------
-
-
-@app.get("/folders")
-async def get_folders():
-    return folder.list_all()
-
-
-@app.post("/folders", status_code=201)
-async def post_folder(req: FolderRequest):
-    try:
-        return folder.create(req.name)
-    except ValueError as exc:
-        raise HTTPException(400, str(exc))
-
-
-@app.delete("/folders/{folder_id}", status_code=204)
-async def remove_folder(folder_id: int):
-    if not folder.delete(folder_id):
-        raise HTTPException(404, "no such folder")
-
-
-@app.get("/folders/{folder_id}/files")
-async def get_files(folder_id: int):
-    if not folder.get(folder_id):
-        raise HTTPException(404, "no such folder")
-    return file.list_for(folder_id)
-
-
-@app.get("/formats")
-async def get_formats():
-    """One source of truth for the upload allowlist -- the UI renders this."""
-    return {"groups": extract.FORMAT_GROUPS, "max_mb": models.paths.MAX_UPLOAD_BYTES // (1024 * 1024)}
-
-
-@app.post("/folders/{folder_id}/files", status_code=201)
-async def post_files(folder_id: int, files: list[UploadFile]):
-    """Multi-upload. A rejected file doesn't abort the ones beside it."""
-    saved, failed = [], []
-    for upload in files:
-        try:
-            # Extraction is synchronous and CPU-bound -- a big PDF would block
-            # the event loop, and with it every in-flight chat stream.
-            # UploadFile.file is a sync SpooledTemporaryFile, so the read side
-            # belongs on the same thread.
-            saved.append(
-                await run_in_threadpool(
-                    file.save, folder_id, upload.filename, upload.file, upload.content_type
-                )
-            )
-        except LookupError:
-            raise HTTPException(404, "no such folder")
-        except ValueError as exc:
-            failed.append({"name": upload.filename, "error": str(exc)})
-    return {"saved": saved, "failed": failed}
-
-
-@app.post("/extract")
-async def post_extract():
-    """Backfill: convert any file that has no extracted text yet."""
-    return await run_in_threadpool(file.backfill)
-
-
-@app.get("/files/{file_id}/text")
-async def get_file_text(file_id: int):
-    """The extracted markdown -- what retrieval will chunk, not the original."""
-    row = file.get_text(file_id)
-    if not row:
-        raise HTTPException(404, "no such file")
-    return row
-
-
-@app.delete("/files/{file_id}", status_code=204)
-async def remove_file(file_id: int):
-    if not file.delete(file_id):
-        raise HTTPException(404, "no such file")
-
-
-# --- chat -----------------------------------------------------------------
-
-
-@app.post("/chat")
-async def chat(req: ChatRequest):
-    """Streams NDJSON: one {"token": ...} per chunk, then {"done": true}."""
-
-    options = {"temperature": 0.7, "num_ctx": 4096}
-
-    async def stream():
-        try:
-            if req.mode == "generate":
-                # Only the latest user turn: a raw continuation has no notion of
-                # conversation, and num_predict stops it rambling to num_ctx.
-                prompt = next(
-                    (m.content for m in reversed(req.messages) if m.role == "user"), ""
-                )
-                async for chunk in await client.generate(
-                    model=MODEL,
-                    prompt=prompt,
-                    stream=True,
-                    options={**options, "num_predict": 256},
-                ):
-                    yield json.dumps({"token": chunk["response"]}) + "\n"
-            else:
-                async for chunk in await client.chat(
-                    model=MODEL,
-                    messages=[m.model_dump() for m in req.messages],
-                    stream=True,
-                    options=options,
-                ):
-                    yield json.dumps({"token": chunk["message"]["content"]}) + "\n"
-            yield json.dumps({"done": True}) + "\n"
-        except Exception as exc:
-            # The response has already started, so errors ride the stream itself
-            # rather than surfacing as an HTTP status the browser can act on.
-            yield json.dumps({"error": str(exc)}) + "\n"
-
-    return StreamingResponse(stream(), media_type="application/x-ndjson")
+app.include_router(chat_router)
+app.include_router(folder_router)
+app.include_router(file_router)

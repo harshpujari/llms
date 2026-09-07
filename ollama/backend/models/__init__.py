@@ -1,25 +1,12 @@
-"""Data models for the Library.
+"""Database models. Table definitions and the queries against them, nothing else.
 
-Two stores, deliberately:
-
-  * SQLite (in a volume) holds the metadata -- names, sizes, hashes, and the
-    indexing state retrieval will need later.
-  * ./storage (bind-mounted) holds the bytes, in a directory tree that mirrors
-    the folder list, so files stay inspectable from the host.
-
-    db       connection, schema, timestamps
-    paths    user input -> filesystem paths, safely
-    folder   folders
-    file     files within a folder
-    schemas  Pydantic request bodies
+Importing this package registers every table with db_pool.Model, which is how
+init_db() knows what to create -- the same job models/__init__.py does in
+assistcx-platform for SQLAlchemy's Base.
 """
 
-from . import db, file, folder, paths, schemas
+# Database modules
+from models.file import File
+from models.folder import Folder
 
-__all__ = ["db", "file", "folder", "paths", "schemas", "init"]
-
-
-def init() -> None:
-    """Create the storage root and the tables. Safe to call on every boot."""
-    paths.ensure_root()
-    db.init_schema()
+__all__ = ["File", "Folder"]

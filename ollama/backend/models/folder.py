@@ -1,13 +1,24 @@
-"""Folders: the top level of the Library, one directory each under ./storage."""
+"""The folders table: the top level of the Library, one directory each."""
 
-import shutil
+# Custom libraries
+from db_pool import Model, connect, now
 
-from . import db, paths
+
+class Folder(Model):
+    __tablename__ = "folders"
+    __schema__ = """
+    CREATE TABLE IF NOT EXISTS folders (
+      id         INTEGER PRIMARY KEY,
+      name       TEXT NOT NULL,          -- as typed, shown in the UI
+      slug       TEXT NOT NULL UNIQUE,   -- the directory name under STORAGE_ROOT
+      created_at TEXT NOT NULL
+    );
+    """
 
 
 def list_all() -> list[dict]:
-    with db.connect() as conn:
-        rows = conn.execute(
+    with connect() as db:
+        rows = db.execute(
             """
             SELECT f.*,
                    COUNT(fi.id)               AS file_count,
@@ -22,47 +33,27 @@ def list_all() -> list[dict]:
 
 
 def get(folder_id: int) -> dict | None:
-    with db.connect() as conn:
-        row = conn.execute("SELECT * FROM folders WHERE id = ?", (folder_id,)).fetchone()
+    with connect() as db:
+        row = db.execute("SELECT * FROM folders WHERE id = ?", (folder_id,)).fetchone()
     return dict(row) if row else None
 
 
-def create(name: str) -> dict:
-    name = (name or "").strip()
-    if not name:
-        raise ValueError("folder name is required")
+def slug_taken(slug: str) -> bool:
+    with connect() as db:
+        return db.execute("SELECT 1 FROM folders WHERE slug = ?", (slug,)).fetchone() is not None
 
-    base = paths.slugify(name)
-    if not base:
-        raise ValueError("folder name must contain a letter or number")
 
-    with db.connect() as conn:
-        # Two folders may legitimately share a display name; the slug is what
-        # has to be unique, since it's a directory.
-        slug, n = base, 1
-        while conn.execute("SELECT 1 FROM folders WHERE slug = ?", (slug,)).fetchone():
-            n += 1
-            slug = f"{base}-{n}"
-
-        cur = conn.execute(
+def insert(name: str, slug: str) -> dict:
+    with connect() as db:
+        cur = db.execute(
             "INSERT INTO folders (name, slug, created_at) VALUES (?, ?, ?)",
-            (name, slug, db.now()),
+            (name, slug, now()),
         )
         folder_id = cur.lastrowid
-
-    paths.folder_path(slug).mkdir(parents=True, exist_ok=True)
     return {"id": folder_id, "name": name, "slug": slug, "file_count": 0, "total_bytes": 0}
 
 
 def delete(folder_id: int) -> bool:
-    row = get(folder_id)
-    if not row:
-        return False
-
-    # Rows first: if the rmtree fails the folder is still listed, which is
-    # recoverable. The reverse leaves rows pointing at files that don't exist.
-    with db.connect() as conn:
-        conn.execute("DELETE FROM folders WHERE id = ?", (folder_id,))
-
-    shutil.rmtree(paths.folder_path(row["slug"]), ignore_errors=True)
-    return True
+    with connect() as db:
+        cur = db.execute("DELETE FROM folders WHERE id = ?", (folder_id,))
+    return cur.rowcount > 0

@@ -1,6 +1,9 @@
-"""Request bodies for the API. Pydantic validates and coerces at the edge, so
-nothing below this layer has to re-check types."""
+"""Request bodies for the chat endpoint."""
 
+# Default libraries
+from typing import Optional
+
+# Installed libraries
 from pydantic import BaseModel
 
 
@@ -17,8 +20,4 @@ class ChatRequest(BaseModel):
     mode: str = "chat"
     # Accepted and ignored until retrieval lands -- the UI already tracks which
     # library folder the conversation is scoped to, and this is where it arrives.
-    folder_id: int | None = None
-
-
-class FolderRequest(BaseModel):
-    name: str
+    folder_id: Optional[int] = None
