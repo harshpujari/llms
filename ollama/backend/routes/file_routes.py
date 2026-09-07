@@ -79,9 +79,12 @@ async def post_files(
 
 
 @file_router.post("/extract")
-async def post_extract(db: sqlite3.Connection = Depends(get_db)):
-    """Retry: re-queue every file without text, previous failures included."""
-    ids = library_service.files_missing_text(db)
+async def post_extract(
+    force: bool = False,
+    db: sqlite3.Connection = Depends(get_db),
+):
+    """Re-queue extraction: files without text, or all of them with ?force=1."""
+    ids = library_service.files_to_extract(db, force)
     for file_id in ids:
         extraction_worker.enqueue(file_id)
     return {"requeued": len(ids), "queued": extraction_worker.pending()}

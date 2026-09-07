@@ -245,6 +245,29 @@
 
   .md tbody tr:nth-child(even) { background: rgba(127, 127, 127, 0.06); }
 
+  /* Page boundary: a rule with the number set into it. */
+  .md .page-sep {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 22px 0 14px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--secondary);
+  }
+
+  .md .page-sep::before,
+  .md .page-sep::after {
+    content: "";
+    flex: 1;
+    height: 0;
+    border-top: 0.5px solid var(--sep);
+  }
+
+  .md > .page-sep:first-child { margin-top: 0; }
+
   .md hr {
     height: 0;
     margin: 14px 0;
@@ -1448,6 +1471,16 @@ function renderMarkdown(src) {
     if (heading) {
       closeAll();
       const level = heading[1].length;
+
+      // "## Page 3" / "## Slide 7" are the boundary markers extraction writes.
+      // Shown as a labelled rule rather than another heading, so they read as
+      // boundaries instead of competing with the document's real headings.
+      const boundary = level === 2 && heading[2].match(/^(Page|Slide) (\d+)$/);
+      if (boundary) {
+        html += `<div class="page-sep"><span>${boundary[1]} ${boundary[2]}</span></div>`;
+        continue;
+      }
+
       html += `<h${level}>${inlineMd(heading[2])}</h${level}>`;
       continue;
     }

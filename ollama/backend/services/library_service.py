@@ -145,10 +145,13 @@ def delete_file(db: sqlite3.Connection, file_id: int) -> bool:
     return True
 
 
-def files_missing_text(db: sqlite3.Connection) -> list[int]:
-    """Ids of every file without extracted text, previous failures included.
+def files_to_extract(db: sqlite3.Connection, force: bool = False) -> list[int]:
+    """Ids to hand the worker.
 
-    Retrying a failure is the point here -- this is the manual "try again"
-    path, unlike the worker's startup queue which skips known failures.
+    Without force: everything lacking text, previous failures included -- the
+    manual "try again", unlike the worker's startup queue which skips failures.
+    With force: everything, for re-running after the parser itself changes.
     """
-    return [row["id"] for row in FileRepository(db).get_files_missing_text()]
+    repo = FileRepository(db)
+    rows = repo.get_all_file_ids() if force else repo.get_files_missing_text()
+    return [row["id"] for row in rows]

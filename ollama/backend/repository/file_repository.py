@@ -64,6 +64,11 @@ class FileRepository:
         ).fetchall()
         return [dict(r) for r in rows]
 
+    def get_all_file_ids(self) -> list[dict]:
+        """Every file, for a forced re-extraction after the parser changes."""
+        rows = self.db.execute("SELECT id FROM files ORDER BY id").fetchall()
+        return [dict(r) for r in rows]
+
     def get_files_missing_text(self) -> list[dict]:
         """Everything without text, failures included -- the manual retry set."""
         rows = self.db.execute(
