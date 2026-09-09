@@ -6,7 +6,8 @@ assistcx-platform for SQLAlchemy's Base.
 """
 
 # Database modules
+from models.chunk import Chunk
 from models.file import File
 from models.folder import Folder
 
-__all__ = ["File", "Folder"]
+__all__ = ["Chunk", "File", "Folder"]
