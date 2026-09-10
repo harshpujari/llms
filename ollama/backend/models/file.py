@@ -28,6 +28,11 @@ class File(Model):
       -- Reserved for retrieval: null until chunked and embedded.
       indexed_at  TEXT,
       chunk_count INTEGER NOT NULL DEFAULT 0,
+      -- The document summary, built from its chunks' summaries rather than
+      -- its opening pages. NULL until every chunk has been summarized.
+      summary       TEXT,
+      summary_model TEXT,               -- which model wrote it, so it can be redone
+      summarized_at TEXT,
       UNIQUE (folder_id, stored_name)
     );
 
@@ -39,10 +44,15 @@ class File(Model):
         "text_content": "TEXT",
         "extracted_at": "TEXT",
         "extract_error": "TEXT",
+        "summary": "TEXT",
+        "summary_model": "TEXT",
+        "summarized_at": "TEXT",
     }
 
     # Every column except text_content, which can be megabytes and has no
-    # business in a directory listing. Its length comes back instead.
+    # business in a directory listing. Its length comes back instead. summary
+    # stays out for the same reason; summarized_at is enough to show status.
     LIST_COLUMNS = """id, folder_id, name, stored_name, bytes, sha256, mime,
                       created_at, extracted_at, extract_error, indexed_at,
-                      chunk_count, LENGTH(text_content) AS text_chars"""
+                      chunk_count, summarized_at,
+                      LENGTH(text_content) AS text_chars"""
