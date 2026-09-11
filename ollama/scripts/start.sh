@@ -3,7 +3,6 @@
 #
 #   ./scripts/start.sh           start everything (ollama + api + ui)
 #   ./scripts/start.sh --build   force a rebuild (needed after requirements.txt changes)
-#   ./scripts/start.sh --stop    stop everything
 #   ./scripts/start.sh --logs    follow logs
 #
 # Fully self-contained: Ollama runs in a container and the model lives in the
@@ -22,17 +21,12 @@ BUILD=0
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --build) BUILD=1 ;;
-    --stop)
-      "${COMPOSE[@]}" down
-      echo "stopped. (the model stays in the ollama-data volume)"
-      exit 0
-      ;;
     --logs)
       exec "${COMPOSE[@]}" logs -f
       ;;
     *)
       echo "unknown option: $1" >&2
-      sed -n '2,13p' "${BASH_SOURCE[0]}" >&2
+      sed -n '2,12p' "${BASH_SOURCE[0]}" >&2
       exit 1
       ;;
   esac
@@ -58,7 +52,7 @@ fi
 
 "${COMPOSE[@]}" "${UP[@]}"
 
-# The volume survives --stop, so this only downloads on a genuinely fresh setup.
+# The volume survives ./scripts/stop.sh, so this only downloads on a genuinely fresh setup.
 if ! "${COMPOSE[@]}" exec -T ollama ollama list 2>/dev/null | grep -q "$MODEL"; then
   echo "==> pulling $MODEL into the volume (~1.3 GB, first run only)"
   "${COMPOSE[@]}" exec -T ollama ollama pull "$MODEL"
@@ -91,4 +85,4 @@ echo "  API     http://localhost:8000/docs"
 echo "  Ollama  http://localhost:11434"
 echo
 echo "  logs  ./scripts/start.sh --logs"
-echo "  stop  ./scripts/start.sh --stop"
+echo "  stop  ./scripts/stop.sh"
