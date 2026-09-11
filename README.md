@@ -14,3 +14,19 @@ Everything runs in Docker. Nothing is installed on the host, and no data leaves 
 ---
 
 ## Table of contents
+
+- [Features](#features)
+- [Architecture](#architecture)
+- [Quick start](#quick-start)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [API](#api)
+- [Project structure](#project-structure)
+- [Development](#development)
+- [Troubleshooting](#troubleshooting)
+- [FAQ](#faq)
+- [Roadmap](#roadmap)
+- [Security](#security)
+- [Contributing](#contributing)
+- [Other projects in this repo](#other-projects-in-this-repo)
+- [License](#license)
