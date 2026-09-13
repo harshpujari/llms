@@ -40,3 +40,14 @@ Everything runs in Docker. Nothing is installed on the host, and no data leaves 
 - **File viewer**: preview the original file, read the extracted text, or download it.
 - **One-command lifecycle**: `./scripts/start.sh` and `./scripts/stop.sh`.
 - **Live reload**: backend and frontend are bind-mounted, so code edits need no rebuild.
+
+## Architecture
+
+```
+ browser ──▶  web  (nginx, :3000)           serves frontend/index.html
+    │
+    └────▶  api  (FastAPI, :8000)  ──▶  ollama  (:11434)
+                 │                        model in the ollama-data volume
+                 ├── ollama/storage       uploaded files (bind mount)
+                 └── library-data         SQLite metadata + extracted text
+```
