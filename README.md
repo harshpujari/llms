@@ -51,3 +51,15 @@ Everything runs in Docker. Nothing is installed on the host, and no data leaves 
                  ├── ollama/storage       uploaded files (bind mount)
                  └── library-data         SQLite metadata + extracted text
 ```
+
+| Service  | Image                  | Port    | Purpose                                   |
+| -------- | ---------------------- | ------- | ----------------------------------------- |
+| `ollama` | `ollama/ollama:latest` | `11434` | Model runtime (CPU inside the Docker VM)  |
+| `api`    | built from `ollama/DockerFile` | `8000`  | Chat proxy, library, extraction worker    |
+| `web`    | `nginx:alpine`         | `3000`  | Static UI                                 |
+
+The backend is layered top to bottom: `routes` (HTTP only) → `services` (business logic) → `repository` / `models` (SQL) → `schemas` (request/response shapes).
+
+## Quick start
+
+### Prerequisites
