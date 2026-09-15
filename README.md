@@ -63,3 +63,14 @@ The backend is layered top to bottom: `routes` (HTTP only) → `services` (busin
 ## Quick start
 
 ### Prerequisites
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (or Docker Engine with Compose v2)
+- ~2 GB free disk for the default model and images
+
+### Run
+
+```bash
+git clone git@github.com:harshpujari/llms.git
+cd llms/ollama
+./scripts/start.sh
+```
