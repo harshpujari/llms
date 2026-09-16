@@ -74,3 +74,13 @@ git clone git@github.com:harshpujari/llms.git
 cd llms/ollama
 ./scripts/start.sh
 ```
+
+On the first run the script builds the API image and pulls the model (about 1.3 GB). Later runs reuse both.
+
+When it's ready:
+
+| What   | URL                          |
+| ------ | ---------------------------- |
+| UI     | http://localhost:3000        |
+| API    | http://localhost:8000/docs   |
+| Ollama | http://localhost:11434       |
