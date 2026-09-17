@@ -84,3 +84,14 @@ When it's ready:
 | UI     | http://localhost:3000        |
 | API    | http://localhost:8000/docs   |
 | Ollama | http://localhost:11434       |
+
+## Usage
+
+```bash
+./scripts/start.sh            # start everything (ollama + api + ui)
+./scripts/start.sh --build    # force a rebuild (after requirements.txt changes)
+./scripts/start.sh --logs     # follow logs
+
+./scripts/stop.sh             # stop and remove containers; the model is kept
+./scripts/stop.sh --purge     # also delete the model volume (it's pulled again on next start)
+```
