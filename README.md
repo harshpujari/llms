@@ -95,3 +95,13 @@ When it's ready:
 ./scripts/stop.sh             # stop and remove containers; the model is kept
 ./scripts/stop.sh --purge     # also delete the model volume (it's pulled again on next start)
 ```
+
+### Supported upload formats
+
+| Group                | Extensions                                         |
+| -------------------- | -------------------------------------------------- |
+| Documents            | `.pdf` `.docx` `.pptx` `.epub` `.msg`              |
+| Spreadsheets & data  | `.xlsx` `.xls` `.csv` `.json` `.xml`               |
+| Text & web           | `.txt` `.md` `.markdown` `.html` `.htm` `.rst`     |
+
+Max 25 MB per file. PDFs need a text layer, because OCR isn't enabled, so scanned pages won't extract.
