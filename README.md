@@ -105,3 +105,13 @@ When it's ready:
 | Text & web           | `.txt` `.md` `.markdown` `.html` `.htm` `.rst`     |
 
 Max 25 MB per file. PDFs need a text layer, because OCR isn't enabled, so scanned pages won't extract.
+
+### Uninstall
+
+```bash
+./scripts/stop.sh --purge                         # containers + model volume
+docker volume rm local-llama_library-data         # library metadata and extracted text
+docker image rm local-llama-api                   # the API image
+```
+
+Uploaded files stay in `ollama/storage/` until you delete them yourself.
