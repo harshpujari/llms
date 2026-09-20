@@ -115,3 +115,15 @@ docker image rm local-llama-api                   # the API image
 ```
 
 Uploaded files stay in `ollama/storage/` until you delete them yourself.
+
+## Configuration
+
+Set these in your shell before `./scripts/start.sh`, or in a `.env` file next to `ollama/DockerCompse.yml`.
+
+| Variable       | Default                  | Description                                    |
+| -------------- | ------------------------ | ---------------------------------------------- |
+| `MODEL`        | `llama3.2:1b`            | Ollama model to pull and chat with             |
+| `OLLAMA_HOST`  | `http://ollama:11434`    | Where the API reaches Ollama                   |
+| `LOG_LEVEL`    | `INFO`                   | Backend log level                              |
+| `STORAGE_ROOT` | `/app/storage`           | Upload directory inside the container          |
+| `LIBRARY_DB`   | `/app/data/library.db`   | SQLite database path inside the container      |
