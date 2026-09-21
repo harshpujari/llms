@@ -127,3 +127,13 @@ Set these in your shell before `./scripts/start.sh`, or in a `.env` file next to
 | `LOG_LEVEL`    | `INFO`                   | Backend log level                              |
 | `STORAGE_ROOT` | `/app/storage`           | Upload directory inside the container          |
 | `LIBRARY_DB`   | `/app/data/library.db`   | SQLite database path inside the container      |
+
+For example, to use a larger model:
+
+```bash
+MODEL=llama3.2:3b ./scripts/start.sh
+```
+
+## API
+
+Interactive docs are at http://localhost:8000/docs. Main endpoints:
