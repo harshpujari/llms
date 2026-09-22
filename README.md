@@ -137,3 +137,18 @@ MODEL=llama3.2:3b ./scripts/start.sh
 ## API
 
 Interactive docs are at http://localhost:8000/docs. Main endpoints:
+
+| Method   | Path                            | Description                                          |
+| -------- | ------------------------------- | ---------------------------------------------------- |
+| `GET`    | `/health`                       | API status and whether Ollama is reachable           |
+| `POST`   | `/chat`                         | Streamed completion (NDJSON)                         |
+| `GET`    | `/folders`                      | List folders                                         |
+| `POST`   | `/folders`                      | Create a folder                                      |
+| `DELETE` | `/folders/{id}`                 | Delete a folder                                      |
+| `GET`    | `/folders/{id}/files`           | List files in a folder                               |
+| `POST`   | `/folders/{id}/files`           | Upload one or more files (multipart)                 |
+| `GET`    | `/files/{id}/raw`               | Original file (`?download=true` to force a save)     |
+| `GET`    | `/files/{id}/text`              | Extracted markdown                                   |
+| `DELETE` | `/files/{id}`                   | Delete a file                                        |
+| `POST`   | `/extract`                      | Re-queue extraction (`?force=true` for all files)    |
+| `GET`    | `/formats`                      | Upload allowlist and size limit                      |
