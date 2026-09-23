@@ -152,3 +152,15 @@ Interactive docs are at http://localhost:8000/docs. Main endpoints:
 | `DELETE` | `/files/{id}`                   | Delete a file                                        |
 | `POST`   | `/extract`                      | Re-queue extraction (`?force=true` for all files)    |
 | `GET`    | `/formats`                      | Upload allowlist and size limit                      |
+
+Chat example:
+
+```bash
+curl -N http://localhost:8000/chat \
+  -H 'Content-Type: application/json' \
+  -d '{"messages":[{"role":"user","content":"Hello!"}],"mode":"chat"}'
+```
+
+The response streams one JSON object per line: `{"token": "..."}` for each chunk, then `{"done": true}`, or `{"error": "..."}` if something fails mid-stream.
+
+## Project structure
