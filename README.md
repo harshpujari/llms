@@ -164,3 +164,24 @@ curl -N http://localhost:8000/chat \
 The response streams one JSON object per line: `{"token": "..."}` for each chunk, then `{"done": true}`, or `{"error": "..."}` if something fails mid-stream.
 
 ## Project structure
+
+```
+ollama/
+├── DockerCompse.yml        # ollama + api + web
+├── DockerFile              # API image
+├── backend/
+│   ├── main.py             # app entry: lifespan, CORS, routers
+│   ├── routes/             # HTTP layer (chat, folders, files)
+│   ├── services/           # ollama, library, storage, extraction worker
+│   ├── repository/         # SQL for folders and files
+│   ├── models/             # table definitions
+│   ├── schemas/            # Pydantic request/response models
+│   └── requirements.txt    # fully pinned dependencies
+├── frontend/
+│   └── index.html          # single-page UI
+├── scripts/
+│   ├── start.sh
+│   └── stop.sh
+├── storage/                # uploaded files (bind-mounted into the API)
+└── roadmap.md              # RAG plan
+```
