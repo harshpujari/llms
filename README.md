@@ -185,3 +185,15 @@ ollama/
 ├── storage/                # uploaded files (bind-mounted into the API)
 └── roadmap.md              # RAG plan
 ```
+
+## Development
+
+- **Backend**: edit anything in `ollama/backend/`. Uvicorn runs with `--reload`, so the API restarts on its own.
+- **Frontend**: edit `ollama/frontend/index.html` and refresh the browser.
+- **Dependencies**: add the package to the `direct` block of `ollama/backend/requirements.txt` and run `./scripts/start.sh --build`. Then refresh the pinned `transitive` block:
+
+  ```bash
+  docker compose -f DockerCompse.yml exec -T api pip freeze
+  ```
+
+- **Logs**: `./scripts/start.sh --logs`, or for one service: `docker compose -f DockerCompse.yml logs -f api`.
