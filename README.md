@@ -197,3 +197,14 @@ ollama/
   ```
 
 - **Logs**: `./scripts/start.sh --logs`, or for one service: `docker compose -f DockerCompse.yml logs -f api`.
+
+## Troubleshooting
+
+| Symptom                                           | Fix                                                                                      |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `Docker isn't running`                            | Start Docker Desktop and re-run the script.                                              |
+| `WARNING: the API is up but can't reach Ollama`   | Check `docker compose -f DockerCompse.yml logs ollama`. The model may still be loading. |
+| Chat is slow                                      | Ollama runs on CPU inside the Docker VM. Try a smaller model or give Docker more CPUs.  |
+| Chat slows down during large uploads              | Expected. Extraction is capped at 1 CPU so it doesn't starve Ollama.                    |
+| A PDF shows an extraction error                   | It's probably scanned. OCR isn't supported yet.                                          |
+| Port 3000 / 8000 / 11434 already in use           | Stop the other process, or change the port mapping in `ollama/DockerCompse.yml`.               |
