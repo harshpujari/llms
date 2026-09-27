@@ -208,3 +208,14 @@ ollama/
 | Chat slows down during large uploads              | Expected. Extraction is capped at 1 CPU so it doesn't starve Ollama.                    |
 | A PDF shows an extraction error                   | It's probably scanned. OCR isn't supported yet.                                          |
 | Port 3000 / 8000 / 11434 already in use           | Stop the other process, or change the port mapping in `ollama/DockerCompse.yml`.               |
+
+## FAQ
+
+**Can it use my Mac's GPU?**
+Not inside Docker: the Docker VM has no Metal access, so Ollama runs on CPU. The trade is a stack with nothing installed on the host.
+
+**Can I swap the model?**
+Yes. Set `MODEL` to any tag from the [Ollama library](https://ollama.com/library) and re-run `./scripts/start.sh`. It's pulled on first use.
+
+**Where is my data stored?**
+Uploaded files are in `ollama/storage/`. Metadata and extracted text are in the `library-data` volume, and the model is in `ollama-data`.
