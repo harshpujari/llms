@@ -219,3 +219,13 @@ Yes. Set `MODEL` to any tag from the [Ollama library](https://ollama.com/library
 
 **Where is my data stored?**
 Uploaded files are in `ollama/storage/`. Metadata and extracted text are in the `library-data` volume, and the model is in `ollama-data`.
+
+## Roadmap
+
+Retrieval-augmented generation is next: SQLite + `sqlite-vec` for vectors, FTS5 for hybrid search, and `nomic-embed-text` embeddings from the same Ollama container. See [ollama/roadmap.md](ollama/roadmap.md) for the phased plan.
+
+## Security
+
+This is built for local, single-user use. The API has **no authentication**, and CORS only allows `localhost:3000`. Don't expose ports `8000` or `11434` to a network you don't trust.
+
+## Contributing
