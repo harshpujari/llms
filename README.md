@@ -229,3 +229,12 @@ Retrieval-augmented generation is next: SQLite + `sqlite-vec` for vectors, FTS5 
 This is built for local, single-user use. The API has **no authentication**, and CORS only allows `localhost:3000`. Don't expose ports `8000` or `11434` to a network you don't trust.
 
 ## Contributing
+
+Contributions are welcome.
+
+1. Fork the repo and create a branch: `git checkout -b feature/my-change`
+2. Make your change and check it end to end with `./scripts/start.sh`
+3. Keep the layering intact: no logic in `backend/routes/`, no SQL outside `backend/repository/` and `backend/models/`
+4. Open a pull request that describes what changed and why
+
+For bugs and ideas, please [open an issue](https://github.com/harshpujari/llms/issues).
