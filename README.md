@@ -247,3 +247,13 @@ For bugs and ideas, please [open an issue](https://github.com/harshpujari/llms/i
 | [`TrainYourOwnLLM-Tutorial/`](TrainYourOwnLLM-Tutorial/) | Notebooks and a small transformer for training an LLM from scratch       |
 
 ## License
+
+`minbpe/` ships with its own [LICENSE](minbpe/LICENSE). 
+For the rest of the repo, no license has been chosen yet. Until one is added, all rights are reserved by the author.
+
+## Acknowledgements
+
+- [Ollama](https://ollama.com): local model runtime
+- [Meta Llama 3.2](https://www.llama.com/): default model
+- [FastAPI](https://fastapi.tiangolo.com/): API framework
+- [MarkItDown](https://github.com/microsoft/markitdown): document-to-markdown conversion
