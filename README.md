@@ -238,3 +238,12 @@ Contributions are welcome.
 4. Open a pull request that describes what changed and why
 
 For bugs and ideas, please [open an issue](https://github.com/harshpujari/llms/issues).
+
+## Other projects in this repo
+
+| Directory                                                | What it is                                                                 |
+| -------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [`minbpe/`](minbpe/)                                     | Minimal byte-level BPE tokenizer (see its own [README](minbpe/README.md)) |
+| [`TrainYourOwnLLM-Tutorial/`](TrainYourOwnLLM-Tutorial/) | Notebooks and a small transformer for training an LLM from scratch       |
+
+## License
