@@ -35,6 +35,7 @@ class FileRepository:
             """SELECT fi.id, fi.folder_id, fi.name, fi.stored_name, fi.bytes,
                       fi.sha256, fi.mime, fi.created_at, fi.extracted_at,
                       fi.extract_error, fi.indexed_at, fi.chunk_count,
+                      fi.summarized_at,
                       LENGTH(fi.text_content) AS text_chars,
                       f.slug
                  FROM files fi JOIN folders f ON f.id = fi.folder_id
@@ -73,6 +74,31 @@ class FileRepository:
         """Everything without text, failures included -- the manual retry set."""
         rows = self.db.execute(
             """SELECT id FROM files WHERE text_content IS NULL ORDER BY id"""
+        ).fetchall()
+        return [dict(r) for r in rows]
+
+    def get_files_to_index(self) -> list[dict]:
+        """Extracted but never chunked: files from before indexing existed, or a
+        crash between extraction and chunking. Extracted text always chunks to
+        at least one chunk, so chunk_count = 0 can only mean "not yet"."""
+        rows = self.db.execute(
+            """SELECT id FROM files
+                WHERE text_content IS NOT NULL AND chunk_count = 0
+                ORDER BY id"""
+        ).fetchall()
+        return [dict(r) for r in rows]
+
+    def get_files_missing_summary(self) -> list[dict]:
+        """Chunked but no document summary yet -- the indexing worker's resume set.
+
+        Covers chunks still pending as well as a crash after the last chunk
+        summary but before the document one: re-chunking clears summarized_at,
+        so a file with pending chunks is always in here too.
+        """
+        rows = self.db.execute(
+            """SELECT id FROM files
+                WHERE chunk_count > 0 AND summarized_at IS NULL
+                ORDER BY id"""
         ).fetchall()
         return [dict(r) for r in rows]
 
@@ -121,6 +147,7 @@ class FileRepository:
             "text_chars": None,
             "chunk_count": 0,
             "indexed_at": None,
+            "summarized_at": None,
         }
 
     def update_file_text(self, file_id: int, text: str) -> bool:
@@ -145,6 +172,43 @@ class FileRepository:
             self.db.execute(
                 f"UPDATE {File.__tablename__} SET extract_error = ? WHERE id = ?",
                 (error, file_id),
+            )
+            self.db.commit()
+        except sqlite3.Error as e:
+            self.db.rollback()
+            logger.error(f"SQLite Error: {e}")
+            return False
+        return True
+
+    def update_file_chunked(self, file_id: int, chunk_count: int) -> bool:
+        """New chunks make the old document summary stale: it described chunks
+        that no longer exist, so it is cleared until the worker rebuilds it.
+
+        indexed_at is left alone -- it means chunked *and embedded*, and is set
+        by the embedding step.
+        """
+        try:
+            self.db.execute(
+                f"""UPDATE {File.__tablename__}
+                       SET chunk_count = ?, summary = NULL, summary_model = NULL,
+                           summarized_at = NULL
+                     WHERE id = ?""",
+                (chunk_count, file_id),
+            )
+            self.db.commit()
+        except sqlite3.Error as e:
+            self.db.rollback()
+            logger.error(f"SQLite Error: {e}")
+            return False
+        return True
+
+    def update_file_summary(self, file_id: int, summary: str, model: str) -> bool:
+        try:
+            self.db.execute(
+                f"""UPDATE {File.__tablename__}
+                       SET summary = ?, summary_model = ?, summarized_at = ?
+                     WHERE id = ?""",
+                (summary, model, now(), file_id),
             )
             self.db.commit()
         except sqlite3.Error as e:
