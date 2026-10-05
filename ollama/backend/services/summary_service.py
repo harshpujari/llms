@@ -102,9 +102,22 @@ PREAMBLE = re.compile(
 MARKDOWN = re.compile(r"\*\*|__|^#+\s*|^\s*[-*]\s+", re.MULTILINE)
 
 
-def _clean(text: str) -> str:
+# A first line with no sentence end, before the real answer, is the model
+# echoing the "Document: / Section:" header back as a title.
+TITLE_LINE = re.compile(r"^[^\n.!?]{1,100}\n+(?=\S)")
+SENTENCE_END = re.compile(r"[.!?](?=\s|$)")
+
+
+def _clean(text: str, truncated: bool = False) -> str:
     text = PREAMBLE.sub("", text or "")
-    text = MARKDOWN.sub("", text).strip().strip('"').strip()
+    text = MARKDOWN.sub("", text).strip()
+    text = TITLE_LINE.sub("", text, count=1).strip().strip('"').strip()
+    if truncated:
+        # Cut off by num_predict: drop the unfinished sentence. A number cut
+        # mid-way ("6.5J x 17") is worse in an index than no number at all.
+        ends = list(SENTENCE_END.finditer(text))
+        if ends:
+            text = text[: ends[-1].end()]
     if not text:
         raise ValueError("the model returned an empty summary")
     return text
@@ -126,7 +139,7 @@ def _ask(system: str, user: str, options: dict) -> str:
         raise SummaryUnavailable(f"ollama error ({exc.status_code}): {exc.error}") from exc
     except (ConnectionError, httpx.HTTPError) as exc:
         raise SummaryUnavailable(f"ollama unreachable at {OLLAMA_HOST}: {exc}") from exc
-    return _clean(response.message.content)
+    return _clean(response.message.content, truncated=response.done_reason == "length")
 
 
 def summarize_chunk(text: str, heading: str | None, file_name: str) -> str:
