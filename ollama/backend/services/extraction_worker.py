@@ -12,11 +12,14 @@ about.
 
 State lives in the files table, not in this queue, so a restart loses nothing:
 start() re-reads whatever is still unextracted and queues it again.
+
+Each file that extracts is handed on to indexing_worker, which chunks and
+summarizes it on its own, slower queue.
 """
 
 # Custom libraries
 from logger import configure_logging
-from services import extract_service, storage_service
+from services import extract_service, indexing_worker, storage_service
 
 # Database modules
 from db_pool import connect
@@ -47,30 +50,35 @@ def pending() -> int:
     return _queue.qsize() if _queue else 0
 
 
-def _extract_one(file_id: int) -> None:
+def _extract_one(file_id: int) -> bool:
     """Runs on a worker thread. Opens its own connection: the request-scoped one
-    from Depends(get_db) is long gone by the time this runs."""
+    from Depends(get_db) is long gone by the time this runs.
+
+    True when new text was saved, so the caller knows to queue indexing.
+    """
     db = connect()
     try:
         repo = FileRepository(db)
         row = repo.get_file(file_id)
         if not row:
-            return  # deleted while it sat in the queue
+            return False  # deleted while it sat in the queue
 
         path = storage_service.file_path(row["slug"], row["stored_name"])
         if not path.exists():
             repo.update_file_error(file_id, "file missing from storage")
-            return
+            return False
 
         try:
             text = extract_service.to_markdown(path)
         except ValueError as exc:
             logger.info("extraction failed for %s: %s", row["name"], exc)
             repo.update_file_error(file_id, str(exc))
-            return
+            return False
 
-        repo.update_file_text(file_id, text)
+        if not repo.update_file_text(file_id, text):
+            return False
         logger.info("extracted %s (%d chars)", row["name"], len(text))
+        return True
     finally:
         db.close()
 
@@ -79,7 +87,11 @@ async def _run() -> None:
     while True:
         file_id = await _queue.get()
         try:
-            await run_in_threadpool(_extract_one, file_id)
+            if await run_in_threadpool(_extract_one, file_id):
+                # Queued from here, not the thread: enqueue is event-loop only.
+                # rechunk because the text is new -- chunks and summaries from
+                # an earlier extraction describe text that is gone.
+                indexing_worker.enqueue(file_id, rechunk=True)
         except Exception:
             # A crash here must not kill the worker, or every later upload
             # silently stays queued forever.
