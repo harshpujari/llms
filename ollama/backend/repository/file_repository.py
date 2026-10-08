@@ -102,6 +102,25 @@ class FileRepository:
         ).fetchall()
         return [dict(r) for r in rows]
 
+    def get_indexing_rows(self, folder_id: Optional[int] = None) -> list[dict]:
+        """Every file's progress through extraction and indexing: flags and
+        counts only, never the text itself. All folders when folder_id is None."""
+        rows = self.db.execute(
+            """SELECT fi.id, fi.folder_id, fi.name, fi.chunk_count,
+                      fi.text_content IS NOT NULL  AS extracted,
+                      fi.extract_error IS NOT NULL AS failed,
+                      fi.summarized_at IS NOT NULL AS summarized,
+                      (SELECT COUNT(*) FROM chunks c
+                        WHERE c.file_id = fi.id
+                          AND c.summarized_at IS NULL
+                          AND c.summary_error IS NULL) AS pending
+                 FROM files fi
+                WHERE ?1 IS NULL OR fi.folder_id = ?1
+                ORDER BY fi.id""",
+            (folder_id,),
+        ).fetchall()
+        return [dict(r) for r in rows]
+
     def create_file(self, file_data: dict) -> Optional[dict]:
         """The row lands with no text: extraction happens after, on the worker."""
         created = now()
