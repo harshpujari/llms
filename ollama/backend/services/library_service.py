@@ -8,7 +8,7 @@ SQL, and storage/extract only touch the filesystem and MarkItDown respectively.
 
 # Custom libraries
 from logger import configure_logging
-from services import extract_service, storage_service
+from services import extract_service, indexing_worker, storage_service
 
 # Database modules
 from repository.file_repository import FileRepository
@@ -155,3 +155,56 @@ def files_to_extract(db: sqlite3.Connection, force: bool = False) -> list[int]:
     repo = FileRepository(db)
     rows = repo.get_all_file_ids() if force else repo.get_files_missing_text()
     return [row["id"] for row in rows]
+
+
+# --- indexing progress ----------------------------------------------------
+
+
+def indexing_status(db: sqlite3.Connection, folder_id: Optional[int] = None) -> dict:
+    """Where each file is, so the UI can say what isn't ready yet.
+
+    Stages, in the order a file moves through them:
+      extracting  no text yet -- not searchable at all
+      reading     text and chunks exist, summaries still being written; already
+                  searchable by its text, so answers can use it
+      ready       document summary written
+      failed      extraction failed, already shown on the file's row
+
+    A file with every chunk attempted but no document summary (all of them
+    failed) counts as ready: it is as searchable as it will get, and calling it
+    "reading" would leave a banner up forever.
+    """
+    live = indexing_worker.status()
+    active = live["current"]["file_id"] if live["current"] else None
+
+    counts = {"extracting": 0, "reading": 0, "ready": 0, "failed": 0}
+    unfinished = []
+    for row in FileRepository(db).get_indexing_rows(folder_id):
+        if not row["extracted"]:
+            stage = "failed" if row["failed"] else "extracting"
+        elif row["summarized"]:
+            stage = "ready"
+        elif row["chunk_count"] == 0 or row["pending"] or row["id"] == active:
+            # The active check covers the document-summary call itself, when
+            # no chunks are left pending but the file isn't finished.
+            stage = "reading"
+        else:
+            stage = "ready"
+
+        counts[stage] += 1
+        if stage in ("extracting", "reading"):
+            unfinished.append(
+                {
+                    "id": row["id"],
+                    "folder_id": row["folder_id"],
+                    "name": row["name"],
+                    "stage": stage,
+                    "done": row["chunk_count"] - row["pending"],
+                    "total": row["chunk_count"],
+                    "active": row["id"] == active,
+                }
+            )
+
+    # paused: Ollama unreachable, with seconds until the next try -- the one
+    # thing worth telling the user that the tables can't.
+    return {"counts": counts, "files": unfinished, "paused": live["paused"]}
