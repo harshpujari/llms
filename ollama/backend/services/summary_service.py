@@ -20,6 +20,7 @@ Errors come in two kinds, and the worker treats them differently:
 from logger import configure_logging
 from services.chunk_service import estimate_tokens
 from services.ollama_service import MODEL, OLLAMA_HOST
+from services.ollama_service import OPTIONS as CHAT_OPTIONS
 
 # Default libraries
 import os
@@ -38,10 +39,15 @@ SUMMARY_MODEL = os.getenv("SUMMARY_MODEL", MODEL)
 # does. Generous timeout -- a cold model on CPU takes a while to load.
 client = Client(host=OLLAMA_HOST, timeout=300)
 
+# num_ctx must match chat's. Ollama loads a model at one context size, so a
+# request with a different one reloads it -- measured: chat went from 0.1s to
+# 60s to first token while chunks summarized at 2048 beside chat's 4096.
+NUM_CTX = CHAT_OPTIONS["num_ctx"]
+
 # temperature 0: these are index entries, not prose -- the same chunk should
 # summarize the same way twice. num_predict stops a small model rambling.
-CHUNK_OPTIONS = {"temperature": 0, "num_ctx": 2048, "num_predict": 160}
-DOCUMENT_OPTIONS = {"temperature": 0, "num_ctx": 4096, "num_predict": 400}
+CHUNK_OPTIONS = {"temperature": 0, "num_ctx": NUM_CTX, "num_predict": 160}
+DOCUMENT_OPTIONS = {"temperature": 0, "num_ctx": NUM_CTX, "num_predict": 400}
 
 # How much summary text one document call may read. num_ctx 4096 minus the
 # instructions and room for the answer.
