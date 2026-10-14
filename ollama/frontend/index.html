@@ -109,26 +109,6 @@
     color: var(--secondary);
   }
 
-  /* Chevron drawn as an inline SVG data URI -- no external asset can load here. */
-  #mode {
-    appearance: none;
-    -webkit-appearance: none;
-    padding: 1px 16px 1px 8px;
-    font: inherit;
-    font-weight: 500;
-    color: var(--bubble-me);
-    background-color: transparent;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23007aff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
-    background-repeat: no-repeat;
-    background-position: right 4px center;
-    border: 0;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-
-  #mode:hover { background-color: rgba(127, 127, 127, 0.16); }
-  #mode:focus-visible { outline: 2px solid var(--bubble-me); outline-offset: 1px; }
-
   #log {
     flex: 1;
     overflow-y: auto;
@@ -817,10 +797,6 @@
   <div>
     <h1>Llama 3.2</h1>
     <p class="sub">
-      <select id="mode" aria-label="Mode">
-        <option value="chat">Chat</option>
-        <option value="generate">Generate</option>
-      </select>
       <span id="status">local</span>
     </p>
   </div>
@@ -928,10 +904,8 @@ const form = document.getElementById("form");
 const input = document.getElementById("input");
 const send = document.getElementById("send");
 const status = document.getElementById("status");
-const modeSelect = document.getElementById("mode");
 
 // Ollama keeps no history, so the full transcript is resent every turn.
-// Generate mode never touches this: a raw completion has no conversation.
 const history = [];
 
 // --- Library -------------------------------------------------------------
@@ -1536,11 +1510,6 @@ async function refreshIndexing() {
   if (st.files.length) indexingPoll = setTimeout(refreshIndexing, 3000);
 }
 
-modeSelect.addEventListener("change", () => {
-  input.placeholder = modeSelect.value === "generate" ? "Text to continue…" : "Message";
-  input.focus();
-});
-
 // --- Minimal markdown renderer ------------------------------------------
 // The model emits markdown, and nothing external is loadable here (the page is
 // served offline by nginx), so this covers the subset an LLM actually produces:
@@ -1719,7 +1688,7 @@ function renderMarkdown(src) {
 
 fetch(API + "/health")
   .then(r => r.json())
-  .then(d => { status.textContent = d.ok ? "· " + d.model : "· Ollama unreachable"; })
+  .then(d => { status.textContent = d.ok ? d.model : "Ollama unreachable"; })
   .catch(() => { status.textContent = "backend unreachable"; });
 
 function addBubble(who, text) {
@@ -1753,12 +1722,8 @@ form.addEventListener("submit", async e => {
   const text = input.value.trim();
   if (!text || send.disabled) return;
 
-  const mode = modeSelect.value;
-  const chatting = mode === "chat";
-
   addBubble("me", text);
-  // In generate mode the turn is standalone, so it stays out of the transcript.
-  if (chatting) history.push({ role: "user", content: text });
+  history.push({ role: "user", content: text });
   input.value = "";
   input.style.height = "auto";
   send.disabled = true;
@@ -1785,11 +1750,10 @@ form.addEventListener("submit", async e => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        messages: chatting ? history : [{ role: "user", content: text }],
-        mode,
+        messages: history,
         // Ignored by the backend until retrieval lands; sent now so the two
         // sides don't need changing together later.
-        folder_id: chatting && scope ? scope.id : null,
+        folder_id: scope ? scope.id : null,
       }),
     });
     if (!res.ok) throw new Error("HTTP " + res.status);
@@ -1820,7 +1784,7 @@ form.addEventListener("submit", async e => {
 
     if (reply) {
       paint(); // the last scheduled frame may not have run yet
-      if (chatting) history.push({ role: "assistant", content: reply });
+      history.push({ role: "assistant", content: reply });
     } else {
       bubble.textContent = "(empty response)";
     }
@@ -1828,7 +1792,7 @@ form.addEventListener("submit", async e => {
     bubble.classList.remove("md");
     bubble.classList.add("error");
     bubble.textContent = "⚠︎ " + err.message;
-    if (chatting) history.pop(); // drop the unanswered turn so the next isn't poisoned
+    history.pop(); // drop the unanswered turn so the next isn't poisoned
   } finally {
     send.disabled = false;
     input.focus();
