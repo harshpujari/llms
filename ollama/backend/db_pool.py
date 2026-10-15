@@ -59,7 +59,13 @@ def connect() -> sqlite3.Connection:
     # worker thread (run_in_threadpool) so extraction doesn't block the event
     # loop. SQLite would otherwise refuse to be touched off its creating thread.
     # Safe here: a request uses its connection sequentially, never concurrently.
-    db = sqlite3.connect(DB_PATH, check_same_thread=False)
+    #
+    # timeout: how long a write waits for another connection's write lock
+    # before failing with "database is locked". SQLite's default of 5 s is
+    # shorter than a large re-chunk (its keyword-index and vector triggers) or
+    # the startup index rebuild can hold it -- and a failed write in a worker
+    # is a document stuck mid-pipeline.
+    db = sqlite3.connect(DB_PATH, check_same_thread=False, timeout=30)
     db.row_factory = sqlite3.Row
     # Off by default in SQLite: without this, ON DELETE CASCADE silently
     # does nothing and deleting a folder orphans all its file rows.
