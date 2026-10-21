@@ -122,26 +122,7 @@
   </form>
 </footer>
 
-<script type="module">
-import { API } from "./js/api.js";
-import "./js/chat.js";
-import { setPanel, isPanelOpen } from "./js/library.js";
-import { closeViewer, isViewerOpen } from "./js/viewer.js";
-
-const status = document.getElementById("status");
-
-document.addEventListener("keydown", e => {
-  if (e.key !== "Escape") return;
-  // The viewer sits on top, so it closes first and reveals the panel again.
-  if (isViewerOpen()) closeViewer();
-  else if (isPanelOpen()) setPanel(false);
-});
-
-fetch(API + "/health")
-  .then(r => r.json())
-  .then(d => { status.textContent = d.ok ? d.model : "Ollama unreachable"; })
-  .catch(() => { status.textContent = "backend unreachable"; });
-</script>
+<script type="module" src="js/main.js"></script>
 
 </body>
 </html>
