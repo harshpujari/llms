@@ -395,12 +395,14 @@ button svg { display: block; }
   #indexing .spin { animation: none; }
 }
 
-/* --- Scope chip -------------------------------------------------------
-   Sits above the composer, where an attachment would: it's per-message
-   state, so it belongs next to the message, not in the title bar. */
+/* --- Attachment chips -------------------------------------------------
+   Above the composer, where attachments go: they're what the next message
+   answers from, so they belong next to it, not in the title bar. */
 
 #scope {
   display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   max-width: 760px;
   margin: 0 auto 8px;
 }
@@ -422,6 +424,34 @@ button svg { display: block; }
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+/* Progress after the name. Never truncated: on a narrow screen the name gives
+   way first, since the status is the part that changes. */
+.chip .status {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 4px;
+  color: var(--secondary);
+}
+
+.chip .status::before { content: "·"; }
+
+.chip .spin {
+  width: 9px;
+  height: 9px;
+  border: 1.5px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chip .spin { animation: none; }
+}
+
+.chip.is-failed { color: #ff9500; background: rgba(255, 149, 0, 0.14); }
+.chip.is-failed .status { color: inherit; }
 
 .chip button {
   display: grid;
