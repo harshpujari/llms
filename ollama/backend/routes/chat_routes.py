@@ -1,9 +1,10 @@
-"""Chat endpoints: health of the upstream, and the streaming completion."""
+"""Chat endpoints: health of the upstream, and the streaming completion --
+answered from the attached documents when there are any."""
 
 # Custom libraries
 from logger import configure_logging
 from schemas.chat_schema import ChatRequest
-from services import ollama_service
+from services import chat_service, ollama_service
 
 # Installed libraries
 from fastapi import APIRouter
@@ -22,5 +23,5 @@ async def get_health():
 @chat_router.post("/chat")
 async def post_chat(req: ChatRequest):
     return StreamingResponse(
-        ollama_service.stream(req), media_type="application/x-ndjson"
+        chat_service.stream(req), media_type="application/x-ndjson"
     )

@@ -41,33 +41,47 @@ async def health() -> dict:
         return {"ok": False, "ollama": OLLAMA_HOST, "error": str(exc)}
 
 
-async def stream(req: ChatRequest) -> AsyncIterator[str]:
-    """Yields NDJSON: one {"token": ...} per chunk, then {"done": true}."""
+async def stream_messages(messages: list[dict]) -> AsyncIterator[str]:
+    """A chat completion as NDJSON: one {"token": ...} per chunk, then
+    {"done": true}. The messages are sent as given -- chat_service decides what
+    goes in them."""
     try:
-        if req.mode == "generate":
-            # Only the latest user turn: a raw continuation has no notion of
-            # conversation, and num_predict stops it rambling to num_ctx.
-            prompt = next(
-                (m.content for m in reversed(req.messages) if m.role == "user"), ""
-            )
-            async for chunk in await client.generate(
-                model=MODEL,
-                prompt=prompt,
-                stream=True,
-                options={**OPTIONS, "num_predict": 256},
-            ):
-                yield json.dumps({"token": chunk["response"]}) + "\n"
-        else:
-            async for chunk in await client.chat(
-                model=MODEL,
-                messages=[m.model_dump() for m in req.messages],
-                stream=True,
-                options=OPTIONS,
-            ):
-                yield json.dumps({"token": chunk["message"]["content"]}) + "\n"
+        async for chunk in await client.chat(
+            model=MODEL,
+            messages=messages,
+            stream=True,
+            options=OPTIONS,
+        ):
+            yield json.dumps({"token": chunk["message"]["content"]}) + "\n"
         yield json.dumps({"done": True}) + "\n"
     except Exception as exc:
         # The response has already started, so errors ride the stream itself
         # rather than surfacing as an HTTP status the browser can act on.
         logger.exception("chat stream failed")
+        yield json.dumps({"error": str(exc)}) + "\n"
+
+
+async def stream(req: ChatRequest) -> AsyncIterator[str]:
+    """Yields NDJSON: one {"token": ...} per chunk, then {"done": true}."""
+    if req.mode != "generate":
+        async for line in stream_messages([m.model_dump() for m in req.messages]):
+            yield line
+        return
+
+    try:
+        # Only the latest user turn: a raw continuation has no notion of
+        # conversation, and num_predict stops it rambling to num_ctx.
+        prompt = next(
+            (m.content for m in reversed(req.messages) if m.role == "user"), ""
+        )
+        async for chunk in await client.generate(
+            model=MODEL,
+            prompt=prompt,
+            stream=True,
+            options={**OPTIONS, "num_predict": 256},
+        ):
+            yield json.dumps({"token": chunk["response"]}) + "\n"
+        yield json.dumps({"done": True}) + "\n"
+    except Exception as exc:
+        logger.exception("generate stream failed")
         yield json.dumps({"error": str(exc)}) + "\n"
