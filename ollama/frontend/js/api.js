@@ -40,3 +40,21 @@ export function fileState(f) {
   if (f.text_chars == null) return "queued";
   return "done";
 }
+
+function extractionLabel(f) {
+  const state = fileState(f);
+  if (state === "failed") return "⚠︎ " + f.extract_error;
+  if (state === "queued") return "extracting…";
+  return `${f.text_chars.toLocaleString()} chars extracted`;
+}
+
+// `p` is the file's entry from /indexing, present only while it's unfinished.
+export function isReading(f, p) {
+  return fileState(f) === "done" && p && p.stage === "reading";
+}
+
+export function fileLabel(f, p) {
+  const base = extractionLabel(f);
+  if (!isReading(f, p)) return base;
+  return `${base} · reading ${p.total ? `${p.done}/${p.total}` : "…"}`;
+}

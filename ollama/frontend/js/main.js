@@ -9,20 +9,24 @@
 //   library.js   the folders panel: folders, files, uploads
 //   viewer.js    the file viewer
 //   indexing.js  the "still reading" banner above the composer
+//   picker.js    the 📎 menu: upload, or choose folders and files to attach
 //
 // No bundler: the browser loads these as native modules, straight from nginx.
 
 import { API } from "./api.js";
 import "./chat.js";
 import { setPanel, isPanelOpen } from "./library.js";
+import { setPicker, isPickerOpen } from "./picker.js";
 import { closeViewer, isViewerOpen } from "./viewer.js";
 
 const status = document.getElementById("status");
 
 document.addEventListener("keydown", e => {
   if (e.key !== "Escape") return;
-  // The viewer sits on top, so it closes first and reveals the panel again.
+  // Topmost first: the viewer covers everything, and the picker is a popover
+  // over the chat, so neither leaves the other open behind it.
   if (isViewerOpen()) closeViewer();
+  else if (isPickerOpen()) setPicker(false, { refocus: true });
   else if (isPanelOpen()) setPanel(false);
 });
 
