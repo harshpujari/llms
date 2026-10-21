@@ -15,6 +15,19 @@ from fastapi import HTTPException
 logger = configure_logging(__name__)
 
 
+def _scope(folder_ids: list[int], file_ids: list[int]) -> tuple[str, list[int]]:
+    """SQL matching files in any of folder_ids plus any of file_ids -- the
+    chat's attachments -- with its parameters. Empty when both are."""
+    clauses, params = [], []
+    if folder_ids:
+        clauses.append(f"fi.folder_id IN ({', '.join('?' * len(folder_ids))})")
+        params += folder_ids
+    if file_ids:
+        clauses.append(f"fi.id IN ({', '.join('?' * len(file_ids))})")
+        params += file_ids
+    return " OR ".join(clauses), params
+
+
 class FileRepository:
     def __init__(self, db: sqlite3.Connection):
         self.db = db
@@ -108,14 +121,8 @@ class FileRepository:
         """Progress through extraction and indexing for files in any of
         folder_ids plus any of file_ids -- every file when both are empty.
         Flags and counts only, never the text itself."""
-        clauses, params = [], []
-        if folder_ids:
-            clauses.append(f"fi.folder_id IN ({', '.join('?' * len(folder_ids))})")
-            params += folder_ids
-        if file_ids:
-            clauses.append(f"fi.id IN ({', '.join('?' * len(file_ids))})")
-            params += file_ids
-        where = f"WHERE {' OR '.join(clauses)}" if clauses else ""
+        clause, params = _scope(folder_ids, file_ids)
+        where = f"WHERE {clause}" if clause else ""
 
         rows = self.db.execute(
             f"""SELECT fi.id, fi.folder_id, fi.name, fi.chunk_count, fi.extract_error,
@@ -215,14 +222,15 @@ class FileRepository:
         """New chunks make the old document summary stale: it described chunks
         that no longer exist, so it is cleared until the worker rebuilds it.
 
-        indexed_at is left alone -- it means chunked *and embedded*, and is set
-        by the embedding step.
+        indexed_at too: it means chunked *and embedded*, and the old chunks'
+        vectors went with them. mark_indexed sets it again once the new chunks
+        are embedded.
         """
         try:
             self.db.execute(
                 f"""UPDATE {File.__tablename__}
                        SET chunk_count = ?, summary = NULL, summary_model = NULL,
-                           summarized_at = NULL
+                           summarized_at = NULL, indexed_at = NULL
                      WHERE id = ?""",
                 (chunk_count, file_id),
             )
@@ -247,6 +255,104 @@ class FileRepository:
             logger.error(f"SQLite Error: {e}")
             return False
         return True
+
+    # --- vectors and search ------------------------------------------------
+    # vectors_file_summary is a vec0 table (see models/file.py).
+
+    def get_files_needing_vectors(self) -> list[dict]:
+        """Chunked files with something left to embed: chunk text (not yet
+        indexed), chunk summaries, or the document summary. The indexing
+        worker's backfill set -- including files from before embeddings."""
+        rows = self.db.execute(
+            """SELECT fi.id FROM files fi
+                WHERE fi.chunk_count > 0
+                  AND (fi.indexed_at IS NULL
+                       OR EXISTS (SELECT 1 FROM chunks c
+                                   WHERE c.file_id = fi.id AND c.summary IS NOT NULL
+                                     AND NOT EXISTS (SELECT 1 FROM vectors_chunk_summary v
+                                                      WHERE v.chunk_id = c.id))
+                       OR (fi.summary IS NOT NULL
+                           AND NOT EXISTS (SELECT 1 FROM vectors_file_summary v
+                                            WHERE v.file_id = fi.id)))
+                ORDER BY fi.id"""
+        ).fetchall()
+        return [dict(r) for r in rows]
+
+    def get_summary_to_embed(self, file_id: int) -> Optional[str]:
+        """The document summary, if it has no vector yet."""
+        row = self.db.execute(
+            """SELECT summary FROM files fi
+                WHERE fi.id = ? AND fi.summary IS NOT NULL
+                  AND NOT EXISTS (SELECT 1 FROM vectors_file_summary v WHERE v.file_id = fi.id)""",
+            (file_id,),
+        ).fetchone()
+        return row["summary"] if row else None
+
+    def save_summary_vector(self, file_id: int, vector: bytes) -> bool:
+        """Delete-then-insert, as vec0 has no INSERT OR REPLACE; skipped if the
+        file was deleted meanwhile, since vec0 has no foreign keys either."""
+        try:
+            self.db.execute("DELETE FROM vectors_file_summary WHERE file_id = ?", (file_id,))
+            if self.db.execute(
+                f"SELECT 1 FROM {File.__tablename__} WHERE id = ?", (file_id,)
+            ).fetchone():
+                self.db.execute(
+                    "INSERT INTO vectors_file_summary (file_id, embedding) VALUES (?, ?)",
+                    (file_id, vector),
+                )
+            self.db.commit()
+        except sqlite3.Error as e:
+            self.db.rollback()
+            logger.error(f"SQLite Error: {e}")
+            return False
+        return True
+
+    def mark_indexed(self, file_id: int) -> bool:
+        """Every chunk's text is embedded: the file is searchable from now."""
+        try:
+            self.db.execute(
+                f"UPDATE {File.__tablename__} SET indexed_at = ? WHERE id = ?",
+                (now(), file_id),
+            )
+            self.db.commit()
+        except sqlite3.Error as e:
+            self.db.rollback()
+            logger.error(f"SQLite Error: {e}")
+            return False
+        return True
+
+    def search_summaries(self, vector: bytes, file_ids: list[int], k: int) -> list[dict]:
+        """Documents nearest in meaning by their summary, among file_ids."""
+        if not file_ids:
+            return []
+        marks = ", ".join("?" * len(file_ids))
+        rows = self.db.execute(
+            f"""SELECT file_id, distance
+                  FROM vectors_file_summary
+                 WHERE embedding MATCH ? AND k = ? AND file_id IN ({marks})
+                 ORDER BY distance""",
+            (vector, k, *file_ids),
+        ).fetchall()
+        return [dict(r) for r in rows]
+
+    def get_searchable_files(self, folder_ids: list[int], file_ids: list[int]) -> list[dict]:
+        """The attached files, each saying whether it can be searched yet
+        (indexed_at set) and, if not, why -- for the "answered from 6 of 8"
+        note. Nothing attached means nothing here, unlike get_indexing_rows."""
+        clause, params = _scope(folder_ids, file_ids)
+        if not clause:
+            return []
+        rows = self.db.execute(
+            f"""SELECT fi.id, fi.folder_id, fi.name, fi.summary,
+                       fi.indexed_at IS NOT NULL    AS searchable,
+                       fi.text_content IS NOT NULL  AS extracted,
+                       fi.extract_error IS NOT NULL AS failed
+                  FROM files fi
+                 WHERE {clause}
+                 ORDER BY fi.id""",
+            params,
+        ).fetchall()
+        return [dict(r) for r in rows]
 
     def delete_file(self, file_id: int) -> bool:
         try:
