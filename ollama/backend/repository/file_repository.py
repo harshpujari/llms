@@ -102,22 +102,34 @@ class FileRepository:
         ).fetchall()
         return [dict(r) for r in rows]
 
-    def get_indexing_rows(self, folder_id: Optional[int] = None) -> list[dict]:
-        """Every file's progress through extraction and indexing: flags and
-        counts only, never the text itself. All folders when folder_id is None."""
+    def get_indexing_rows(
+        self, folder_ids: list[int], file_ids: list[int]
+    ) -> list[dict]:
+        """Progress through extraction and indexing for files in any of
+        folder_ids plus any of file_ids -- every file when both are empty.
+        Flags and counts only, never the text itself."""
+        clauses, params = [], []
+        if folder_ids:
+            clauses.append(f"fi.folder_id IN ({', '.join('?' * len(folder_ids))})")
+            params += folder_ids
+        if file_ids:
+            clauses.append(f"fi.id IN ({', '.join('?' * len(file_ids))})")
+            params += file_ids
+        where = f"WHERE {' OR '.join(clauses)}" if clauses else ""
+
         rows = self.db.execute(
-            """SELECT fi.id, fi.folder_id, fi.name, fi.chunk_count,
-                      fi.text_content IS NOT NULL  AS extracted,
-                      fi.extract_error IS NOT NULL AS failed,
-                      fi.summarized_at IS NOT NULL AS summarized,
-                      (SELECT COUNT(*) FROM chunks c
-                        WHERE c.file_id = fi.id
-                          AND c.summarized_at IS NULL
-                          AND c.summary_error IS NULL) AS pending
-                 FROM files fi
-                WHERE ?1 IS NULL OR fi.folder_id = ?1
-                ORDER BY fi.id""",
-            (folder_id,),
+            f"""SELECT fi.id, fi.folder_id, fi.name, fi.chunk_count, fi.extract_error,
+                       fi.text_content IS NOT NULL  AS extracted,
+                       fi.extract_error IS NOT NULL AS failed,
+                       fi.summarized_at IS NOT NULL AS summarized,
+                       (SELECT COUNT(*) FROM chunks c
+                         WHERE c.file_id = fi.id
+                           AND c.summarized_at IS NULL
+                           AND c.summary_error IS NULL) AS pending
+                  FROM files fi
+                 {where}
+                 ORDER BY fi.id""",
+            params,
         ).fetchall()
         return [dict(r) for r in rows]
 

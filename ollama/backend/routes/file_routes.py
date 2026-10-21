@@ -12,10 +12,9 @@ from services import (
 
 # Default libraries
 import sqlite3
-from typing import Optional
 
 # Installed libraries
-from fastapi import APIRouter, Depends, HTTPException, UploadFile
+from fastapi import APIRouter, Depends, HTTPException, Query, UploadFile
 # Aliased: schemas.file_schema.FileResponse is a different thing entirely.
 from fastapi.responses import FileResponse as RawFile
 from starlette.concurrency import run_in_threadpool
@@ -113,14 +112,14 @@ async def post_extract(
 
 @file_router.get("/indexing")
 async def get_indexing(
-    folder_id: Optional[int] = None,
+    folder_id: list[int] = Query(default=[]),
+    file_id: list[int] = Query(default=[]),
     db: sqlite3.Connection = Depends(get_db),
 ):
-    """What isn't ready yet, for the chat banner and the file rows. Scoped to
-    one folder when given -- the one the chat is answering from."""
-    if folder_id is not None and not library_service.get_folder(db, folder_id):
-        raise HTTPException(404, "no such folder")
-    return library_service.indexing_status(db, folder_id)
+    """What isn't ready yet, for the chat banner, the attachment chips and the
+    file rows: ?folder_id=1&folder_id=2&file_id=7. Deleted ids come back under
+    `missing`, not as a 404."""
+    return library_service.indexing_status(db, folder_id, file_id)
 
 
 @file_router.get("/files/{file_id}/raw")

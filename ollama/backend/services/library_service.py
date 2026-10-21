@@ -179,8 +179,14 @@ def files_to_extract(db: sqlite3.Connection, force: bool = False) -> list[int]:
 # --- indexing progress ----------------------------------------------------
 
 
-def indexing_status(db: sqlite3.Connection, folder_id: Optional[int] = None) -> dict:
-    """Where each file is, so the UI can say what isn't ready yet.
+def indexing_status(
+    db: sqlite3.Connection,
+    folder_ids: Optional[list[int]] = None,
+    file_ids: Optional[list[int]] = None,
+) -> dict:
+    """Where each file is, so the UI can say what isn't ready yet. Covers the
+    given folders and files -- what the chat is attached to -- or the whole
+    library when neither is given.
 
     Stages, in the order a file moves through them:
       extracting  no text yet -- not searchable at all
@@ -196,9 +202,12 @@ def indexing_status(db: sqlite3.Connection, folder_id: Optional[int] = None) -> 
     live = indexing_worker.status()
     active = live["current"]["file_id"] if live["current"] else None
 
+    folder_ids, file_ids = folder_ids or [], file_ids or []
+    rows = FileRepository(db).get_indexing_rows(folder_ids, file_ids)
+
     counts = {"extracting": 0, "reading": 0, "ready": 0, "failed": 0}
-    unfinished = []
-    for row in FileRepository(db).get_indexing_rows(folder_id):
+    unfinished, failed = [], []
+    for row in rows:
         if not row["extracted"]:
             stage = "failed" if row["failed"] else "extracting"
         elif row["summarized"]:
@@ -223,7 +232,32 @@ def indexing_status(db: sqlite3.Connection, folder_id: Optional[int] = None) -> 
                     "active": row["id"] == active,
                 }
             )
+        elif stage == "failed":
+            failed.append(
+                {
+                    "id": row["id"],
+                    "folder_id": row["folder_id"],
+                    "name": row["name"],
+                    "error": row["extract_error"],
+                }
+            )
+
+    # Attached, but deleted since. Reported rather than raised, so one stale
+    # attachment can't break the status of the rest -- and dropped by the UI
+    # straight away, before SQLite hands its id to something new.
+    found = {row["id"] for row in rows}
+    folders = FolderRepository(db)
+    missing = {
+        "folder_ids": [f for f in folder_ids if not folders.get_folder(f)],
+        "file_ids": [f for f in file_ids if f not in found],
+    }
 
     # paused: Ollama unreachable, with seconds until the next try -- the one
     # thing worth telling the user that the tables can't.
-    return {"counts": counts, "files": unfinished, "paused": live["paused"]}
+    return {
+        "counts": counts,
+        "files": unfinished,
+        "failed": failed,
+        "missing": missing,
+        "paused": live["paused"],
+    }
