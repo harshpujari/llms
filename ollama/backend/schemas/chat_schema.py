@@ -1,10 +1,13 @@
 """Request bodies for the chat endpoint."""
 
-# Default libraries
-from typing import Optional
-
 # Installed libraries
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, model_validator
+
+# Folders and files together. Retrieval picks its best chunks from all of them,
+# so more wouldn't overflow the context -- the cap keeps the chips readable and
+# keeps unrelated documents away from a small model. The frontend mirrors it in
+# js/state.js.
+MAX_ATTACHMENTS = 5
 
 
 class Message(BaseModel):
@@ -18,6 +21,13 @@ class ChatRequest(BaseModel):
     # "generate" -> raw completion, no template, no history: the model just
     #               continues the text, the way a base model would.
     mode: str = "chat"
-    # Accepted and ignored until retrieval lands -- the UI already tracks which
-    # library folder the conversation is scoped to, and this is where it arrives.
-    folder_id: Optional[int] = None
+    # What the conversation answers from: whole folders and single files, as
+    # attached in the UI. Accepted and ignored until retrieval lands.
+    folder_ids: list[int] = Field(default_factory=list)
+    file_ids: list[int] = Field(default_factory=list)
+
+    @model_validator(mode="after")
+    def _cap_attachments(self) -> "ChatRequest":
+        if len(self.folder_ids) + len(self.file_ids) > MAX_ATTACHMENTS:
+            raise ValueError(f"at most {MAX_ATTACHMENTS} folders and files can be attached")
+        return self
