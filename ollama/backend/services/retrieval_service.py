@@ -57,12 +57,13 @@ FLOOR = 0.45
 # off-topic question shouldn't drag in a passage that's far off in meaning.
 KEYWORD_FLOOR = 0.55
 
-# Room for passages in the prompt: num_ctx is 4096, and the question, the
-# instructions, history and the answer all need some too.
-CONTEXT_TOKENS = 1500
+# Room for passages in the prompt. On CPU the model reads its whole prompt
+# before the first token, about 11 ms a token here -- measured cold on the
+# Amaze brochure: ~1,460 tokens of excerpts, 6/6 correct, first token ~18 s;
+# ~700 tokens, 5/6 correct, ~6 s. Six questions can't tell 5/6 from 6/6; the
+# twelve seconds are certain. Raise it for accuracy over speed.
+CONTEXT_TOKENS = 900
 MAX_SOURCES = 5
-# Each contributing file gets one line of its summary as context.
-ABOUT_CHARS = 200
 
 # Words that say how a question is asked, not what it's about. Matching them
 # would rank passages by how often they use "the".
@@ -108,18 +109,6 @@ def _coverage(files: list[dict]) -> dict:
         "searched": len(files) - len(unsearched),
         "unsearched": unsearched,
     }
-
-
-def _about(summary: Optional[str]) -> Optional[str]:
-    """A file's summary cut to its first sentence or two, for one line of context."""
-    if not summary:
-        return None
-    line = " ".join(summary.split())
-    if len(line) <= ABOUT_CHARS:
-        return line
-    cut = line[:ABOUT_CHARS]
-    end = cut.rfind(". ")
-    return cut[: end + 1] if end > 40 else cut.rstrip() + "…"
 
 
 def _search(question: str, vector: Optional[bytes], files: list[dict]) -> list[dict]:
@@ -203,9 +192,9 @@ def _search(question: str, vector: Optional[bytes], files: list[dict]) -> list[d
 async def retrieve(question: str, folder_ids: list[int], file_ids: list[int]) -> dict:
     """What to answer `question` from, among the attached folders and files.
 
-    Returns sources (best first, numbered [1]..[n]), one line `about` each
-    contributing file, `coverage` of what was and wasn't searched, and
-    `keywords_only` when the embedding model was unavailable.
+    Returns sources (best first, numbered [1]..[n]), `coverage` of what was
+    and wasn't searched, and `keywords_only` when the embedding model was
+    unavailable.
     """
     started = time.time()
 
@@ -219,7 +208,7 @@ async def retrieve(question: str, folder_ids: list[int], file_ids: list[int]) ->
     files = await run_in_threadpool(attached)
     coverage = _coverage(files)
     searchable = [f for f in files if f["searchable"]]
-    result = {"sources": [], "about": {}, "coverage": coverage, "keywords_only": False}
+    result = {"sources": [], "coverage": coverage, "keywords_only": False}
     if not searchable:
         return result
 
@@ -231,12 +220,7 @@ async def retrieve(question: str, folder_ids: list[int], file_ids: list[int]) ->
         vector, result["keywords_only"] = None, True
 
     sources = await run_in_threadpool(_search, question, vector, searchable)
-    by_id = {f["id"]: f for f in searchable}
     result["sources"] = sources
-    result["about"] = {
-        fid: line for fid in dict.fromkeys(s["file_id"] for s in sources)
-        if (line := _about(by_id[fid]["summary"]))
-    }
     logger.info(
         "retrieved %d source(s) from %d/%d file(s) in %.0f ms%s",
         len(sources), coverage["searched"], coverage["total"],

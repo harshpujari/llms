@@ -4,10 +4,20 @@ With attachments, each message is answered in three moves:
 
   retrieve   the latest message is searched for in the attached folders and
              files (retrieval_service)
-  ground     what was found goes into a system message, numbered for citing,
-             written fresh for this message and never kept in the history
+  ground     what was found replaces that message, for this request only: the
+             excerpts, then the question, then a cue to answer. The history
+             the UI keeps still holds what was typed
   stream     the model answers, after a {"retrieval": ...} frame telling the UI
              what was searched and what the answer can cite
+
+The prompt's shape was measured, not guessed. With the excerpts in a system
+message, labelled "[1] file · page", llama3.2:1b began its answers by copying
+them -- citing [1] looked like the start of an excerpt. Tagged excerpts in the
+user message, ending "Question: ... Answer in one or two sentences:", gave
+5/6 and 6/6 correct with nothing copied. And when nothing matched, *any*
+instruction about documents confused it ("hi" -> "there are no attached
+documents. Is everything okay?"), so then there is none: the {"retrieval"}
+frame tells the UI, which says so beside the answer.
 
 Without attachments it's plain chat, as it always was. Either way the history
 is trimmed to fit the context window: Ollama silently drops the *start* of an
@@ -35,44 +45,35 @@ ANSWER_TOKENS = 700
 MESSAGE_OVERHEAD = 4
 
 
-def _system_prompt(found: dict) -> str:
-    sources, coverage = found["sources"], found["coverage"]
-    lines: list[str] = []
+def _attr(value: str) -> str:
+    """Safe inside a double-quoted tag attribute."""
+    return value.replace('"', "'")
 
-    if sources:
-        lines += [
-            "Answer using only the excerpts below, from the user's attached documents.",
-            "- If they don't contain the answer, say you couldn't find it in the attached documents.",
-            "- Cite the excerpts you used by number, like [1] or [2][3].",
-            "- Copy names, figures and units exactly as written.",
-        ]
-    else:
-        # "hi" with a folder attached should still get a greeting, not an
-        # apology for the folder.
-        lines += [
-            "The user has attached documents, but nothing in them matched this message.",
-            "If it asks about the documents, say you couldn't find that in the attached "
-            "documents. Otherwise, reply normally.",
-        ]
 
-    if coverage["unsearched"]:
-        names = ", ".join(u["name"] for u in coverage["unsearched"][:5])
-        lines.append(
-            f"Some attached documents couldn't be searched yet ({names}), "
-            "so an answer missing here may be in those."
+def _grounded(found: dict, question: str) -> str:
+    """The latest message as the model sees it: the excerpts, then the question."""
+    excerpts = "\n".join(
+        f'<excerpt n="{s["n"]}" source="{_attr(_source_label(s))}">\n{s["text"]}\n</excerpt>'
+        for s in found["sources"]
+    )
+    instruction = (
+        "Use only the excerpts to answer. Cite them by number, like [1]. "
+        "If the answer isn't in them, say so."
+    )
+    unsearched = found["coverage"]["unsearched"]
+    if unsearched:
+        names = ", ".join(u["name"] for u in unsearched[:5])
+        instruction += (
+            f" Some attached documents couldn't be searched yet ({names}), "
+            "so if the answer isn't here it may be in those."
         )
+    return f"{instruction}\n\n{excerpts}\n\nQuestion: {question}\nAnswer in one or two sentences:"
 
-    if sources:
-        names = {s["file_id"]: s["file_name"] for s in sources}
-        if found["about"]:
-            lines.append("\nDocuments:")
-            lines += [f"- {names[fid]}: {about}" for fid, about in found["about"].items()]
-        lines.append("\nExcerpts:")
-        for s in sources:
-            label = f"{s['file_name']} · {s['heading']}" if s["heading"] else s["file_name"]
-            lines.append(f"[{s['n']}] {label}\n{s['text']}\n")
 
-    return "\n".join(lines)
+def _source_label(s: dict) -> str:
+    # The file's name without its extension, and where in it.
+    name = s["file_name"].rsplit(".", 1)[0]
+    return f"{name}, {s['heading']}" if s["heading"] else name
 
 
 def _frame(found: Optional[dict], error: Optional[str] = None) -> str:
@@ -91,45 +92,48 @@ def _frame(found: Optional[dict], error: Optional[str] = None) -> str:
     }}) + "\n"
 
 
-def _fit(system: Optional[str], history: list[Message]) -> list[dict]:
-    """The system message, then as much recent history as the context holds.
-    Oldest turns go first; the latest message always stays."""
-    budget = ollama_service.OPTIONS["num_ctx"] - ANSWER_TOKENS
-    if system:
-        budget -= estimate_tokens(system) + MESSAGE_OVERHEAD
+def _fit(history: list[Message], latest: Optional[str] = None) -> list[dict]:
+    """As much recent history as the context holds, oldest turns dropped
+    first. The latest message always stays -- as `latest` when given, the
+    grounded version of it."""
+    messages = [m.model_dump() for m in history]
+    if latest is not None and messages:
+        messages[-1] = {**messages[-1], "content": latest}
 
+    budget = ollama_service.OPTIONS["num_ctx"] - ANSWER_TOKENS
     kept: list[dict] = []
-    for message in reversed(history):
-        cost = estimate_tokens(message.content) + MESSAGE_OVERHEAD
+    for message in reversed(messages):
+        cost = estimate_tokens(message["content"]) + MESSAGE_OVERHEAD
         if kept and cost > budget:
             break
-        kept.append(message.model_dump())
+        kept.append(message)
         budget -= cost
     kept.reverse()
 
-    if len(kept) < len(history):
-        logger.info("trimmed %d old message(s) to fit the context", len(history) - len(kept))
-    return ([{"role": "system", "content": system}] if system else []) + kept
+    if len(kept) < len(messages):
+        logger.info("trimmed %d old message(s) to fit the context", len(messages) - len(kept))
+    return kept
 
 
 async def stream(req: ChatRequest) -> AsyncIterator[str]:
     """Yields NDJSON: a {"retrieval": ...} frame when documents are attached,
     then {"token": ...} frames, then {"done": true}."""
     attached = req.folder_ids or req.file_ids
-    if req.mode == "generate" or not attached:
+    question = req.messages[-1].content if req.messages and req.messages[-1].role == "user" else ""
+    if req.mode == "generate" or not attached or not question.strip():
         if req.mode == "generate":
             async for line in ollama_service.stream(req):
                 yield line
         else:
-            async for line in ollama_service.stream_messages(_fit(None, req.messages)):
+            async for line in ollama_service.stream_messages(_fit(req.messages)):
                 yield line
         return
 
-    question = next((m.content for m in reversed(req.messages) if m.role == "user"), "")
-    system = None
+    latest = None
     try:
         found = await retrieval_service.retrieve(question, req.folder_ids, req.file_ids)
-        system = _system_prompt(found)
+        if found["sources"]:
+            latest = _grounded(found, question)
         yield _frame(found)
     except Exception:
         # The answer still comes, just not from the documents -- and the frame
@@ -137,5 +141,5 @@ async def stream(req: ChatRequest) -> AsyncIterator[str]:
         logger.exception("retrieval failed")
         yield _frame(None, "Couldn't search the attached documents.")
 
-    async for line in ollama_service.stream_messages(_fit(system, req.messages)):
+    async for line in ollama_service.stream_messages(_fit(req.messages, latest)):
         yield line
