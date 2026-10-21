@@ -16,6 +16,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
 COMPOSE=(docker compose -f DockerCompse.yml)
 MODEL="${MODEL:-llama3.2:1b}"
+EMBED_MODEL="${EMBED_MODEL:-nomic-embed-text}"
 BUILD=0
 
 while [[ $# -gt 0 ]]; do
@@ -52,11 +53,14 @@ fi
 
 "${COMPOSE[@]}" "${UP[@]}"
 
-# The volume survives ./scripts/stop.sh, so this only downloads on a genuinely fresh setup.
-if ! "${COMPOSE[@]}" exec -T ollama ollama list 2>/dev/null | grep -q "$MODEL"; then
-  echo "==> pulling $MODEL into the volume (~1.3 GB, first run only)"
-  "${COMPOSE[@]}" exec -T ollama ollama pull "$MODEL"
-fi
+# The volume survives ./scripts/stop.sh, so this only downloads on a genuinely
+# fresh setup -- or after switching MODEL or EMBED_MODEL to one not pulled yet.
+for m in "$MODEL" "$EMBED_MODEL"; do
+  if ! "${COMPOSE[@]}" exec -T ollama ollama list 2>/dev/null | grep -q "$m"; then
+    echo "==> pulling $m into the volume (first run only)"
+    "${COMPOSE[@]}" exec -T ollama ollama pull "$m"
+  fi
+done
 
 echo "==> waiting for the API"
 for i in $(seq 1 60); do

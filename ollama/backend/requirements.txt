@@ -12,6 +12,7 @@ fastapi==0.121.2
 uvicorn[standard]==0.42.0
 ollama==0.6.2
 python-multipart==0.0.32   # file uploads: FastAPI rejects multipart without it
+sqlite-vec==0.1.9          # vector search: the vec0 table, loaded on every connection
 # Document -> markdown extraction. Extras are picked deliberately: no
 # audio-transcription, no OCR, no Azure Document Intelligence.
 markitdown[pdf,docx,pptx,xlsx,xls,outlook]
