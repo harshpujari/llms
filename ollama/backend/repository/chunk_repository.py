@@ -188,6 +188,20 @@ class ChunkRepository:
         """Chunks nearest in meaning by their summary, among file_ids."""
         return self._knn("vectors_chunk_summary", vector, file_ids, k)
 
+    def text_distances(self, vector: bytes, chunk_ids: list[int]) -> dict[int, float]:
+        """Distance in meaning from `vector` to these chunks' text, looked up
+        directly -- for keyword hits the nearest-neighbour search didn't reach."""
+        if not chunk_ids:
+            return {}
+        marks = ", ".join("?" * len(chunk_ids))
+        rows = self.db.execute(
+            f"""SELECT chunk_id, vec_distance_cosine(embedding, ?) AS distance
+                  FROM vectors_chunk_text
+                 WHERE chunk_id IN ({marks})""",
+            (vector, *chunk_ids),
+        ).fetchall()
+        return {r["chunk_id"]: r["distance"] for r in rows}
+
     def search_keywords(self, match: str, file_ids: list[int], k: int) -> list[dict]:
         """Best BM25 matches among file_ids, best first (bm25 is lower-is-better).
 
