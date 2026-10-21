@@ -48,7 +48,7 @@ class FileRepository:
             """SELECT fi.id, fi.folder_id, fi.name, fi.stored_name, fi.bytes,
                       fi.sha256, fi.mime, fi.created_at, fi.extracted_at,
                       fi.extract_error, fi.indexed_at, fi.chunk_count,
-                      fi.summarized_at,
+                      fi.summarized_at, fi.embed_model,
                       LENGTH(fi.text_content) AS text_chars,
                       f.slug
                  FROM files fi JOIN folders f ON f.id = fi.folder_id
@@ -230,7 +230,7 @@ class FileRepository:
             self.db.execute(
                 f"""UPDATE {File.__tablename__}
                        SET chunk_count = ?, summary = NULL, summary_model = NULL,
-                           summarized_at = NULL, indexed_at = NULL
+                           summarized_at = NULL, indexed_at = NULL, embed_model = NULL
                      WHERE id = ?""",
                 (chunk_count, file_id),
             )
@@ -259,14 +259,16 @@ class FileRepository:
     # --- vectors and search ------------------------------------------------
     # vectors_file_summary is a vec0 table (see models/file.py).
 
-    def get_files_needing_vectors(self) -> list[dict]:
+    def get_files_needing_vectors(self, model: str) -> list[dict]:
         """Chunked files with something left to embed: chunk text (not yet
-        indexed), chunk summaries, or the document summary. The indexing
-        worker's backfill set -- including files from before embeddings."""
+        indexed), chunk summaries, or the document summary -- or vectors from
+        an embedding model other than `model`. The indexing worker's backfill
+        set, including files from before embeddings existed."""
         rows = self.db.execute(
             """SELECT fi.id FROM files fi
                 WHERE fi.chunk_count > 0
                   AND (fi.indexed_at IS NULL
+                       OR fi.embed_model IS NOT ?
                        OR EXISTS (SELECT 1 FROM chunks c
                                    WHERE c.file_id = fi.id AND c.summary IS NOT NULL
                                      AND NOT EXISTS (SELECT 1 FROM vectors_chunk_summary v
@@ -274,7 +276,8 @@ class FileRepository:
                        OR (fi.summary IS NOT NULL
                            AND NOT EXISTS (SELECT 1 FROM vectors_file_summary v
                                             WHERE v.file_id = fi.id)))
-                ORDER BY fi.id"""
+                ORDER BY fi.id""",
+            (model,),
         ).fetchall()
         return [dict(r) for r in rows]
 
@@ -307,12 +310,34 @@ class FileRepository:
             return False
         return True
 
-    def mark_indexed(self, file_id: int) -> bool:
-        """Every chunk's text is embedded: the file is searchable from now."""
+    def mark_indexed(self, file_id: int, model: str) -> bool:
+        """Every chunk's text is embedded, by `model`: searchable from now."""
         try:
             self.db.execute(
-                f"UPDATE {File.__tablename__} SET indexed_at = ? WHERE id = ?",
-                (now(), file_id),
+                f"UPDATE {File.__tablename__} SET indexed_at = ?, embed_model = ? WHERE id = ?",
+                (now(), model, file_id),
+            )
+            self.db.commit()
+        except sqlite3.Error as e:
+            self.db.rollback()
+            logger.error(f"SQLite Error: {e}")
+            return False
+        return True
+
+    def clear_vectors(self, file_id: int) -> bool:
+        """Drops every vector of a file -- its chunks' and its summary's -- and
+        un-indexes it, so it is embedded again from scratch. For a change of
+        embedding model; the text, chunks and summaries all stay."""
+        try:
+            for table in ("vectors_chunk_text", "vectors_chunk_summary"):
+                self.db.execute(
+                    f"DELETE FROM {table} WHERE chunk_id IN (SELECT id FROM chunks WHERE file_id = ?)",
+                    (file_id,),
+                )
+            self.db.execute("DELETE FROM vectors_file_summary WHERE file_id = ?", (file_id,))
+            self.db.execute(
+                f"UPDATE {File.__tablename__} SET indexed_at = NULL, embed_model = NULL WHERE id = ?",
+                (file_id,),
             )
             self.db.commit()
         except sqlite3.Error as e:

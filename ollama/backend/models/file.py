@@ -37,6 +37,9 @@ class File(Model):
       summary       TEXT,
       summary_model TEXT,               -- which model wrote it, so it can be redone
       summarized_at TEXT,
+      -- The embedding model this file's vectors came from. Vectors from two
+      -- models can't be compared, so a change of EMBED_MODEL re-embeds.
+      embed_model   TEXT,
       UNIQUE (folder_id, stored_name)
     );
 
@@ -51,6 +54,7 @@ class File(Model):
         "summary": "TEXT",
         "summary_model": "TEXT",
         "summarized_at": "TEXT",
+        "embed_model": "TEXT",
     }
 
     # The document summary's vector, so "what is this file about?" can match a
