@@ -1,12 +1,14 @@
 import { api, formatBytes, icon, FOLDER_ICON, DOC_ICON, CHEV_ICON, fileState, fileLabel, isReading } from "./api.js";
 import { nudgeIndexing } from "./indexing.js";
-import { getScope, setScope } from "./state.js";
+import {
+  MAX_ATTACHMENTS, attach, detach, forgetFolder, isAttached, canAttachFolder, onAttachmentsChange,
+} from "./state.js";
 import { openViewer } from "./viewer.js";
 
 // --- Library -------------------------------------------------------------
 // Two views in one panel, iOS navigation-stack style: the folder list, and one
-// folder's files. The scope (state.js) is the folder the next message will be
-// answered from -- tracked now, consumed once retrieval is wired up.
+// folder's files. Folders are added to the chat from here or the 📎 picker;
+// what's attached lives in state.js.
 
 const panel = document.getElementById("panel");
 const backdrop = document.getElementById("backdrop");
@@ -111,13 +113,15 @@ async function showFolders() {
       iconPaths: FOLDER_ICON,
       name: f.name,
       meta: `${f.file_count} file${f.file_count === 1 ? "" : "s"} · ${formatBytes(f.total_bytes)}`,
-      active: getScope()?.id === f.id,
+      active: isAttached("folder", f.id),
       chevron: true,
       onOpen: () => showFolder(f),
       onDelete: async () => {
         if (!confirm(`Delete "${f.name}" and its ${f.file_count} file(s)?`)) return;
         await api(`/folders/${f.id}`, { method: "DELETE" });
-        if (getScope()?.id === f.id) setScope(null);
+        // Now, not on the banner's next poll: with nothing unfinished there
+        // may not be one, and the chip would point at a deleted folder.
+        forgetFolder(f.id);
         showFolders();
       },
     }));
@@ -179,9 +183,9 @@ async function showFolder(folder) {
     }, extracting ? 1200 : 3000);
   }
 
-  // An upload into the chat's folder should bring the banner up now, not on
+  // An upload into an attached folder should bring the banner up now, not on
   // its next poll -- which, if it had nothing to show, isn't coming.
-  if (getScope()?.id === folder.id) nudgeIndexing();
+  if (isAttached("folder", folder.id)) nudgeIndexing();
 
   panelBody.replaceChildren();
   if (!files.length) {
@@ -200,6 +204,7 @@ async function showFolder(folder) {
       onOpen: () => openViewer(f),
       onDelete: async () => {
         await api(`/files/${f.id}`, { method: "DELETE" });
+        detach("file", f.id);
         showFolder(folder);
       },
     }));
@@ -238,19 +243,40 @@ async function showFolder(folder) {
   actions.className = "action-row";
   actions.append(upload, info);
 
-  const selected = getScope()?.id === folder.id;
+  panelFoot.replaceChildren(notice, actions, useButton(folder));
+}
+
+// Add to chat / Remove from chat. The panel stays open either way: with
+// several folders to add, closing it each time would mean reopening it for
+// the next, and the chips update in view behind it.
+function useButton(folder) {
+  const on = isAttached("folder", folder.id);
   const use = document.createElement("button");
   use.className = "action secondary";
   use.type = "button";
-  use.textContent = selected ? "Stop using in chat" : "Chat with this folder";
-  use.onclick = () => {
-    setScope(selected ? null : { id: folder.id, name: folder.name });
-    showFolder(folder);
-    if (!selected) setPanel(false);
-  };
-
-  panelFoot.replaceChildren(notice, actions, use);
+  if (on) {
+    use.textContent = "Remove from chat";
+    use.onclick = () => detach("folder", folder.id);
+  } else if (canAttachFolder(folder.id)) {
+    use.textContent = "Add to chat";
+    use.onclick = () => attach({ kind: "folder", id: folder.id, name: folder.name });
+  } else {
+    use.textContent = `Chat is full (${MAX_ATTACHMENTS} of ${MAX_ATTACHMENTS})`;
+    use.disabled = true;
+  }
+  return use;
 }
+
+// Attached or detached from anywhere -- here, the 📎 picker, a chip's x --
+// the open view follows: the folder's button, or the list's active icons.
+onAttachmentsChange(() => {
+  if (!isPanelOpen()) return;
+  if (openFolder) {
+    panelFoot.querySelector(".action.secondary")?.replaceWith(useButton(openFolder));
+  } else {
+    showFolders();
+  }
+});
 
 // Fetched once from /formats so the allowlist has a single definition -- the
 // backend rejects on the same list this renders.

@@ -33,6 +33,12 @@ export function canAttach() {
   return attachments.length < MAX_ATTACHMENTS;
 }
 
+// Attaching a folder absorbs its files attached one by one, which frees their
+// slots -- so a full list can still take the folder of a file it holds.
+export function canAttachFolder(folderId) {
+  return canAttach() || attachments.some(a => a.kind === "file" && a.folder_id === folderId);
+}
+
 // False when nothing changed: already attached, covered by its folder, or full.
 export function attach(item) {
   if (isAttached(item.kind, item.id)) return false;
@@ -53,6 +59,16 @@ export function attach(item) {
 
 export function detach(kind, id) {
   const rest = attachments.filter(a => !(a.kind === kind && a.id === id));
+  if (rest.length === attachments.length) return;
+  attachments = rest;
+  changed();
+}
+
+// A folder was deleted: it goes, and so does any of its files attached on
+// their own -- in one change, so the chips redraw once.
+export function forgetFolder(folderId) {
+  const rest = attachments.filter(a =>
+    !(a.kind === "folder" && a.id === folderId) && !(a.kind === "file" && a.folder_id === folderId));
   if (rest.length === attachments.length) return;
   attachments = rest;
   changed();
@@ -81,21 +97,4 @@ export function prune(missing) {
 
 export function onAttachmentsChange(fn) {
   listeners.push(fn);
-}
-
-// --- Single-folder scope (transitional) --------------------------------------
-// What chat.js, library.js and indexing.js still call until they move to the
-// list above: "the scope" is the first attached folder.
-
-export function getScope() {
-  return attachments.find(a => a.kind === "folder") || null;
-}
-
-export function setScope(next) {
-  attachments = next ? [{ kind: "folder", id: next.id, name: next.name }] : [];
-  changed();
-}
-
-export function onScopeChange(fn) {
-  listeners.push(() => fn(getScope()));
 }

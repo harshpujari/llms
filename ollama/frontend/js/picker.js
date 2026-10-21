@@ -1,7 +1,7 @@
 import { api, icon, FOLDER_ICON, DOC_ICON, CHEV_ICON, fileState, fileLabel, isReading } from "./api.js";
 import { nudgeIndexing } from "./indexing.js";
 import {
-  MAX_ATTACHMENTS, attach, detach, isAttached, coveredByFolder, canAttach,
+  MAX_ATTACHMENTS, attach, detach, isAttached, coveredByFolder, canAttach, canAttachFolder,
   getAttachments, onAttachmentsChange,
 } from "./state.js";
 
@@ -167,12 +167,6 @@ function uploadRow() {
   return el;
 }
 
-// Attaching a folder absorbs its files attached one by one, which frees their
-// slots -- so a full picker can still take the folder of a file it holds.
-function canTakeFolder(folderId) {
-  return canAttach() || getAttachments().some(a => a.kind === "file" && a.folder_id === folderId);
-}
-
 function folderToggle(folder) {
   return on => on
     ? attach({ kind: "folder", id: folder.id, name: folder.name })
@@ -215,7 +209,7 @@ function renderFolders() {
       name: f.name,
       meta: plural(f.file_count, "file"),
       checked: on,
-      disabled: !on && !canTakeFolder(f.id),
+      disabled: !on && !canAttachFolder(f.id),
       onToggle: folderToggle(f),
       onOpen: () => showFolder(f),
     });
@@ -269,7 +263,7 @@ function renderFolder() {
       name: `All of ${folder.name}`,
       meta: plural(files.length, "file"),
       checked: whole,
-      disabled: !whole && !canTakeFolder(folder.id),
+      disabled: !whole && !canAttachFolder(folder.id),
       onToggle: folderToggle(folder),
     }),
   ];
