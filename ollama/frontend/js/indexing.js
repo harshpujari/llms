@@ -1,16 +1,28 @@
 import { api } from "./api.js";
-import { getScope, onScopeChange } from "./state.js";
+import { attachmentIds, getAttachments, onAttachmentsChange, prune } from "./state.js";
 
 // --- Indexing banner -----------------------------------------------------
 // A file is searchable by its text seconds after upload, but summarizing it
-// takes minutes on CPU. While the chat's folder has files still being read,
-// say so above the composer -- what's missing, and that replies may be slow --
-// then go quiet once it's all done.
+// takes minutes on CPU. While anything attached to the chat is still being
+// read, say so above the composer -- what's missing, and that replies may be
+// slow -- then go quiet once it's all done. Each status is also passed on, so
+// the attachment chips can show their own progress.
 
 const indexingBar = document.getElementById("indexing");
 
 let indexingPoll = null;
 let indexingGen = 0; // drops a response that a newer refresh has overtaken
+const listeners = [];
+
+// Every /indexing response, as it lands; null when nothing is attached or the
+// backend can't be reached.
+export function onIndexingStatus(fn) {
+  listeners.push(fn);
+}
+
+function publish(st) {
+  for (const fn of listeners) fn(st);
+}
 
 function plural(n, word) {
   return `${n} ${word}${n === 1 ? "" : "s"}`;
@@ -76,33 +88,50 @@ async function refreshIndexing() {
   clearTimeout(indexingPoll);
   indexingPoll = null;
   const gen = ++indexingGen;
-  const scope = getScope();
-  if (!scope) {
+  const { folder_ids, file_ids } = attachmentIds();
+  if (!folder_ids.length && !file_ids.length) {
     indexingBar.hidden = true;
+    publish(null);
     return;
   }
 
+  const query = [
+    ...folder_ids.map(id => "folder_id=" + id),
+    ...file_ids.map(id => "file_id=" + id),
+  ].join("&");
+
   let st;
   try {
-    st = await api(`/indexing?folder_id=${scope.id}`);
+    st = await api(`/indexing?${query}`);
   } catch {
     // Not worth an error of its own: a dead backend already shows up in the
     // header and the chat. Hide, and look again in a while.
     if (gen !== indexingGen) return;
     indexingBar.hidden = true;
+    publish(null);
     indexingPoll = setTimeout(refreshIndexing, 10000);
     return;
   }
-  if (gen !== indexingGen) return; // scope changed, or a newer refresh ran
+  if (gen !== indexingGen) return; // attachments changed, or a newer refresh ran
+
+  // Deleted since being attached. Pruning notifies, which starts a fresh
+  // refresh for what's left -- this response still describes the old list.
+  const { missing } = st;
+  if (missing && (missing.folder_ids.length || missing.file_ids.length)) {
+    const before = getAttachments();
+    prune(missing);
+    if (getAttachments() !== before) return;
+  }
 
   renderIndexing(st);
+  publish(st);
   if (st.files.length) indexingPoll = setTimeout(refreshIndexing, 3000);
 }
 
 // For callers that know something may have just changed -- an upload into
-// the chat's folder: refresh now, unless a poll is already on its way.
+// an attached folder: refresh now, unless a poll is already on its way.
 export function nudgeIndexing() {
   if (!indexingPoll) refreshIndexing();
 }
 
-onScopeChange(refreshIndexing);
+onAttachmentsChange(refreshIndexing);
