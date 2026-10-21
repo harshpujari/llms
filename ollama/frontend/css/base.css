@@ -117,6 +117,44 @@ header .sub {
 
 .row { display: flex; }
 .row.me { justify-content: flex-end; }
+/* A column, so an answer's sources sit under it. */
+.row.them { flex-direction: column; align-items: flex-start; }
+
+/* --- Sources under an answer ------------------------------------------
+   Quieter than the answer: grey, small, wrapped to the bubble's width. */
+.sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: min(75%, 560px);
+  margin: 6px 0 2px 4px;
+}
+
+.source {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 100%;
+  padding: 3px 9px;
+  font: inherit;
+  font-size: 12px;
+  color: var(--secondary);
+  background: rgba(127, 127, 127, 0.12);
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.source:hover { color: var(--text); background: rgba(127, 127, 127, 0.2); }
+.source svg { flex: none; }
+.source .label { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+.sources .note {
+  flex-basis: 100%;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--secondary);
+}
 
 .bubble {
   max-width: min(75%, 560px);

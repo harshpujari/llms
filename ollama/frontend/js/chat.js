@@ -2,10 +2,11 @@ import { API, icon, FOLDER_ICON, DOC_ICON } from "./api.js";
 import { onIndexingStatus } from "./indexing.js";
 import { renderMarkdown } from "./markdown.js";
 import { attachmentIds, detach, getAttachments, onAttachmentsChange } from "./state.js";
+import { openViewer } from "./viewer.js";
 
 // --- Chat ----------------------------------------------------------------
 // The conversation and the composer under it: the attachment chips, sending,
-// and streaming the reply in.
+// streaming the reply in, and under a reply from the documents, its sources.
 
 const log = document.getElementById("log");
 const form = document.getElementById("form");
@@ -103,6 +104,80 @@ function addBubble(who, text) {
   return bubble;
 }
 
+// --- Sources under an answer -----------------------------------------------
+// From the {"retrieval"} frame the server sends before an answer from the
+// attached documents. A chip per passage the answer was given, which opens the
+// file; and a note when there's something to own up to -- documents that
+// weren't searched, or nothing matching, which makes the answer not theirs.
+
+// "invoice.pdf is still extracting" for one; "2 still extracting, 1 couldn't
+// be read" for several.
+function unsearchedText(unsearched) {
+  if (unsearched.length === 1) {
+    const { name, reason } = unsearched[0];
+    return reason === "couldn't be read" ? `${name} couldn't be read` : `${name} is ${reason}`;
+  }
+  const counts = new Map();
+  for (const u of unsearched) counts.set(u.reason, (counts.get(u.reason) || 0) + 1);
+  return [...counts].map(([reason, n]) => `${n} ${reason}`).join(", ");
+}
+
+function sourceChip(s) {
+  const name = s.file_name.replace(/\.[^.]+$/, "");
+  const chip = document.createElement("button");
+  chip.type = "button";
+  chip.className = "source";
+  chip.title = `Open ${s.file_name}`;
+  chip.appendChild(icon(DOC_ICON, 12));
+  const label = document.createElement("span");
+  label.className = "label";
+  label.textContent = s.heading ? `${name} · ${s.heading}` : name;
+  chip.appendChild(label);
+  // Only searchable files are ever sources, so the file is extracted.
+  chip.onclick = () => openViewer({ id: s.file_id, name: s.file_name, text_chars: 1, extract_error: null });
+  return chip;
+}
+
+function renderRetrieval(row, r) {
+  const box = document.createElement("div");
+  box.className = "sources";
+  const notes = [];
+
+  if (r.error) {
+    notes.push(r.error);
+  } else {
+    // One chip per file and place: a page split in two is one place to look.
+    const seen = new Set();
+    for (const s of r.sources) {
+      const key = `${s.file_id}:${s.heading}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      box.appendChild(sourceChip(s));
+    }
+
+    const { total, searched, unsearched } = r.coverage;
+    if (!r.sources.length) {
+      notes.push(searched
+        ? "Nothing in the attached documents matched — this answer isn't from them."
+        : "None of the attached documents can be searched yet — this answer isn't from them.");
+    }
+    if (unsearched.length) {
+      notes.push(r.sources.length
+        ? `Answered from ${searched} of ${total} documents — ${unsearchedText(unsearched)}.`
+        : `${unsearchedText(unsearched)}.`);
+    }
+    if (r.keywords_only) notes.push("Searched by keywords only — the embedding model wasn't available.");
+  }
+
+  for (const text of notes) {
+    const note = document.createElement("span");
+    note.className = "note";
+    note.textContent = text;
+    box.appendChild(note);
+  }
+  if (box.childElementCount) row.appendChild(box);
+}
+
 // Grow the field with the text, up to the CSS max-height.
 input.addEventListener("input", () => {
   input.style.height = "auto";
@@ -151,8 +226,7 @@ form.addEventListener("submit", async e => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         messages: history,
-        // Ignored by the backend until retrieval lands; sent now so the two
-        // sides don't need changing together later.
+        // What the answer is searched for in; nothing attached is plain chat.
         ...attachmentIds(),
       }),
     });
@@ -174,6 +248,11 @@ form.addEventListener("submit", async e => {
         if (!line.trim()) continue;
         const msg = JSON.parse(line);
         if (msg.error) throw new Error(msg.error);
+        // Before the first token, so the sources show while it answers.
+        if (msg.retrieval) {
+          renderRetrieval(bubble.parentElement, msg.retrieval);
+          log.scrollTop = log.scrollHeight;
+        }
         if (msg.token) {
           if (!reply) bubble.classList.add("md"); // first token clears the dots
           reply += msg.token;
