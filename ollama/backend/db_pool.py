@@ -15,6 +15,9 @@ import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
 
+# Installed libraries
+import sqlite_vec
+
 logger = configure_logging(__name__)
 
 DB_PATH = Path(os.getenv("LIBRARY_DB", "/app/data/library.db"))
@@ -39,6 +42,12 @@ class Model:
         super().__init_subclass__(**kwargs)
         Model.registry.append(cls)
 
+    @classmethod
+    def after_init(cls, db: sqlite3.Connection) -> None:
+        """Runs once every model's tables and columns exist. For what can't go
+        in __schema__: triggers on columns a migration adds, and one-time
+        backfills. Must be safe to run on every startup."""
+
 
 def now() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
@@ -56,6 +65,12 @@ def connect() -> sqlite3.Connection:
     # does nothing and deleting a folder orphans all its file rows.
     db.execute("PRAGMA foreign_keys = ON")
     db.execute("PRAGMA journal_mode = WAL")
+    # sqlite-vec, on every connection rather than only the ones that search:
+    # triggers tidy the vector tables on plain deletes too, and on a
+    # connection without it they fail with "no such module: vec0".
+    db.enable_load_extension(True)
+    sqlite_vec.load(db)
+    db.enable_load_extension(False)
     return db
 
 
@@ -69,7 +84,8 @@ def get_db():
 
 
 def init_db() -> None:
-    """Create every registered table, then apply any pending column additions."""
+    """Create every registered table, apply pending column additions, then
+    each model's after_init."""
     # Importing the package registers each model against Model.registry.
     import models  # noqa: F401
 
@@ -84,3 +100,8 @@ def init_db() -> None:
                 if column not in have:
                     logger.info("adding %s.%s", model.__tablename__, column)
                     db.execute(f"ALTER TABLE {model.__tablename__} ADD COLUMN {column} {ddl}")
+
+        # A second pass, so a trigger can reference any model's tables --
+        # including columns a migration above has only just added.
+        for model in Model.registry:
+            model.after_init(db)

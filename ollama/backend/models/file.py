@@ -2,6 +2,10 @@
 
 # Custom libraries
 from db_pool import Model
+from models.chunk import EMBED_DIM
+
+# Default libraries
+import sqlite3
 
 
 class File(Model):
@@ -48,6 +52,32 @@ class File(Model):
         "summary_model": "TEXT",
         "summarized_at": "TEXT",
     }
+
+    # The document summary's vector, so "what is this file about?" can match a
+    # whole document rather than one chunk of it. Triggers here, not in
+    # __schema__: summary is a migrated column, and on an old database it
+    # doesn't exist until the migrations have run.
+    __search__ = f"""
+    CREATE VIRTUAL TABLE IF NOT EXISTS vectors_file_summary USING vec0(
+      file_id   INTEGER PRIMARY KEY,
+      embedding float[{EMBED_DIM}] distance_metric=cosine
+    );
+
+    CREATE TRIGGER IF NOT EXISTS files_vectors_delete AFTER DELETE ON files BEGIN
+      DELETE FROM vectors_file_summary WHERE file_id = old.id;
+    END;
+
+    -- Re-chunking clears the summary; a rewrite replaces it. Either way the
+    -- old vector describes text that is gone.
+    CREATE TRIGGER IF NOT EXISTS files_summary_vector_stale AFTER UPDATE OF summary ON files
+      WHEN new.summary IS NOT old.summary BEGIN
+      DELETE FROM vectors_file_summary WHERE file_id = old.id;
+    END;
+    """
+
+    @classmethod
+    def after_init(cls, db: sqlite3.Connection) -> None:
+        db.executescript(cls.__search__)
 
     # Every column except text_content, which can be megabytes and has no
     # business in a directory listing. Its length comes back instead. summary
