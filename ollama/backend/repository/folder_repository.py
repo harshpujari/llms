@@ -39,6 +39,12 @@ class FolderRepository:
         ).fetchone()
         return dict(row) if row else None
 
+    def get_folder_by_slug(self, slug: str) -> Optional[dict]:
+        row = self.db.execute(
+            f"SELECT * FROM {Folder.__tablename__} WHERE slug = ?", (slug,)
+        ).fetchone()
+        return dict(row) if row else None
+
     def slug_exists(self, slug: str) -> bool:
         return (
             self.db.execute(

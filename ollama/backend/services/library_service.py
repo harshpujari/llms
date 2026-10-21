@@ -55,6 +55,25 @@ def create_folder(db: sqlite3.Connection, name: str) -> dict:
     return row
 
 
+MISC_NAME = "Miscellaneous"
+MISC_SLUG = storage_service.slugify(MISC_NAME)
+
+
+def misc_folder(db: sqlite3.Connection) -> dict:
+    """Where uploads from the chat bar land, created on first use.
+
+    Found by slug, not name: a "Miscellaneous" made by hand is the same folder,
+    and deleting it just means the next upload brings it back. Called on the
+    event loop, never a worker thread, so two uploads can't both create it.
+    """
+    row = FolderRepository(db).get_folder_by_slug(MISC_SLUG)
+    if row:
+        return row
+    created = create_folder(db, MISC_NAME)
+    logger.info("created %s for chat uploads", MISC_NAME)
+    return FolderRepository(db).get_folder(created["id"])
+
+
 def delete_folder(db: sqlite3.Connection, folder_id: int) -> bool:
     repo = FolderRepository(db)
     row = repo.get_folder(folder_id)

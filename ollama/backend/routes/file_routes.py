@@ -41,14 +41,10 @@ async def get_files(folder_id: int, db: sqlite3.Connection = Depends(get_db)):
     return library_service.list_files(db, folder_id)
 
 
-@file_router.post("/folders/{folder_id}/files", status_code=201)
-async def post_files(
-    folder_id: int,
-    files: list[UploadFile],
-    db: sqlite3.Connection = Depends(get_db),
-):
-    """Multi-upload. Returns as soon as the bytes are stored -- text extraction
-    is queued and reported through each file's status. A rejected file doesn't
+async def _save_uploads(
+    db: sqlite3.Connection, folder_id: int, files: list[UploadFile]
+) -> dict:
+    """Store each upload and queue it for extraction. A rejected file doesn't
     abort the ones beside it."""
     saved, failed = [], []
     for upload in files:
@@ -77,6 +73,30 @@ async def post_files(
         saved.append(row)
 
     return {"saved": saved, "failed": failed, "queued": extraction_worker.pending()}
+
+
+@file_router.post("/folders/{folder_id}/files", status_code=201)
+async def post_files(
+    folder_id: int,
+    files: list[UploadFile],
+    db: sqlite3.Connection = Depends(get_db),
+):
+    """Multi-upload. Returns as soon as the bytes are stored -- text extraction
+    is queued and reported through each file's status."""
+    return await _save_uploads(db, folder_id, files)
+
+
+@file_router.post("/files", status_code=201)
+async def post_misc_files(
+    files: list[UploadFile],
+    db: sqlite3.Connection = Depends(get_db),
+):
+    """Uploads from the chat bar, which have no folder of their own: they land
+    in Miscellaneous. The folder comes back too, so the UI knows where they went
+    and can attach the saved files straight away."""
+    folder = library_service.misc_folder(db)
+    result = await _save_uploads(db, folder["id"], files)
+    return {**result, "folder": folder}
 
 
 @file_router.post("/extract")
