@@ -12,8 +12,10 @@ Errors come in two kinds, and the worker treats them differently:
                       wrong with the text, so nothing gets marked failed --
                       otherwise a stopped container would fail every chunk in
                       seconds and none would ever be retried.
-  ValueError          The model answered but produced nothing usable. Recorded
-                      against the chunk, the way extraction errors are.
+  ValueError          The model answered but produced nothing usable -- or
+                      kept erroring on this text while answering others.
+                      Recorded against the chunk, the way extraction errors
+                      are, so one bad chunk can't stall the queue.
 """
 
 # Custom libraries
@@ -25,6 +27,7 @@ from services.ollama_service import OPTIONS as CHAT_OPTIONS
 # Default libraries
 import os
 import re
+import time
 
 # Installed libraries
 import httpx
@@ -52,6 +55,13 @@ DOCUMENT_OPTIONS = {"temperature": 0, "num_ctx": NUM_CTX, "num_predict": 400}
 # How much summary text one document call may read. num_ctx 4096 minus the
 # instructions and room for the answer.
 DOCUMENT_INPUT_TOKENS = 2500
+
+
+# One failed request isn't automatically an outage: a single chunk can make the
+# model error while everything else is fine. A failure is retried after these
+# waits; if it keeps failing, the model is asked something trivial -- no answer
+# means an outage, an answer means it's this text.
+RETRY_WAITS = (2, 5)
 
 
 class SummaryUnavailable(Exception):
@@ -129,23 +139,49 @@ def _clean(text: str, truncated: bool = False) -> str:
     return text
 
 
-def _ask(system: str, user: str, options: dict) -> str:
+def _healthy() -> bool:
+    """Can the model answer at all? A one-token reply, at the same context size
+    as everything else here so it can't trigger a reload."""
     try:
-        response = client.chat(
+        client.chat(
             model=SUMMARY_MODEL,
-            messages=[
-                {"role": "system", "content": system},
-                {"role": "user", "content": user},
-            ],
-            options=options,
+            messages=[{"role": "user", "content": "Reply with: ok"}],
+            options={**CHUNK_OPTIONS, "num_predict": 1},
         )
-    except ResponseError as exc:
-        # A missing model is a 404 here. Like an outage, it is fixed by
-        # pulling or restarting, not by giving up on the text.
-        raise SummaryUnavailable(f"ollama error ({exc.status_code}): {exc.error}") from exc
-    except (ConnectionError, httpx.HTTPError) as exc:
-        raise SummaryUnavailable(f"ollama unreachable at {OLLAMA_HOST}: {exc}") from exc
-    return _clean(response.message.content, truncated=response.done_reason == "length")
+        return True
+    except Exception:
+        return False
+
+
+def _ask(system: str, user: str, options: dict) -> str:
+    failure: ResponseError
+    for wait in (0, *RETRY_WAITS):
+        if wait:
+            time.sleep(wait)
+        try:
+            response = client.chat(
+                model=SUMMARY_MODEL,
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": user},
+                ],
+                options=options,
+            )
+        except ResponseError as exc:
+            if exc.status_code == 404:
+                # The model isn't pulled. Like an outage, fixed by pulling,
+                # not by giving up on the text.
+                raise SummaryUnavailable(f"ollama error (404): {exc.error}") from exc
+            failure = exc
+            continue
+        except (ConnectionError, httpx.HTTPError) as exc:
+            raise SummaryUnavailable(f"ollama unreachable at {OLLAMA_HOST}: {exc}") from exc
+        return _clean(response.message.content, truncated=response.done_reason == "length")
+
+    if _healthy():
+        # Up and answering -- it's this text it can't take.
+        raise ValueError(f"the model kept failing on this text ({failure.status_code}): {failure.error}")
+    raise SummaryUnavailable(f"ollama error ({failure.status_code}): {failure.error}")
 
 
 def summarize_chunk(text: str, heading: str | None, file_name: str) -> str:

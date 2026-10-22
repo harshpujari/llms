@@ -38,6 +38,10 @@ class Chunk(Model):
       summarized_at TEXT,
       -- Set on failure so one bad chunk isn't retried on every boot.
       summary_error TEXT,
+      -- Why this chunk has no vector, when Ollama was up but refused its text
+      -- (or its summary's). Set so it isn't retried every sweep; it can still
+      -- be found by keywords. Cleared with the vectors, on a model change.
+      vector_error  TEXT,
       -- Also serves as the file_id index: it leads with file_id.
       UNIQUE (file_id, ord)
     );
@@ -46,6 +50,10 @@ class Chunk(Model):
     CREATE INDEX IF NOT EXISTS chunks_pending ON chunks(file_id)
       WHERE summarized_at IS NULL AND summary_error IS NULL;
     """
+
+    __migrations__ = {
+        "vector_error": "TEXT",
+    }
 
     # Created after every table exists (see Model.after_init). Neither kind of
     # virtual table follows ON DELETE CASCADE, so triggers do the tidying.

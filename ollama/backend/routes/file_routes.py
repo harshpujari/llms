@@ -65,6 +65,14 @@ async def _save_uploads(
             logger.info("rejected %s: %s", upload.filename, exc)
             failed.append({"name": upload.filename, "error": str(exc)})
             continue
+        except Exception as exc:
+            # Anything else -- the database busy past its wait, a disk error --
+            # is this file's failure alone, reported as such rather than a 500
+            # for the whole batch. save_file has already removed its bytes.
+            logger.exception("couldn't save %s", upload.filename)
+            error = exc.detail if isinstance(exc, HTTPException) else "couldn't save this file — try again"
+            failed.append({"name": upload.filename, "error": error})
+            continue
 
         # Back on the event loop after the await, which is the only place the
         # asyncio queue may be touched.

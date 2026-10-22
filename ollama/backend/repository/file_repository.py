@@ -199,7 +199,8 @@ class FileRepository:
                 f"""UPDATE {File.__tablename__}
                        SET text_content = ?, extracted_at = ?, extract_error = NULL,
                            chunk_count = 0, indexed_at = NULL, embed_model = NULL,
-                           summary = NULL, summary_model = NULL, summarized_at = NULL
+                           summary = NULL, summary_model = NULL, summarized_at = NULL,
+                           vector_error = NULL
                      WHERE id = ?""",
                 (text, now(), file_id),
             )
@@ -254,7 +255,7 @@ class FileRepository:
         try:
             self.db.execute(
                 f"""UPDATE {File.__tablename__}
-                       SET summary = ?, summary_model = ?, summarized_at = ?
+                       SET summary = ?, summary_model = ?, summarized_at = ?, vector_error = NULL
                      WHERE id = ?""",
                 (summary, model, now(), file_id),
             )
@@ -280,9 +281,10 @@ class FileRepository:
                        OR fi.embed_model IS NOT ?
                        OR EXISTS (SELECT 1 FROM chunks c
                                    WHERE c.file_id = fi.id AND c.summary IS NOT NULL
+                                     AND c.vector_error IS NULL
                                      AND NOT EXISTS (SELECT 1 FROM vectors_chunk_summary v
                                                       WHERE v.chunk_id = c.id))
-                       OR (fi.summary IS NOT NULL
+                       OR (fi.summary IS NOT NULL AND fi.vector_error IS NULL
                            AND NOT EXISTS (SELECT 1 FROM vectors_file_summary v
                                             WHERE v.file_id = fi.id)))
                 ORDER BY fi.id""",
@@ -294,7 +296,7 @@ class FileRepository:
         """The document summary, if it has no vector yet."""
         row = self.db.execute(
             """SELECT summary FROM files fi
-                WHERE fi.id = ? AND fi.summary IS NOT NULL
+                WHERE fi.id = ? AND fi.summary IS NOT NULL AND fi.vector_error IS NULL
                   AND NOT EXISTS (SELECT 1 FROM vectors_file_summary v WHERE v.file_id = fi.id)""",
             (file_id,),
         ).fetchone()
@@ -312,6 +314,21 @@ class FileRepository:
                     "INSERT INTO vectors_file_summary (file_id, embedding) VALUES (?, ?)",
                     (file_id, vector),
                 )
+            self.db.commit()
+        except sqlite3.Error as e:
+            self.db.rollback()
+            logger.error(f"SQLite Error: {e}")
+            return False
+        return True
+
+    def mark_vector_error(self, file_id: int, error: str) -> bool:
+        """Ollama is up but won't embed the document summary: record why, so it
+        stops being retried."""
+        try:
+            self.db.execute(
+                f"UPDATE {File.__tablename__} SET vector_error = ? WHERE id = ?",
+                (error, file_id),
+            )
             self.db.commit()
         except sqlite3.Error as e:
             self.db.rollback()
@@ -344,8 +361,12 @@ class FileRepository:
                     (file_id,),
                 )
             self.db.execute("DELETE FROM vectors_file_summary WHERE file_id = ?", (file_id,))
+            # A new model gets a fresh try at anything the old one refused.
+            self.db.execute("UPDATE chunks SET vector_error = NULL WHERE file_id = ?", (file_id,))
             self.db.execute(
-                f"UPDATE {File.__tablename__} SET indexed_at = NULL, embed_model = NULL WHERE id = ?",
+                f"""UPDATE {File.__tablename__}
+                       SET indexed_at = NULL, embed_model = NULL, vector_error = NULL
+                     WHERE id = ?""",
                 (file_id,),
             )
             self.db.commit()

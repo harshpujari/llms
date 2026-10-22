@@ -11,7 +11,9 @@ store, checked against EMBED_DIM: a model of another size fails loudly instead
 of filling the tables with vectors that can't be compared.
 
 Errors follow summary_service: EmbedUnavailable means Ollama is down, slow, or
-missing the model -- retry later, nothing is wrong with the text.
+missing the model -- retry later, nothing is wrong with the text. A text it
+refuses while otherwise working comes back as None instead, so one bad chunk
+can't stall a file, or the queue behind it.
 """
 
 # Custom libraries
@@ -21,6 +23,8 @@ from services.ollama_service import OLLAMA_HOST
 
 # Default libraries
 import os
+import time
+from typing import Optional
 
 # Installed libraries
 import httpx
@@ -67,16 +71,56 @@ def _to_bytes(vectors) -> list[bytes]:
     return [row.tobytes() for row in arr]
 
 
-def embed_documents(texts: list[str]) -> list[bytes]:
-    """Chunks and summaries, one vector each, in order."""
-    vectors: list[bytes] = []
-    for i in range(0, len(texts), BATCH):
-        batch = [DOCUMENT_PREFIX + t for t in texts[i:i + BATCH]]
+def _request(texts: list[str]) -> list[bytes]:
+    response = client.embed(model=EMBED_MODEL, input=[DOCUMENT_PREFIX + t for t in texts])
+    return _to_bytes(response.embeddings)
+
+
+def _healthy() -> bool:
+    try:
+        _request(["ok"])
+        return True
+    except Exception:
+        return False
+
+
+def _one(text: str) -> Optional[bytes]:
+    """A text the batch it was in failed on: whole, then its first half --
+    whatever in it the model chokes on may be in the rest, and half a chunk
+    still says most of what it's about. None if Ollama is up but refuses it
+    both ways."""
+    for attempt in (text, text[: max(200, len(text) // 2)]):
         try:
-            response = client.embed(model=EMBED_MODEL, input=batch)
-        except (ResponseError, ConnectionError, httpx.HTTPError) as exc:
+            return _request([attempt])[0]
+        except ResponseError as exc:
+            if exc.status_code == 404:
+                raise _unavailable(exc) from exc
+            failure = exc
+        except (ConnectionError, httpx.HTTPError) as exc:
             raise _unavailable(exc) from exc
-        vectors += _to_bytes(response.embeddings)
+    if _healthy():
+        logger.warning("%s refuses a text (%s): %r", EMBED_MODEL, failure.status_code, text[:60])
+        return None
+    raise _unavailable(failure) from failure
+
+
+def embed_documents(texts: list[str]) -> list[Optional[bytes]]:
+    """Chunks and summaries, one vector each, in order -- None for a text the
+    model refuses while otherwise working. Raises EmbedUnavailable when it's
+    down or missing."""
+    vectors: list[Optional[bytes]] = []
+    for i in range(0, len(texts), BATCH):
+        batch = texts[i:i + BATCH]
+        try:
+            vectors += _request(batch)
+        except ResponseError as exc:
+            if exc.status_code == 404:
+                raise _unavailable(exc) from exc
+            # One text can sink a whole batch: find which, one at a time.
+            time.sleep(1)
+            vectors += [_one(t) for t in batch]
+        except (ConnectionError, httpx.HTTPError) as exc:
+            raise _unavailable(exc) from exc
     return vectors
 
 

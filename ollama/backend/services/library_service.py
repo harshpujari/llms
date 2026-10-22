@@ -142,16 +142,27 @@ def save_file(
     # batch would otherwise hold the request open for minutes. The caller
     # enqueues the returned id -- this runs on a worker thread, and the queue
     # can only be touched from the event loop.
-    return FileRepository(db).create_file(
-        {
-            "folder_id": folder_id,
-            "name": display,
-            "stored_name": stored,
-            "bytes": size,
-            "sha256": sha,
-            "mime": mime,
-        }
-    )
+    #
+    # If the row can't be saved, the bytes go too: with no row pointing at
+    # them, nothing would ever find them again.
+    try:
+        row = FileRepository(db).create_file(
+            {
+                "folder_id": folder_id,
+                "name": display,
+                "stored_name": stored,
+                "bytes": size,
+                "sha256": sha,
+                "mime": mime,
+            }
+        )
+    except Exception:
+        storage_service.remove_file(slug, stored)
+        raise
+    if row is None:
+        storage_service.remove_file(slug, stored)
+        raise RuntimeError("the file's record couldn't be saved")
+    return row
 
 
 def delete_file(db: sqlite3.Connection, file_id: int) -> bool:

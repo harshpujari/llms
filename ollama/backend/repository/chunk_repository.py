@@ -119,7 +119,7 @@ class ChunkRepository:
         rows = self.db.execute(
             f"""SELECT c.id, c.text
                   FROM {Chunk.__tablename__} c
-                 WHERE c.file_id = ?
+                 WHERE c.file_id = ? AND c.vector_error IS NULL
                    AND NOT EXISTS (SELECT 1 FROM vectors_chunk_text v WHERE v.chunk_id = c.id)
                  ORDER BY c.ord""",
             (file_id,),
@@ -131,7 +131,7 @@ class ChunkRepository:
         rows = self.db.execute(
             f"""SELECT c.id, c.summary
                   FROM {Chunk.__tablename__} c
-                 WHERE c.file_id = ? AND c.summary IS NOT NULL
+                 WHERE c.file_id = ? AND c.summary IS NOT NULL AND c.vector_error IS NULL
                    AND NOT EXISTS (SELECT 1 FROM vectors_chunk_summary v WHERE v.chunk_id = c.id)
                  ORDER BY c.ord""",
             (file_id,),
@@ -154,6 +154,21 @@ class ChunkRepository:
                         f"INSERT INTO {table} (chunk_id, embedding, file_id) VALUES (?, ?, ?)",
                         (chunk_id, vector, file_id),
                     )
+            self.db.commit()
+        except sqlite3.Error as e:
+            self.db.rollback()
+            logger.error(f"SQLite Error: {e}")
+            return False
+        return True
+
+    def mark_vector_error(self, chunk_id: int, error: str) -> bool:
+        """Ollama is up but won't embed this chunk: record why, so it stops
+        being retried. It stays findable by keywords."""
+        try:
+            self.db.execute(
+                f"UPDATE {Chunk.__tablename__} SET vector_error = ? WHERE id = ?",
+                (error, chunk_id),
+            )
             self.db.commit()
         except sqlite3.Error as e:
             self.db.rollback()

@@ -125,8 +125,11 @@ class WorkQueue:
     # --- the loop ------------------------------------------------------------
 
     async def _run(self) -> None:
+        # This loop's own reference: stop() clears self._queue before it
+        # cancels the loop, and the finally below still has to reach it.
+        queue = self._queue
         while True:
-            item = await self._queue.get()
+            item = await queue.get()
             self._waiting.discard(item)
             self._active = item
             try:
@@ -147,7 +150,7 @@ class WorkQueue:
                         logger.exception("%s: after %s finished", self.name, item)
             finally:
                 self._active = None
-                self._queue.task_done()
+                queue.task_done()
 
     async def _pause(self, exc: Exception) -> None:
         wait = self._pause_wait
@@ -215,6 +218,10 @@ class WorkQueue:
                 await task
             except asyncio.CancelledError:
                 pass
+            except Exception:
+                # Shutting down regardless; a loop that ends badly is logged,
+                # not allowed to break the app's shutdown.
+                logger.exception("%s: while stopping", self.name)
         for retry in self._retries.values():
             if retry["handle"]:
                 retry["handle"].cancel()

@@ -46,6 +46,20 @@ logger = configure_logging(__name__)
 _current: Optional[dict] = None
 
 
+# Recorded on a chunk or file the embedding model refuses while working.
+REFUSED = "the embedding model refused this text"
+
+
+def _save(file_id: int, todo: list[dict], vectors: list, save, chunks: ChunkRepository, what: str) -> None:
+    """Vectors for what embedded; for what didn't, the reason, so it isn't
+    tried again every sweep. A chunk with no vector is still found by keywords."""
+    for c, v in zip(todo, vectors):
+        if v is None:
+            logger.warning("chunk %s of file %s can't be embedded: keyword search only", c["id"], file_id)
+            must(chunks.mark_vector_error(c["id"], REFUSED), "a chunk's vector error")
+    must(save(file_id, [(c["id"], v) for c, v in zip(todo, vectors) if v is not None]), what)
+
+
 def _embed_text(file_id: int, files: FileRepository, chunks: ChunkRepository) -> bool:
     """Every chunk's text, a batch at a time so a restart keeps what's done;
     then the file is marked indexed -- searchable. False if it stopped short."""
@@ -53,7 +67,7 @@ def _embed_text(file_id: int, files: FileRepository, chunks: ChunkRepository) ->
         if not files.get_file(file_id):
             return False  # deleted mid-way: its chunks went with it
         vectors = embed_service.embed_documents([c["text"] for c in todo])
-        must(chunks.save_text_vectors(file_id, [(c["id"], v) for c, v in zip(todo, vectors)]), "chunk vectors")
+        _save(file_id, todo, vectors, chunks.save_text_vectors, chunks, "chunk vectors")
     must(files.mark_indexed(file_id, embed_service.EMBED_MODEL), "the file as indexed")
     return True
 
@@ -62,10 +76,14 @@ def _embed_summaries(file_id: int, files: FileRepository, chunks: ChunkRepositor
     """Chunk summaries not embedded yet, and the document summary if it isn't."""
     while todo := chunks.get_chunks_missing_summary_vectors(file_id)[:embed_service.BATCH]:
         vectors = embed_service.embed_documents([c["summary"] for c in todo])
-        must(chunks.save_summary_vectors(file_id, [(c["id"], v) for c, v in zip(todo, vectors)]), "summary vectors")
+        _save(file_id, todo, vectors, chunks.save_summary_vectors, chunks, "summary vectors")
     summary = files.get_summary_to_embed(file_id)
     if summary:
-        must(files.save_summary_vector(file_id, embed_service.embed_documents([summary])[0]), "the summary vector")
+        vector = embed_service.embed_documents([summary])[0]
+        if vector is None:
+            must(files.mark_vector_error(file_id, REFUSED), "the summary's vector error")
+        else:
+            must(files.save_summary_vector(file_id, vector), "the summary vector")
 
 
 def _index_one(file_id: int) -> None:
