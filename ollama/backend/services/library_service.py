@@ -8,7 +8,7 @@ SQL, and storage/extract only touch the filesystem and MarkItDown respectively.
 
 # Custom libraries
 from logger import configure_logging
-from services import extract_service, indexing_worker, storage_service
+from services import extract_service, extraction_worker, indexing_worker, storage_service
 
 # Database modules
 from repository.file_repository import FileRepository
@@ -201,6 +201,12 @@ def indexing_status(
     """
     live = indexing_worker.status()
     active = live["current"]["file_id"] if live["current"] else None
+    # Waiting to retry after an error that wasn't the file's own -- in either
+    # worker. Shown, so a file that's stuck for a moment doesn't look stuck.
+    retrying = {
+        r["id"]: {"error": r["error"], "retry_in": r["retry_in"], "attempts": r["attempts"]}
+        for r in extraction_worker.status()["retrying"] + live["retrying"]
+    }
 
     folder_ids, file_ids = folder_ids or [], file_ids or []
     rows = FileRepository(db).get_indexing_rows(folder_ids, file_ids)
@@ -227,9 +233,12 @@ def indexing_status(
                     "folder_id": row["folder_id"],
                     "name": row["name"],
                     "stage": stage,
-                    "done": row["chunk_count"] - row["pending"],
+                    # Clamped: right after new text, chunk_count is 0 while
+                    # the old chunks are still there to be replaced.
+                    "done": max(0, row["chunk_count"] - row["pending"]),
                     "total": row["chunk_count"],
                     "active": row["id"] == active,
+                    "retrying": retrying.get(row["id"]),
                 }
             )
         elif stage == "failed":

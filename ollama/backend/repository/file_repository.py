@@ -189,11 +189,17 @@ class FileRepository:
         }
 
     def update_file_text(self, file_id: int, text: str) -> bool:
-        """Success clears any error from an earlier attempt."""
+        """New text clears any error from an earlier attempt -- and everything
+        indexing built from the old text. chunk_count back to 0 is what tells
+        the indexing worker, or its scan after a restart, to chunk again; until
+        then the file isn't searchable (indexed_at NULL), so its old chunks and
+        vectors are never served against the new text."""
         try:
             self.db.execute(
                 f"""UPDATE {File.__tablename__}
-                       SET text_content = ?, extracted_at = ?, extract_error = NULL
+                       SET text_content = ?, extracted_at = ?, extract_error = NULL,
+                           chunk_count = 0, indexed_at = NULL, embed_model = NULL,
+                           summary = NULL, summary_model = NULL, summarized_at = NULL
                      WHERE id = ?""",
                 (text, now(), file_id),
             )
@@ -241,7 +247,10 @@ class FileRepository:
             return False
         return True
 
-    def update_file_summary(self, file_id: int, summary: str, model: str) -> bool:
+    def update_file_summary(self, file_id: int, summary: Optional[str], model: str) -> bool:
+        """summary None still sets summarized_at: the step is done, there just
+        isn't a summary to show for it -- every chunk's failed, say. Left unset,
+        the worker's scan would retry it every sweep, a model call each time."""
         try:
             self.db.execute(
                 f"""UPDATE {File.__tablename__}

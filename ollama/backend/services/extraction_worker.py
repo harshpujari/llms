@@ -10,8 +10,10 @@ machine -- running N of them in parallel would recreate the problem it fixed.
 Ordering also stays predictable, which makes the UI's polling easy to reason
 about.
 
-State lives in the files table, not in this queue, so a restart loses nothing:
-start() re-reads whatever is still unextracted and queues it again.
+The queue itself is a WorkQueue: a file that fails for a reason of its own --
+a scanned PDF, an unsupported layout -- is marked failed; one that fails for
+any other reason is retried until it doesn't. The files table is the record of
+what's unextracted, re-read at startup and every sweep.
 
 Each file that extracts is handed on to indexing_worker, which chunks and
 summarizes it on its own, slower queue.
@@ -20,111 +22,96 @@ summarizes it on its own, slower queue.
 # Custom libraries
 from logger import configure_logging
 from services import extract_service, indexing_worker, storage_service
+from services.work_queue import WorkQueue, must
 
 # Database modules
 from db_pool import connect
 from repository.file_repository import FileRepository
 
-# Default libraries
-import asyncio
-from typing import Optional
-
-# Installed libraries
-from starlette.concurrency import run_in_threadpool
-
 logger = configure_logging(__name__)
 
-_queue: Optional[asyncio.Queue] = None
-_task: Optional[asyncio.Task] = None
-
-
-def enqueue(file_id: int) -> None:
-    """Called from the event loop only -- asyncio.Queue isn't thread-safe."""
-    if _queue is None:
-        logger.warning("extraction worker not running, file %s not queued", file_id)
-        return
-    _queue.put_nowait(file_id)
-
-
-def pending() -> int:
-    return _queue.qsize() if _queue else 0
+# Re-extraction asked for explicitly (/extract?force). Anything else is only
+# extracted while it has no text, so a sweep or a repeated request can never
+# redo -- and so re-index from scratch -- a file that's already done.
+_forced: set[int] = set()
 
 
 def _extract_one(file_id: int) -> bool:
     """Runs on a worker thread. Opens its own connection: the request-scoped one
     from Depends(get_db) is long gone by the time this runs.
 
-    True when new text was saved, so the caller knows to queue indexing.
+    True when new text was saved, so indexing gets queued.
     """
     db = connect()
     try:
         repo = FileRepository(db)
         row = repo.get_file(file_id)
         if not row:
+            _forced.discard(file_id)
             return False  # deleted while it sat in the queue
+        if row["text_chars"] is not None and file_id not in _forced:
+            return False  # already extracted
 
         path = storage_service.file_path(row["slug"], row["stored_name"])
         if not path.exists():
-            repo.update_file_error(file_id, "file missing from storage")
+            must(repo.update_file_error(file_id, "file missing from storage"), "the extraction error")
+            _forced.discard(file_id)
             return False
 
         try:
             text = extract_service.to_markdown(path)
         except ValueError as exc:
+            # The file's own problem: no text layer, an unreadable format.
             logger.info("extraction failed for %s: %s", row["name"], exc)
-            repo.update_file_error(file_id, str(exc))
+            must(repo.update_file_error(file_id, str(exc)), "the extraction error")
+            _forced.discard(file_id)
             return False
 
-        if not repo.update_file_text(file_id, text):
-            return False
+        must(repo.update_file_text(file_id, text), "the extracted text")
+        _forced.discard(file_id)
         logger.info("extracted %s (%d chars)", row["name"], len(text))
         return True
     finally:
         db.close()
 
 
-async def _run() -> None:
-    while True:
-        file_id = await _queue.get()
-        try:
-            if await run_in_threadpool(_extract_one, file_id):
-                # Queued from here, not the thread: enqueue is event-loop only.
-                # rechunk because the text is new -- chunks and summaries from
-                # an earlier extraction describe text that is gone.
-                indexing_worker.enqueue(file_id, rechunk=True)
-        except Exception:
-            # A crash here must not kill the worker, or every later upload
-            # silently stays queued forever.
-            logger.exception("extraction worker failed on file %s", file_id)
-        finally:
-            _queue.task_done()
-
-
-async def start() -> None:
-    global _queue, _task
-    _queue = asyncio.Queue()
-    _task = asyncio.create_task(_run())
-
-    # Anything left unextracted by a previous run gets picked up again.
+def _unextracted() -> list[int]:
+    """Never attempted -- failures are left for the user to retry."""
     db = connect()
     try:
-        queued = FileRepository(db).get_queued_files()
+        return [row["id"] for row in FileRepository(db).get_queued_files()]
     finally:
         db.close()
 
-    for row in queued:
-        _queue.put_nowait(row["id"])
-    if queued:
-        logger.info("requeued %d file(s) from a previous run", len(queued))
+
+def _hand_on(file_id: int, extracted: bool) -> None:
+    # Runs on the event loop, the only place a queue may be touched.
+    if extracted:
+        indexing_worker.enqueue(file_id)
+
+
+queue = WorkQueue("extraction", _extract_one, _unextracted, on_done=_hand_on)
+
+
+def enqueue(file_id: int, force: bool = False) -> None:
+    """Event loop only. force re-extracts a file that already has text -- for
+    when the parser itself has changed."""
+    if force:
+        _forced.add(file_id)
+    queue.enqueue(file_id)
+
+
+def pending() -> int:
+    return queue.pending()
+
+
+def status() -> dict:
+    return queue.status()
+
+
+async def start() -> None:
+    await queue.start()
 
 
 async def stop() -> None:
-    global _queue, _task
-    if _task:
-        _task.cancel()
-        try:
-            await _task
-        except asyncio.CancelledError:
-            pass
-    _task = None
-    _queue = None
+    await queue.stop()

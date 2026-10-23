@@ -289,4 +289,11 @@ def to_chunks(markdown: str) -> list[dict]:
                     "tokens": estimate_tokens(text),
                 }
             )
+
+    # Text that's nothing but headings packs into no blocks at all. It's still
+    # text -- extraction refuses anything shorter than MIN_CHARS -- so it
+    # becomes one chunk, rather than a file that can never be indexed.
+    if not chunks and markdown and markdown.strip():
+        text = markdown.strip()
+        chunks.append({"ord": 0, "heading": None, "text": text, "tokens": estimate_tokens(text)})
     return chunks

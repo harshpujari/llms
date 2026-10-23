@@ -106,7 +106,7 @@ async def post_extract(
     """Re-queue extraction: files without text, or all of them with ?force=1."""
     ids = library_service.files_to_extract(db, force)
     for file_id in ids:
-        extraction_worker.enqueue(file_id)
+        extraction_worker.enqueue(file_id, force=force)
     return {"requeued": len(ids), "queued": extraction_worker.pending()}
 
 
