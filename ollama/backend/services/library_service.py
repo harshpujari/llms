@@ -249,6 +249,8 @@ def indexing_status(
                     "done": max(0, row["chunk_count"] - row["pending"]),
                     "total": row["chunk_count"],
                     "active": row["id"] == active,
+                    # Text embedded: findable already, while summaries arrive.
+                    "searchable": bool(row["searchable"]),
                     "retrying": retrying.get(row["id"]),
                 }
             )

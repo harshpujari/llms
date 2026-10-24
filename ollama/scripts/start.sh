@@ -15,7 +15,7 @@ set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
 COMPOSE=(docker compose -f DockerCompse.yml)
-MODEL="${MODEL:-llama3.2:1b}"
+MODEL="${MODEL:-llama3.2:3b}"
 EMBED_MODEL="${EMBED_MODEL:-nomic-embed-text}"
 BUILD=0
 

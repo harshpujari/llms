@@ -33,8 +33,15 @@ function chipStatus(item) {
     if (!p) return null;
     // Ollama unreachable: nothing is moving, so no spinner -- the banner says why.
     if (progress.paused) return { kind: "paused", text: "paused" };
+    // Waiting out a retry: nothing moving for this one either. The tooltip
+    // says what went wrong.
+    if (p.retrying) {
+      const when = p.retrying.retry_in ? ` in ${p.retrying.retry_in}s` : "";
+      return { kind: "paused", text: `retrying${when}`, title: p.retrying.error };
+    }
     if (p.stage === "extracting") return { kind: "busy", text: "extracting…" };
-    return { kind: "busy", text: p.total ? `reading ${p.done}/${p.total}` : "reading…" };
+    if (!p.searchable) return { kind: "busy", text: "indexing…" };
+    return { kind: "busy", text: p.total ? `summarizing ${p.done}/${p.total}` : "summarizing…" };
   }
 
   const busy = progress.files.filter(f => f.folder_id === item.id).length;

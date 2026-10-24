@@ -37,7 +37,7 @@ services:
       - "8000:8000"
     environment:
       OLLAMA_HOST: ${OLLAMA_HOST:-http://ollama:11434}
-      MODEL: ${MODEL:-llama3.2:1b}
+      MODEL: ${MODEL:-llama3.2:3b}
       # Turns chunks and questions into vectors for retrieval. Pulled by start.sh.
       EMBED_MODEL: ${EMBED_MODEL:-nomic-embed-text}
     depends_on:

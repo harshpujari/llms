@@ -19,7 +19,7 @@ from ollama import AsyncClient
 logger = configure_logging(__name__)
 
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://host.docker.internal:11434")
-MODEL = os.getenv("MODEL", "llama3.2:1b")
+MODEL = os.getenv("MODEL", "llama3.2:3b")
 
 OPTIONS = {"temperature": 0.7, "num_ctx": 4096}
 

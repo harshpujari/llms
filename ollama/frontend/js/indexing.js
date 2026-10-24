@@ -30,8 +30,9 @@ function plural(n, word) {
 
 function progressLabel(p) {
   if (p.stage === "extracting") return "extracting";
-  if (!p.total) return "starting";
-  return `${p.done}/${p.total} sections`;
+  if (!p.searchable) return "indexing";
+  if (!p.total) return "starting summaries";
+  return `${p.done} of ${p.total} sections`;
 }
 
 function line(...parts) {
@@ -55,7 +56,12 @@ function renderIndexing(st) {
   // Failed files are excluded: they're never going to be read, and their row
   // already says why.
   const total = st.counts.extracting + st.counts.reading + st.counts.ready;
-  const current = st.files.find(p => p.active) || st.files[0];
+  const retrying = st.files.filter(p => p.retrying);
+  const moving = st.files.filter(p => !p.retrying);
+  const current = st.files.find(p => p.active) || moving[0] || st.files[0];
+  // Every unfinished file already searchable: only summaries are left, and
+  // answers can use these documents now.
+  const searchable = st.files.every(p => p.searchable);
 
   const lead = document.createElement("span");
   const text = document.createElement("span");
@@ -73,13 +79,27 @@ function renderIndexing(st) {
       line(`${plural(unfinished, "document")} not fully read yet. Answers may miss what's in them.`),
     );
   } else {
-    lead.className = "spin";
-    lead.setAttribute("aria-hidden", "true");
-    text.append(
-      line(strong(`Reading ${unfinished} of ${plural(total, "document")}`),
-           ` · ${current.name} · ${progressLabel(current)}`),
-      line("Answers may miss what's in them, and replies may be slower until it's done."),
-    );
+    // A spinner only while something is actually moving.
+    lead.className = moving.length ? "spin" : "alert";
+    if (moving.length) lead.setAttribute("aria-hidden", "true");
+    else lead.textContent = "⚠︎";
+    if (moving.length) {
+      text.append(line(
+        strong(`${searchable ? "Summarizing" : "Reading"} ${moving.length} of ${plural(total, "document")}`),
+        ` · ${current.name} · ${progressLabel(current)}`,
+      ));
+    }
+    if (retrying.length) {
+      const next = Math.min(...retrying.map(p => p.retrying.retry_in));
+      const when = next ? `retrying in ${next}s` : "retrying now";
+      text.append(line(
+        strong(retrying.length === 1 ? `${retrying[0].name} hit an error` : `${retrying.length} documents hit errors`),
+        ` · ${when}`,
+      ));
+    }
+    text.append(line(searchable
+      ? "They can already be searched; summaries add detail. Replies may be slower until it's done."
+      : "Answers may miss what's in them, and replies may be slower until it's done."));
   }
   indexingBar.replaceChildren(lead, text);
 }

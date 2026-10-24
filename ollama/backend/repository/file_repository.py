@@ -127,6 +127,7 @@ class FileRepository:
         rows = self.db.execute(
             f"""SELECT fi.id, fi.folder_id, fi.name, fi.chunk_count, fi.extract_error,
                        fi.text_content IS NOT NULL  AS extracted,
+                       fi.indexed_at IS NOT NULL    AS searchable,
                        fi.extract_error IS NOT NULL AS failed,
                        fi.summarized_at IS NOT NULL AS summarized,
                        (SELECT COUNT(*) FROM chunks c
