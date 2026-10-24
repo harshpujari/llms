@@ -53,8 +53,22 @@ export function isReading(f, p) {
   return fileState(f) === "done" && p && p.stage === "reading";
 }
 
+// "hit an error, retrying in 40s" -- a file waiting to retry after a failure
+// that wasn't its own fault, so it doesn't look merely slow.
+export function retryText(r) {
+  return r.retry_in ? `hit an error, retrying in ${r.retry_in}s` : "hit an error, retrying now";
+}
+
+// Searchable comes first: it's what matters. A file's text is indexed seconds
+// after upload; the summaries that follow only add a second way to find each
+// section, and take minutes.
 export function fileLabel(f, p) {
   const base = extractionLabel(f);
+  if (fileState(f) === "queued" && p?.retrying) return `extraction ${retryText(p.retrying)}`;
   if (!isReading(f, p)) return base;
-  return `${base} · reading ${p.total ? `${p.done}/${p.total}` : "…"}`;
+  if (p.retrying) return `${base} · ${retryText(p.retrying)}`;
+  if (!p.searchable) return `${base} · indexing…`;
+  return p.total
+    ? `${base} · searchable · summarizing ${p.done} of ${p.total} sections`
+    : `${base} · searchable · starting summaries`;
 }
